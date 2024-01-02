@@ -108,7 +108,7 @@ function AboutUs() {
                            languages.
                         </p>
                         <p className="s-para text-white">So when it comes to booking the perfect hotel, vacation rental, resort,
-                           apartment, guest house, or tree house, we have got you covered.
+                           apartment, guest house, or tree house, weve got you covered.
                         </p>
                         <a href="#" className="primary-btn about-btn text-white">Read More</a>
                      </div>

@@ -1,8 +1,10 @@
 {
   "name": "luxuryhotels",
+  "homepage": ".",
+  "proxy":"https://fableadtechnolabs.com/luxuryhotelsmagazines",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+ 
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@testing-library/jest-dom": "^5.17.0",
