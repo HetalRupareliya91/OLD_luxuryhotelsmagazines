@@ -2,433 +2,108 @@ import React from 'react'
 import Header from '../components/header';
 import { Col, Container, Form, Image, Nav, Row } from 'react-bootstrap';
 import News1 from '../../assets/img/news1.jpg'
+import News2 from '../../assets/img/news2.jpg'
 
 import { useState } from 'react';
+import DataTable from 'react-data-table-component';
 import fileImage from '../../assets/img/file-upload.png'
 import MultiStep from 'react-multistep';
 
-import { EditorState,} from 'draft-js';
+import { EditorState, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import Footer from '../components/footer';
+import Step1 from './multistepForm/stepOne';
+import Step3 from './multistepForm/stepThree';
+import Step4 from './multistepForm/stepFour';
+import Step2 from './multistepForm/stepTwo';
 
-const steps = [
-  { title: 'Hotel Details', component: <Step1 /> },
-  { title: 'Hotel Contacts', component: <Step2 /> },
-  { title: 'Special Offer', component: <Step3 /> },
-  { title: 'HomePage Addon', component: <Step4 /> },
-];
 
-function Step1() {
-  return (
-    <div>
-      <Row className=" mb-3">
 
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="hotelName" name="hotelName" placeholder="Hotel Name" required />
-        </Col>
 
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="hotelWebsite" name="hotelWebsite" placeholder="Hotel Website" required />
-        </Col>
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="YoutubeLink" name="YoutubeLink" placeholder="Youtube Link" required />
-        </Col>
 
-        <Col lg={6}>
-          <div className="select-option">
-            <select id="" className="sidebar-input" >
-              <option value="Kyrgyzstan">Country</option>
-              <option value="Kyrgyzstan">Kyrgyzstan</option>
-              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-              <option value="Latvia">Latvia</option>
-              <option value="Lebanon">Lebanon</option>
-              <option value="Lesotho">Lesotho</option>
-              <option value="Liberia">Liberia</option>
-              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-              <option value="Liechtenstein">Liechtenstein</option>
-              <option value="Lithuania">Lithuania</option>
-              <option value="Luxembourg">Luxembourg</option>
-              <option value="Macao">Macao</option>
-            </select>
-          </div>
-        </Col>
-      </Row>
-
-      <Row className=" mb-3">
-
-        <Col lg={6}>
-          <div className="select-option">
-            <select id="" className="sidebar-input">
-              <option value="Kyrgyzstan">State</option>
-              <option value="Kyrgyzstan">Kyrgyzstan</option>
-              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-              <option value="Latvia">Latvia</option>
-              <option value="Lebanon">Lebanon</option>
-              <option value="Lesotho">Lesotho</option>
-              <option value="Liberia">Liberia</option>
-              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-              <option value="Liechtenstein">Liechtenstein</option>
-              <option value="Lithuania">Lithuania</option>
-              <option value="Luxembourg">Luxembourg</option>
-              <option value="Macao">Macao</option>
-            </select>
-          </div>           </Col>
-
-        <Col lg={6}>
-          <div className="select-option">
-            <select id="" className="sidebar-input">
-              <option value="Kyrgyzstan">City</option>
-              <option value="Kyrgyzstan">Kyrgyzstan</option>
-              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
-              <option value="Latvia">Latvia</option>
-              <option value="Lebanon">Lebanon</option>
-              <option value="Lesotho">Lesotho</option>
-              <option value="Liberia">Liberia</option>
-              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-              <option value="Liechtenstein">Liechtenstein</option>
-              <option value="Lithuania">Lithuania</option>
-              <option value="Luxembourg">Luxembourg</option>
-              <option value="Macao">Macao</option>
-            </select>
-          </div>
-        </Col>
-      </Row>
-      <Row className=" mb-3">
-
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="location" name="location" placeholder="Location" />
-        </Col>
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="contactImformation" name="contactImformation" placeholder="Contact Information" required />
-        </Col>
-
-      </Row>
-      <Row className=" mb-3">
-        <Col lg={12}>
-          <input className="sidebar-input" type="text" id="aboutHotel" name="aboutHotel" placeholder="About Hotel" required />
-        </Col>
-      </Row>
-
-      <Row className=" mb-3">
-        <Col lg={12}>
-          <input className="sidebar-input" type="text" id="roomsAndSuites" name="roomsAndSuites" placeholder="Rooms And Suites" required />
-        </Col>
-      </Row>
-
-      <Row className=" mb-3">
-        <Col lg={12}>
-          <input className="sidebar-input" type="text" id="restaurantsAndBars " name="restaurantsAndBars" placeholder="Restaurents And Bars (Optional)" />
-        </Col>
-      </Row>
-      <Row className=" mb-3">
-        <Col lg={12}>
-          <input className="sidebar-input" type="text" id="spaAndWellness " name="spaAndWellness" placeholder="Spa And Wellness (Optional)" />
-        </Col>
-      </Row>
-      <Row className=" mb-3">
-        <Col lg={12}>
-          <input className="sidebar-input" type="text" id="otherFacilities " name="otherFacilities" placeholder="Other Facilities (Optional)" />
-        </Col>
-      </Row>
-      <h5>Hotel Amenities</h5>
-      <Row className="mb-3">
-        <Col lg={6}>
-          <input className="sidebar-input" type="number" id="numberOfRooms " name="numberOfRooms" placeholder="Number Of Rooms" />
-        </Col>
-
-        <Col lg={6}>
-          <input className="sidebar-input" type="number" id="numberOfRestaurents" name="numberOfRestaurents" placeholder="Number Of Restaurents" />
-        </Col>
-      </Row>
-      <Row className="mb-3">
-        <Col lg={6}>
-          <input className="sidebar-input" type="number" id="outdoorSwimmingPool " name="outdoorSwimmingPool" placeholder="Outdoor Swimming Pool" />
-        </Col>
-
-        <Col lg={6}>
-          <input className="sidebar-input" type="number" id="bars" name="bars" placeholder="Bars" />
-        </Col>
-      </Row >
-
-      <Row className="mb-3">
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex '>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Spa</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Gym</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Indoor Swimming Pool</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Private Beach</label>
-          </Form.Group>
-        </Col>
-
-      </Row>
-      <Row className="mb-3">
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex '>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Concierge Service </label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Sport classNamees</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Tennis</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Water Sports</label>
-          </Form.Group>
-        </Col>
-
-      </Row>
-      <Row className="mb-3">
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex '>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Concierge Service </label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Sport classNamees</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Tennis</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Water Sports</label>
-          </Form.Group>
-        </Col>
-
-      </Row>
-      <Row className="mb-3">
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex '>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Sun Beds</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Beach Cabanas</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Room Service</label>
-          </Form.Group>
-        </Col>
-        <Col lg={3}>
-          <Form.Group controlId="checkboxGroup" className='d-flex'>
-            <Form.Check type="checkbox" id="checkbox1" className=' me-3' />
-            <label htmlFor="checkbox1">Private Driver</label>
-          </Form.Group>
-        </Col>
-      </Row>
-      <Row className="mb-3">
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="otherInformation" name="otherInformation" placeholder="Other Information (40 Characters Maximum)" />
-        </Col>
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="otherInformation" name="otherInformation" placeholder="Other Information (40 Characters Maximum)" />
-        </Col>
-      </Row>
-    </div>
-  );
-}
-
-function Step2() {
-  return (
-    <div>
-      <Row className="mb-3">
-        <h3>Contact 1 </h3>
-        <Col lg={4}>
-          <input className="sidebar-input" type="text" id="name" name="name" placeholder=" Name" required />
-        </Col>
-        <Col lg={4}>
-          <input className="sidebar-input" type="email" id="email" name="email" placeholder=" Email" required />
-        </Col>
-        <Col lg={4}>
-          <input className="sidebar-input" type="text" id="contactInformation" name="contactInformation" placeholder="Contact Information" required />
-        </Col>
-      </Row>
-
-      <Row className="mb-3">
-        <h3>Contact 2 </h3>
-        <Col lg={4}>
-          <input className="sidebar-input" type="text" id="name" name="name" placeholder=" Name" required />
-        </Col>
-        <Col lg={4}>
-          <input className="sidebar-input" type="email" id="email" name="email" placeholder=" Email" required />
-        </Col>
-        <Col lg={4}>
-          <input className="sidebar-input" type="text" id="contactInformation" name="contactInformation" placeholder="Contact Information" required />
-        </Col>
-      </Row>
-
-      <Row className="mb-3">
-        <h3>Contact 3 </h3>
-        <Col lg={4}>
-          <input className="sidebar-input" type="text" id="name" name="name" placeholder=" Name" required />
-        </Col>
-        <Col lg={4}>
-          <input className="sidebar-input" type="email" id="email" name="email" placeholder=" Email" required />
-        </Col>
-        <Col lg={4}>
-          <input className="sidebar-input" type="text" id="contactInformation" name="contactInformation" placeholder="Contact Information" required />
-        </Col>
-      </Row>
-    </div>
-  );
-}
-
-function Step3( ) {
- 
-  return (
-
-    <div>
-      <Row className='mb-3'>
-        <Col lg={6}>
-          <input className="sidebar-input" type="text" id="offerTitle" name="offerTitle" placeholder="Offer Title" required />
-        </Col>
-        <Col lg={6}>
-          <input className="sidebar-input" type="tel" id="phoneNumber" name="phoneNumber" placeholder="Contact Phone Nunmber" required />
-        </Col>
-      </Row>
-
-      <Row className='mb-3'>
-        <Col lg={6}>
-          <input className="sidebar-input" type="date" id="offerValidFrom" name="offerValidFrom" value="Offer Valid From " required />
-        </Col>
-        <Col lg={6}>
-          <input className="sidebar-input" type="date" id="offerValidTo" name="offerValidTo" value="Offer Valid To" required />
-        </Col>
-      </Row>
-      <Row className='mb-3'>
-        <Col lg={12}>
-          <textarea className="sidebar-input" rows={4} required />
-        </Col>
-      </Row>
-      <Row className='mb-3'>
-        <Col lg={12}>
-          <input type="text" id='redeemLink' name='redeemLink' className="sidebar-input" placeholder='Redeem Link' required />
-        </Col>
-      </Row>
-    </div>
-  );
-}
-function Step4({ onBack }) {
-  return (
-    <div>
-      <Row className='mb-3'>
-        <Col>
-          <h5>
-            Add Hotel to The Home Page Latest News?
-          </h5>
-          <div className="select-option">
-            <select id="" className="sidebar-input">
-              <option value="Kyrgyzstan">No</option>
-              <option value="">Display For 1 Week (+10 Euro)</option>
-              <option value="">Display For 1 Month (+25 Euro)</option>
-
-            </select>
-          </div>
-        </Col>
-      </Row>
-
-      <Row className='mb-3'>
-        <Col>
-          <h5>
-            Add Hotel to The Home Page Hotel Latest News?
-          </h5>
-          <div className="select-option">
-            <select id="" className="sidebar-input">
-              <option value="Kyrgyzstan">No</option>
-              <option value="">Display For 1 Week (+10 Euro)</option>
-              <option value="">Display For 1 Month (+25 Euro)</option>
-
-            </select>
-          </div>
-        </Col>
-      </Row>
-      <Row className='mb-3'>
-        <Col>
-          <h5>
-            Add Special Offer to The Homepage?
-          </h5>
-          <div className="select-option">
-            <select id="" className="sidebar-input">
-              <option value="Kyrgyzstan">No</option>
-              <option value="">Display For 1 Week (+10 Euro)</option>
-              <option value="">Display For 1 Month (+25 Euro)</option>
-
-            </select>
-          </div>
-        </Col>
-      </Row>
-      <Row className='mb-3'>
-        <Col>
-          <h5>
-            Add hotel to The Home Page Spotlight?
-          </h5>
-          <div className="select-option">
-            <select id="" className="sidebar-input">
-              <option value="Kyrgyzstan">No</option>
-              <option value="">Display For 1 Week (+10 Euro)</option>
-              <option value="">Display For 1 Month (+25 Euro)</option>
-
-            </select>
-          </div>
-        </Col>
-      </Row>
-    </div>
-  );
-}
 function UserProfile() {
   const [currentSection, setCurrentSection] = useState('myHotels');
   const showSection = (section) => {
     setCurrentSection(section);
   };
   const [hotelEditorState, setHotelEditorState] = useState(EditorState.createEmpty());
+  const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
 
   const handleHotelEditorChange = (editorState) => {
     setHotelEditorState(editorState);
   };
 
+  const handleBlogEditorChange = (editorState) => {
+    setBlogEditorState(editorState);
+  };
 
+  const data = [
+    {
+      date: '2023-12-22',
+      hotelName: 'Hotel 1',
+      location: 'Location 1',
+      amount: '$123',
+    },
+    {
+      date: '2023-12-23',
+      hotelName: 'Hotel 2',
+      location: 'Location 2',
+      amount: '$123',
+    },
+    {
+      date: '2023-12-22',
+      hotelName: 'Hotel 3',
+      location: 'Location 3',
+      amount: '$123',
+    },
+  ];
+  const blogData = [
+    {
+      date: '2023-12-22',
+      blogName: 'Blog 1',
+      location: 'Location 1',
+      description: 'Description1',
+    },
+    {
+      date: '2023-12-23',
+      blogName: 'Blog 2',
+      location: 'Location 2',
+      description: 'Description2',
+    },
+  ];
+  const columns = [
+    { name: 'Date', selector: 'date' },
+    { name: 'Hotel Name', selector: 'hotelName' },
+    { name: 'Location', selector: 'location' },
+    { name: 'Amount', selector: 'amount' },
+    {
+      name: 'Action',
+      cell: row => (
+        <div className='d-flex '>
+          <button className='me-1 table-button'>View</button>
+          <button className='me-1'>Edit</button>
+          <button className='me-1'>Delete</button>
+        </div>
+      ),
+    },
+  ];
+  const blogColumns = [
+    { name: 'Date', selector: 'date' },
+    { name: 'Blog Name', selector: 'blogName' },
+    { name: 'Location', selector: 'location' },
+    { name: 'Description', selector: 'description' },
+    {
+      name: 'Action',
+      cell: row => (
+        <div className='d-flex '>
+          <button className='me-1 table-button'>View</button>
+          <button className='me-1'>Edit</button>
+          <button className='me-1'>Delete</button>
+        </div>
+      ),
+    },
+  ];
 
   return (
     <>
@@ -495,215 +170,197 @@ function UserProfile() {
           <div id="content">
             <div id="welcomeMessage" >
               <div id="myHotels" style={{ display: currentSection === 'myHotels' ? 'block' : 'none' }}>
-                <h2 className="mb-3">My Hotels</h2>
                 <button className='userprofilebuttons' >All Hotels</button>
                 <button className='userprofilebuttons' onClick={() => showSection('addHotels')} >Add Hotel</button>
                 <div className='d-flex hotel-profile-div mt-3 mb-5'>
                   <div className='image-div me-5'>
                     <Image src={News1} />
                   </div>
-                  <div className='details-div'>
-                    <div>
+                  <div className='details-div mt-4'>
+                    <div className='mb-3'>
                       <h4>Symphony Style Hotel, Quorvus Collection</h4>
-                      
-                        <h6>created at 2023-10-08</h6>
+                      <h6>created at 2023-10-08</h6>
 
-<h5>Package expiry: 2024/04/08</h5>
-                       
+                      <h5>Package expiry: 2024/04/08</h5>
+                      </div>
                       <Row>
-                      <Col lg={8}> 
+                        <Col lg={8}>
                       <div className='time-left mb-3'>
-                        <span>Time Left: 97d 11h 36m 13s </span>
+                        <h6>Time Left: 97d 11h 36m 13s </h6>
                       </div>
                       </Col>
-                      <Col lg={4} className='text-end'><div className='d-flex '>
-                      <button className='me-1 table-button btn-default'>View</button>
+                         <Col lg={4}>  
+                    <div className='d-flex  all-hotel-btns'>
+                      <button className='me-1 btn-default'>View</button>
                       <button className='me-1 btn-default'>Edit</button>
                       <button className='me-1 btn-default'>Delete</button>
                     </div>
                     </Col>
-                      
-                      </Row>
-                    </div>
-                    
+
+                    </Row>
                   </div>
 
                 </div>
 
-                <div className='d-flex hotel-profile-div mt-3 mb-5'>
+                <div className='d-flex hotel-profile-div'>
                   <div className='image-div me-5'>
-                    <Image src={News1} />
+                    <Image src={News2} />
                   </div>
-                  <div className='details-div'>
-                    <div>
+                  <div className='details-div mt-4'>
+                    <div className='mb-3'>
                       <h4>Symphony Style Hotel, Quorvus Collection</h4>
-                      
-                        <h6>created at 2023-10-08</h6>
+                      <h6>created at 2023-10-08</h6>
 
-<h5>Package expiry: 2024/04/08</h5>
-                       
+                      <h5>Package expiry: 2024/04/08</h5>
+                      </div>
                       <Row>
-                      <Col lg={8}> 
+                        <Col lg={8}>
                       <div className='time-left mb-3'>
-                        <span>Time Left: 97d 11h 36m 13s </span>
+                        <h6>Time Left: 97d 11h 36m 13s </h6>
                       </div>
                       </Col>
-                      <Col lg={4} className='text-end'><div className='d-flex '>
-                      <button className='me-1 table-button btn-default'>View</button>
+                         <Col lg={4}>  
+                    <div className='d-flex  all-hotel-btns'>
+                      <button className='me-1 btn-default'>View</button>
                       <button className='me-1 btn-default'>Edit</button>
                       <button className='me-1 btn-default'>Delete</button>
                     </div>
                     </Col>
-                      
-                      </Row>
-                    </div>
-                    
-                  </div>
 
+                    </Row>
+                  </div>
                 </div>
                
-               <div cla>
-               <nav aria-label="Page navigation example">
-  <ul className="pagination">
-    <li className="page-item">
-      <a className="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span className="sr-only">Previous</span>
-      </a>
-    </li>
-    <li className="page-item"><a className="page-link" href="#">1</a></li>
-    <li className="page-item"><a className="page-link" href="#">2</a></li>
-    <li className="page-item"><a className="page-link" href="#">3</a></li>
-    <li className="page-item">
-      <a className="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span className="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-               </div>
+                <div className="col-lg-12">
+                    <div className="room-pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">Next <i className="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
                 
               </div>
 
 
               <div id="myBlogs" style={{ display: currentSection === 'myBlogs' ? 'block' : 'none' }}>
-                <h2 className="mb-3">My Blogs</h2>
                 <button className='userprofilebuttons'  >All Blogs</button>
                 <button className='userprofilebuttons' onClick={() => showSection('addBlogs')}>Add Blogs</button>
+
                 <div className='d-flex hotel-profile-div mt-3 mb-5'>
                   <div className='image-div me-5'>
                     <Image src={News1} />
                   </div>
-                  <div className='details-div'>
-                    <div>
+                  <div className='details-div mt-4'>
+                    <div className='mb-3'>
                       <h4>Symphony Style Hotel, Quorvus Collection</h4>
-                      
-                        <h6>created at 2023-10-08</h6>
+                      <h6>created at 2023-10-08</h6>
 
-<h5>Package expiry: 2024/04/08</h5>
-                       
+                      <h5>Package expiry: 2024/04/08</h5>
+                      </div>
                       <Row>
-                      <Col lg={8}> 
+                        <Col lg={8}>
                       <div className='time-left mb-3'>
-                        <span>Time Left: 97d 11h 36m 13s </span>
+                        <h6>Time Left: 97d 11h 36m 13s </h6>
                       </div>
                       </Col>
-                      <Col lg={4} className='text-end'><div className='d-flex '>
-                      <button className='me-1 table-button btn-default'>View</button>
+                         <Col lg={4}>  
+                    <div className='d-flex  all-hotel-btns'>
+                      <button className='me-1 btn-default'>View</button>
                       <button className='me-1 btn-default'>Edit</button>
                       <button className='me-1 btn-default'>Delete</button>
                     </div>
                     </Col>
-                      
-                      </Row>
-                    </div>
-                    
+
+                    </Row>
                   </div>
 
                 </div>
 
-                <div className='d-flex hotel-profile-div mt-3 mb-5'>
+                <div className='d-flex hotel-profile-div'>
                   <div className='image-div me-5'>
-                    <Image src={News1} />
+                    <Image src={News2} />
                   </div>
-                  <div className='details-div'>
-                    <div>
+                  <div className='details-div mt-4'>
+                    <div className='mb-3'>
                       <h4>Symphony Style Hotel, Quorvus Collection</h4>
-                      
-                        <h6>created at 2023-10-08</h6>
+                      <h6>created at 2023-10-08</h6>
 
-<h5>Package expiry: 2024/04/08</h5>
-                       
+                      <h5>Package expiry: 2024/04/08</h5>
+                      </div>
                       <Row>
-                      <Col lg={8}> 
+                        <Col lg={8}>
                       <div className='time-left mb-3'>
-                        <span>Time Left: 97d 11h 36m 13s </span>
+                        <h6>Time Left: 97d 11h 36m 13s </h6>
                       </div>
                       </Col>
-                      <Col lg={4} className='text-end'><div className='d-flex '>
-                      <button className='me-1 table-button btn-default'>View</button>
+                         <Col lg={4}>  
+                    <div className='d-flex  all-hotel-btns'>
+                      <button className='me-1 btn-default'>View</button>
                       <button className='me-1 btn-default'>Edit</button>
                       <button className='me-1 btn-default'>Delete</button>
                     </div>
                     </Col>
-                      
-                      </Row>
-                    </div>
-                    
-                  </div>
 
+                    </Row>
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                    <div className="room-pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">Next <i className="fa fa-long-arrow-right"></i></a>
+                    </div>
                 </div>
               </div>
               <div id="myProfile" style={{ display: currentSection === 'myProfile' ? 'block' : 'none' }}>
                 <h3 className="mb-4">Personal Information</h3>
 
                 <form id="profileForm">
-                  <div className="row mb-3">
-                    <div className="col-lg-2">
+                  <div class="row mb-3">
+                    <div class="col-lg-2">
                       <label for="fullName">Full Name:</label>
                     </div>
-                    <div className="col-lg-6">
-                      <input className="sidebar-input" type="text" id="fullName" name="fullName" placeholder="Adam Milne" />
+                    <div class="col-lg-6">
+                      <input class="sidebar-input" type="text" id="fullName" name="fullName" placeholder="Adam Milne" />
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <div className="col-lg-2">
+                  <div class="row mb-3">
+                    <div class="col-lg-2">
                       <label for="email">Email:</label>
                     </div>
-                    <div className="col-lg-6">
-                      <input className="sidebar-input" type="email" id="email" name="email" placeholder="adam@gmail.com" />
+                    <div class="col-lg-6">
+                      <input class="sidebar-input" type="email" id="email" name="email" placeholder="adam@gmail.com" />
                     </div>
                   </div>
 
-                  <div className="row mb-3">
-                    <div className="col-lg-2">
+                  <div class="row mb-3">
+                    <div class="col-lg-2">
                       <label for="phoneNumber">Phone Number:</label>
                     </div>
-                    <div className="col-lg-6">
-                      <input className="sidebar-input" type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" />
+                    <div class="col-lg-6">
+                      <input class="sidebar-input" type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" />
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <div className="col-lg-2">
+                  <div class="row mb-3">
+                    <div class="col-lg-2">
                       <label for="dob">Date of Birth:</label>
                     </div>
-                    <div className="col-lg-6">
-                      <input className="sidebar-input" type="date" id="dob" name="dob" />
+                    <div class="col-lg-6">
+                      <input class="sidebar-input" type="date" id="dob" name="dob" />
                     </div>
                   </div>
-                  <div className="row mb-3">
-                    <div className="col-lg-2">
+                  <div class="row mb-3">
+                    <div class="col-lg-2">
                       <label for="bio">Bio:</label>
                     </div>
-                    <div className="col-lg-6">
-                      <textarea className="sidebar-input" id="bio" name="bio" rows="6">I am a web developer</textarea>
+                    <div class="col-lg-6">
+                      <textarea class="sidebar-input" id="bio" name="bio" rows="6">I am a web developer</textarea>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-lg-2">
+                  <div class="row">
+                    <div class="col-lg-2">
                     </div>
-                    <div className="col-lg-4">
+                    <div class="col-lg-4">
                       <button type="submit">Save Profile</button>
                     </div>
                   </div>
@@ -752,9 +409,12 @@ function UserProfile() {
                 </form>
               </div>
               <div id="addHotels" style={{ display: currentSection === 'addHotels' ? 'block' : 'none' }}>
-                <h3 className="mb-4">Add a New Hotel</h3>
-                <MultiStep steps={steps} prevButton={<button style={{ display: 'none' }}>Prev</button>} nextButton={<button style={{ display: 'none' }}>Next</button>} />
-              </div>
+                <MultiStep activeStep={0} >
+    <Step1 title='Hotel Details'/>
+    <Step2 title='Hotel Contacts'/>
+    <Step3 title='Special Offer'/>
+    <Step4 title='Home Page Addon'/>
+</MultiStep>              </div>
 
             </div>
           </div>

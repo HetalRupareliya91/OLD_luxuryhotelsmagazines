@@ -26,11 +26,7 @@ function Blogs (){
             <Row >
                 <Col lg={12} >
                     <div className="breadcrumb-text">
-                        <h2>Blog</h2>
-                        <div className="bt-option">
-                            <a href="./home.html">Home</a>
-                            <span>Blog Grid</span>
-                        </div>
+                        <h2>Blogs</h2>
                     </div>
                 </Col>
             </Row>

@@ -9,7 +9,7 @@ import logo5 from "../../assets/img/hero/logo5.png"
 function ClientLogo() {
  
     return (
-<section className="spad">
+<section className="spad clientlogosection">
          <h3 className="text-center">A SELECTION OF WHO WE WORK WITH</h3>
          <div className="slider">
             <div className="item"><a href=""><img alt="logo" src={logo1}/></a>
