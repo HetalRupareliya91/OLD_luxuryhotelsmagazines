@@ -20,8 +20,6 @@ import Step2 from './multistepForm/stepTwo';
 
 
 
-
-
 function UserProfile() {
   const [currentSection, setCurrentSection] = useState('myHotels');
   const showSection = (section) => {
