@@ -41,7 +41,7 @@ function Login (){
                               <h6>You Can Also Login With <span className="page_move_btn" >Facebook /Google</span></h6>
                            </div>
                            <div className="footer_line">
-                              <h6>Don't have an account? <a className="page_move_btn" href="signup.html">sign up</a></h6>
+                              <h6>Don't have an account? <a className="page_move_btn" href="/signup">sign up</a></h6>
                            </div>
                         </Form>
                      </div>

@@ -1,10 +1,9 @@
 {
   "name": "luxuryhotels",
   "homepage": ".",
-  "proxy":"https://fableadtechnolabs.com/luxuryhotelsmagazines",
+  "proxy": "https://fableadtechnolabs.com/luxuryhotelsmagazines",
   "version": "0.1.0",
   "private": true,
- 
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -21,9 +20,11 @@
     "react-icons": "^4.12.0",
     "react-multistep": "^5.5.9",
     "react-owl-carousel": "^2.3.3",
+    "react-parallax": "^3.5.1",
     "react-quill": "^2.0.0",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
+    "react-scroll-parallax": "^3.4.5",
     "react-step-wizard": "^5.3.11",
     "styled-components": "^6.1.6",
     "web-vitals": "^2.1.4"
