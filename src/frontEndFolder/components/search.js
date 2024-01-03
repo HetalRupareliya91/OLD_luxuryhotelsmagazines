@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
  function Search(){
     return(

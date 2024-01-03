@@ -1,13 +1,13 @@
 import React from "react";
-import Head7 from '../../assets/img/head7.webp'
+import Head7 from '../../assets/img/head7.webp';
 import { Col, Container, Image, Row } from "react-bootstrap";
-import News1 from '../../assets/img/news1.jpg'
-import News2 from '../../assets/img/news2.jpg'
-import News3 from '../../assets/img/news3.jpg'
-import News4 from '../../assets/img/news4.jpg'
-import News5 from '../../assets/img/news5.jpg'
-import News6 from '../../assets/img/news6.jpg'
-import News7 from '../../assets/img/news7.jpg'
+import News1 from '../../assets/img/news1.jpg';
+import News2 from '../../assets/img/news2.jpg';
+import News3 from '../../assets/img/news3.jpg';
+import News4 from '../../assets/img/news4.jpg';
+import News5 from '../../assets/img/news5.jpg';
+import News6 from '../../assets/img/news6.jpg';
+import News7 from '../../assets/img/news7.jpg';
 function Destination() {
     return(
         <section className=" destination-div spad">

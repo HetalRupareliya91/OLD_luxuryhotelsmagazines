@@ -10,6 +10,7 @@ import about1 from '../../assets/img/about/about-1.jpg'
 import about2 from '../../assets/img/about/about-2.jpg'
 import HeroImage from '../../assets/img/hero/hero-2.jpg'
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Parallax } from "react-parallax";
 function AboutUs() {
 
     return(
@@ -92,8 +93,10 @@ function AboutUs() {
         
         </Container>
      </section>
-     <section className="special spad" data-scrollax-parent="true">
-         <div className="cover" data-scrollax="properties: { translateY: '30%' }"><img src={HeroImage} alt=""/></div>
+
+     <Parallax blur={5} bgImage={HeroImage} bgImageAlt="the cat" strength={350}>
+
+     <section className="special spad" >
          <div className="content">
             <div className="container">
                <div className="row ">
@@ -128,7 +131,9 @@ function AboutUs() {
                </div>
             </div>
          </div>
+        
       </section>
+      </Parallax>
       
 </>
     );

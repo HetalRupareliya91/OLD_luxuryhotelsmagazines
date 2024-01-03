@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/img/logo.svg"
+import Logo from "../../assets/img/logo.svg";
 import { FaPhone, FaEnvelope, FaFacebook, FaYoutube, FaInstagram,FaTwitter,FaTripadvisor} from 'react-icons/fa';
 import { Col, Container, Row } from "react-bootstrap";
 

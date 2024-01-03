@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaAddressBook, FaChild, FaDatabase, FaEuroSign, FaFacebookSquare, FaGlobe, FaInternetExplorer, FaNewspaper, FaRecycle, FaSignInAlt, FaTrophy } from "react-icons/fa";

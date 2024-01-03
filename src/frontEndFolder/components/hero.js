@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Container, Row, Carousel } from "react-bootstrap";
-import Hero1 from '../../assets/img/hero/hero-1.jpg'
-import Hero2 from '../../assets/img/hero/hero-2.jpg'
-import Hero3 from '../../assets/img/hero/hero-3.jpg'
+import Hero1 from '../../assets/img/hero/hero-1.jpg';
+import Hero2 from '../../assets/img/hero/hero-2.jpg';
+import Hero3 from '../../assets/img/hero/hero-3.jpg';
 function Hero(){
     return(
   <section className="hero-section">

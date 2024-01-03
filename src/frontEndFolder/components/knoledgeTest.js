@@ -1,8 +1,8 @@
 import React from "react";
-import News4 from '../../assets/img/news4.jpg'
-import News5 from '../../assets/img/news5.jpg'
-import News6 from '../../assets/img/news6.jpg'
-import News7 from '../../assets/img/news7.jpg'
+import News4 from '../../assets/img/news4.jpg';
+import News5 from '../../assets/img/news5.jpg';
+import News6 from '../../assets/img/news6.jpg';
+import News7 from '../../assets/img/news7.jpg';
 import { Col, Container, Row } from "react-bootstrap";
 function KnoledgeTest(){
     return(
