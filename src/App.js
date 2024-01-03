@@ -1,8 +1,7 @@
 
 import './App.css';
 import './assets/style.css';
-import RoutesPage from './frontEndFolder/mainComponent/routes';
-// import './assets/aboutUs.js'
+import RoutesPage from './frontend/routes';
 
 function App() {
   return (

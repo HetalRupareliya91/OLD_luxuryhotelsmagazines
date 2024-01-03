@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import IndexPage from ".";
-import Blogs from "../pages/blogs";
-import BlogDetails from "../pages/blogDetails";
-import Rooms from "../pages/rooms";
-import Login from "../auth/login";
-import Signup from "../auth/signup";
-import UserProfile from "../pages/userProfile";
-import RoomDetails from "../pages/roomDetails";
-import PricingPlan from "../components/pricingPlan";
-import Profile from "../components/profile";
+import Blogs from "./pages/blogs";
+import BlogDetails from "./pages/blogDetails";
+import Rooms from "./pages/rooms";
+import Login from "./auth/login";
+import Signup from "./auth/signup";
+import UserProfile from "./pages/userProfile";
+import RoomDetails from "./pages/roomDetails";
+import PricingPlan from "./components/pricingPlan";
+import Profile from "./components/profile";
 
 
 function RoutesPage(){
