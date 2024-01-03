@@ -37,7 +37,7 @@ function Login (){
                               <input type="password" className="" name="Password" placeholder="Password "/>
                            </div>
                            <button type="submit" name="user_login_submit" className="auth_btn">Log in</button>
-                           <div className="footer_line">
+                           <div className="footer_line mt-2">
                               <h6>You Can Also Login With <span className="page_move_btn" >Facebook /Google</span></h6>
                            </div>
                            <div className="footer_line">
