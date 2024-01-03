@@ -2673,6 +2673,9 @@ figure:hover .img-dec {
 	background-color: #000;
     padding: 60px;
 }
+#footer-newsletter{
+	background-color: unset;
+}
 .footer-newsletter-notice{
 	color: #ffffff;
 }
