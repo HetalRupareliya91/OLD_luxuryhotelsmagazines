@@ -47,7 +47,7 @@ function UserProfile() {
       date: '2023-12-23',
       hotelName: 'Hotel 2',
       location: 'Location 2',
-      amount: '$123',
+      amount: '$123', 
     },
     {
       date: '2023-12-22',

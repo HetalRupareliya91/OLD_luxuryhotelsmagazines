@@ -374,7 +374,7 @@ Default sorting</h6>
                             <a href="room-details.html" className="primary-btn">More Details</a>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div className="col-lg-12">
                     <div className="room-pagination">
                         <a href="#">1</a>
