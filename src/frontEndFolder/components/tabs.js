@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from '../../assets/img/logo.png';
 import Hero3 from "../../assets/img/hero/hero-3.jpg";
+import { Parallax } from "react-parallax";
 
 function Tabs() {
   const [activeTab, setActiveTab] = useState("Zoom");
@@ -10,8 +11,9 @@ function Tabs() {
   }
 
   return (
-    <section className="special spad " data-scrollax-parent="true">
-      <div className="cover" data-scrollax="properties: { translateY: '30%' }"><img src={Hero3} /></div>
+    <Parallax blur={0} bgImage={Hero3} bgImageAlt="the cat" strength={300}>
+    <section className="special spad tabs-section" data-scrollax-parent="true">
+    
       <div className="content tabcontainer">
         <div>
           <div className="w3-sidebar w3-bar-block  w3-card">
@@ -38,7 +40,9 @@ function Tabs() {
           </div>
         </div>
       </div>
+     
     </section>
+    </Parallax>
   );
 }
 

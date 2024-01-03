@@ -2287,10 +2287,12 @@ ul, ol {
 }
 /* Large Mobile: 480px */
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
 	.testimonial-slider.owl-carousel .owl-nav {
 		display: none;
 	}
+
+
 	.room-details-item .rd-text .rd-title {
 		margin-bottom: 25px;
 	}
@@ -2322,7 +2324,145 @@ ul, ol {
 	.hp-room-item {
 		margin-bottom: 10px;
 	}
-}
+} */
+
+@media only screen and (max-width: 767px) {
+	.zoom-content {
+		margin-left: 0px!important;
+		background: #ffffff!important;
+		position: relative;
+		border: 1px solid #b5191fff;
+	}
+	.pricingTable{
+		margin: 0 0 30px 0;
+	 }
+	
+	.pricingTable path {
+	 fill: #b5191fff;
+	}
+	.bg-primary {
+	 background-color: #b5191fff!important;
+	
+	}
+	.card {
+	 border: 1px solid #dbdbdb;
+	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+	 margin: 0 -15px;
+	 
+	 transition: all 0.4s ease-in-out 0s;
+	 margin: 0px 10px;
+	 border-radius: 12px;
+	}
+	.buttons {
+		padding: 10px 21px 13px!important;
+	}
+	.amenity:nth-child(odd) {
+		float: left;
+	}
+	.fa-facebook {
+		padding: 7px 15px!important;
+		margin-right: 1px!important;
+	}
+	.sharethis i {
+		border: 1px solid #80808052;
+		padding: 7px 8px!important;
+		margin-right: 6px;
+		font-size: 27px;
+		border-radius: 15px;
+		color: #b5191fff;
+	}
+	.logo img {
+		width: 50%;
+	}
+	.amenity-main {
+		margin-top: 10px;
+		display: contents!important;
+	}
+	.amenity {
+		border: 1px solid #80808085;
+		padding: 8px 6px!important;
+		font-size: 16px;
+		width: 48%!important;
+		margin: 0px 4px;
+		display: flex!important;
+		color: black;
+		margin-top: 7px!important;
+	}
+	.w3-sidebar.w3-bar-block.w3-card {
+		position: absolute!important;
+		height: auto;
+		background: transparent!important;
+		box-shadow: unset!important;
+		top: 39px;
+		display: flex;
+		width: 86%!important;
+		font-size: 12px;
+	}
+	button.w3-bar-item {
+		width: unset!important;
+		padding: 8px 6px!important;
+	}
+	.tabcontainer {
+		width: 93%!important;
+		margin: auto;
+		margin-top: 15px!important;
+	}
+	.menu {
+		display: flex;
+	}
+		.testimonial-slider.owl-carousel .owl-nav {
+			display: none;
+		}
+		.room-details-item .rd-text .rd-title {
+			margin-bottom: 25px;
+		}
+		.room-details-item .rd-text .rd-title h3 {
+			float: none;
+			margin-bottom: 30px;
+		}
+		.room-details-item .rd-text .rd-title .rdt-right {
+			float: none;
+			text-align: left;
+		}
+		.footer-section .copyright-option ul li {
+			margin-right: 25px;
+		}
+		.blog-details-text .tag-share .tags {
+			float: none;
+			margin-bottom: 20px;
+		}
+		.blog-details-text .tag-share .social-share {
+			float: none;
+		}
+		.about-text .section-title h2 {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.hp-room-items {
+			margin: 0 -5px;
+		}
+		.hp-room-item {
+			margin-bottom: 10px;
+		}
+		.tabsec {
+		height: 160vh!important;
+	}
+	.hotel-profile-div{
+		display: flex;
+		flex-direction: column;
+	}
+	.hotel-profile-div .image-div{
+		width: 100% !important;
+		margin-right: unset !important;
+	}
+	.image-container{
+		display: none;
+	}
+	.form-container {
+		height: 65vh;
+		box-sizing: border-box;
+	}
+	}
 /* Small Mobile: 320px */
 
 @media only screen and (max-width: 479px) {
@@ -3007,7 +3147,6 @@ transform: translateX(50px);
 }
 
 .userprofilebuttons{
-	width: 15% !important;
 	background-color: #b5191fff;
     color: white;
     padding: 8px;
@@ -3091,7 +3230,7 @@ transform: translateX(50px);
 	padding: 15px;
 }
 .hotel-profile-div .image-div{
-	width: 30% !important;
+	width: 30% ;
 	height: auto;
 }
 .hotel-profile-div .image-div img{
@@ -3163,7 +3302,10 @@ transform: translateX(50px);
     height: auto;
     background: transparent!important;
     box-shadow: unset!important;
-    width:215px
+    width:215px;
+	display: flex;
+	flex-direction: column;
+	
 }
 .tabcontainer {
     width: 63%;
@@ -3734,4 +3876,7 @@ a.btn.btn-block.btn-default {
 	}
 	.serch-btn:hover {
 		background-color: #fff;
+	}
+	ul{
+		padding-left: unset !important;
 	}
