@@ -10,7 +10,7 @@ function CallToAction (){
                
                 <Row className=" align-items-center">
                     <Col lg={3} xs={12}>
-                     <div className="logo">
+                     <div className="logo mt-3 mb-0">
                         <a href="./index.html">
                         <img src={Logo} alt=""/>
                         </a>
@@ -23,7 +23,7 @@ function CallToAction (){
                         </span>
                     </Col>
                     <Col  xs={12} sm={6} lg={5} xl={6} >
-                        <form id="footer-newsletter" className="d-flex justify-content-end ">
+                        <form id="footer-newsletter" className="d-flex  ">
                             <input type="text" className="form-control newsletteremailfield" name="email" id="emailsignupAddr" placeholder="Your email address"/>
                             <input type="hidden" id="footerToken" className="tokenfield" name="token"/>
                             <button type="submit" id="sitefooter_emailsignup" className="btn btn-default emailsignup" name="emailPopupSubscribe">Sign up</button>

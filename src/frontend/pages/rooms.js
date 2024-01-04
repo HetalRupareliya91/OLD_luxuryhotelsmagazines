@@ -11,6 +11,7 @@ import News5 from '../../assets/img/news5.jpg'
 import News6 from '../../assets/img/news6.jpg'
 import News7 from '../../assets/img/news7.jpg'
 import { FaSearch } from 'react-icons/fa';
+import CallToAction from '../components/callToAction';
 
 function Rooms(){
     return (
@@ -289,8 +290,8 @@ function Rooms(){
      
  <h1 className="text-center mt-5">Our Hotels</h1>
             <Row >
-            <Col lg={6} ><h5 style={{lineHeight: "3",marginRight: "6px"}}>Showing 1–12 of 33 results
-Default sorting</h5>
+            <Col lg={6} ><h6 style={{lineHeight: "3",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
+Default sorting</h6>
 </Col>
             <div className="col-lg-6 text-right">
                   <div className="dropdown text-end ">
@@ -373,7 +374,7 @@ Default sorting</h5>
                             <a href="room-details.html" className="primary-btn">More Details</a>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div className="col-lg-12">
                     <div className="room-pagination">
                         <a href="#">1</a>
@@ -384,6 +385,7 @@ Default sorting</h5>
             </div>
         </Container>
     </section>
+    <CallToAction/>
     <Footer/>
  </>
     );

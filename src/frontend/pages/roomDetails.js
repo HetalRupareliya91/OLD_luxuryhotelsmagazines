@@ -40,7 +40,7 @@ function RoomDetails() {
                             </div>
 
                         </div>
-                        <div className="col-lg-4 ">
+                        <div className="col-lg-4 mt-3 ">
                             <div>
 
                                 <a href="/discover/discover-saudi/content/discover-saudis-unesco-world-heritage-sites/" aria-label="Discover Saudi's UNESCO World Heritage Sites" style={{ display: "flex", flexDirection: "row", flexWrap: "nowrap", alignItems: "center", marginBottom: "10px", color: "#000" }}>
@@ -239,7 +239,7 @@ function RoomDetails() {
                                     <div className="col-lg-8"><p className="f-para sharethis mt-2"><i aria-hidden="true"><FaFacebook /></i>
                                         <i aria-hidden="true"><FaTwitter /></i><i aria-hidden="true"><FaWhatsapp /></i><i aria-hidden="true"><FaTelegram /></i><i aria-hidden="true"><FaLinkedin /></i><i aria-hidden="true"><FaSnapchat /></i><i aria-hidden="true"><FaEnvelope /></i>
                                     </p></div>
-                                    <div className="col-lg-4 text-end">
+                                    <div className="col-lg-4 mt-3">
 
                                         <p className="f-para likeview mt-2">
                                             <i aria-hidden="true">&nbsp;5 <FaEye /></i>

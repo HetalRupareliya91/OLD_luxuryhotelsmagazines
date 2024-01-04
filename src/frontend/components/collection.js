@@ -10,7 +10,7 @@ function Collections() {
         <section className="services-section spad">
         <Container >
            <h2 className="text-center mb-5">The sustainability collection</h2>
-            <Row >
+            
               <Row className="mt-3">
                 <Col lg={3} md={6}>
                    <figure>
@@ -51,7 +51,7 @@ function Collections() {
                 </div>
              </Row>
             
-            </Row>
+            
         </Container>
     </section>
     );
