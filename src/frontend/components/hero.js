@@ -28,6 +28,7 @@ function Hero(){
                   // className="d-block w-100"
                   src={Hero1}
                   alt="First slide"
+                  className="slider-img"
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -35,6 +36,7 @@ function Hero(){
                   // className="d-block w-100"
                   src={Hero2}
                   alt="Second slide"
+                  className="slider-img"
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -42,6 +44,7 @@ function Hero(){
                   // className="d-block w-100"
                   src={Hero3}
                   alt="Third slide"
+                  className="slider-img"
                 />
               </Carousel.Item>
             </Carousel>

@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/footer";
 import { Form } from "react-bootstrap";
 import Header from "../components/header";
+import axios from "axios";
 function Login (){
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+ 
+   const handleLogin = async (e) => {
+     e.preventDefault();
+ 
+     const userData = { email, password };
+ 
+     try {
+       const response = await axios.post(
+         " https://luxuryhotelsmagazines.fableadtechnolabs.com/backend/api/user-login",
+         userData,
+         {
+           headers: {
+             Authorization: "hXuRUGsEGuhGf6KM",
+           },
+         }
+       );
+ 
+       if (response.status === 200) {
+         console.log("Login successful:", response.data);
+         // Handle successful login, e.g., redirect the user or set a user state
+       } else {
+         console.error("Login failed:", response.statusText);
+         // Handle login failure, e.g., show an error message
+       }
+     } catch (error) {
+       console.error("Error:", error.message);
+       // Handle network errors or other exceptions
+     }
+   };
+
     return(
 <>
 <Header/>
@@ -31,12 +64,12 @@ function Login (){
                            </div>
                            <div className="form-floating">
                               <label for="Email"></label>
-                              <input type="email" className="" name="Email" placeholder="Email "/>
+                              <input type="email" className="" name="Email" placeholder="Email "  onChange={(e) => setEmail(e.target.value)}/>
                            </div>
                            <div className="form-floating">
-                              <input type="password" className="" name="Password" placeholder="Password "/>
+                              <input type="password" className="" name="Password" placeholder="Password "  onChange={(e) => setPassword(e.target.value)}/>
                            </div>
-                           <button type="submit" name="user_login_submit" className="auth_btn">Log in</button>
+                           <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>
                            <div className="footer_line mt-2">
                               <h6>You Can Also Login With <span className="page_move_btn" >Facebook /Google</span></h6>
                            </div>

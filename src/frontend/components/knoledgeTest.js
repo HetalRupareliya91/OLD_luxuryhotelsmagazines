@@ -9,7 +9,7 @@ function KnoledgeTest(){
 <section className="spad">
           <Container >
             <h2 className="text-center mb-4">Test your travel knowledge</h2>
-            <Row >
+            
                <Row className=" mt-3">
                  <Col lg={3} md={6} >
                     <figure>
@@ -50,7 +50,7 @@ function KnoledgeTest(){
                  </Col>
               </Row>
              
-             </Row>
+             
           </Container>
       </section>
     );

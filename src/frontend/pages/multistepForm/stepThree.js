@@ -25,7 +25,7 @@ function Step3() {
         </Row>
         <Row className='mb-3'>
           <Col lg={12}>
-            <textarea className="sidebar-input" rows={4} required />
+            <textarea className="sidebar-input" rows={4} placeholder="Description" required />
           </Col>
         </Row>
         <Row className='mb-3'>
