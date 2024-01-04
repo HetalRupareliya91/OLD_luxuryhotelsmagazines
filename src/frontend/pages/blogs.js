@@ -20,7 +20,7 @@ function Blogs (){
     return(
 <>
 <Header/>
- <Hero/>
+ {/* <Hero/> */}
  <div className='serch-div'>
  <div className="booking-form-rooms">
               <Form action="#" className='booking-form-rooms-form'>
@@ -308,9 +308,9 @@ function Blogs (){
                         <img src={Blog1} />
                         <div className="bi-text">
                             <span className="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details.html">Tremblant In Canada</a></h4>
+                            <h4><a href="/blog-details">Tremblant In Canada</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 15th April, 2019 </div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
                         </div>
                     </div>
                 </Col>
@@ -319,9 +319,9 @@ function Blogs (){
                     <img src={Blog2} />
                         <div className="bi-text">
                             <span className="b-tag">Camping</span>
-                            <h4><a href="./blog-details.html">Choosing A Static Caravan</a></h4>
+                            <h4><a href="/blog-details">Choosing A Static Caravan</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 15th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="/blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -333,7 +333,7 @@ function Blogs (){
                             <span className="b-tag">Event</span>
                             <h4><a href="./blog-details">Copper Canyon</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 21th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -345,7 +345,7 @@ function Blogs (){
                             <span className="b-tag">Trivago</span>
                             <h4><a href="./blog-details">A Time Travel Postcard</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 22th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -355,9 +355,9 @@ function Blogs (){
                     <img src={Blog5} />
                         <div className="bi-text">
                             <span className="b-tag">Camping</span>
-                            <h4><a href="./blog-details.html">A Time Travel Postcard</a></h4>
+                            <h4><a href="./blog-details">A Time Travel Postcard</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 25th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -367,9 +367,9 @@ function Blogs (){
                     <img src={Blog6} />
                         <div className="bi-text">
                             <span className="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details.html">Virginia Travel For Kids</a></h4>
+                            <h4><a href="./blog-details">Virginia Travel For Kids</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 28th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -379,9 +379,9 @@ function Blogs (){
                     <img src={Blog7} />
                         <div className="bi-text">
                             <span className="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details.html">Bryce Canyon A Stunning</a></h4>
+                            <h4><a href="./blog-details">Bryce Canyon A Stunning</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 29th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -391,9 +391,9 @@ function Blogs (){
                     <img src={Blog8} />
                         <div className="bi-text">
                             <span className="b-tag">Event & Travel</span>
-                            <h4><a href="./blog-details.html">Motorhome Or Trailer</a></h4>
+                            <h4><a href="./blog-details">Motorhome Or Trailer</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 30th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>
@@ -403,9 +403,9 @@ function Blogs (){
                     <img src={Blog9} />
                         <div className="bi-text">
                             <span className="b-tag">Camping</span>
-                            <h4><a href="./blog-details.html">Lost In Lagos Portugal</a></h4>
+                            <h4><a href="/blog-details">Lost In Lagos Portugal</a></h4>
                             <div className="b-time"><i className="icon_clock_alt"></i> 30th April, 2019</div>
-                            <a href="room-details.html" className="primary-btn mt-3">More Details</a>
+                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
                     </div>

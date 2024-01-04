@@ -313,12 +313,12 @@ Default sorting</h6>
         </Row>
             <div className="row">
                 <div className="col-lg-4 col-md-6">
-                    <a href="room-details.html"><div className="room-item">
+                    <a href="/room-details"><div className="room-item">
                         <img src={News5} alt=""/>
                         <div className="ri-text">
                             <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
                               
-                            <a href="room-details.html" className="primary-btn">More Details</a>
+                            <a href="room-details" className="primary-btn">More Details</a>
                         </div>
                     </div></a>
                 </div>
@@ -328,7 +328,7 @@ Default sorting</h6>
                         <div className="ri-text">
                             <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
                              
-                            <a href="room-details.html" className="primary-btn">More Details</a>
+                            <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -338,7 +338,7 @@ Default sorting</h6>
                         <div className="ri-text">
                             <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
                              
-                            <a href="room-details.html" className="primary-btn">More Details</a>
+                            <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -349,7 +349,7 @@ Default sorting</h6>
                             <h4>Luxury Room</h4>
                              
                           
-                            <a href="room-details.html" className="primary-btn">More Details</a>
+                            <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -360,7 +360,7 @@ Default sorting</h6>
                             <h4>Symphony Style Hotel, Quorvus Collection</h4>
                              
                            
-                            <a href="room-details.html" className="primary-btn">More Details</a>
+                            <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -371,7 +371,7 @@ Default sorting</h6>
                             <h4>David Citadel Hotel  </h4>
                              
                            
-                            <a href="room-details.html" className="primary-btn">More Details</a>
+                            <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div> 

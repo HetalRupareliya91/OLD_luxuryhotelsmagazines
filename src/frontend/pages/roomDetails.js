@@ -285,7 +285,7 @@ function RoomDetails() {
                                     <div className="col-lg-6 mt-3 text-center"><button className=" btn-default w-100">Visit Website</button>
 
                                     </div>
-                                    <div className="col-lg-12 mt-3 text-center"><a href="create-hotel-package.html"><button className=" btn-default w-100">Claim Listing</button></a>
+                                    <div className="col-lg-12 mt-3 text-center"><a href="/pricing-plan"><button className=" btn-default w-100">Claim Listing</button></a>
                                     </div>
 
 

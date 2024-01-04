@@ -501,7 +501,7 @@ ul, ol {
 	padding: 7px;
 }
 .offcanvas-menu-wrapper {
-	display: none;
+	/* display: none; */
 }
 /*---------------------
   Hero
@@ -2062,7 +2062,7 @@ ul, ol {
 		width: 300px;
 		z-index: 999;
 		background: #ffffff;
-		text-align: center;
+		/* text-align: center; */
 		overflow-y: auto;
 		height: 100%;
 		opacity: 0;
@@ -2139,6 +2139,10 @@ ul, ol {
 	.offcanvas-menu-wrapper .header-configure-area .language-option .flag-dropdown ul li {
 		list-style: none;
 		text-align: left;
+		
+	}
+	nav.mainmenu.mobile-menu li {
+		padding: 7px 0;
 	}
 	.offcanvas-menu-wrapper .header-configure-area .language-option .flag-dropdown ul li a {
 		font-size: 14px;
@@ -2157,13 +2161,13 @@ ul, ol {
 		font-size: 13px;
 		font-weight: 700;
 		padding: 16px 28px 15px;
-		background: #dfa974;
+		background: #b5191fff;
 		color: #ffffff;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
 	.offcanvas-menu-wrapper .mainmenu {
-		display: none;
+		/* display: none; */
 	}
 	.offcanvas-menu-wrapper .slicknav_menu {
 		background: transparent;
@@ -2184,39 +2188,39 @@ ul, ol {
 	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li .dropdown {
 		padding-left: 20px;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li a {
-		margin: 0;
+	.offcanvas-menu-wrapper  ul li a {
+		margin: 0 !important;
 		padding: 10px;
 		font-weight: 600;
 		font-size: 14px;
-		color: #19191a;
+		color: #19191a !important;
 		border-bottom: 1px solid #e5e5e5;
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li a:hover {
+	.offcanvas-menu-wrapper   ul li a:hover {
 		border-radius: 0;
 		background: transparent;
 		color: #dfa974;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row a {
+	.offcanvas-menu-wrapper   .slicknav_row a {
 		border-bottom: 0;
 		padding-left: 0;
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row span {
+	.offcanvas-menu-wrapper   .slicknav_row span {
 		color: #19191a;
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row:hover a {
+	.offcanvas-menu-wrapper:hover a {
 		color: #dfa974;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row:hover span {
+	.offcanvas-menu-wrapper:hover span {
 		color: #dfa974;
 	}
 	.offcanvas-menu-wrapper .top-social {
@@ -2367,7 +2371,16 @@ ul, ol {
 		width: 1.3em;
 		line-height: 1.4em;
 		border-radius: 50%;
-		bottom: -5.5rem !important;
+		bottom: -5.6rem !important;
+	}
+	.user_login .go2150698616:before {
+		position: relative;
+		float: left;
+		left: 50%;
+		width: 1.3em;
+		line-height: 1.4em;
+		border-radius: 50%;
+		bottom: -4.1rem !important;
 	}
 	#content {
 		flex: 1 1;
@@ -3963,7 +3976,7 @@ a.btn.btn-block.btn-default {
 	div#main-addhotel {
 		padding: 30px;
 	}
-	div#addHotels ol {
+	.go2392553372 {
 		padding: unset;
 		margin-bottom: 42px;
 	}

@@ -9,7 +9,7 @@ import News3 from '../../assets/img/news3.jpg'
 import News4 from '../../assets/img/news4.jpg'
 import News5 from '../../assets/img/news5.jpg'
 import News6 from '../../assets/img/news6.jpg'
-import Logo from "../../assets/img/logo.png"
+import Logo from "../../assets/img/logo.svg"
 
 import { Col, Container, Image, Row } from "react-bootstrap";
  function BlogDetails() {
@@ -85,7 +85,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                {/* <div className="row">
 
                     <div className="col-lg-12">
                         <div className="row mt-3">
@@ -121,7 +121,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                         </div>
 
                     </div>
-                </div>
+                </div> */}
 
                 <div className="row mt-5">
                     <div className="col-lg-8">
@@ -187,7 +187,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                                 search the various sites of our great land, America.</p>
 
                         </div>
-                        <div className="rd-text">
+                        {/* <div className="rd-text">
                             <div className="rd-title">
                                 <i  aria-hidden="true"><FaHome/></i> Spa & Wellness
                             </div>
@@ -201,8 +201,8 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                                 achievement of a lifetime. It can be similar to sojourning with your residence as you
                                 search the various sites of our great land, America.</p>
 
-                        </div>
-                        <div className="rd-text">
+                        </div> */}
+                        {/* <div className="rd-text">
                             <div className="rd-title">
                                 <i  aria-hidden="true"><FaList/></i> Other Facilities
                             </div>
@@ -231,7 +231,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                                 achievement of a lifetime. It can be similar to sojourning with your residence as you
                                 search the various sites of our great land, America.</p>
 
-                        </div>
+                        </div>*/}
                         <div className="rd-text">
                             <div className="rd-title">
                                 <i className="fa fa-share-alt" aria-hidden="true"></i> Share This
@@ -251,7 +251,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                             </div>
 
 
-                        </div>
+                        </div> 
 
                     </div>
                     <div className="col-lg-4">
@@ -279,7 +279,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/D0UnqGm_miA?si=qnB4y7REmVnd-Lyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
 
-                            <div className="locationmap mt-3">
+                            {/* <div className="locationmap mt-3">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29759.049789885605!2d72.75953112132576!3d21.196876856223426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c351ceae251%3A0x1d35b30f855a2c36!2sAdajan%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703916461865!5m2!1sen!2sin" width="100%" height="450" style={{ border: "0", allowfullscreen: "", loading: "lazy", referrerpolicy: "no-referrer-when-downgrade" }}></iframe>
                             </div>
                             <div className="row  ">
@@ -287,11 +287,11 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                                 <div className="col-lg-6 mt-3 text-center"><button className=" btn-default w-100">Visit Website</button>
 
                                 </div>
-                                <div className="col-lg-12 mt-3 text-center"><a href="create-hotel-package.html"><button className=" btn-default w-100">Claim Listing</button></a>
+                                <div className="col-lg-12 mt-3 text-center"><a href="/pricing-plan"><button className=" btn-default w-100">Claim Listing</button></a>
                                 </div>
 
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

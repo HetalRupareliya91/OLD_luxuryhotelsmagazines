@@ -14,10 +14,10 @@ function Login (){
  
      try {
        const response = await axios.post("https://luxuryhotelsmagazines.fableadtechnolabs.com/backend/api/user-login",
-         userData,
+         JSON.stringify(userData),
          {
            headers: {
-             Authorization: "hXuRUGsEGuhGf6KM",
+             'Authorization': "hXuRUGsEGuhGf6KM",
            },
          }
        );
@@ -66,11 +66,8 @@ function Login (){
                               <input type="password" className="" name="Password" placeholder="Password "  onChange={(e) => setPassword(e.target.value)}/>
                            </div>
                            <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>
-                           <div className="footer_line mt-2">
-                              <h6>You Can Also Login With <span className="page_move_btn" >Facebook /Google</span></h6>
-                           </div>
-                           <div className="footer_line">
-                              <h6>Don't have an account? <a className="page_move_btn" href="/signup">sign up</a></h6>
+                           <div className="footer_line mt-3">
+                              <h6>Don't have an account? <a className="page_move_btn" href="/signup">Sign up</a></h6>
                            </div>
                         </Form>
                      </div>

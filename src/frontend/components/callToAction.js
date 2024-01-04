@@ -11,7 +11,7 @@ function CallToAction (){
                 <Row className=" align-items-center">
                     <Col lg={3} xs={12}>
                      <div className="logo mt-3 mb-0">
-                        <a href="./index.html">
+                        <a href="/">
                         <img src={Logo} alt=""/>
                         </a>
                      </div>                 
