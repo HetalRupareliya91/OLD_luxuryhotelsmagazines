@@ -381,51 +381,51 @@ function UserProfile() {
                 <h3 className="mb-4">Personal Information</h3>
 
                 <form id="profileForm">
-                  <div class="row mb-3">
-                    <div class="col-lg-2">
+                  <div className="row mb-3">
+                    <div className="col-lg-2">
                       <label for="fullName">Full Name:</label>
                     </div>
-                    <div class="col-lg-6">
-                      <input class="sidebar-input" type="text" id="fullName" name="fullName" placeholder="Adam Milne" />
+                    <div className="col-lg-6">
+                      <input className="sidebar-input" type="text" id="fullName" name="fullName" placeholder="Adam Milne" />
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-2">
+                  <div className="row mb-3">
+                    <div className="col-lg-2">
                       <label for="email">Email:</label>
                     </div>
-                    <div class="col-lg-6">
-                      <input class="sidebar-input" type="email" id="email" name="email" placeholder="adam@gmail.com" />
+                    <div className="col-lg-6">
+                      <input className="sidebar-input" type="email" id="email" name="email" placeholder="adam@gmail.com" />
                     </div>
                   </div>
 
-                  <div class="row mb-3">
-                    <div class="col-lg-2">
+                  <div className="row mb-3">
+                    <div className="col-lg-2">
                       <label for="phoneNumber">Phone Number:</label>
                     </div>
-                    <div class="col-lg-6">
-                      <input class="sidebar-input" type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" />
+                    <div className="col-lg-6">
+                      <input className="sidebar-input" type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" />
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-2">
+                  <div className="row mb-3">
+                    <div className="col-lg-2">
                       <label for="dob">Date of Birth:</label>
                     </div>
-                    <div class="col-lg-6">
-                      <input class="sidebar-input" type="date" id="dob" name="dob" />
+                    <div className="col-lg-6">
+                      <input className="sidebar-input" type="date" id="dob" name="dob" />
                     </div>
                   </div>
-                  <div class="row mb-3">
-                    <div class="col-lg-2">
+                  <div className="row mb-3">
+                    <div className="col-lg-2">
                       <label for="bio">Bio:</label>
                     </div>
-                    <div class="col-lg-6">
-                      <textarea class="sidebar-input" id="bio" name="bio" rows="6">I am a web developer</textarea>
+                    <div className="col-lg-6">
+                      <textarea className="sidebar-input" id="bio" name="bio" rows="6">I am a web developer</textarea>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-lg-2">
+                  <div className="row">
+                    <div className="col-lg-2">
                     </div>
-                    <div class="col-lg-4">
+                    <div className="col-lg-4">
                       <button type="submit">Save Profile</button>
                     </div>
                   </div>

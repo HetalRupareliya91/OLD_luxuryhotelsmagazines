@@ -13,8 +13,7 @@ function Login (){
      const userData = { email, password };
  
      try {
-       const response = await axios.post(
-         " https://luxuryhotelsmagazines.fableadtechnolabs.com/backend/api/user-login",
+       const response = await axios.post("https://luxuryhotelsmagazines.fableadtechnolabs.com/backend/api/user-login",
          userData,
          {
            headers: {
@@ -24,15 +23,12 @@ function Login (){
        );
  
        if (response.status === 200) {
-         console.log("Login successful:", response.data);
-         // Handle successful login, e.g., redirect the user or set a user state
+         console.log("Login successful:");
        } else {
-         console.error("Login failed:", response.statusText);
-         // Handle login failure, e.g., show an error message
+         console.error("Login failed:");
        }
      } catch (error) {
        console.error("Error:", error.message);
-       // Handle network errors or other exceptions
      }
    };
 

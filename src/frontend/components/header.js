@@ -15,7 +15,7 @@ function Header() {
    <div className={`canvas-open ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
         {isMobileMenuOpen ? <FaBars /> : <FaBars />}
       </div>
-      <div className={`offcanvas-menu-wrapper ${isMobileMenuOpen ? 'active' : ''}`}>
+      <div className="offcanvas-menu-wrapper">
       <div className="canvas-close">
          <i className="icon_close"></i>
       </div>
@@ -27,10 +27,10 @@ function Header() {
       </div>
       <nav className="mainmenu mobile-menu">
          <ul> 
-            <li class="active"><a href="/">Home</a></li>
+            <li className="active"><a href="/">Home</a></li>
             <li>
                <a href="/">Latest News</a>
-               <ul class="dropdown">
+               <ul className="dropdown">
                   <li><a href="./room-details">Room Details</a></li>
                   <li><a href="#">-Find Luxury Hotels</a></li>
                   <li><a href="#">-Create Profile</a></li>
@@ -48,7 +48,7 @@ function Header() {
          <a href="#"><i className="fa fa-instagram"></i></a>
       </div>
       <ul className="top-widget">
-         <li><a href="mailto:Info@LuxuryHotelsMagazines.Com"><i class="fa fa-envelope"></i> Info@LuxuryHotelsMagazines.Com</a></li>
+         <li><a href="mailto:Info@LuxuryHotelsMagazines.Com"><i className="fa fa-envelope"></i> Info@LuxuryHotelsMagazines.Com</a></li>
       </ul>
    </div>
 <header className="header-section">

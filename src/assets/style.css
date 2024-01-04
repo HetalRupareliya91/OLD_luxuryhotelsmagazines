@@ -495,6 +495,11 @@ ul, ol {
 .canvas-open {
 	display: none;
 }
+.canvas-open svg{
+	margin: unset ;
+	border: 1px solid black;
+	padding: 7px;
+}
 .offcanvas-menu-wrapper {
 	display: none;
 }
@@ -2039,18 +2044,17 @@ ul, ol {
 		position: absolute;
 		right: 40px;
 		top: 25px;
-		font-size: 22px;
+		font-size: 32px;
 		width: 30px;
-		height: 30px;
+		/* height: 30px; */
 		color: #19191a;
-		border: 1px solid #19191a;
-		border-radius: 2px;
 		line-height: 33px;
 		text-align: center;
 		z-index: 100;
 		display: block;
 		cursor: pointer;
 	}
+	
 	.offcanvas-menu-wrapper {
 		position: fixed;
 		left: -300px;
