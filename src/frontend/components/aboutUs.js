@@ -18,7 +18,7 @@ function AboutUs() {
             <section className="aboutus-section spad">
         <Container>
           <div className="hp-room-items">
-            <h2 className="text-center mb-5">New Arrivals</h2>
+            <h1 className="text-center mb-4">New Arrivals</h1>
             <Row>
               <Col lg={3} md={6}>
                 <figure>

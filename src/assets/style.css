@@ -31,7 +31,12 @@
 
 /* Template default CSS
 /*----------------------------------------*/
-
+@font-face {
+	font-family: 'cabin';
+	src: url('./Cabin-Regular.ttf') 
+		 
+	/* Add additional formats if needed */
+  }
 html, body {
 	height: 100%;
 	font-family: "Cabin", sans-serif !important;
@@ -47,6 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: #111111;
 	font-weight: 400;
 	font-family: "Lora", serif;
+	font-family: "Cabin", sans-serif !important;
+
 }
 h1 {
 	font-size: 70px;
@@ -392,6 +399,7 @@ ul, ol {
 	position: relative;
 	z-index: 9;
 	height: 90px;
+	box-shadow: 7px 22px 31px -40px;
 }
 .menu-item .logo {
 	padding: 25px 0;
@@ -534,7 +542,7 @@ ul, ol {
 }
 .booking-form {
     background: white;
-    padding: 31px 40px 37px 40px;
+    padding: 1px 1px 1px 1px;
     border-radius: 24px;
     position: relative;
     margin-top: -57px;
@@ -1248,8 +1256,13 @@ ul, ol {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.room-pagination .active{
+background: #b5191fff;
+color: #ffffff;
+}
 .room-pagination a:last-child {
 	margin-right: 0;
+	
 }
 .room-pagination a:hover {
 	background: #b5191fff;
@@ -2487,6 +2500,11 @@ ul, ol {
 		margin: auto;
 		margin-top: 15px!important;
 	}
+	.tabcontainer1{
+		width: 93%!important;
+		margin: auto;
+		margin-top: 15px!important;
+	}
 	.menu {
 		display: flex;
 	}
@@ -2769,17 +2787,16 @@ figure:hover .img-dec {
 	color: #ffffff;
 }
 .footer-top #footer-newsletter input {
-    margin-right: 1rem;
     width: 68%;
     padding: 0.313rem;
     border: 1px solid #fff;
-    border-radius: 3px;
+    border-radius: 3px 0px 0px 3px;
 }
  .footer-top #footer-newsletter .btn {
     text-transform: uppercase;
 	background-color: #b5191fff;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 0px 4px 4px 0px;
     border: 1px solid #b5191fff;
 padding: 0px 10px 0px 10px;
 }
@@ -2819,8 +2836,8 @@ padding: 0px 10px 0px 10px;
 }
 .contentcollection_itemtext2{
 	font-size: 18px;
-	width: 100%;	
-	margin-left: 20px;
+	/* width: 100%;	 */
+	/* margin-left: 20px; */
 }
 
 .add-hotels{
@@ -2879,8 +2896,6 @@ padding: 0px 10px 0px 10px;
    .sidebar-list{
     color: #fff !important;
 	font-size: 20px;
-	
-	text-align: center;
    }
    .sidebar-list:hover{
     color: #fff !important;
@@ -2922,7 +2937,7 @@ padding: 0px 10px 0px 10px;
 		width: 100%;
 		padding: 10px;
 		margin-bottom: 15px;
-		border: 1px solid #b5191fff;
+		border: 1px solid #000;
 		border-radius: 4px;
 		box-sizing: border-box;
 	}
@@ -2943,11 +2958,11 @@ padding: 0px 10px 0px 10px;
 	}
 
 	.logout-btn {
-		position: absolute;
+		/* position: absolute; */
 		font-size: 20px;
-		bottom: 0px;
-		
-		width: 100%;
+		/* bottom: 0px; */
+		/* width: 100%; */
+		padding: 8px 16px;
 	}
 	svg {
 		
@@ -3067,7 +3082,7 @@ button {
 }
 
 button:hover {
-	background-color: #b5191fff;
+	background-color: #b5191fff !important;
 }
 
 .signup-section {
@@ -3089,19 +3104,6 @@ height: 60px;
 display: flex;
 justify-content: center;
 /* margin:20px 0; */
-}
-
-.logo .bluebirdlogo {
-height: 100%;
-}
-
-.logo p {
-height: 100%;
-display: flex;
-align-items: center;
-font-size: 30px;
-color: rgb(66, 68, 74);
-text-shadow: var(--bg-text-shadow);
 }
 
 .auth_container {
@@ -3155,6 +3157,9 @@ margin: 10px;
 display: none;
 text-align: center;
 animation: screen_animation .4s;
+}
+.user_login input:focus{
+	border-color: #000;
 }
 /* toggle display */
 .user_login.active{
@@ -3397,6 +3402,10 @@ transform: translateX(50px);
     width: 63%;
     margin: auto;
 }
+.tabcontainer1{
+	width: 80%;
+	margin: auto;
+} 
 button.w3-bar-item {
     background: white;
     margin-bottom: 2px;
@@ -3419,7 +3428,7 @@ button.w3-bar-item {
 }
 h5{
 	font-family: "Cabin", sans-serif!important;
-}
+	}
 .amenity {
     border: 1px solid #80808085;
     padding: 14px 11px;
@@ -3689,9 +3698,13 @@ a.btn.btn-block.btn-default {
       flex: 1;
       /* max-width: 100%; */
       }
-      .image-container,
+      .image-container{
+		height: 100vh;
+		box-sizing: border-box;
+		}
+
       .form-container {
-      height: 80vh;
+      height: 92vh;
       box-sizing: border-box;
       }
       .image-container img {
@@ -3728,7 +3741,7 @@ a.btn.btn-block.btn-default {
       cursor: pointer;
       }
       button:hover {
-      background-color: #b5191fff;
+      background-color: #b5191fff !important;
       }
       .signup-section {
       text-align: center;
@@ -3759,17 +3772,7 @@ a.btn.btn-block.btn-default {
       color: rgb(66, 68, 74);
       text-shadow: var(--bg-text-shadow);
       }
-      .auth_container {
-      height: 80%;
-      margin: 50px;
-      }
-      #Log_in {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      }
+  
       .role_btn {
       display: flex;
       gap: 30px;
@@ -3904,7 +3907,7 @@ a.btn.btn-block.btn-default {
 	}
 	.user_login button{
 		margin: 0px 10px;
-		width: 15%;
+		width: 38%;	
 		border-radius: 5px
 	}
 
@@ -3983,3 +3986,30 @@ a.btn.btn-block.btn-default {
 	div#addHotels ol li {
 		min-width: 5rem !important;
 	}
+	form {
+		background: white;
+		padding: 23px;
+	}
+.card-body-div{
+	margin: 20px;
+}
+.current-subscription h6{
+	color:#b5191fff ;
+}
+.current-subscription span{
+	color:#b5191fff ;
+}
+.category-div{
+	text-align: center;	
+	border: 1px solid #80808057;
+}
+.category-div a{
+	cursor: pointer;
+}
+.also-like{
+	border: 1px solid #80808057;
+	padding: 10px;
+}
+.mainContenerdiv{
+	width: 80%;
+}

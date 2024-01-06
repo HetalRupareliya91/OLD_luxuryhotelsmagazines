@@ -78,14 +78,14 @@ function Header() {
       <div className="menu-item">
         <Container>
           <Row>
-            <Col lg={2}>
+            <Col lg={3}>
               <div className="logo">
                 <a href="/">
                   <Image src={Logo}  alt="" />
                 </a>
               </div>
             </Col>
-            <Col lg={10}>
+            <Col lg={9}>
             <div className="nav-menu">
                            <nav className="mainmenu">
                               <ul>
@@ -99,7 +99,7 @@ function Header() {
                                    
                                  </li>
                                  <li><a href="/login">Login</a></li>
-                                 <li><a href="/userprofile">Create Hotel Profile</a></li>
+                                 <li><a href="/userprofile">Create Hotel/Blog Profile</a></li>
                               </ul>
                            </nav>
                            <div className="nav-right search-switch">

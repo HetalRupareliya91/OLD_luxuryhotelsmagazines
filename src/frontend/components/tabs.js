@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/logo.svg';
 import Hero3 from "../../assets/img/hero/hero-3.jpg";
 import { Parallax } from "react-parallax";
 

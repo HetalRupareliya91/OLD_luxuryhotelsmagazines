@@ -9,8 +9,15 @@ import StepOne from "./signupMultistepForm/stepOne";
 import StepTwo from "./signupMultistepForm/stepTwo";
 
 function Signup() {
-    const [step, setStep] = useState(1);
-   
+  const [step, setStep] = useState(1);
+
+  const nextStep = () => {
+      setStep(step + 1);
+  };
+
+  const prevStep = () => {
+      setStep(step - 1);
+  };   
 
     return (
         <>
@@ -29,10 +36,30 @@ function Signup() {
         id="userlogin"
         
     >
-       <MultiStep activeStep={0} >
-    <StepOne title='Signup Details'/>
-    <StepTwo title='Subscription Plan'/></MultiStep>
+      {step === 1 && <StepOne title='Signup Details' nextStep={nextStep} />}
+                                {step === 2 && <StepTwo title='Subscription Plan' prevStep={prevStep} />}
+
+                                {step > 1 && (
+                                  <>
+                                  <div className="float-end">
+                                        <button onClick={prevStep} >
+                                            Previous
+                                        </button>
+                                        <button onClick={nextStep} >
+                                        Submit
+                                    </button>
+                                    </div>
+                                    </>
+                                    )}
+                                    {step < 2 && (
+                                        <button onClick={nextStep} >
+                                            next
+                                        </button>
+                                    )}
+                           
       </form>
+     
+                                  
 </div>
 
 

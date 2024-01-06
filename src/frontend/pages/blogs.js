@@ -304,6 +304,7 @@ function Blogs (){
         <Container className="container">
             <div className="row">
                 <Col lg={4} md={6}>
+                    <a href="/blog-details">
                     <div className="blog-item set-bg" >
                         <img src={Blog1} />
                         <div className="bi-text">
@@ -312,9 +313,10 @@ function Blogs (){
                             <div className="b-time"><i className="icon_clock_alt"></i> 15th April, 2019 </div>
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog2} />
                         <div className="bi-text">
@@ -324,9 +326,10 @@ function Blogs (){
                             <a href="/blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog3} />
                         <div className="bi-text">
@@ -336,9 +339,10 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog4} />
                         <div className="bi-text">
@@ -348,9 +352,10 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog5} />
                         <div className="bi-text">
@@ -360,9 +365,10 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog6} />
                         <div className="bi-text">
@@ -372,9 +378,10 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog7} />
                         <div className="bi-text">
@@ -384,9 +391,10 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog8} />
                         <div className="bi-text">
@@ -396,9 +404,10 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={4} md={6}>
+                <a href="/blog-details">
                     <div className="blog-item set-bg" >
                     <img src={Blog9} />
                         <div className="bi-text">
@@ -408,7 +417,7 @@ function Blogs (){
                             <a href="blog-details" className="primary-btn mt-3">More Details</a>
 
                         </div>
-                    </div>
+                    </div></a>
                 </Col>
                 <Col lg={12} >
                     <div className="load-more">

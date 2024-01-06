@@ -290,7 +290,7 @@ function Rooms(){
      
  <h1 className="text-center mt-5">Our Hotels</h1>
             <Row >
-            <Col lg={6} ><h6 style={{lineHeight: "3",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
+            <Col lg={6} ><h6 style={{lineHeight: "4",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
 Default sorting</h6>
 </Col>
             <div className="col-lg-6 text-right">
@@ -313,7 +313,8 @@ Default sorting</h6>
         </Row>
             <div className="row">
                 <div className="col-lg-4 col-md-6">
-                    <a href="/room-details"><div className="room-item">
+                    <a href="/room-details">
+                        <div className="room-item">
                         <img src={News5} alt=""/>
                         <div className="ri-text">
                             <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
@@ -323,6 +324,7 @@ Default sorting</h6>
                     </div></a>
                 </div>
                 <div className="col-lg-4 col-md-6">
+                <a href="/room-details">
                     <div className="room-item">
                         <img src={News6} alt=""/>
                         <div className="ri-text">
@@ -330,19 +332,22 @@ Default sorting</h6>
                              
                             <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <div className="col-lg-4 col-md-6">
+                <a href="/room-details">
                     <div className="room-item">
+
                         <img src={News7} alt=""/>
                         <div className="ri-text">
                             <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
                              
                             <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <div className="col-lg-4 col-md-6">
+                <a href="/room-details">
                     <div className="room-item">
                         <img src={Rooms4} alt=""/>
                         <div className="ri-text">
@@ -351,9 +356,10 @@ Default sorting</h6>
                           
                             <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <div className="col-lg-4 col-md-6">
+                <a href="/room-details">
                     <div className="room-item">
                         <img src={Rooms5} alt=""/>
                         <div className="ri-text">
@@ -362,9 +368,10 @@ Default sorting</h6>
                            
                             <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
                 <div className="col-lg-4 col-md-6">
+                <a href="/room-details">
                     <div className="room-item">
                         <img src={Rooms6}alt=""/>
                         <div className="ri-text">
@@ -373,11 +380,11 @@ Default sorting</h6>
                            
                             <a href="/room-details" className="primary-btn">More Details</a>
                         </div>
-                    </div>
+                    </div></a>
                 </div> 
                 <div className="col-lg-12">
                     <div className="room-pagination">
-                        <a href="#">1</a>
+                        <a href="#" className='active'>1</a>
                         <a href="#">2</a>
                         <a href="#">Next <i className="fa fa-long-arrow-right"></i></a>
                     </div>

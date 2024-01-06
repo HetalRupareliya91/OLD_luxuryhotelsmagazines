@@ -1,51 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import { FaAddressBook, FaChild, FaDatabase, FaEuroSign, FaFacebookSquare, FaGlobe, FaInternetExplorer, FaNewspaper, FaRecycle, FaSignInAlt, FaTrophy } from "react-icons/fa";
+import ReCAPTCHA from "react-google-recaptcha";
 
-function StepOne(params) {
+function StepOne() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    
+      const handleInputChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.name]: e.target.value,
+        });
+      };
+      
     return(
         <>
-        <div className="row ">
+        <Row className="row ">
             <div className=" col-lg-6 mt-3">
-                <input type="text" className="" name="firstname" placeholder=" firstname" />
+                <input type="text" className="" name="name" placeholder="Name"value={formData.name}
+            onChange={handleInputChange} />
             </div>
             <div className="col-lg-6 mt-3">
-                <input type="text" className="" name="lastname" placeholder="lastname " />
+                <input type="email" className="" name="Email" placeholder="Email "  value={formData.email}
+            onChange={handleInputChange} />
             </div>
-        </div>
-        <div className="row ">
-            <div className=" col-lg-6 mt-3">
-                <input type="text" className="" name="Username" placeholder=" Username" />
-            </div>
-            <div className="col-lg-6 mt-3">
-                <input type="email" className="" name="Email" placeholder="Email " />
-            </div>
-        </div>
-        <div className="row ">
-            <div className="col-lg-6 mt-3">
-                <input type="date" className="" id="DOB" placeholder="Date Of Birth" />
-
-            </div>
-            <div className="col-lg-6 mt-3">
-                <input type="text" className="" id="Gender" placeholder="Gender" />
-            </div>
-        </div>
-        <div className="row ">
-            <div className="col-md-6 mt-3">
-                <input type="password" className="" id="password" placeholder="Password" />
-            </div>
-            <div className="col-md-6 mt-3">
-                <input type="password" className="" id="password" placeholder="Confirm Password" />
-            </div>
-        </div>
-        <Row className="mt-3">
-    <Col lg={6}></Col>
-    <Col lg={6} className="text-end">
-       
-        </Col>
-  </Row>
-       
-
+        </Row>
+     
+        <Row >
+            <Col md={6} className="mt-3">
+                <input type="password" className="" id="password" placeholder="Password"  value={formData.password}
+            onChange={handleInputChange} />
+            </Col>
+            <Col md={6} className=" mt-3">
+                <input type="password" className="" id="password" placeholder="Confirm Password" value={formData.confirmPassword}
+            onChange={handleInputChange}  />
+            </Col>
+        </Row>
+        <Row className="re-captcha mt-3 ">
+            <Col lg={12}>
+            <ReCAPTCHA
+                      sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
+                    //   onChange={handleVerification}
+                    />
+            </Col>
+        </Row>
+    
+    
   <div className="footer_line mt-3">
                               <h6>Already have an account? <a className="page_move_btn" href="/login">Login</a></h6>
                            </div>

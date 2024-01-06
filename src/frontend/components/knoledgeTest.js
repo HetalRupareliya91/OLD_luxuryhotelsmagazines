@@ -8,7 +8,7 @@ function KnoledgeTest(){
     return(
 <section className="spad">
           <Container >
-            <h2 className="text-center mb-4">Test your travel knowledge</h2>
+            <h2 className="text-center mb-4">Test Your Travel Knowledge</h2>
             
                <Row className=" mt-3">
                  <Col lg={3} md={6} >

@@ -26,7 +26,7 @@ function CallToAction (){
                         <form id="footer-newsletter" className="d-flex  ">
                             <input type="text" className="form-control newsletteremailfield" name="email" id="emailsignupAddr" placeholder="Your email address"/>
                             <input type="hidden" id="footerToken" className="tokenfield" name="token"/>
-                            <button type="submit" id="sitefooter_emailsignup" className="btn btn-default emailsignup" name="emailPopupSubscribe">Sign up</button>
+                            <button type="submit" id="sitefooter_emailsignup" className="btn btn-default emailsignup" name="emailPopupSubscribe" href="/signup">Sign up</button>
                         </form>
                     </Col>
                 </Row>

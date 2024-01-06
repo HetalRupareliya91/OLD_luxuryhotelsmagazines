@@ -10,6 +10,7 @@ import UserProfile from "./pages/userProfile";
 import RoomDetails from "./pages/roomDetails";
 import PricingPlan from "./components/pricingPlan";
 import Profile from "./components/profile";
+import SubsriptionPage from "./components/subscriptionPage";
 
 
 function RoutesPage(){
@@ -26,6 +27,7 @@ function RoutesPage(){
       <Route exact path="/userprofile" element={<UserProfile/> } />
       <Route exact path="/pricing-plan" element={<PricingPlan/> } />
       <Route exact path="/profile" element={<Profile/> } />
+      <Route exact path="/subscription" element={<SubsriptionPage/> } />
       </Routes>  
     );
 }

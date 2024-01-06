@@ -9,7 +9,7 @@ function Collections() {
     return(
         <section className="services-section spad">
         <Container >
-           <h2 className="text-center mb-5">The sustainability collection</h2>
+           <h2 className="text-center mb-5">The Sustainability Collection</h2>
             
               <Row className="mt-3">
                 <Col lg={3} md={6}>

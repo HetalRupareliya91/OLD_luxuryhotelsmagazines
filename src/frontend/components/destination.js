@@ -15,7 +15,7 @@ function Destination() {
            <Row >
               <Col lg={12} >
                  <div className="section-title">
-                    <h2>Destination of the month: Saudi Arabia</h2>
+                    <h2>Destination Of The Month: Saudi Arabia</h2>
                  </div>
               </Col>
            </Row>

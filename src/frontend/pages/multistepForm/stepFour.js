@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Form, Image, Nav, Row } from 'react-bootstrap';
 
 function Step4() {
+
+  const [formData, setFormData] = useState({
+    hotel_title:"",
+
+    website: "",
+    youtube_link:"",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });   
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
     return (
       <div>
         <Row className='mb-3'>
