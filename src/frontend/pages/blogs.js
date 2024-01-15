@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Search from "../components/search";
 import Blog1 from "../../assets/img/blog/blog-1.jpg"
 import Blog2 from "../../assets/img/blog/blog-2.jpg"
@@ -14,9 +14,65 @@ import Header from "../components/header";
 import Hero from "../components/hero";
 import Footer from "../components/footer";
 import { FaSearch } from "react-icons/fa";
+import API from "../../utils";
+import axios from "axios";
 
 
 function Blogs (){
+    const [hotelName, setHotelName] = useState('');
+    const [country, setCountry] = useState('');
+    const formData = {
+     coutry_id: "1",
+     hotel_keyword: hotelName
+    }
+  
+    const handleSearch = async (e) => {
+     e.preventDefault();
+     try {
+        const response = await axios.post(
+           `${API.BASE_URL}${API.ENDPOINTS.hotelSearch}`,
+           JSON.stringify(formData),
+           {
+              headers: {
+                 Authorization: "hXuRUGsEGuhGf6KM",
+              },
+           }
+        );
+  
+        if (response.status === 200) {
+           console.log("signup successful:");
+        } else {
+           console.error("signup failed:");
+        }
+     } catch (error) {
+        console.error("Error:", error.message);
+     }
+  };
+
+    const [apiData, setApiData] = useState([]);
+
+    const fetchAllNewsData = async () => {
+        try {
+          const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allNews}`, {
+            headers: {
+              Authorization: "hXuRUGsEGuhGf6KM",
+            }
+          });
+          const data = response.data;
+          if (data.status === true) {
+            setApiData(data.data);
+          } else {
+            console.error("Failed to fetch data");
+          }
+        } catch (error) {
+          console.error("Error:", error.message);
+        }
+      };
+    
+      useEffect(() => {
+        fetchAllNewsData();
+      }, []);
+
     return(
 <>
 <Header/>
@@ -27,7 +83,8 @@ function Blogs (){
                  <Row >
                     <Col lg={5} >
                        <div className="check-date">
-                          <input type="text" placeholder="Enter Hotel Name"/>
+                          <input type="text" placeholder="Enter Hotel Name" value={hotelName}
+                    onChange={(e) => setHotelName(e.target.value)}/>
                           <i className="fa fa-building" aria-hidden="true"></i>
                        </div>
                     </Col>
@@ -283,12 +340,12 @@ function Blogs (){
                        </div>
                     </Col>
                     <Col lg={2} >
-                       <button type="submit" className='serch-btn'><i><FaSearch/></i></button>
+                       <button type="submit" className='serch-btn' onClick={handleSearch}><i><FaSearch/></i></button>
                     </Col>
                  </Row>
               </Form>
            </div></div>
- <div className="breadcrumb-section">
+ {/* <div className="breadcrumb-section">
         <Container>
             <Row >
                 <Col lg={12} >
@@ -298,133 +355,36 @@ function Blogs (){
                 </Col>
             </Row>
         </Container>
-    </div>
+    </div> */}
  
-    <section className="blog-section blog-page spad">
-        <Container className="container">
-            <div className="row">
-                <Col lg={4} md={6}>
-                    <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                        <img src={Blog1} />
-                        <div className="bi-text">
-                            <span className="b-tag">Travel Trip</span>
-                            <h4><a href="/blog-details">Tremblant In Canada</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 15th April, 2019 </div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog2} />
-                        <div className="bi-text">
-                            <span className="b-tag">Camping</span>
-                            <h4><a href="/blog-details">Choosing A Static Caravan</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 15th April, 2019</div>
-                            <a href="/blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog3} />
-                        <div className="bi-text">
-                            <span className="b-tag">Event</span>
-                            <h4><a href="./blog-details">Copper Canyon</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 21th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog4} />
-                        <div className="bi-text">
-                            <span className="b-tag">Trivago</span>
-                            <h4><a href="./blog-details">A Time Travel Postcard</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 22th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog5} />
-                        <div className="bi-text">
-                            <span className="b-tag">Camping</span>
-                            <h4><a href="./blog-details">A Time Travel Postcard</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 25th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog6} />
-                        <div className="bi-text">
-                            <span className="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details">Virginia Travel For Kids</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 28th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog7} />
-                        <div className="bi-text">
-                            <span className="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details">Bryce Canyon A Stunning</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 29th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog8} />
-                        <div className="bi-text">
-                            <span className="b-tag">Event & Travel</span>
-                            <h4><a href="./blog-details">Motorhome Or Trailer</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 30th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={4} md={6}>
-                <a href="/blog-details">
-                    <div className="blog-item set-bg" >
-                    <img src={Blog9} />
-                        <div className="bi-text">
-                            <span className="b-tag">Camping</span>
-                            <h4><a href="/blog-details">Lost In Lagos Portugal</a></h4>
-                            <div className="b-time"><i className="icon_clock_alt"></i> 30th April, 2019</div>
-                            <a href="blog-details" className="primary-btn mt-3">More Details</a>
-
-                        </div>
-                    </div></a>
-                </Col>
-                <Col lg={12} >
-                    <div className="load-more">
-                        <a href="#" className="primary-btn">Load More</a>
-                    </div>
-                </Col>
+    <section className="rooms-section spad ">
+        <Container>
+     
+ <h1 className="text-center breadcrumb-section">Our News</h1>
+         
+ <Row >
+          {apiData.map((news) => (
+            <Col lg={4} md={6} key={news.id}>
+              <a href={`/blog-details/${news.id}`}>
+                <div className="blog-item set-bg">
+                  <img src={news.fullImagePath} alt={news.news_title} />
+                  <div className="bi-text">
+                    {/* Display other news details */}
+                    {/* <span className="b-tag">{news.news_desc}</span> */}
+                    <h4><a href={`/blog-details/${news.id}`}>{news.news_title}</a></h4>
+                    <div className="b-time"><i className="icon_clock_alt"></i> {news.created_at}</div>
+                    <a href={`/blog-details/${news.id}`} className="primary-btn mt-3">More Details</a>
+                  </div>
+                </div>
+              </a>
+            </Col>
+          ))}
+          <Col lg={12}>
+            <div className="load-more">
+              <a href="#" className="primary-btn">Load More</a>
             </div>
+          </Col>
+        </Row>
         </Container>
     </section>
     <Footer/>

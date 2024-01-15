@@ -28,6 +28,10 @@ function Footer(){
                           <a href="#"><i ></i><FaTwitter/></a>
                           <a href="#"><i ><FaTripadvisor/></i></a>
                           <a href="#"><i ><FaInstagram/></i></a>
+                          <a href="#"><i ><FaInstagram/></i></a>
+                          <a href="#"><i ><FaInstagram/></i></a>
+                          <a href="#"><i ><FaInstagram/></i></a>
+                          <a href="#"><i ><FaInstagram/></i></a>
                           <a href="#"><i ></i><FaYoutube/></a>
                        </div>
                     </div>

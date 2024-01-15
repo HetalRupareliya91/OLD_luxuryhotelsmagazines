@@ -48,7 +48,7 @@ function Header() {
          <a href="#"><i ><FaInstagram/></i></a>
       </div>
       <ul className="top-widget">
-         <li><a href="mailto:Info@LuxuryHotelsMagazines.Com"><i className="fa fa-envelope"></i> Info@LuxuryHotelsMagazines.Com</a></li>
+         <li><a href="mailto:Info@LuxuryHotelsMagazines.Com"><i className="fa fa-envelope"></i> info@luxuryhotelsmagazines.com</a></li>
       </ul>
    </div>
     )}
@@ -59,7 +59,7 @@ function Header() {
             <Col lg={6}>
               <div className="tn-left">
                     {/* <li><i className="fa fa-phone"></i> (12) 345 67890</li> */}
-                <a href="mailto:Info@LuxuryHotelsMagazines.Com"><i ><FaEnvelope/></i>Info@LuxuryHotelsMagazines.Com</a>
+                <a href="mailto:Info@LuxuryHotelsMagazines.Com"><i ><FaEnvelope/></i> info@luxuryhotelsmagazines.com</a>
               </div>
             </Col>
             <Col lg={6}>
@@ -90,16 +90,19 @@ function Header() {
                            <nav className="mainmenu">
                               <ul>
                                  <li className="active"><a href="/">Home</a></li>
-                                 <li>
-                                    <a href="/blogs">Publish Your News</a>
-                                  
-                                 </li>
+
                                  <li>
                                     <a href="/rooms">Luxury Hotels/Resorts</a>
                                    
                                  </li>
+                                 <li><a href="/userprofile">List Your Hotels</a></li>
+
+                                 <li>
+                                    <a href="/blogs">Publish Hotel News</a>
+                                  
+                                 </li>
+                               
                                  <li><a href="/login">Login</a></li>
-                                 <li><a href="/userprofile">Create Hotel/Blog Profile</a></li>
                               </ul>
                            </nav>
                            <div className="nav-right search-switch">

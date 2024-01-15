@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import {  FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaWhatsapp, FaTelegram, FaLinkedin, FaSnapchat, FaEye, FaHeart, FaMapMarker, FaBuilding, FaSpaceShuttle, FaHome, FaList, FaPencilAlt } from 'react-icons/fa';
@@ -12,209 +12,120 @@ import News6 from '../../assets/img/news6.jpg'
 import Logo from "../../assets/img/logo.svg"
 
 import { Col, Container, Image, Row } from "react-bootstrap";
+import { useLocation, useParams } from "react-router-dom";
+import API from "../../utils";
+import axios from "axios";
+import CallToAction from "../components/callToAction";
  function BlogDetails() {
 
+    const { news_id } = useParams();
+  console.log(news_id);
+
+  const [postData, setPostData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Make a POST request with the id
+        const response = await axios.post(
+          `${API.BASE_URL}${API.ENDPOINTS.viewNews}`,
+          { news_id: news_id },
+          {
+            headers: {
+              Authorization: 'hXuRUGsEGuhGf6KM',
+            },
+          }
+        );
+
+        const responseData = response.data;
+
+        if (responseData.status === true) {
+          setPostData(responseData.data);
+        } else {
+          console.error('Failed to fetch post data');
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
+    };
+
+    if (news_id) {
+      fetchData();
+    }
+  }, [news_id]);
     return(
+        
         <><Header />
         <section className="room-details-section spad">
             <div className="container">
+            {postData ? (
                 <div className="row">
                     <div className="col-lg-8">
-                        <div className="row mb-5">
+                        <div className="row mb-3">
                             <div className="col-lg-12">
-                                <h3 className="mt-0">Commercial + Residential Apartments Off-Plan Project With 50% ROI Located On A Sea Front In Cyprus</h3>
+                                <h3 className="mt-0">{postData.news_title}</h3>
                                
                                 {/* <div className="location"> <p><i ><FaMapMarker/></i> Courtyard by Marriott Nashik, Mumbai Naka, Mumbai-Agra National Highway, Nashik, 422001 Nashik, India</p></div> */}
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-12">
-                            <img src={News5} alt="" />
-                            </div>
+                        <Row className="mb-5">
+                            <Col lg={12} >
+                            <Image src={postData.news_image} alt="postData.news_image" />
+                            </Col>
                            
-                        </div>
+                        </Row>
 
-                    </div>
-                    <div className="col-lg-4 ">
-                    <h4 className="mb-3">You May ALso Like</h4>
- 
-                        <div className="also-like">
-                          <Row className="mb-2">
-                            <Col lg={6}>
-                            <img className="contentcollection_itemimage2" src={News1} />
-                            </Col>
-                            <Col>
-                            <h7 className="contentcollection_itemtext2">Commercial off-plan Project on a Sea...</h7>
-                            </Col>
-
-                          </Row>
-                          <Row className="mb-2">
-                            <Col lg={6}>
-                            <img className="contentcollection_itemimage2" src={News3} />
-                            </Col>
-                            <Col>
-                            <h7 className="contentcollection_itemtext2">Gili Air Hotel, Indonesia ...</h7>
-                            </Col>
-
-                          </Row>
-                          <Row className="mb-2">
-                            <Col lg={6}>
-                            <img className="contentcollection_itemimage2" src={News4} />
-                            </Col>
-                            <Col>
-                            <h7 className="contentcollection_itemtext2">Grand Opening ceremony, Royal Dubai...</h7>
-                            </Col>
-
-                          </Row>
-                          <Row className="mb-2">
-                            <Col lg={6}>
-                            <img className="contentcollection_itemimage2" src={News5} />
-                            </Col>
-                            <Col>
-                            <h7 className="contentcollection_itemtext2">Cyprus & Greece Magazine 2023 ....</h7>
-                            </Col>
-                          </Row>
-                          <Row className="mb-2">
-                            <Col lg={6}>
-                            <img className="contentcollection_itemimage2" src={News6} />
-                            </Col>
-                            <Col>
-                            <h7 className="contentcollection_itemtext2">Commercial off-plan Project on a Sea...</h7>
-                            </Col>
-                          </Row>
-                          <Row>
-                            <Col lg={6}>
-                            <img className="contentcollection_itemimage2" src={News1} />
-                            </Col>
-                            <Col>
-                            <h7 className="contentcollection_itemtext2">Commercial off-plan Project with 50% ROI located on a Sea...</h7>
-                            </Col>
-                          </Row>
-                        </div>
-                        <div>
-
-
-                        </div>
-                    </div>
-                </div>
-        
-                <div className="row mt-5">
-                    <div className="col-lg-8">
                         <div className="rd-text">
                            
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
+                           <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
+                               advantages and disadvantages of both, so you will be confident when purchasing an RV.
+                               When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
+                               wheeler? The advantages and disadvantages of both are studied so that you can make your
+                               choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
+                               achievement of a lifetime. It can be similar to sojourning with your residence as you
+                               search the various sites of our great land, America.</p>
 
-                        </div>
-                        <div className="rd-text">
-                         
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
+                       </div>
+                       <div className="rd-text">
+                        
+                           <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
+                               advantages and disadvantages of both, so you will be confident when purchasing an RV.
+                               When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
+                               wheeler? The advantages and disadvantages of both are studied so that you can make your
+                               choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
+                               achievement of a lifetime. It can be similar to sojourning with your residence as you
+                               search the various sites of our great land, America.</p>
 
-                        </div>
-                        <div className="rd-text">
-                           
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
+                       </div>
+                       <div className="rd-text">
+                          
+                           <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
+                               advantages and disadvantages of both, so you will be confident when purchasing an RV.
+                               When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
+                               wheeler? The advantages and disadvantages of both are studied so that you can make your
+                               choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
+                               achievement of a lifetime. It can be similar to sojourning with your residence as you
+                               search the various sites of our great land, America.</p>
 
-                        </div>
-                        <div className="rd-text">
-                         
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
+                       </div>
+                       <div className="rd-text">
+                        
+                           <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
+                               advantages and disadvantages of both, so you will be confident when purchasing an RV.
+                               When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
+                               wheeler? The advantages and disadvantages of both are studied so that you can make your
+                               choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
+                               achievement of a lifetime. It can be similar to sojourning with your residence as you
+                               search the various sites of our great land, America.</p>
 
-                        </div>
-                        {/* <div className="rd-text">
-                            <div className="rd-title">
-                                <i  aria-hidden="true"><FaHome/></i> Spa & Wellness
-                            </div>
-
-
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
-
-                        </div> */}
-                        {/* <div className="rd-text">
-                            <div className="rd-title">
-                                <i  aria-hidden="true"><FaList/></i> Other Facilities
-                            </div>
-
-
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
-
-                        </div>
-                        <div className="rd-text">
-                            <div className="rd-title">
-                                <i  aria-hidden="true"><FaPencilAlt/></i>  Additional information
-                            </div>
-
-
-                            <p className="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
-
-                        </div>*/}
-                        <div className="rd-text">
-                            <div className="rd-title">
-                                <i className="fa fa-share-alt" aria-hidden="true"></i> Share This
-                            </div>
-
-                            <div className="row">
-                                <div className="col-lg-8"><p className="f-para sharethis mt-2"><i aria-hidden="true"><FaFacebook /></i>
-                                    <i aria-hidden="true"><FaTwitter /></i><i aria-hidden="true"><FaWhatsapp /></i><i aria-hidden="true"><FaTelegram /></i><i aria-hidden="true"><FaLinkedin /></i><i aria-hidden="true"><FaSnapchat /></i><i aria-hidden="true"><FaEnvelope /></i>
-                                </p></div>
-                                <div className="col-lg-4 text-end">
-
-                                    <p className="f-para likeview mt-2">
-                                        <i aria-hidden="true">&nbsp;5 <FaEye /></i>
-                                        <i aria-hidden="true">&nbsp;10 <FaHeart /></i>
-                                        </p>
-                                </div>
-                            </div>
-
-
-                        </div> 
+                       </div>
 
                     </div>
                     <div className="col-lg-4">
                     {/* <h4 >Categories</h4>  */}
+                    <h4 className="mb-3">Catagaries</h4>
                     <div className="category-div">
-                        
+                       
                         <Row className="mt-2 mb-2">
                             <Col lg={12}>
                            <a><span>Super Cars</span></a>
@@ -267,31 +178,101 @@ import { Col, Container, Image, Row } from "react-bootstrap";
                                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/D0UnqGm_miA?si=qnB4y7REmVnd-Lyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
 
-                            {/* <div className="locationmap mt-3">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29759.049789885605!2d72.75953112132576!3d21.196876856223426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c351ceae251%3A0x1d35b30f855a2c36!2sAdajan%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703916461865!5m2!1sen!2sin" width="100%" height="450" style={{ border: "0", allowfullscreen: "", loading: "lazy", referrerpolicy: "no-referrer-when-downgrade" }}></iframe>
-                            </div>
-                            <div className="row  ">
-                                <div className="col-lg-6 mt-3 text-center"><button className=" btn-default w-100">Book Online</button></div>
-                                <div className="col-lg-6 mt-3 text-center"><button className=" btn-default w-100">Visit Website</button>
-
-                                </div>
-                                <div className="col-lg-12 mt-3 text-center"><a href="/pricing-plan"><button className=" btn-default w-100">Claim Listing</button></a>
-                                </div>
-
-
-                            </div> */}
+                       
                         </div>
                     </div>
-
-
-
-
-
-
-
+                   
                 </div>
+        ) : (   <p>Loading...</p>
+        )}
+                <Row className=" mt-5">
+                    <Col lg={8} >
+                    
+                        <div className="rd-text">
+                            <div className="rd-title">
+                                <i className="fa fa-share-alt" aria-hidden="true"></i> Share This
+                            </div>
+
+                            <Row >
+                                <Col lg={8} className="col-lg-8"><p className="f-para sharethis mt-2"><i aria-hidden="true"><FaFacebook /></i>
+                                    <i aria-hidden="true"><FaTwitter /></i><i aria-hidden="true"><FaWhatsapp /></i><i aria-hidden="true"><FaTelegram /></i><i aria-hidden="true"><FaLinkedin /></i><i aria-hidden="true"><FaSnapchat /></i><i aria-hidden="true"><FaEnvelope /></i>
+                                </p></Col>
+                                <Col lg={4} className="col-lg-4 text-end">
+                                    <p className="f-para likeview mt-2">
+                                        <i aria-hidden="true">&nbsp;5 <FaEye /></i>
+                                        <i aria-hidden="true">&nbsp;10 <FaHeart /></i>
+                                        </p>
+                                </Col>
+                            </Row>
+
+
+                        </div> 
+
+                    </Col>
+
+                </Row >
+                <div className="alternate-hotels mt-3">
+                            <div className="text-left m-4">
+                                <h2>You May Also Like</h2>
+                            </div>
+                            <div className="card-deck">
+                                
+                                <div className="slider d-flex">   
+                                    <div className="item">
+                                        <div className="card">
+                                            <img className="card-img-top" src={News5} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Hotel Taj</h5>
+                                                <h6 className="card-title">India</h6>
+                                                <p className="card-text">7.8/10 (Good)</p>
+                                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="card">
+                                            <img className="card-img-top" src={News1} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Hotel Taj</h5>
+                                                <h6 className="card-title">England</h6>
+                                                <p className="card-text">7.8/10 (Good)</p>
+                                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="card">
+                                            <img className="card-img-top" src={News2} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Hotel Taj</h5>
+                                                <h6 className="card-title">Dubai</h6>
+                                                <p className="card-text">7.8/10 (Good)</p>
+                                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="card">
+                                            <img className="card-img-top" src={News5} alt="Card image cap" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">Hotel Taj</h5>
+                                                <h6 className="card-title">India</h6>
+                                                <p className="card-text">7.8/10 (Good)</p>
+                                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             </div>
+        
         </section>
+        <CallToAction/>
         <Footer />
     </>
     );

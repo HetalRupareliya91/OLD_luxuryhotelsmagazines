@@ -83,8 +83,10 @@ function Login() {
          );
 
          if (response.status === 200) {
+            localStorage.setItem("token", response.data.token)
+            localStorage.setItem('isLoggedIn', 'true');
             navigate("/home");
-            console.log("Login successful:");
+            console.log(response.data.message);
          } else {
             console.error("Login failed:");
          }

@@ -11,6 +11,9 @@ import about2 from '../../assets/img/about/about-2.jpg'
 import HeroImage from '../../assets/img/hero/hero-2.jpg'
 import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { Parallax } from "react-parallax";
+import VideoBackgrounds from '../../assets/videos/hotelvideo_km2KqTxn.mp4';
+import ReactPlayer from "react-player";
+
 function AboutUs() {
 
     return(
@@ -18,22 +21,24 @@ function AboutUs() {
             <section className="aboutus-section spad">
         <Container>
           <div className="hp-room-items">
-            <h1 className="text-center mb-4">New Arrivals</h1>
+            <h1 className="text-center mb-4">Recently Added Hotels</h1>
             <Row>
               <Col lg={3} md={6}>
                 <figure>
-                  {/* <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
+
                   <div className="thumbnail">
                     <div>
                       <Button className="readmore">Read More</Button>
                     </div>
                     <Image src={News1} alt="" />
                   </div>
+
                 </figure>
               </Col>
               <Col lg={6} md={6}>
                 <figure>
-                  {/* <div className="img-dec img-center">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                  <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                   <div className="thumbnail">
                     <div><Button className="readmore">Read More</Button></div>
                     <Image src={News2} alt="" />
@@ -42,7 +47,7 @@ function AboutUs() {
               </Col>
               <Col lg={3} md={6}>
                 <figure>
-                  {/* <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                  <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                   <div className="thumbnail">
                     <div><Button className="readmore">Read More</Button></div>
                     <Image src={News3} alt=""/>
@@ -53,7 +58,7 @@ function AboutUs() {
               <Row className=" mt-3">
                  <Col lg={3} md={6}>
                     <figure>
-                        {/* <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                        <div className="thumbnail">
                           <div><button className="readmore">Read More</button></div>
                           <Image src={News4} alt=""/>
@@ -62,8 +67,7 @@ function AboutUs() {
                  </Col>
                  <Col lg={3} md={6}>
                     <figure>
-                        {/* <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
-                       
+                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>  
                        <div className="thumbnail">
                           <div><button className="readmore">Read More</button></div>
                           <Image src={News5} alt=""/>
@@ -72,7 +76,7 @@ function AboutUs() {
                  </Col>
                  <Col lg={3} md={6}>
                     <figure>
-                        {/* <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                        <div className="thumbnail">
                           <div><button className="readmore">Read More</button></div>
                           <Image src={News6} alt=""/>
@@ -81,7 +85,7 @@ function AboutUs() {
                  </Col>
                  <Col lg={3} md={6}>
                     <figure>
-                        {/* <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                        <div className="thumbnail">
                           <div><button className="readmore">Read More</button></div>
                           <Image src={News7} alt=""/>
@@ -94,17 +98,18 @@ function AboutUs() {
         </Container>
      </section>
 
-     <Parallax blur={5} bgImage={HeroImage} bgImageAlt="the cat" strength={350}>
-
-     <section className="special spad" >
-         <div className="content">
-            <div className="container">
-               <div className="row ">
+     <section className="video-background p-0">
+     <div className='video-iframe'>
+      <iframe loading="lazy" style={{width: "100%"}} id="ytplayer" type="text/html" width="100%" height="450px" src="https://www.youtube.com/embed/GCHzng92OEI?&autoplay=1&mute=1&loop=1&color=white&controls=0&playsinline=1&rel=0&playlist=GCHzng92OEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>   
+            </div>
+      <div className="text-overlay">
+      <div className="row ">
                   <div className="col-lg-6">
                      <div className="about-text">
                         <div className="section-title  ">
                            <span className="text-white">About Us</span>
-                           <h2 className="text-white">Intercontinental LA <br />Westlake Hotel</h2>
+                           <h2 className="text-white">Luxury Hotels Magazines</h2>
                         </div>
                         <p className="f-para text-white">Sona.com is a leading online accommodation site. We’re passionate about
                            travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
@@ -129,11 +134,34 @@ function AboutUs() {
                      </div>
                   </div>
                </div>
+          {/* <Row>
+            <Col lg={6}>
+              <div className='text-div'>
+                <span className=''>Luxury Hotels, a renowned global brand founded in England 17 years ago, is currently present in 89 countries. We provide Luxury Hotels for affluent travellers through our online platform and in print and digital formats. Each Edition is accessible for free download on 5 different platforms and attracts 4-5 million online readers annually.</span>
+                <span className=''>Through our Printed Edition Rotation Program, your hotel will be featured as one of the top Luxury Hotels and will ensure a continuous influx of bookings and a consistent occupancy rate of 800,000 to 1 million tourists throughout the year, all without any commission fees.</span>
+              </div>
+            </Col>
+            <Col lg={6} >
+              <div className='text-center hotel-present-div'>
+                <h1>Luxury Hotels</h1>
+                <h4>PRESENTS</h4>
+              </div>
+            </Col>
+          </Row> */}
+          </div>
+    </section>
+    
+     {/* <Parallax blur={5} bgImage={HeroImage} bgImageAlt="the cat" strength={350}>
+
+     <section className="special spad" >
+         <div className="content">
+            <div className="container">
+              
             </div>
          </div>
         
       </section>
-      </Parallax>
+      </Parallax> */}
       
 </>
     );

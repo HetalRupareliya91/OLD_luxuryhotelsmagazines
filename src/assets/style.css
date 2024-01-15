@@ -103,10 +103,11 @@ ul, ol {
 .section-title {
 	text-align: center;
 	margin-bottom: 22px;
+	width: 75%;
 }
 .section-title span {
 	font-size: 14px;
-	color: #26262d;
+	color: #fff;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -138,7 +139,7 @@ ul, ol {
 .primary-btn {	
 	display: inline-block;
 	font-size: 14px;
-	color: #ffffff;
+	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 700;
@@ -518,7 +519,7 @@ ul, ol {
 .hero-section {
 	position: relative;
 	padding-top: 60px;
-	padding-bottom: 100px;
+	padding-bottom: 400px;
 }
 .hero-section .container {
 	position: relative;
@@ -539,6 +540,9 @@ ul, ol {
 	color: #ffffff;
 	line-height: 28px;
 	margin-bottom: 35px;
+}
+.slider-img{
+	height:400px;
 }
 .booking-form {
     background: white;
@@ -699,9 +703,9 @@ ul, ol {
 .about-text .about-btn {
 	color: #19191a;
 }
-.about-pic img {
+/* .about-pic img {
 	min-width: 100%;
-}
+} */
 /*---------------------
   Service Section
 -----------------------*/
@@ -1575,10 +1579,11 @@ color: #ffffff;
 	padding-bottom: 88px;
 }
 .blog-item {
-	height: 450px;
+	height: 430px;
 	position: relative;
 	margin-bottom: 30px;
 	border-radius: 5px;
+	border: 1px solid #474747;
 }
 .blog-item.small-size {
 	height: 400px;
@@ -1606,11 +1611,11 @@ color: #ffffff;
 	margin-bottom: 18px;
 }
 .blog-item .bi-text h4 a {
-	color: #ffffff;
+	color: #000;
 }
 .blog-item .bi-text .b-time {
 	font-size: 12px;
-	color: #ffffff;
+	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
@@ -2354,6 +2359,28 @@ color: #ffffff;
 		position: relative;
 		border: 1px solid #b5191fff;
 	}
+	.carousel.slide {
+		height: 300px;
+	}
+	.carousel-inner {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		height: 300px;
+	}
+	.booking-form {
+		background: white;
+		padding: 1px 1px 1px 1px;
+		border-radius: 24px;
+		position: relative;
+		margin-top: 255px;
+		z-index: 10;
+		box-shadow: 0px 0px 35px -12px grey;
+	}
+	.video-player video {
+		width: 1498px;
+		height: 100%;
+	}
 	.select-id {
 		padding: 10px !important;
 		height: unset !important;
@@ -2563,9 +2590,7 @@ color: #ffffff;
 	.booking-form-rooms{
 		padding: unset !important ;
 	}
-	.slider-img{
-		height:800px;
-	}
+	
 	.select-option {
 		margin-top: 11px;
 	}
@@ -2631,7 +2656,8 @@ input[type="text"]::placeholder {
 }
 
 figure {
-   height: 300px
+   height: 300px;
+   position:relative;
 }
 .destination-img-div{
 	height: 480px !important;
@@ -3083,6 +3109,10 @@ button {
 
 button:hover {
 	background-color: #b5191fff !important;
+	color: #ffffff;
+}
+.booking-form form button:hover{
+	color: #fff;
 }
 
 .signup-section {
@@ -4012,4 +4042,114 @@ a.btn.btn-block.btn-default {
 }
 .mainContenerdiv{
 	width: 80%;
+}
+.exclusive-deals{
+	border: 2px solid #b5191fff;
+	border-radius: 5px;
+	padding: 10px;
+}	
+.exclusive-deals h5{
+	color: #b5191fff;
+
+	font-weight: 600;
+}
+.exclusive-deals a{
+	cursor: pointer;
+}
+.exclusive-deals .phone-icon {
+font-size: 40px;
+color: #b5191fff;
+}
+.exclusive-deals .valid{
+	font-size: 14px;
+}
+.alternate-hotels h2{
+	text-align: left !important;
+}
+.card-img-top {
+	height: 30vh;
+}
+
+.VideoBackground-main{
+	position: absolute;
+}
+  
+/* .video-background {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+  }
+  .video-player{
+	width: 100%;
+	height: 100vh;
+  } */
+
+  .video-background {
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	overflow: hidden;
+  }
+
+  
+  .video-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  
+  .text-overlay {
+	position: absolute;
+	top: 15%;
+	left: 8%;
+	color: #ffffff !important;
+	font-size: 18px;
+	
+  }
+  .text-overlay .text-div{
+width: 80%;
+line-height: 2;
+  }
+  .hotel-present-div{
+	position: relative;
+	top: 80px;
+  }
+  .thumbnail.destination-main {
+    height: unset;
+}
+.video-player video {
+    width: 1498px!important;
+    height: 100%!important;
+}
+.video-player {
+    height: unset !important;
+}
+.all-hotel-section{
+	background-color: #fff;
+}
+
+
+.slick-next:before {
+	font-size: 28px !important;
+}
+.video-iframe{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    padding: 10px;
+    height: 100%;
+    min-height: 1px;
 }

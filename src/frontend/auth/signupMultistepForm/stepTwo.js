@@ -7,6 +7,7 @@ function StepTwo() {
         <>
            
         <div className=" justify-content-between mt-4 ">
+            
         <Row >
           <Col  lg={6} md={6} sm={6}>
               <div className="pricingTable m-0">
