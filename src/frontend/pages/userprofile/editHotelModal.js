@@ -111,6 +111,7 @@ function EditHotelModal({ show, handleClose, hotel_id,handleHotelEditorChange, h
   };
 
   const fetchAmenities = async () => {
+    const token = localStorage.getItem("token");
     try {
         const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allHotelAmenities}`, {
             headers: {
@@ -138,6 +139,7 @@ useEffect(() => {
 }, []);
 
 const handleEditHotel = async (e) => {
+    const token = localStorage.getItem("token");
   e.preventDefault();
   const formDataObject = new FormData();
   formDataObject.append('user_id', 3);
@@ -198,7 +200,7 @@ const handleEditHotel = async (e) => {
           formDataObject,
           {
               headers: {
-                  "Authorization": "hXuRUGsEGuhGf6KM",
+                "Authorization": "Bearer " + token,
                   'Content-Type': 'multipart/form-data',
               },
           }

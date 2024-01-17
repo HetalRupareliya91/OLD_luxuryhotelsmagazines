@@ -27,10 +27,12 @@ function AllHotels(){
   
 
   const fetchAllHotels = async () => {
+    const token = localStorage.getItem("token");
+    console.log(token);
     try {
       const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allHotels}`, {
         headers: {
-          Authorization: "hXuRUGsEGuhGf6KM",
+          "Authorization": "Bearer " + token,
         }
       });
       const data = response.data;

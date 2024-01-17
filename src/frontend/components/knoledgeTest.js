@@ -30,13 +30,13 @@ function KnoledgeTest() {
     ],
   };
 
-  const handlePrev = () => {
-    sliderRef.current.slickPrev();
-  };
+  // const handlePrev = () => {
+  //   sliderRef.current.slickPrev();
+  // };
 
-  const handleNext = () => {
-    sliderRef.current.slickNext();
-  };
+  // const handleNext = () => {
+  //   sliderRef.current.slickNext();
+  // };
 
   const deals = [
     {

@@ -107,18 +107,21 @@ function AboutUs() {
       <div className="row ">
                   <div className="col-lg-6">
                      <div className="about-text">
-                        <div className="section-title  ">
+                        <div className="section-title ">
                            <span className="text-white">About Us</span>
-                           <h2 className="text-white">Luxury Hotels Magazines</h2>
-                        </div>
-                        <p className="f-para text-white">Sona.com is a leading online accommodation site. We’re passionate about
+                           <h3 >Luxury Hotels Magazines</h3>
+                           <p className="f-para text-white">Sona.com is a leading online accommodation site. We’re passionate about
                            travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
                            languages.
                         </p>
                         <p className="s-para text-white">So when it comes to booking the perfect hotel, vacation rental, resort,
                            apartment, guest house, or tree house, weve got you covered.
                         </p>
+
                         <a href="#" className="primary-btn about-btn text-white">Read More</a>
+
+                        </div>
+                        
                      </div>
                   </div>
                   <div className="col-lg-6">

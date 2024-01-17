@@ -112,9 +112,9 @@ ul, ol {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-.section-title h2 {
-	font-size: 44px;
-	color: #19191a;
+.section-title h3 {
+	font-size: 38px;
+	color: #b5191fff;
 	line-height: 58px;
 	margin-top: 10px;
 }
@@ -691,8 +691,9 @@ ul, ol {
 	padding: 0 35px;
 }
 .about-text p {
-	color: #26262d;
+	color: #ffffff;
 	font-weight: 500;
+	line-height: 28px;
 }
 .about-text p.f-para {
 	margin-bottom: 10px;
@@ -3506,7 +3507,7 @@ h5{
 }
 .likeview i {
     border: 1px solid #80808052;
-    padding: 9px 9px;
+    padding: 9px 18px 9px 9px;
     margin-right: 6px;
     font-size: 24px;
     border-radius: 15px;
@@ -4063,6 +4064,55 @@ color: #b5191fff;
 .exclusive-deals .valid{
 	font-size: 14px;
 }
+
+
+.exclusive-deals1 {
+    /* border: 2px solid #b5191fff; */
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+	background-color: #ffff;
+	width: 90%;
+}
+.exclusive-deals1 h5 {
+	font-size: 14px;
+    color: #000;
+    font-weight: 500;
+	line-height: 2;
+}
+.exclusive-deals1 a{
+	cursor: pointer;
+}
+.exclusive-deals1 .phone-icon {
+font-size: 40px;
+color: #b5191fff;
+}
+.exclusive-deals1 .valid{
+	font-size: 14px;
+}
+.exclusive-deals1 img{
+	height: auto;
+    width: 200px;
+}
+.star-rating span:before {
+    content: "\f148" "\f148" "\f148" "\f148" "\f148";
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+}
+
+.star-rating {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-size: 28px;
+    color: #EABE12;
+    font-family: woodmart-font;
+}
 .alternate-hotels h2{
 	text-align: left !important;
 }
@@ -4130,8 +4180,29 @@ line-height: 2;
 }
 
 
+.slick-prev:before{
+	font-size: 28px !important;
+	color: #b5191fff !important;
+}
+
 .slick-next:before {
 	font-size: 28px !important;
+	color: #b5191fff !important;
+}
+.slick-prev, .slick-next {
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 0px !important;
+    height: 0px !important;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
 }
 .video-iframe{
 	position: relative;
@@ -4153,3 +4224,190 @@ line-height: 2;
     height: 100%;
     min-height: 1px;
 }
+.section-title{
+	background-color:#0000002b !important;
+}
+.videos-content-present{
+	position: relative;
+	top: 80px;
+}
+.what-we-do{
+	height: 700px;
+	background-color: #ffff;
+	background-image: url(../assets/img/hero/hero-1.jpg);
+		/* background-color: black; */
+}
+.contact-us{
+	height: 700px;
+    background-image: url(../assets/img/hero/hero-1.jpg);
+	background-color: #b5191fff;
+}
+
+.contact-us .inner-div {
+	height: 350px;
+	width: 350px;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	position: relative;
+    top: 200px;
+	left: 200px;
+	padding: 100px 0px;
+}
+.what-we-do.col-lg-6:hover .inner-div{
+    height: 350px;
+    width: 350px;
+    border: 8px solid #b5191fff;
+    border-radius: 0px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 90px 0px;
+	transition: 0.5s ease all;
+}
+.contact-us.col-lg-6:hover .inner-div{
+    height: 350px;
+    width: 350px;
+    border: 8px solid #ffffff;
+    border-radius: 0px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 90px 0px;
+	transition: 0.5s ease all;
+}
+.contact-us .inner-div h2{
+
+	font-size: 40px !important;
+    color: #ffff;
+    font-weight: 800;
+}
+.contact-us .inner-div p{
+	color: #ffff;
+    font-size: 20px !important;
+}
+.what-we-do .inner-div {
+	height: 350px;
+	width: 350px;
+	border: 8px solid #b5191fff;
+	border-radius: 50%;
+	position: relative;
+    top: 200px;
+	left: 200px;
+	padding: 100px 0px;
+	transition: 0.5s ease all;
+}
+.what-we-do .inner-div:hover {
+    height: 350px;
+    width: 350px;
+    border: 8px solid #b5191fff;
+    border-radius: 0px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 90px 0px;
+}
+.what-we-do .inner-div h2{
+
+font-size: 40px !important;
+    color: #e41d25;
+    font-weight: 800;
+}
+
+.what-we-do .inner-div p{
+	color: #e41d25;
+    font-size: 20px !important;
+	}
+
+	.advertise-first-section{
+		height: 700px;
+	}
+	.adv-container{
+		position: relative;
+		top: 50px;
+	}
+	.heading{
+		color: #ffff;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+
+	.flip-box {
+		background-color: transparent;
+		
+		/* border: 1px solid #f1f1f1; */
+		perspective: 1000px; /* Remove this if you don't want the 3D effect */
+	  }
+	  
+	  /* This container is needed to position the front and back side */
+	  .flip-box-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	  }
+	  
+	  /* Do an horizontal flip when you move the mouse over the flip box container */
+	  .flip-box:hover .flip-box-inner {
+		transform: rotateY(180deg);
+	  }
+	  
+	  /* Position the front and back side */
+	  .flip-box-front, .flip-box-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden; /* Safari */
+		backface-visibility: hidden;
+	  }
+	  .flip-box-back .heading{
+		color: #ffff;
+		font-size: 18px;
+		font-weight: 400;
+	  }
+	  /* Style the front side (fallback if image is missing) */
+	  .flip-box-front {
+		background-color: #bbb;
+		color: black;
+	  }
+	  
+	  /* Style the back side */
+	  .flip-box-back {
+		/* background-color: dodgerblue; */
+		color: white;
+		transform: rotateY(180deg);
+	  }
+	  .text-heading-button{
+		position: relative;
+		top: 320px;
+	  }
+	  .what-we-do.col-lg-6:hover .hovermaindiv {
+		background: #ff000052;
+	}
+	 .hovermaindiv {
+		height: 700px;
+		background: #fff;
+	}
+
+	.contact-us.col-lg-6:hover .hovermaindivtwo {
+		background: #ff000052;
+	}
+	 .hovermaindivtwo {
+		height: 700px;
+		background: #ff000a;
+	}
+	.normal-star {
+		/* font-family: "Cabin", sans-serif;  */
+		font-size: 20px; 
+		display: inline-block;
+	  }
+	  
+	  .star-icon:before {
+		content: "\f005"; 
+	  }
+	  
+	  .normal-star.filled .star-icon {
+		color: gold; /* Color for filled stars */
+	  }

@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from "react"
-import Search from "../components/search";
-import Blog1 from "../../assets/img/blog/blog-1.jpg"
-import Blog2 from "../../assets/img/blog/blog-2.jpg"
-import Blog3 from "../../assets/img/blog/blog-3.jpg"
-import Blog4 from "../../assets/img/blog/blog-4.jpg"
-import Blog5 from "../../assets/img/blog/blog-5.jpg"
-import Blog6 from "../../assets/img/blog/blog-6.jpg"
-import Blog7 from "../../assets/img/blog/blog-7.jpg"
-import Blog8 from "../../assets/img/blog/blog-8.jpg"
-import Blog9 from "../../assets/img/blog/blog-9.jpg"
+
 import { Col, Container, Form, Row } from "react-bootstrap";
 import Header from "../components/header";
-import Hero from "../components/hero";
 import Footer from "../components/footer";
 import { FaSearch } from "react-icons/fa";
 import API from "../../utils";
@@ -52,10 +42,11 @@ function Blogs (){
     const [apiData, setApiData] = useState([]);
 
     const fetchAllNewsData = async () => {
+      const token = localStorage.getItem("token");
         try {
           const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allNews}`, {
             headers: {
-              Authorization: "hXuRUGsEGuhGf6KM",
+               "Authorization": "Bearer " + token,
             }
           });
           const data = response.data;

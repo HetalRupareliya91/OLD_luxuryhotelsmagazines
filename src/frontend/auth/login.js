@@ -82,13 +82,16 @@ function Login() {
             }
          );
 
-         if (response.status === 200) {
+         if (response.data.status === true) {
+            
             localStorage.setItem("token", response.data.token)
             localStorage.setItem('isLoggedIn', 'true');
             navigate("/home");
             console.log(response.data.message);
          } else {
             console.error("Login failed:");
+            const errorMessage = response.data.message || "Login failed. Please try again.";
+         document.getElementById("loginErrorMessage").innerText = errorMessage;
          }
       } catch (error) {
          console.error("Error:", error.message);
@@ -147,6 +150,7 @@ function Login() {
                               )}
                               <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>
                               <div className="footer_line mt-3">
+                              <h6 id="loginErrorMessage" style={{ color: "red" }}></h6>
                                  <h6>Don't have an account? <a className="page_move_btn" href="/signup"  >Sign up</a></h6>
                               </div>
                            </Form>

@@ -513,8 +513,7 @@ function AddBlogs() {
             </Col>
         </Row>
         <Row className=" mb-3">
-          <Col lg={2}>
-          </Col>
+         
           <Col lg={6}>
             <button type="submit" >Add Blog</button>
           </Col>

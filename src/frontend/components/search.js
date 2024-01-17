@@ -6,8 +6,9 @@ import axios from 'axios';
    const [hotelName, setHotelName] = useState('');
   const [country, setCountry] = useState('');
   const formData = {
-   coutry_id: "1",
-   hotel_keyword: hotelName
+   
+   hotel_keyword: hotelName,
+   country:country
   }
 
   const handleSearch = async (e) => {
@@ -23,10 +24,10 @@ import axios from 'axios';
          }
       );
 
-      if (response.status === 200) {
-         console.log("signup successful:");
+      if (response.data.status === true) {
+         
       } else {
-         console.error("signup failed:");
+         console.error("seach failed:");
       }
    } catch (error) {
       console.error("Error:", error.message);

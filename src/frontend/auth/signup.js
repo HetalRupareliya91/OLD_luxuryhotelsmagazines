@@ -55,7 +55,7 @@ function Signup() {
                 }
             );
 
-            if (response.status === 200) {
+            if (response.data.status === true) {
                 console.log("signup successful:");
             } else {
                 console.error("signup failed:");

@@ -42,6 +42,7 @@ function Footer(){
                        <p><a href="" className="footer-links">Our Team</a></p>
                        <p><a href="" className="footer-links">About Us</a></p>
                     <p><a href="" className="footer-links">Luxury Hotel Selection</a></p>
+                    <p><a href="" className="footer-links">Luxury Hotels Editions</a></p>
                     </div>
                  </Col>
                  <Col lg={3}>
@@ -50,7 +51,7 @@ function Footer(){
                        <p><a href="" className="footer-links">Distribution</a></p>
                        <p><a href="" className="footer-links">Publish Your News/PR</a></p>
                        <p><a href="" className="footer-links">Media Pack</a></p>
-                       <p><a href="" className="footer-links">Advertise With Us</a></p>
+                       <p><a href="advertise-with-us" className="footer-links">Advertise With Us</a></p>
                        <p><a href="" className="footer-links">Create Hotel Profile</a></p>
                     </div>
                  </Col>

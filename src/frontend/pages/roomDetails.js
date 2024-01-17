@@ -57,16 +57,8 @@ function RoomDetails() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <h3 className="mt-0">Jumeirah Al Qasr Hotel, Dubai</h3>
-                                    <div className="rdt-right">
-
-                                    </div>
-                                    <div className="location"> <p><i ><FaMapMarker /></i> Courtyard by Marriott Nashik, Mumbai Naka, Mumbai-Agra National Highway, Nashik, 422001 Nashik, India</p></div>
-                                </div>
-                            </div>
-                            <div className="row">
+                         
+                            <div className="row mt-5">
                                 <div className="col-lg-4">
                                     <div className="row">
                                         <div className="col-lg-12 col-6"><img src={News5} alt="" className="mb-2" /></div>
@@ -75,6 +67,13 @@ function RoomDetails() {
                                 </div>
                                 <div className="col-lg-8">
                                     <img src={News5} alt="" />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-lg-12 text-end ">
+                                    <h3 className="mt-4">Jumeirah Al Qasr Hotel, Dubai</h3>
+                             
                                 </div>
                             </div>
                         </div>
@@ -197,13 +196,13 @@ function RoomDetails() {
                                     <div className="col-lg-8"><p className="f-para sharethis mt-2"><i aria-hidden="true"><FaFacebook /></i>
                                         <i aria-hidden="true"><FaTwitter /></i><i aria-hidden="true"><FaWhatsapp /></i><i aria-hidden="true"><FaTelegram /></i><i aria-hidden="true"><FaLinkedin /></i><i aria-hidden="true"><FaSnapchat /></i><i aria-hidden="true"><FaEnvelope /></i>
                                     </p></div>
-                                    <div className="col-lg-4 mt-3">
+                                    {/* <div className="col-lg-4 mt-3">
 
                                         <p className="f-para likeview mt-2">
                                             <i aria-hidden="true">&nbsp;5 <FaEye /></i>
                                             <i aria-hidden="true">&nbsp;10 <FaHeart /></i>
                                         </p>
-                                    </div>
+                                    </div> */}
                                 </div>
 
 
@@ -230,9 +229,9 @@ function RoomDetails() {
                                     </div>
                                 </form>
 
-                                <div className="youtube-video mt-3">
+                                {/* <div className="youtube-video mt-3">
                                     <iframe width="100%" height="200" src="https://www.youtube.com/embed/D0UnqGm_miA?si=qnB4y7REmVnd-Lyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
+                                </div> */}
 
                                 <div className="locationmap mt-3">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29759.049789885605!2d72.75953112132576!3d21.196876856223426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04c351ceae251%3A0x1d35b30f855a2c36!2sAdajan%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703916461865!5m2!1sen!2sin" width="100%" height="450" style={{ border: "0", allowfullscreen: "", loading: "lazy", referrerpolicy: "no-referrer-when-downgrade" }}></iframe>
@@ -244,6 +243,15 @@ function RoomDetails() {
                                     </div>
                                     <div className="col-lg-12 mt-3 text-center"><a href="/pricing-plan"><button className=" btn-default w-100">Claim Listing</button></a>
                                     </div>
+                                </div>
+
+                                <div className="mt-4">
+                                    <h2>Hotel Website Visits</h2>
+
+                                    <p className="f-para likeview mt-4 d-flex justify-content-around">
+                                            <i aria-hidden="true"><FaEye />&nbsp;10 Views</i>
+                                            <i aria-hidden="true"><FaHeart />&nbsp;5 Likes</i>
+                                        </p>
                                 </div>
                             </div>
                         </div>

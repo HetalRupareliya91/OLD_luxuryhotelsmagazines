@@ -11,6 +11,9 @@ import RoomDetails from "./pages/roomDetails";
 import PricingPlan from "./components/pricingPlan";
 import Profile from "./components/profile";
 import SubsriptionPage from "./components/subscriptionPage";
+import WhatWeDo from "./pages/whatWeDo";
+import AdvertiseWithUs from "./pages/advertiseWithUs";
+import HotelSelection from "./pages/hotelSelection";
 
 
 function RoutesPage(){
@@ -28,6 +31,9 @@ function RoutesPage(){
       <Route exact path="/pricing-plan" element={<PricingPlan/> } />
       <Route exact path="/profile" element={<Profile/> } />
       <Route exact path="/subscription" element={<SubsriptionPage/> } />
+      <Route exact path="/what-we-do" element={<WhatWeDo/> } />
+      <Route exact path="/advertise-with-us" element={<AdvertiseWithUs/> } />
+      {/* <Route exact path="/hotels-selection" element={<HotelSelection/> } /> */}
       </Routes>  
     );
 }

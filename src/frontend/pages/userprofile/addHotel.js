@@ -109,12 +109,10 @@ function AddHotel() {
     const prevStep = () => {
         setStep(step - 1);
 
-
-
     };
 
-
     const handleCreateHotel = async (e) => {
+        const token = localStorage.getItem("token");
         e.preventDefault();
         const formDataObject = new FormData();
         formDataObject.append('user_id', 3);
@@ -170,11 +168,12 @@ function AddHotel() {
         }
         try {
             const response = await axios.post(
+                
                 `${API.BASE_URL}${API.ENDPOINTS.createHotel}`,
                 formDataObject,
                 {
                     headers: {
-                        "Authorization": "hXuRUGsEGuhGf6KM",
+                        "Authorization": "Bearer " + token,
                         'Content-Type': 'multipart/form-data',
                     },
                 }
