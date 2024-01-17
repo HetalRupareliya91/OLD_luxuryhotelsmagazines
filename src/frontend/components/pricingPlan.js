@@ -1,8 +1,12 @@
 import React from "react";
 import { FaEuroSign, FaSignInAlt } from "react-icons/fa";
+import Header from "./header";
+import Footer from "./footer";
 
 function PricingPlan() {
     return(
+        <>
+        <Header></Header>
         <section>
         <div className="demo">
       <div className="container">
@@ -60,6 +64,8 @@ function PricingPlan() {
       </div>
   </div>
    </section>
+   <Footer/>
+   </>
     );
 }
 export default PricingPlan;

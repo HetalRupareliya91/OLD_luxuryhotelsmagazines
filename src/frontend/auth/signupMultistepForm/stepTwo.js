@@ -1,14 +1,15 @@
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import { FaAddressBook, FaChild, FaDatabase, FaEuroSign, FaFacebookSquare, FaGlobe, FaInternetExplorer, FaNewspaper, FaRecycle, FaSignInAlt, FaTrophy } from "react-icons/fa";
+import { FaEuroSign } from "react-icons/fa";
 
-function StepTwo(params) {
+function StepTwo() {
     return(
         <>
            
         <div className=" justify-content-between mt-4 ">
-        <div className="row">
-          <div className="col-md-6 col-sm-6">
+            
+        <Row >
+          <Col  lg={6} md={6} sm={6}>
               <div className="pricingTable m-0">
                   <div className="pricingTable-header">
                       <span className="heading">
@@ -28,9 +29,9 @@ function StepTwo(params) {
                       <a href="#" className="btn btn-block btn-default">Pay With Card <i aria-hidden="true"></i></a>  
                   </div>
               </div>
-          </div>
+          </Col>
 
-          <div className="col-md-6 col-sm-6">
+          <Col  lg={6} md={6} sm={6}>
               <div className="pricingTable m-0">
                   <div className="pricingTable-header">
                       <span className="heading">
@@ -50,10 +51,10 @@ function StepTwo(params) {
                       <a href="#" className="btn btn-block btn-default">Pay With Card <i aria-hidden="true"></i></a> 
                   </div>
               </div>
-          </div>
+          </Col>
 
          
-      </div>
+      </Row>
       <Row className="mt-3">
         <Col lg={6}></Col>
         <Col lg={6} className="d-flex">

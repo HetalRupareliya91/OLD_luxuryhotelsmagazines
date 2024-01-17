@@ -31,7 +31,12 @@
 
 /* Template default CSS
 /*----------------------------------------*/
-
+@font-face {
+	font-family: 'cabin';
+	src: url('./Cabin-Regular.ttf') 
+		 
+	/* Add additional formats if needed */
+  }
 html, body {
 	height: 100%;
 	font-family: "Cabin", sans-serif !important;
@@ -47,6 +52,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: #111111;
 	font-weight: 400;
 	font-family: "Lora", serif;
+	font-family: "Cabin", sans-serif !important;
+
 }
 h1 {
 	font-size: 70px;
@@ -96,17 +103,18 @@ ul, ol {
 .section-title {
 	text-align: center;
 	margin-bottom: 22px;
+	width: 75%;
 }
 .section-title span {
 	font-size: 14px;
-	color: #26262d;
+	color: #fff;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-.section-title h2 {
-	font-size: 44px;
-	color: #19191a;
+.section-title h3 {
+	font-size: 38px;
+	color: #b5191fff;
 	line-height: 58px;
 	margin-top: 10px;
 }
@@ -131,7 +139,7 @@ ul, ol {
 .primary-btn {	
 	display: inline-block;
 	font-size: 14px;
-	color: #ffffff;
+	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 700;
@@ -392,6 +400,7 @@ ul, ol {
 	position: relative;
 	z-index: 9;
 	height: 90px;
+	box-shadow: 7px 22px 31px -40px;
 }
 .menu-item .logo {
 	padding: 25px 0;
@@ -501,7 +510,7 @@ ul, ol {
 	padding: 7px;
 }
 .offcanvas-menu-wrapper {
-	display: none;
+	/* display: none; */
 }
 /*---------------------
   Hero
@@ -510,7 +519,7 @@ ul, ol {
 .hero-section {
 	position: relative;
 	padding-top: 60px;
-	padding-bottom: 100px;
+	padding-bottom: 400px;
 }
 .hero-section .container {
 	position: relative;
@@ -532,9 +541,12 @@ ul, ol {
 	line-height: 28px;
 	margin-bottom: 35px;
 }
+.slider-img{
+	height:400px;
+}
 .booking-form {
     background: white;
-    padding: 31px 40px 37px 40px;
+    padding: 1px 1px 1px 1px;
     border-radius: 24px;
     position: relative;
     margin-top: -57px;
@@ -679,8 +691,9 @@ ul, ol {
 	padding: 0 35px;
 }
 .about-text p {
-	color: #26262d;
+	color: #ffffff;
 	font-weight: 500;
+	line-height: 28px;
 }
 .about-text p.f-para {
 	margin-bottom: 10px;
@@ -691,9 +704,9 @@ ul, ol {
 .about-text .about-btn {
 	color: #19191a;
 }
-.about-pic img {
+/* .about-pic img {
 	min-width: 100%;
-}
+} */
 /*---------------------
   Service Section
 -----------------------*/
@@ -1248,8 +1261,13 @@ ul, ol {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.room-pagination .active{
+background: #b5191fff;
+color: #ffffff;
+}
 .room-pagination a:last-child {
 	margin-right: 0;
+	
 }
 .room-pagination a:hover {
 	background: #b5191fff;
@@ -1562,10 +1580,11 @@ ul, ol {
 	padding-bottom: 88px;
 }
 .blog-item {
-	height: 450px;
+	height: 430px;
 	position: relative;
 	margin-bottom: 30px;
 	border-radius: 5px;
+	border: 1px solid #474747;
 }
 .blog-item.small-size {
 	height: 400px;
@@ -1593,11 +1612,11 @@ ul, ol {
 	margin-bottom: 18px;
 }
 .blog-item .bi-text h4 a {
-	color: #ffffff;
+	color: #000;
 }
 .blog-item .bi-text .b-time {
 	font-size: 12px;
-	color: #ffffff;
+	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
@@ -2062,7 +2081,7 @@ ul, ol {
 		width: 300px;
 		z-index: 999;
 		background: #ffffff;
-		text-align: center;
+		/* text-align: center; */
 		overflow-y: auto;
 		height: 100%;
 		opacity: 0;
@@ -2139,6 +2158,10 @@ ul, ol {
 	.offcanvas-menu-wrapper .header-configure-area .language-option .flag-dropdown ul li {
 		list-style: none;
 		text-align: left;
+		
+	}
+	nav.mainmenu.mobile-menu li {
+		padding: 7px 0;
 	}
 	.offcanvas-menu-wrapper .header-configure-area .language-option .flag-dropdown ul li a {
 		font-size: 14px;
@@ -2157,13 +2180,13 @@ ul, ol {
 		font-size: 13px;
 		font-weight: 700;
 		padding: 16px 28px 15px;
-		background: #dfa974;
+		background: #b5191fff;
 		color: #ffffff;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
 	.offcanvas-menu-wrapper .mainmenu {
-		display: none;
+		/* display: none; */
 	}
 	.offcanvas-menu-wrapper .slicknav_menu {
 		background: transparent;
@@ -2184,39 +2207,39 @@ ul, ol {
 	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li .dropdown {
 		padding-left: 20px;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li a {
-		margin: 0;
+	.offcanvas-menu-wrapper  ul li a {
+		margin: 0 !important;
 		padding: 10px;
 		font-weight: 600;
 		font-size: 14px;
-		color: #19191a;
+		color: #19191a !important;
 		border-bottom: 1px solid #e5e5e5;
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav ul li a:hover {
+	.offcanvas-menu-wrapper   ul li a:hover {
 		border-radius: 0;
 		background: transparent;
 		color: #dfa974;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row a {
+	.offcanvas-menu-wrapper   .slicknav_row a {
 		border-bottom: 0;
 		padding-left: 0;
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row span {
+	.offcanvas-menu-wrapper   .slicknav_row span {
 		color: #19191a;
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row:hover a {
+	.offcanvas-menu-wrapper:hover a {
 		color: #dfa974;
 	}
-	.offcanvas-menu-wrapper .slicknav_menu .slicknav_nav .slicknav_row:hover span {
+	.offcanvas-menu-wrapper:hover span {
 		color: #dfa974;
 	}
 	.offcanvas-menu-wrapper .top-social {
@@ -2337,6 +2360,28 @@ ul, ol {
 		position: relative;
 		border: 1px solid #b5191fff;
 	}
+	.carousel.slide {
+		height: 300px;
+	}
+	.carousel-inner {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		height: 300px;
+	}
+	.booking-form {
+		background: white;
+		padding: 1px 1px 1px 1px;
+		border-radius: 24px;
+		position: relative;
+		margin-top: 255px;
+		z-index: 10;
+		box-shadow: 0px 0px 35px -12px grey;
+	}
+	.video-player video {
+		width: 1498px;
+		height: 100%;
+	}
 	.select-id {
 		padding: 10px !important;
 		height: unset !important;
@@ -2367,7 +2412,16 @@ ul, ol {
 		width: 1.3em;
 		line-height: 1.4em;
 		border-radius: 50%;
-		bottom: -5.5rem !important;
+		bottom: -5.6rem !important;
+	}
+	.user_login .go2150698616:before {
+		position: relative;
+		float: left;
+		left: 50%;
+		width: 1.3em;
+		line-height: 1.4em;
+		border-radius: 50%;
+		bottom: -4.1rem !important;
 	}
 	#content {
 		flex: 1 1;
@@ -2474,6 +2528,11 @@ ul, ol {
 		margin: auto;
 		margin-top: 15px!important;
 	}
+	.tabcontainer1{
+		width: 93%!important;
+		margin: auto;
+		margin-top: 15px!important;
+	}
 	.menu {
 		display: flex;
 	}
@@ -2532,9 +2591,7 @@ ul, ol {
 	.booking-form-rooms{
 		padding: unset !important ;
 	}
-	.slider-img{
-		height:800px;
-	}
+	
 	.select-option {
 		margin-top: 11px;
 	}
@@ -2600,7 +2657,8 @@ input[type="text"]::placeholder {
 }
 
 figure {
-   height: 300px
+   height: 300px;
+   position:relative;
 }
 .destination-img-div{
 	height: 480px !important;
@@ -2756,17 +2814,16 @@ figure:hover .img-dec {
 	color: #ffffff;
 }
 .footer-top #footer-newsletter input {
-    margin-right: 1rem;
     width: 68%;
     padding: 0.313rem;
     border: 1px solid #fff;
-    border-radius: 3px;
+    border-radius: 3px 0px 0px 3px;
 }
  .footer-top #footer-newsletter .btn {
     text-transform: uppercase;
 	background-color: #b5191fff;
     color: #fff;
-    border-radius: 20px;
+    border-radius: 0px 4px 4px 0px;
     border: 1px solid #b5191fff;
 padding: 0px 10px 0px 10px;
 }
@@ -2806,8 +2863,8 @@ padding: 0px 10px 0px 10px;
 }
 .contentcollection_itemtext2{
 	font-size: 18px;
-	width: 100%;	
-	margin-left: 20px;
+	/* width: 100%;	 */
+	/* margin-left: 20px; */
 }
 
 .add-hotels{
@@ -2866,8 +2923,6 @@ padding: 0px 10px 0px 10px;
    .sidebar-list{
     color: #fff !important;
 	font-size: 20px;
-	
-	text-align: center;
    }
    .sidebar-list:hover{
     color: #fff !important;
@@ -2909,7 +2964,7 @@ padding: 0px 10px 0px 10px;
 		width: 100%;
 		padding: 10px;
 		margin-bottom: 15px;
-		border: 1px solid #b5191fff;
+		border: 1px solid #000;
 		border-radius: 4px;
 		box-sizing: border-box;
 	}
@@ -2930,11 +2985,11 @@ padding: 0px 10px 0px 10px;
 	}
 
 	.logout-btn {
-		position: absolute;
+		/* position: absolute; */
 		font-size: 20px;
-		bottom: 0px;
-		
-		width: 100%;
+		/* bottom: 0px; */
+		/* width: 100%; */
+		padding: 8px 16px;
 	}
 	svg {
 		
@@ -3054,7 +3109,11 @@ button {
 }
 
 button:hover {
-	background-color: #b5191fff;
+	background-color: #b5191fff !important;
+	color: #ffffff;
+}
+.booking-form form button:hover{
+	color: #fff;
 }
 
 .signup-section {
@@ -3076,19 +3135,6 @@ height: 60px;
 display: flex;
 justify-content: center;
 /* margin:20px 0; */
-}
-
-.logo .bluebirdlogo {
-height: 100%;
-}
-
-.logo p {
-height: 100%;
-display: flex;
-align-items: center;
-font-size: 30px;
-color: rgb(66, 68, 74);
-text-shadow: var(--bg-text-shadow);
 }
 
 .auth_container {
@@ -3142,6 +3188,9 @@ margin: 10px;
 display: none;
 text-align: center;
 animation: screen_animation .4s;
+}
+.user_login input:focus{
+	border-color: #000;
 }
 /* toggle display */
 .user_login.active{
@@ -3384,6 +3433,10 @@ transform: translateX(50px);
     width: 63%;
     margin: auto;
 }
+.tabcontainer1{
+	width: 80%;
+	margin: auto;
+} 
 button.w3-bar-item {
     background: white;
     margin-bottom: 2px;
@@ -3406,7 +3459,7 @@ button.w3-bar-item {
 }
 h5{
 	font-family: "Cabin", sans-serif!important;
-}
+	}
 .amenity {
     border: 1px solid #80808085;
     padding: 14px 11px;
@@ -3454,7 +3507,7 @@ h5{
 }
 .likeview i {
     border: 1px solid #80808052;
-    padding: 9px 9px;
+    padding: 9px 18px 9px 9px;
     margin-right: 6px;
     font-size: 24px;
     border-radius: 15px;
@@ -3676,9 +3729,13 @@ a.btn.btn-block.btn-default {
       flex: 1;
       /* max-width: 100%; */
       }
-      .image-container,
+      .image-container{
+		height: 100vh;
+		box-sizing: border-box;
+		}
+
       .form-container {
-      height: 80vh;
+      height: 92vh;
       box-sizing: border-box;
       }
       .image-container img {
@@ -3715,7 +3772,7 @@ a.btn.btn-block.btn-default {
       cursor: pointer;
       }
       button:hover {
-      background-color: #b5191fff;
+      background-color: #b5191fff !important;
       }
       .signup-section {
       text-align: center;
@@ -3746,17 +3803,7 @@ a.btn.btn-block.btn-default {
       color: rgb(66, 68, 74);
       text-shadow: var(--bg-text-shadow);
       }
-      .auth_container {
-      height: 80%;
-      margin: 50px;
-      }
-      #Log_in {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      }
+  
       .role_btn {
       display: flex;
       gap: 30px;
@@ -3891,7 +3938,7 @@ a.btn.btn-block.btn-default {
 	}
 	.user_login button{
 		margin: 0px 10px;
-		width: 15%;
+		width: 38%;	
 		border-radius: 5px
 	}
 
@@ -3963,10 +4010,404 @@ a.btn.btn-block.btn-default {
 	div#main-addhotel {
 		padding: 30px;
 	}
-	div#addHotels ol {
+	.go2392553372 {
 		padding: unset;
 		margin-bottom: 42px;
 	}
 	div#addHotels ol li {
 		min-width: 5rem !important;
 	}
+	form {
+		background: white;
+		padding: 23px;
+	}
+.card-body-div{
+	margin: 20px;
+}
+.current-subscription h6{
+	color:#b5191fff ;
+}
+.current-subscription span{
+	color:#b5191fff ;
+}
+.category-div{
+	text-align: center;	
+	border: 1px solid #80808057;
+}
+.category-div a{
+	cursor: pointer;
+}
+.also-like{
+	border: 1px solid #80808057;
+	padding: 10px;
+}
+.mainContenerdiv{
+	width: 80%;
+}
+.exclusive-deals{
+	border: 2px solid #b5191fff;
+	border-radius: 5px;
+	padding: 10px;
+}	
+.exclusive-deals h5{
+	color: #b5191fff;
+
+	font-weight: 600;
+}
+.exclusive-deals a{
+	cursor: pointer;
+}
+.exclusive-deals .phone-icon {
+font-size: 40px;
+color: #b5191fff;
+}
+.exclusive-deals .valid{
+	font-size: 14px;
+}
+
+
+.exclusive-deals1 {
+    /* border: 2px solid #b5191fff; */
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+	background-color: #ffff;
+	width: 90%;
+}
+.exclusive-deals1 h5 {
+	font-size: 14px;
+    color: #000;
+    font-weight: 500;
+	line-height: 2;
+}
+.exclusive-deals1 a{
+	cursor: pointer;
+}
+.exclusive-deals1 .phone-icon {
+font-size: 40px;
+color: #b5191fff;
+}
+.exclusive-deals1 .valid{
+	font-size: 14px;
+}
+.exclusive-deals1 img{
+	height: auto;
+    width: 200px;
+}
+.star-rating span:before {
+    content: "\f148" "\f148" "\f148" "\f148" "\f148";
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+}
+
+.star-rating {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-size: 28px;
+    color: #EABE12;
+    font-family: woodmart-font;
+}
+.alternate-hotels h2{
+	text-align: left !important;
+}
+.card-img-top {
+	height: 30vh;
+}
+
+.VideoBackground-main{
+	position: absolute;
+}
+  
+/* .video-background {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+  }
+  .video-player{
+	width: 100%;
+	height: 100vh;
+  } */
+
+  .video-background {
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	overflow: hidden;
+  }
+
+  
+  .video-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  
+  .text-overlay {
+	position: absolute;
+	top: 15%;
+	left: 8%;
+	color: #ffffff !important;
+	font-size: 18px;
+	
+  }
+  .text-overlay .text-div{
+width: 80%;
+line-height: 2;
+  }
+  .hotel-present-div{
+	position: relative;
+	top: 80px;
+  }
+  .thumbnail.destination-main {
+    height: unset;
+}
+.video-player video {
+    width: 1498px!important;
+    height: 100%!important;
+}
+.video-player {
+    height: unset !important;
+}
+.all-hotel-section{
+	background-color: #fff;
+}
+
+
+.slick-prev:before{
+	font-size: 28px !important;
+	color: #b5191fff !important;
+}
+
+.slick-next:before {
+	font-size: 28px !important;
+	color: #b5191fff !important;
+}
+.slick-prev, .slick-next {
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 0px !important;
+    height: 0px !important;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.video-iframe{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-iframe iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    padding: 10px;
+    height: 100%;
+    min-height: 1px;
+}
+.section-title{
+	background-color:#0000002b !important;
+}
+.videos-content-present{
+	position: relative;
+	top: 80px;
+}
+.what-we-do{
+	height: 700px;
+	background-color: #ffff;
+	background-image: url(../assets/img/hero/hero-1.jpg);
+		/* background-color: black; */
+}
+.contact-us{
+	height: 700px;
+    background-image: url(../assets/img/hero/hero-1.jpg);
+	background-color: #b5191fff;
+}
+
+.contact-us .inner-div {
+	height: 350px;
+	width: 350px;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	position: relative;
+    top: 200px;
+	left: 200px;
+	padding: 100px 0px;
+}
+.what-we-do.col-lg-6:hover .inner-div{
+    height: 350px;
+    width: 350px;
+    border: 8px solid #b5191fff;
+    border-radius: 0px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 90px 0px;
+	transition: 0.5s ease all;
+}
+.contact-us.col-lg-6:hover .inner-div{
+    height: 350px;
+    width: 350px;
+    border: 8px solid #ffffff;
+    border-radius: 0px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 90px 0px;
+	transition: 0.5s ease all;
+}
+.contact-us .inner-div h2{
+
+	font-size: 40px !important;
+    color: #ffff;
+    font-weight: 800;
+}
+.contact-us .inner-div p{
+	color: #ffff;
+    font-size: 20px !important;
+}
+.what-we-do .inner-div {
+	height: 350px;
+	width: 350px;
+	border: 8px solid #b5191fff;
+	border-radius: 50%;
+	position: relative;
+    top: 200px;
+	left: 200px;
+	padding: 100px 0px;
+	transition: 0.5s ease all;
+}
+.what-we-do .inner-div:hover {
+    height: 350px;
+    width: 350px;
+    border: 8px solid #b5191fff;
+    border-radius: 0px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 90px 0px;
+}
+.what-we-do .inner-div h2{
+
+font-size: 40px !important;
+    color: #e41d25;
+    font-weight: 800;
+}
+
+.what-we-do .inner-div p{
+	color: #e41d25;
+    font-size: 20px !important;
+	}
+
+	.advertise-first-section{
+		height: 700px;
+	}
+	.adv-container{
+		position: relative;
+		top: 50px;
+	}
+	.heading{
+		color: #ffff;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+
+	.flip-box {
+		background-color: transparent;
+		
+		/* border: 1px solid #f1f1f1; */
+		perspective: 1000px; /* Remove this if you don't want the 3D effect */
+	  }
+	  
+	  /* This container is needed to position the front and back side */
+	  .flip-box-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	  }
+	  
+	  /* Do an horizontal flip when you move the mouse over the flip box container */
+	  .flip-box:hover .flip-box-inner {
+		transform: rotateY(180deg);
+	  }
+	  
+	  /* Position the front and back side */
+	  .flip-box-front, .flip-box-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden; /* Safari */
+		backface-visibility: hidden;
+	  }
+	  .flip-box-back .heading{
+		color: #ffff;
+		font-size: 18px;
+		font-weight: 400;
+	  }
+	  /* Style the front side (fallback if image is missing) */
+	  .flip-box-front {
+		background-color: #bbb;
+		color: black;
+	  }
+	  
+	  /* Style the back side */
+	  .flip-box-back {
+		/* background-color: dodgerblue; */
+		color: white;
+		transform: rotateY(180deg);
+	  }
+	  .text-heading-button{
+		position: relative;
+		top: 320px;
+	  }
+	  .what-we-do.col-lg-6:hover .hovermaindiv {
+		background: #ff000052;
+	}
+	 .hovermaindiv {
+		height: 700px;
+		background: #fff;
+	}
+
+	.contact-us.col-lg-6:hover .hovermaindivtwo {
+		background: #ff000052;
+	}
+	 .hovermaindivtwo {
+		height: 700px;
+		background: #ff000a;
+	}
+	.normal-star {
+		/* font-family: "Cabin", sans-serif;  */
+		font-size: 20px; 
+		display: inline-block;
+	  }
+	  
+	  .star-icon:before {
+		content: "\f005"; 
+	  }
+	  
+	  .normal-star.filled .star-icon {
+		color: gold; /* Color for filled stars */
+	  }

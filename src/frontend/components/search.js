@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
+import API from '../../utils';
+import axios from 'axios';
  function Search(){
+   const [hotelName, setHotelName] = useState('');
+  const [country, setCountry] = useState('');
+  const formData = {
+   
+   hotel_keyword: hotelName,
+   country:country
+  }
+
+  const handleSearch = async (e) => {
+   e.preventDefault();
+   try {
+      const response = await axios.post(
+         `${API.BASE_URL}${API.ENDPOINTS.hotelSearch}`,
+         JSON.stringify(formData),
+         {
+            headers: {
+               Authorization: "hXuRUGsEGuhGf6KM",
+            },
+         }
+      );
+
+      if (response.data.status === true) {
+         
+      } else {
+         console.error("seach failed:");
+      }
+   } catch (error) {
+      console.error("Error:", error.message);
+   }
+};
     return(
         <section>
         <Container >
@@ -9,13 +41,15 @@ import { Col, Container, Form, Row } from 'react-bootstrap';
                  <Row >
                     <Col lg={5} >
                        <div className="check-date">
-                          <input type="text" placeholder="Enter Hotel Name"/>
+                          <input type="text" placeholder="Enter Hotel Name" value={hotelName}
+                    onChange={(e) => setHotelName(e.target.value)}/>
                           <i className="fa fa-building" aria-hidden="true"></i>
                        </div>
                     </Col>
                     <Col lg={5} >
                        <div className="select-option">
-                          <select className='select-id'>
+                          <select className='select-id' value={country}
+                    onChange={(e) => setCountry(e.target.value)}>
                              <option value="Afghanistan">Country</option>
                              <option value="Afghanistan">Afghanistan</option>
                              <option value="Åland Islands">Åland Islands</option>
@@ -196,76 +230,12 @@ import { Col, Container, Form, Row } from 'react-bootstrap';
                              <option value="Portugal">Portugal</option>
                              <option value="Puerto Rico">Puerto Rico</option>
                              <option value="Qatar">Qatar</option>
-                             <option value="Reunion">Reunion</option>
-                             <option value="Romania">Romania</option>
-                             <option value="Russian Federation">Russian Federation</option>
-                             <option value="Rwanda">Rwanda</option>
-                             <option value="Saint Helena">Saint Helena</option>
-                             <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                             <option value="Saint Lucia">Saint Lucia</option>
-                             <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                             <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
-                             <option value="Samoa">Samoa</option>
-                             <option value="San Marino">San Marino</option>
-                             <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                             <option value="Saudi Arabia">Saudi Arabia</option>
-                             <option value="Senegal">Senegal</option>
-                             <option value="Serbia">Serbia</option>
-                             <option value="Seychelles">Seychelles</option>
-                             <option value="Sierra Leone">Sierra Leone</option>
-                             <option value="Singapore">Singapore</option>
-                             <option value="Slovakia">Slovakia</option>
-                             <option value="Slovenia">Slovenia</option>
-                             <option value="Solomon Islands">Solomon Islands</option>
-                             <option value="Somalia">Somalia</option>
-                             <option value="South Africa">South Africa</option>
-                             <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
-                             <option value="Spain">Spain</option>
-                             <option value="Sri Lanka">Sri Lanka</option>
-                             <option value="Sudan">Sudan</option>
-                             <option value="Suriname">Suriname</option>
-                             <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                             <option value="Swaziland">Swaziland</option>
-                             <option value="Sweden">Sweden</option>
-                             <option value="Switzerland">Switzerland</option>
-                             <option value="Syrian Arab Republic">Syrian Arab Republic</option>
-                             <option value="Taiwan">Taiwan</option>
-                             <option value="Tajikistan">Tajikistan</option>
-                             <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
-                             <option value="Thailand">Thailand</option>
-                             <option value="Timor-leste">Timor-leste</option>
-                             <option value="Togo">Togo</option>
-                             <option value="Tokelau">Tokelau</option>
-                             <option value="Tonga">Tonga</option>
-                             <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                             <option value="Tunisia">Tunisia</option>
-                             <option value="Turkey">Turkey</option>
-                             <option value="Turkmenistan">Turkmenistan</option>
-                             <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                             <option value="Tuvalu">Tuvalu</option>
-                             <option value="Uganda">Uganda</option>
-                             <option value="Ukraine">Ukraine</option>
-                             <option value="United Arab Emirates">United Arab Emirates</option>
-                             <option value="United Kingdom">United Kingdom</option>
-                             <option value="United States">United States</option>
-                             <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
-                             <option value="Uruguay">Uruguay</option>
-                             <option value="Uzbekistan">Uzbekistan</option>
-                             <option value="Vanuatu">Vanuatu</option>
-                             <option value="Venezuela">Venezuela</option>
-                             <option value="Viet Nam">Viet Nam</option>
-                             <option value="Virgin Islands, British">Virgin Islands, British</option>
-                             <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                             <option value="Wallis and Futuna">Wallis and Futuna</option>
-                             <option value="Western Sahara">Western Sahara</option>
-                             <option value="Yemen">Yemen</option>
-                             <option value="Zambia">Zambia</option>
-                             <option value="Zimbabwe">Zimbabwe</option>
+                             
                           </select>
                        </div>
                     </Col>
                     <Col lg={2} >
-                       <button type="submit">Check Availability</button>
+                       <button type="submit" onClick={handleSearch}>Check Availability</button>
                     </Col>
                  </Row>
               </Form>

@@ -10,20 +10,13 @@ import News6 from '../../assets/img/news6.jpg';
 import News7 from '../../assets/img/news7.jpg';
 function Destination() {
     return(
-        <section className=" destination-div spad">
+        <section className="destination-div spad">
         <Container >
            <Row >
-              <Col lg={12} >
-                 <div className="section-title">
-                    <h2>Destination of the month: Saudi Arabia</h2>
-                 </div>
-              </Col>
-           </Row>
-           <Row >
-              <Col lg={7}  md={7} className=" d-flex flex-column justify-content-center">
-                 <figure className="destination-Image-div">
-                     {/* <!-- <div className="destination-Image Image-center">Jumeirah Al Qasr Hotel, Dubai</div> --> */}
-                    <div className="thumbnail">
+              <Col lg={7} md={7} className=" d-flex flex-column mt-5">
+                 <figure className="destination-img-div">
+                 <div className="destination-img image-center">Jumeirah Al Qasr Hotel, Dubai</div>
+                    <div className="thumbnail destination-main">
                        <div><button className="readmore">Read More</button></div>
                        <Image src={Head7}/>
                     </div>

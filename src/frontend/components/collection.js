@@ -9,12 +9,12 @@ function Collections() {
     return(
         <section className="services-section spad">
         <Container >
-           <h2 className="text-center mb-5">The sustainability collection</h2>
+           <h2 className="text-center mb-5">Best Luxury Hotels Of The Year</h2>
             
               <Row className="mt-3">
                 <Col lg={3} md={6}>
                    <figure>
-                       {/* <div className="Image-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                       <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News4}/>
@@ -23,7 +23,7 @@ function Collections() {
                 </Col>
                 <Col lg={3} md={6}>
                    <figure>
-                       {/* <div className="Image-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                       <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                      
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
@@ -33,7 +33,7 @@ function Collections() {
                 </Col>
                 <Col lg={3} md={6}>
                    <figure>
-                       {/* <div className="Image-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                       <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News6}/>
@@ -42,7 +42,7 @@ function Collections() {
                 </Col>
                 <div className="col-lg-3 col-md-6">
                    <figure>
-                       {/* <div className="Image-dec">Jumeirah Al Qasr Hotel, Dubai</div> */}
+                       <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News7}/>

@@ -13,6 +13,7 @@ function LatestNews() {
               <Row className=" mt-3">
                 <Col lg={3} md={6}>
                    <figure>
+                   <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News5} alt=''/>
@@ -22,7 +23,7 @@ function LatestNews() {
                 <Col lg={3} md={6}>
                    <figure>
                       
-                      
+                   <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News4}/>
@@ -31,7 +32,7 @@ function LatestNews() {
                 </Col>
                 <Col lg={3} md={6}>
                    <figure>
-                       
+                   <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News6} alt=''/>
@@ -40,7 +41,7 @@ function LatestNews() {
                 </Col>
                 <Col lg={3} md={6}>
                    <figure>
-                       
+                   <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
                          <div><button className="readmore">Read More</button></div>
                          <Image src={News7}/>

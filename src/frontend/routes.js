@@ -10,6 +10,10 @@ import UserProfile from "./pages/userProfile";
 import RoomDetails from "./pages/roomDetails";
 import PricingPlan from "./components/pricingPlan";
 import Profile from "./components/profile";
+import SubsriptionPage from "./components/subscriptionPage";
+import WhatWeDo from "./pages/whatWeDo";
+import AdvertiseWithUs from "./pages/advertiseWithUs";
+import HotelSelection from "./pages/hotelSelection";
 
 
 function RoutesPage(){
@@ -18,14 +22,18 @@ function RoutesPage(){
       <Route exact path="/" element={<IndexPage/> } />
       <Route exact path="/home" element={<IndexPage/> } />
       <Route exact path="/blogs" element={<Blogs/> } />
-      <Route exact path="/Blog-details" element={<BlogDetails/> } />
+      <Route exact path="/Blog-details/:news_id" element={<BlogDetails/> } />
       <Route exact path="/rooms" element={<Rooms/> } />
-      <Route exact path="/room-details" element={<RoomDetails/> } />
+      <Route exact path="/room-details/:news_id" element={<RoomDetails/> } />
       <Route exact path="/Login" element={<Login/> } />
       <Route exact path="/signup" element={<Signup/> } />
       <Route exact path="/userprofile" element={<UserProfile/> } />
       <Route exact path="/pricing-plan" element={<PricingPlan/> } />
       <Route exact path="/profile" element={<Profile/> } />
+      <Route exact path="/subscription" element={<SubsriptionPage/> } />
+      <Route exact path="/what-we-do" element={<WhatWeDo/> } />
+      <Route exact path="/advertise-with-us" element={<AdvertiseWithUs/> } />
+      {/* <Route exact path="/hotels-selection" element={<HotelSelection/> } /> */}
       </Routes>  
     );
 }

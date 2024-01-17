@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/header';
 import Search from '../components/search';
 import Footer from '../components/footer';
 import Hero from '../components/hero';
-import { Col, Container, Form, Row } from 'react-bootstrap';
+import { Col, Container, Form, Image, Row } from 'react-bootstrap';
 import Rooms4 from "../../assets/img/room/room-4.jpg"
 import Rooms5 from "../../assets/img/room/room-5.jpg"
 import Rooms6 from "../../assets/img/room/room-6.jpg"
@@ -12,18 +12,77 @@ import News6 from '../../assets/img/news6.jpg'
 import News7 from '../../assets/img/news7.jpg'
 import { FaSearch } from 'react-icons/fa';
 import CallToAction from '../components/callToAction';
+import axios from 'axios';
+import API from '../../utils';
 
 function Rooms(){
+
+    const [hotelName, setHotelName] = useState('');
+    const [country, setCountry] = useState('');
+    const formData = {
+     coutry_id: "1",
+     hotel_keyword: hotelName
+    }
+  
+    const handleSearch = async (e) => {
+     e.preventDefault();
+     try {
+        const response = await axios.post(
+           `${API.BASE_URL}${API.ENDPOINTS.hotelSearch}`,
+           JSON.stringify(formData),
+           {
+              headers: {
+                 Authorization: "hXuRUGsEGuhGf6KM",
+              },
+           }
+        );
+  
+        if (response.status === 200) {
+           console.log("signup successful:");
+        } else {
+           console.error("signup failed:");
+        }
+     } catch (error) {
+        console.error("Error:", error.message);
+     }
+  };
+    const [apiData, setApiData] = useState([]);
+
+    const fetchAllHotels = async () => {
+      const token = localStorage.getItem("token");
+        try {
+          const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allHotels}`, {
+            headers: {
+               "Authorization": "Bearer " + token,
+            }
+          });
+          const data = response.data;
+          if (data.status === true) {
+            setApiData(data.data);
+            console.log(data)
+          } else {
+            console.error("Failed to fetch data");
+          }
+        } catch (error) {
+          console.error("Error:", error.message);
+        }
+      };
+    
+      useEffect(() => {
+        fetchAllHotels();
+      }, []);
     return (
         <>
  <Header/>
+ <section className='all-hotel-section'>
  <div className='serch-div'>
  <div className="booking-form-rooms">
               <Form action="#" className='booking-form-rooms-form'>
                  <Row >
                     <Col lg={5} >
                        <div className="check-date">
-                          <input type="text" placeholder="Enter Hotel Name"/>
+                          <input type="text" placeholder="Enter Hotel Name" value={hotelName}
+                    onChange={(e) => setHotelName(e.target.value)}/>
                           <i className="fa fa-building" aria-hidden="true"></i>
                        </div>
                     </Col>
@@ -279,21 +338,21 @@ function Rooms(){
                        </div>
                     </Col>
                     <Col lg={2} >
-                       <button type="submit" className='serch-btn'><i><FaSearch/></i></button>
+                       <button type="submit" className='serch-btn' onClick={handleSearch}><i><FaSearch/></i></button>
                     </Col>
                  </Row>
               </Form>
            </div></div>
 
-    <section className="rooms-section spad mt-5">
+    <section className="rooms-section spad ">
         <Container>
      
  <h1 className="text-center mt-5">Our Hotels</h1>
             <Row >
-            <Col lg={6} ><h6 style={{lineHeight: "3",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
+            <Col lg={6} ><h6 style={{lineHeight: "4",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
 Default sorting</h6>
 </Col>
-            <div className="col-lg-6 text-right">
+            {/* <div className="col-lg-6 text-right">
                   <div className="dropdown text-end ">
             <span className="dropdown-span" style={{lineHeight: "3",marginRight: "6px"}}>Sort By : </span>
 
@@ -309,81 +368,26 @@ Default sorting</h6>
                       </select>
                    </div>
           </div>
-            </div>
+            </div> */}
         </Row>
-            <div className="row">
-                <div className="col-lg-4 col-md-6">
-                    <a href="room-details.html"><div className="room-item">
-                        <img src={News5} alt=""/>
-                        <div className="ri-text">
-                            <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
-                              
-                            <a href="room-details.html" className="primary-btn">More Details</a>
-                        </div>
-                    </div></a>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                    <div className="room-item">
-                        <img src={News6} alt=""/>
-                        <div className="ri-text">
-                            <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
-                             
-                            <a href="room-details.html" className="primary-btn">More Details</a>
-                        </div>
+        <Row >
+            {apiData.map((hotel) => (
+              <Col lg={4} md={6}  key={hotel.id}>
+                <a href={`/room-details/${hotel.id}`}>
+                  <div className="room-item">
+                    <img src={hotel.fullImagePath} alt={hotel.hotel_title} />
+                    <div className="ri-text">
+                      <h4>{hotel.hotel_title}</h4>
+                      <p>{hotel.country}</p>
+                      <a href={`/room-details/${hotel.id}`} className="primary-btn">More Details</a>
                     </div>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                    <div className="room-item">
-                        <img src={News7} alt=""/>
-                        <div className="ri-text">
-                            <h4>Jumeirah Al Qasr Hotel, Dubai</h4>
-                             
-                            <a href="room-details.html" className="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                    <div className="room-item">
-                        <img src={Rooms4} alt=""/>
-                        <div className="ri-text">
-                            <h4>Luxury Room</h4>
-                             
-                          
-                            <a href="room-details.html" className="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                    <div className="room-item">
-                        <img src={Rooms5} alt=""/>
-                        <div className="ri-text">
-                            <h4>Symphony Style Hotel, Quorvus Collection</h4>
-                             
-                           
-                            <a href="room-details.html" className="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                    <div className="room-item">
-                        <img src={Rooms6}alt=""/>
-                        <div className="ri-text">
-                            <h4>David Citadel Hotel  </h4>
-                             
-                           
-                            <a href="room-details.html" className="primary-btn">More Details</a>
-                        </div>
-                    </div>
-                </div> 
-                <div className="col-lg-12">
-                    <div className="room-pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">Next <i className="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+                  </div>
+                </a>
+              </Col>
+            ))}
+          </Row>
         </Container>
+    </section>
     </section>
     <CallToAction/>
     <Footer/>

@@ -12,6 +12,7 @@ import Destination from './components/destination';
 import Header from './components/header';
 import ClientLogo from './components/clientLogo';
 import Tabs from './components/tabs';
+import VideoBackground from './components/videos';
 function IndexPage(){
     return(
         <><Header/>
@@ -23,8 +24,9 @@ function IndexPage(){
     <LatestNews/>
     <Destination/>
     <Collections/>
-    <MostPopular/>
+    <VideoBackground/>
     <KnoledgeTest/>
+   
     <CallToAction/>
     <Footer/>
     </>
