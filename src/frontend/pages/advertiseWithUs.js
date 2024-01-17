@@ -86,7 +86,7 @@ function AdvertiseWithUs() {
 
             <Parallax blur={0} bgImage={Hero3} bgImageAlt="the cat" strength={100} className="advertise-first-section">
                 <section>
-                    <h1>Advertise With Us</h1>
+                    <h2 className="text-center mt-4">Advertise With Us</h2>
                     <Container className="adv-container">
                         <Row>
 

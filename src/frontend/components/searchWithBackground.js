@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../components/header';
-import Search from '../components/search';
-import Footer from '../components/footer';
-import Hero from '../components/hero';
+import React ,{ useEffect, useState }from "react";
 import { Col, Container, Form, Image, Row } from 'react-bootstrap';
-import Rooms4 from "../../assets/img/room/room-4.jpg"
-import Rooms5 from "../../assets/img/room/room-5.jpg"
-import Rooms6 from "../../assets/img/room/room-6.jpg"
-import News5 from '../../assets/img/news5.jpg'
-import News6 from '../../assets/img/news6.jpg'
-import News7 from '../../assets/img/news7.jpg'
-import CallToAction from '../components/callToAction';
 import axios from 'axios';
 import API from '../../utils';
 import { FaSearch } from 'react-icons/fa';
+function SearchWithBackground(){
+    const [hotelName, setHotelName] = useState('');
 
-function Rooms(){
-
-   const [hotelName, setHotelName] = useState('');
-
-    const [country, setCountry] = useState('');
     const formData = {
-     coutry_id: "1",
-     hotel_keyword: hotelName
-    }
+        coutry_id: "1",
+        hotel_keyword: hotelName
+       }
     const handleSearch = async (e) => {
      e.preventDefault();
      try {
@@ -46,36 +32,8 @@ function Rooms(){
         console.error("Error:", error.message);
      }
   };
-    const [apiData, setApiData] = useState([]);
-
-    const fetchAllHotels = async () => {
-      const token = localStorage.getItem("token");
-        try {
-          const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allHotels}`, {
-            headers: {
-               "Authorization": "Bearer " + token,
-            }
-          });
-          const data = response.data;
-          if (data.status === true) {
-            setApiData(data.data);
-            console.log(data)
-          } else {
-            console.error("Failed to fetch data");
-          }
-        } catch (error) {
-          console.error("Error:", error.message);
-        }
-      };
-    
-      useEffect(() => {
-        fetchAllHotels();
-      }, []);
-    return (
-        <>
- <Header/>
- <section className='all-hotel-section'>
- <div className='serch-div'>
+    return(
+<div className='serch-div'>
  <div className="booking-form-rooms">
               <Form action="#" className='booking-form-rooms-form'>
                  <Row >
@@ -345,54 +303,6 @@ function Rooms(){
            </div>
            </div>
 
-    <section className="rooms-section spad ">
-        <Container>
-     
- <h1 className="text-center mt-5">Our Hotels</h1>
-            <Row >
-            <Col lg={6} ><h6 style={{lineHeight: "4",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
-  Default sorting</h6>
-   </Col>
-            {/* <div className="col-lg-6 text-right">
-                  <div className="dropdown text-end ">
-            <span className="dropdown-span" style={{lineHeight: "3",marginRight: "6px"}}>Sort By : </span>
-
-            <div className="select-option shortdrop" style={{float: "right" ,width: "40%"}}>
-                      <select className="select-id">
-                         <option value="Afghanistan">Country</option>
-                         <option value="Afghanistan">Afghanistan</option>
-                         <option value="Åland Islands">Åland Islands</option>
-                         <option value="Albania">Albania</option>
-                         <option value="Algeria">Algeria</option>
-                         <option value="American Samoa">American Samoa</option>
-                         
-                      </select>
-                   </div>
-          </div>
-            </div> */}
-        </Row>
-        <Row >
-            {apiData.map((hotel) => (
-              <Col lg={4} md={6}  key={hotel.id}>
-                <a href={`/room-details/${hotel.id}`}>
-                  <div className="room-item">
-                    <img src={hotel.fullImagePath} alt={hotel.hotel_title} />
-                    <div className="ri-text">
-                      <h4>{hotel.hotel_title}</h4>
-                      <p>{hotel.country}</p>
-                      <a href={`/room-details/${hotel.id}`} className="primary-btn">More Details</a>
-                    </div>
-                  </div>
-                </a>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-    </section>
-    </section>
-    <CallToAction/>
-    <Footer/>
- </>
     );
 }
-export default Rooms;
+export default SearchWithBackground;
