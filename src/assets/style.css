@@ -3458,6 +3458,10 @@ transform: translateX(50px);
 	width: 80%;
 	margin: auto;
 } 
+.tabcontainer2{
+width: 100%;
+margin: auto;
+}
 button.w3-bar-item {
     background: white;
     margin-bottom: 2px;
@@ -4134,9 +4138,7 @@ color: #b5191fff;
     color: #EABE12;
     font-family: woodmart-font;
 }
-.alternate-hotels h2{
-	text-align: left !important;
-}
+
 .card-img-top {
 	height: 30vh;
 }
@@ -4331,7 +4333,7 @@ padding: 10px;
 .what-we-do .inner-div h2{
 
 font-size: 40px !important;
-    color: #e41d25;
+    color: #e41d25 !important;
     font-weight: 800;
 }
 
@@ -4341,17 +4343,21 @@ font-size: 40px !important;
 	}
 
 	.advertise-first-section{
-		height: 700px;
+		height: 800px;
 	}
 	.adv-container{
 		position: relative;
 	}
 	.heading{
 		color: #ffff;
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 500;
 	}
-
+	.heading1{
+		font-size: 24px;
+		color:#b5191fff;
+		font-weight: 600;
+	}
 
 	.flip-box {
 		background-color: transparent;
@@ -4376,12 +4382,13 @@ font-size: 40px !important;
 	  }
 	  
 	  /* Position the front and back side */
-	  .flip-box-front, .flip-box-back {
-		position: absolute;
+	  .flip-box-front{
+			position: absolute;
 		width: 100%;
 		height: 100%;
 		-webkit-backface-visibility: hidden; /* Safari */
 		backface-visibility: hidden;
+		z-index: 100 !important;
 	  }
 	  .flip-box-back .heading{
 		color: #ffff;
@@ -4402,7 +4409,8 @@ font-size: 40px !important;
 	  }
 	  .text-heading-button{
 		position: relative;
-		top: 320px;
+		top: 130px;
+		margin-bottom: 50px;
 	  }
 	  .what-we-do.col-lg-6:hover .hovermaindiv {
 		background: #ff000052;
@@ -4517,3 +4525,277 @@ border-bottom: 1px solid black;
 		margin-top: 10px;
 		font-size: 16px;
 	}
+	.what-we-do-section{
+		background-image: url(../assets/img/hero/hero-1.jpg);
+
+	}
+	.title-subtitle {
+		font-size: 36px;
+		line-height: 40px;
+		color: #ffffff;
+		font-weight: 700;
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+	.liner-continer {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		margin-bottom: 30px
+		
+	}
+	.woodmart-title-container{
+		color: #ffff;	
+		font-size: 36px;
+	}
+	.left-line {
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color: rgba(255,255,255,.3);
+
+	}
+ .right-line {
+	display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color: rgba(255,255,255,.3);
+	}
+
+	.wpb_wrapper p{
+		color: #ffff;
+		font-size: 16px;
+		margin-bottom: 40px;
+	}
+	.element-icon {
+		font-size: 2.85em!important;
+		color: #b5191fff;
+	}
+	.what-we-do-col h4{
+		font-size: 18px;
+		color: #ffff;
+	}
+
+	.what-we-do-col p{
+		font-size: 16px;
+		color: #ffff;
+
+	}
+	.what-we-do-section .main-div{
+		padding: 30px 130px ;
+	}
+
+	.what-we-do-print-section{
+		background-image: url(../assets/img/magazines/BG7.jpg);
+	}
+
+	.what-we-do-print-section .main-div{
+		padding: 0px 150px 30px 160px;
+	}
+	
+
+	.what-we-do-print-section .liner-continer .woodmart-title-container{
+		font-size: 24px;
+		color: #ffff;
+		font-weight: 300px;
+	}
+	.what-we-do-print-section .title-subtitle{
+		font-size: 24px;
+		line-height: 40px;
+		color: #ffffff;
+		font-weight: 700;
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+	.what-we-do-print-section .available-in .left-line{
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color: rgba(255,255,255,.3);
+		margin: 30px 0px;
+	}
+
+	.what-we-do-print-section .available-in .right-line{
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color: rgba(255,255,255,.3);
+		margin: 30px 0px;
+	}
+	.main-div h2{
+		color: #fff;
+		font-size: 18px;
+	}
+
+	.what-we-do-print-section .logos{
+		padding: 25px 50px;
+	}
+	.vc_column-inner{
+    padding-top: 30px !important;
+    padding-right: 30px !important;
+    padding-bottom: 10px !important;
+    padding-left: 30px !important;
+    background-color: #ffffff !important;
+	text-align: start;
+	}
+	.vc_column-inner h3{
+		font-size: 18px;
+		color: #2d2a2a;
+	}
+	.vc_column-inner p{
+		color: #777;
+		font-size: 16px;
+	}
+	.print-campaign-options{
+		margin-top: -46px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    background-color: #ffffff !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+	}
+	.print-campaign-options .title-subtitle{
+		
+			font-size: 36px;
+			line-height: 40px;
+			color: #2d2a2a;
+		
+	}
+	.print-campaign-options .liner-continer .woodmart-title-container{
+		font-size: 24px;
+		color: #2d2a2a;
+		font-weight: 300px;
+	}
+
+	.print-campaign-options .liner-continer .left-line {
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color:#2d2a2a;
+
+	}
+	.print-campaign-options .liner-continer .right-line {
+	display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid #2d2a2a ;
+		border-color:#2d2a2a;
+	}
+
+	.print-campaign-options .image-flip-div p{
+     font-size: 16px;
+		color: #2d2a2a;
+	}
+
+	.print-campaign-options .image-flip-div h3{
+		font-size: 20px;
+		   color: #2d2a2a;
+	   }
+	   /* .print-campaign-options .btn-div{
+position: relative;
+top: 250px;	
+	   } */
+
+	   .what-we-do-digital-section{
+		background-image: url(../assets/img/magazines/BG7.jpg);
+	   }
+
+	   .what-we-do-digital-section .main-div{
+		padding: 30px 0px 30px 60px;
+	}
+	
+
+	.what-we-do-digital-section .liner-continer .woodmart-title-container{
+		font-size: 36px;
+		color: #ffff;
+		font-weight: 300px;
+	}
+	.what-we-do-digital-section .title-subtitle{
+		font-size: 36px;
+		line-height: 40px;
+		color: #ffffff;
+		font-weight: 700;
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+	.what-we-do-digital-section .available-in .left-line{
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color: rgba(255,255,255,.3);
+		margin: 30px 0px;
+	}
+
+	.what-we-do-digital-section .available-in .right-line{
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color: rgba(255,255,255,.3);
+		margin: 30px 0px;
+	}
+	.main-div h2{
+		color: #fff;
+		font-size: 18px;
+	}
+
+	.what-we-do-digital-section .logos{
+		padding: 25px 50px;
+	}
+
+	.digital-campaign-options{
+		margin-top: 0px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    background-color: #ffffff !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+	}
+	.digital-campaign-options .title-subtitle{
+			font-size: 36px;
+			line-height: 40px;
+			color: #2d2a2a !important;
+		
+	}
+	.digital-campaign-options .liner-continer .woodmart-title-container{
+		font-size: 24px;
+		color: #2d2a2a;
+		font-weight: 300px;
+	}
+
+	.digital-campaign-options .liner-continer .left-line {
+		display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid;
+		border-color:#2d2a2a;
+
+	}
+	.digital-campaign-options .liner-continer .right-line {
+	display: block;
+		flex: 1 1 auto;
+		border-bottom: 1px solid #2d2a2a ;
+		border-color:#2d2a2a;
+	}
+
+	.digital-campaign-options .image-flip-div p{
+     font-size: 16px;
+		color: #2d2a2a;
+	}
+
+	.digital-campaign-options .image-flip-div h3{
+		font-size: 20px;
+		   color: #2d2a2a;
+	   }
+
+	   .what-are-you-intersted-in{
+		background-image: url(../assets/img/magazines/BG16.jpg);
+	   }
+	   .what-are-you-intersted-in form{
+		color: rgb(153 153 153 / 84%);;
+	   }
+	   .case-study{
+		background-image: url(../assets/img/magazines/bg4.jpg);
+	   }

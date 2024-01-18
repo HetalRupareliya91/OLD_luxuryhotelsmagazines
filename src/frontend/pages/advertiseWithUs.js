@@ -16,7 +16,9 @@ import magazineImage from "../../assets/img/advertise/advmagazineimg.png"
 import Header from "../components/header";
 import Footer from "../components/footer";
 import CallToAction from "../components/callToAction";
-
+import Magazines1 from  "../../assets/img/magazines/magazines.webp"
+import Magazines2 from  "../../assets/img/magazines/magazines2.webp"
+import Magazines3 from  "../../assets/img/magazines/magazines3.webp"
 function AdvertiseWithUs() {
 
     const [activeTab, setActiveTab] = useState("Zoom");
@@ -31,7 +33,7 @@ function AdvertiseWithUs() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
             {
@@ -52,41 +54,36 @@ function AdvertiseWithUs() {
     const deals = [
         {
             title: advimg1,
-            stars:  "\f149",
+            stars: "\f149",
             description: "“Wanderlust are the ideal partner to work with for the UK market, with excellent editorial standards, and a loyal audience of avid travellers. When working with them we decided to promote an off-the-beaten path destination, in the region of Thrace and the result well-and-truly impressed us! Wanderlust is the best avenue when presenting a new destination/experience/offer to the world!”",
-        },
-        {
-            title: advimg2,
-            stars: "*****",
-            description: " “Wanderlust interpreted our ideas and suggestions brilliantly to come up with a very impactful piece of collateral that portrayed Tasmania’s adventure product in a way that had not been achieved in the UK before.”						",
-        },
-        {
-            title: advimg3,
-            stars: "*****",
-            description: " “Wanderlust are the ideal partner to work with for the UK market, with excellent editorial standards, and a loyal audience of avid travellers. When working with them we decided to promote an off-the-beaten path destination, in the region of Thrace and the result well-and-truly impressed us! Wanderlust is the best avenue when presenting a new destination/experience/offer to the world!”						",
         },
         {
             title: advimg4,
             stars: "*****",
             description: " “The Taiwan Tourism Board needed to find a UK media partner that is well respected, widely known and able to deliver campaigns that satisfy challenging briefs. Wanderlust was able to exceed expectations on all these points and we look forward to working with them again in the future.”	",
         },
+
         {
             title: advimg5,
             stars: "*****",
             description: "“Our campaign with Wanderlust exceeded all expectations (212% of proposed target engagement). We were incredibly pleased with the results and will continue to work with Wanderlust on other campaigns.”",
         },
 
-
+{
+            title: advimg4,
+            stars: "*****",
+            description: " “The Taiwan Tourism Board needed to find a UK media partner that is well respected, widely known and able to deliver campaigns that satisfy challenging briefs. Wanderlust was able to exceed expectations on all these points and we look forward to working with them again in the future.”	",
+        },
 
     ];
     return (
         <>
-        {/* <HEad */}
-        <Header></Header>
+            {/* <HEad */}
+            <Header></Header>
 
-            <Parallax blur={0} bgImage={Hero3} bgImageAlt="the cat" strength={100} className="advertise-first-section">
+            <Parallax blur={5} bgImage={Hero3} bgImageAlt="the cat" strength={100} className="advertise-first-section">
                 <section>
-                    <h2 className="text-center mt-4">Advertise With Us</h2>
+                    <h2 className="text-center text-white mt-4">Advertise With Us</h2>
                     <Container className="adv-container">
                         <Row>
 
@@ -94,40 +91,55 @@ function AdvertiseWithUs() {
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
-                                            <Image src={magazineImage} alt="Paris" />
+                                            <Image src={Magazines1} alt="Paris" />
 
 
                                         </div>
                                         <div class="flip-box-back">
-                                            <h3>The UK's longest-running travel magazine</h3>
-                                            <p className="heading">Relaunched in 2021 with a higher design spefication, more pages than ever and even further distribution. Our six collectable double issues a year reach an average readership of 100k</p>
+                                            <h3>What included</h3>
+                                            <p className="heading">Video Banner exposure to approximately 1 million subscribers
+Reach 1.5 million monthly website visitors</p>
+<p className="heading">Video Banner exposure to approximately 1 million subscribers
+Reach 1.5 million monthly website visitors</p>
+<p className="heading">Sharing Hotel Profile with 1 million
+</p>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div className="text-heading-button">
 
-                                    <div className="text-center mt-4">
-                                        <p className="heading">PRINT</p>
-                                    </div>
-                                    <div className="text-center ">
+<div className="text-center mt-4">
+    <p className="heading1">€80/month
+    </p>
+    <p className="heading">
+        *Original price 450</p>
+    <p className="heading">
+        *Offer valid till 31-12-2023
 
-                                        <button >PRINT CAMPAIGN</button>
-                                    </div>
-                                </div>
+    </p>
+</div>
+
+</div>
                             </Col>
 
                             <Col lg={4} className="p-5">
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
-                                            <Image src={magazineImage} alt="Paris" />
+                                            <Image src={Magazines2} alt="Paris" />
 
 
                                         </div>
                                         <div class="flip-box-back">
-                                            <h3>The UK's longest-running travel magazine</h3>
-                                            <p className="heading">Relaunched in 2021 with a higher design spefication, more pages than ever and even further distribution. Our six collectable double issues a year reach an average readership of 100k</p>
+                                            <h3>What included</h3>
+                                            <p className="heading">Sharing Hotel Profile with 1 million subscribers
+Adjust Hotel profile at any time within a 6-months term</p>
+<p className="heading">Sharing Hotel Profile with 1 million subscribers
+Adjust Hotel profile at any time within a 6-months term</p>
+<p className="heading">Sharing Hotel Profile with 1 million subscribers
+Adjust Hotel profile at any time within a 6-months term</p>
+
                                         </div>
                                     </div>
 
@@ -135,12 +147,16 @@ function AdvertiseWithUs() {
                                 <div className="text-heading-button">
 
                                     <div className="text-center mt-4">
-                                        <p className="heading">TAILORED FOR YOU</p>
-                                    </div>
-                                    <div className="text-center ">
+                                        <p className="heading1">€80/month
+                                        </p>
+                                        <p className="heading">
+                                            *Original price 450</p>
+                                        <p className="heading">
+                                            *Offer valid till 31-12-2023
 
-                                        <button >PRINT CAMPAIGN</button>
+                                        </p>
                                     </div>
+                                 
                                 </div>
                             </Col>
 
@@ -149,11 +165,13 @@ function AdvertiseWithUs() {
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
-                                            <Image src={magazineImage} alt="Paris" />
+                                            <Image src={Magazines3} alt="Paris" />
                                         </div>
                                         <div class="flip-box-back">
-                                            <h3>The UK's longest-running travel magazine</h3>
+                                            <h3>What included</h3>
                                             <p className="heading">Relaunched in 2021 with a higher design spefication, more pages than ever and even further distribution. Our six collectable double issues a year reach an average readership of 100k</p>
+                                            <p className="heading">Video Banner exposure to approximately 1 million subscribers
+Reach 1.5 million monthly website visitors</p>
                                         </div>
                                     </div>
 
@@ -161,11 +179,16 @@ function AdvertiseWithUs() {
                                 <div className="text-heading-button">
 
                                     <div className="text-center mt-4">
-                                        <p className="heading">DIGITAL</p>
+                                        <p className="heading1">€80/month
+                                        </p>
+                                        <p className="heading">
+                                            *Original price 450</p>
+                                        <p className="heading">
+                                            *Offer valid till 31-12-2023
+
+                                        </p>
                                     </div>
-                                    <div className="text-center ">
-                                        <button >PRINT CAMPAIGN</button>
-                                    </div>
+                                 
                                 </div>
                             </Col>
 
@@ -187,12 +210,12 @@ function AdvertiseWithUs() {
                                     <img src={deal.title} />
                                 </a>
                                 <div className="mt-3">
-    {Array.from({ length: 5 }, (_, index) => (
-        <span key={index} className={index < deal.starRating ? "normal-star filled" : "normal-star"}>
-          <FaStar style={{color:"#EABE12"}} className="m-0"/>
-        </span>
-    ))}
-</div>
+                                    {Array.from({ length: 3 }, (_, index) => (
+                                        <span key={index} className={index < deal.starRating ? "normal-star filled" : "normal-star"}>
+                                            <FaStar style={{ color: "#EABE12" }} className="m-0" />
+                                        </span>
+                                    ))}
+                                </div>
                                 <div>
                                     <a>
                                         <h5>{deal.description}</h5>
@@ -208,34 +231,34 @@ function AdvertiseWithUs() {
                 <Row>
                     <Col lg={6} className="what-we-do p-0">
                         <div className="hovermaindiv">
-                        <div className="inner-div">
-                            <div className="text-center">
-                                <p>Continue Reading</p></div>
-                            <div className="text-center">
-                                <h2><a>WHAT WE DO</a></h2>
+                            <div className="inner-div">
+                                <div className="text-center">
+                                    <p>Continue Reading</p></div>
+                                <div className="text-center">
+                                    <h2><a href="what-we-do" style={{ color: "#e41d25" }}>WHAT WE DO</a></h2>
+                                </div>
                             </div>
-                        </div>
                         </div>
 
                     </Col>
 
                     <Col lg={6} className="contact-us p-0">
-                    <div className="hovermaindivtwo">
-                        <div className="inner-div">
-                            <div className="text-center">
-                                <p>Looks Great?</p></div>
-                            <div className="text-center">
-                                <h2><a>CONTACT US</a></h2>
+                        <div className="hovermaindivtwo">
+                            <div className="inner-div">
+                                <div className="text-center">
+                                    <p>Looks Great?</p></div>
+                                <div className="text-center">
+                                    <h2><a>CONTACT US</a></h2>
+                                </div>
                             </div>
-                        </div>
                         </div>
 
                     </Col>
                 </Row>
 
             </section>
-            <CallToAction/>
-            <Footer/>
+            <CallToAction />
+            <Footer />
         </>
 
     );

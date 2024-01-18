@@ -4,10 +4,11 @@ import Footer from "../components/footer";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaWhatsapp, FaTelegram, FaLinkedin, FaSnapchat, FaEye, FaHeart, FaMapMarker, FaBuilding, FaSpaceShuttle, FaHome, FaList, FaPencilAlt } from 'react-icons/fa';
 
-import News1 from '../../assets/img/news1.jpg'
-import News2 from '../../assets/img/news2.jpg'
+
 import News3 from '../../assets/img/news3.jpg'
 import News4 from '../../assets/img/news4.jpg'
+import News1 from '../../assets/img/news1.jpg'
+import News2 from '../../assets/img/news2.jpg'
 import News5 from '../../assets/img/news5.jpg'
 import News6 from '../../assets/img/news6.jpg'
 import Logo from "../../assets/img/logo.svg"
