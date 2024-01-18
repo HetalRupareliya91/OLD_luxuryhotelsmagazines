@@ -39,8 +39,8 @@ function Footer(){
                  <Col lg={3}>
                     <div className="ft-newslatter">
                        <h6>About Us</h6>
-                       <p><a href="" className="footer-links">Our Team</a></p>
-                       <p><a href="" className="footer-links">About Us</a></p>
+                       <p><a href="/our-team" className="footer-links">Our Team</a></p>
+                       <p><a href="/aboutus" className="footer-links">About Us</a></p>
                     <p><a href="hotels-selection" className="footer-links">Luxury Hotel Selection</a></p>
                     <p><a href="hotels-editions" className="footer-links">Luxury Hotels Editions</a></p>
                     </div>

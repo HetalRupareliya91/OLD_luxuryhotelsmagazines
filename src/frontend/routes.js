@@ -15,6 +15,8 @@ import WhatWeDo from "./pages/whatWeDo";
 import AdvertiseWithUs from "./pages/advertiseWithUs";
 import HotelSelection from "./pages/hotelSelection";
 import HotelEditions from "./pages/hotelsEditions";
+import OurTeam from "./pages/ourTeam";
+import AboutUsPage from "./pages/about";
 
 
 function RoutesPage(){
@@ -36,6 +38,8 @@ function RoutesPage(){
       <Route exact path="/advertise-with-us" element={<AdvertiseWithUs/> } />
       <Route exact path="/hotels-selection" element={<HotelSelection/> } />
       <Route exact path="/hotels-editions" element={<HotelEditions/> } />
+      <Route exact path="/our-team" element={<OurTeam/> } />
+      <Route exact path="/aboutus" element={<AboutUsPage/> } />
       </Routes>  
     );
 }

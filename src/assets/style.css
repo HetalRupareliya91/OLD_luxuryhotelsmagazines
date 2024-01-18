@@ -769,6 +769,59 @@ ul, ol {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
+/*------------------------
+  Our Team Page  
+-------------------------*/
+.team-member {
+	margin-bottom: 30px;
+}
+
+.team-member h5 {
+	color: #b5191fff;
+}
+
+.team-member p {
+	color: #19191a;
+}
+
+/*------------------------
+  About Us Page  
+-------------------------*/
+.about-content a {
+	font-size: 18px;
+	font-family: "alright";
+	color: #000;
+	border-bottom: 1px solid black;
+}
+.about-content p {
+	color: #000;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+.aboutimg_content{
+	border: 1px solid #b5191f;
+    margin: 5px;    
+	box-shadow: 3px 3px #b5191f2b;
+}
+.aboutimg_content div{
+	text-align: center;
+}
+.aboutimg_content .title{
+	color: #b5191f;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+	font-family: inherit;
+}
+.aboutimg_content p{
+	text-align: center;
+}
+.aboutimg_content .link_text{
+	color: #000000;
+	text-decoration: underline!important;
+}
+
 /*------------------------
   Home Page Room Section 
 -------------------------*/
@@ -2364,6 +2417,13 @@ color: #ffffff;
 } */
 
 @media only screen and (max-width: 767px) {
+	.aboutimg_content {
+		min-width: 100%;
+		margin-top: 10px!important;
+		border-bottom: 1px solid #b5191f;
+		border-left: unset;
+		border-right: unset;
+	}
 	.zoom-content {
 		margin-left: 0px!important;
 		background: #ffffff!important;
