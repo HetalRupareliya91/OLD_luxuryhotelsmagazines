@@ -14,6 +14,7 @@ import SubsriptionPage from "./components/subscriptionPage";
 import WhatWeDo from "./pages/whatWeDo";
 import AdvertiseWithUs from "./pages/advertiseWithUs";
 import HotelSelection from "./pages/hotelSelection";
+import HotelEditions from "./pages/hotelsEditions";
 
 
 function RoutesPage(){
@@ -33,7 +34,8 @@ function RoutesPage(){
       <Route exact path="/subscription" element={<SubsriptionPage/> } />
       <Route exact path="/what-we-do" element={<WhatWeDo/> } />
       <Route exact path="/advertise-with-us" element={<AdvertiseWithUs/> } />
-      {/* <Route exact path="/hotels-selection" element={<HotelSelection/> } /> */}
+      <Route exact path="/hotels-selection" element={<HotelSelection/> } />
+      <Route exact path="/hotels-editions" element={<HotelEditions/> } />
       </Routes>  
     );
 }

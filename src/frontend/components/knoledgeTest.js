@@ -106,10 +106,10 @@ function KnoledgeTest() {
           {deals.map((deal, index) => (
             <div key={index} className="text-center exclusive-deals">
               <a>
-                <h5>{deal.title}</h5>
+                <h6>{deal.title}</h6>
               </a>
               <div>
-                <FaPhoneSquare className="phone-icon" />
+                <FaPhoneSquare className="phone-icon m-0" />
               </div>
               <div>
                 <a>
@@ -118,13 +118,13 @@ function KnoledgeTest() {
               </div>
               <div>
                 <a>
-                  <h5>{deal.description}</h5>
+                  <h6>{deal.description}</h6>
                 </a>
               </div>
               <div>
                 <span className="valid">{deal.valid}</span>
               </div>
-              <hr />
+              <hr className="m-0"/>
               <div>
                 <span>
                   Stay with us for three or five nights at The Oberoi Beach Resort,

@@ -41,8 +41,8 @@ function Footer(){
                        <h6>About Us</h6>
                        <p><a href="" className="footer-links">Our Team</a></p>
                        <p><a href="" className="footer-links">About Us</a></p>
-                    <p><a href="" className="footer-links">Luxury Hotel Selection</a></p>
-                    <p><a href="" className="footer-links">Luxury Hotels Editions</a></p>
+                    <p><a href="hotels-selection" className="footer-links">Luxury Hotel Selection</a></p>
+                    <p><a href="hotels-editions" className="footer-links">Luxury Hotels Editions</a></p>
                     </div>
                  </Col>
                  <Col lg={3}>

@@ -34,6 +34,16 @@
 @font-face {
 	font-family: 'cabin';
 	src: url('./Cabin-Regular.ttf') 
+	
+		 
+	/* Add additional formats if needed */
+  }
+
+  /*----------------------------------------*/
+@font-face {
+	font-family: 'alright';
+	src: url('./AlrightSansBlack.ttf') 
+	
 		 
 	/* Add additional formats if needed */
   }
@@ -2758,10 +2768,18 @@ button.readmore {
         transform: translateY(100%);
     }
 }
-.img-dec, .destination-img {
+.img-dec{
     position: absolute;
     z-index: 10;
     bottom: 30px;
+    color: white;
+    font-size: 21px;
+    padding: 0px 19px;
+}
+.destination-img {
+    position: absolute;
+    z-index: 10;
+    bottom: 80px;
     color: white;
     font-size: 21px;
     padding: 0px 19px;
@@ -2774,6 +2792,9 @@ button.readmore {
 }
 figure:hover .img-dec {
     color: #ffffff82;
+}
+.destination-img-title{
+
 }
 
 .outdoorAndWalking{
@@ -4049,16 +4070,16 @@ a.btn.btn-block.btn-default {
 	border-radius: 5px;
 	padding: 10px;
 }	
-.exclusive-deals h5{
+.exclusive-deals h6{
 	color: #b5191fff;
-
 	font-weight: 600;
+	font-size: 18px;
 }
 .exclusive-deals a{
 	cursor: pointer;
 }
 .exclusive-deals .phone-icon {
-font-size: 40px;
+font-size: 35px;
 color: #b5191fff;
 }
 .exclusive-deals .valid{
@@ -4226,6 +4247,7 @@ line-height: 2;
 }
 .section-title{
 	background-color:#0000002b !important;
+padding: 10px;
 }
 .videos-content-present{
 	position: relative;
@@ -4323,7 +4345,6 @@ font-size: 40px !important;
 	}
 	.adv-container{
 		position: relative;
-		top: 50px;
 	}
 	.heading{
 		color: #ffff;
@@ -4411,3 +4432,88 @@ font-size: 40px !important;
 	  .normal-star.filled .star-icon {
 		color: gold; /* Color for filled stars */
 	  }
+
+	  .hotel-selection a{
+font-size: 18px;
+font-family: "alright";
+color: #000;
+border-bottom: 1px solid black;
+	  }
+	  .hotel-selection p{
+		font-family: "alright";
+
+		font-size: 18px;
+		color: #000;
+		font-family: sans-serif;
+
+	  }
+	  .selection-img-div{
+		border: 1px solid #d1d1d1;
+		background-color: #fff;
+
+	  }
+	  .hotel-selection-image{
+		height: 150px;
+		width: 100%;
+		min-height: 256px;
+		max-height: 256px;
+		
+		object-fit: fill;
+	  }
+	  .selection-img-div h5{
+		/* color: #000 !important; */
+		color: #b5191fff !important;
+		
+	  }
+	  .selection-img-div p{
+		font-size: 18px;
+		/* font-family: "alright"; */
+		color: #000;
+		/* font-weight: 400; */
+		line-height: 20px;
+		margin: 0 0 15px 5px;
+	  }
+	  .locaton-icon{
+		font-size: 20px !important;
+		color: #b5191fff !important;
+	  }
+
+	  .rowPadding {
+		padding: 30px 0;
+	}
+	.magazineContent {
+		margin: 15px 0;
+		background-color: #fff;
+	}
+
+	.hotel-selection-section{
+		background-color: #fff;
+	}
+
+	ul.social-icons{
+	
+	}
+	ul .social-icons li {
+		display: inline-block;
+		text-align: center;
+		margin: 10px ;
+		padding: 10px;
+		line-height: 36px;
+		
+		width: 30px;
+		height: 34px;
+	}
+
+	.MagazineContent p {
+		color: #000 !important;
+	}
+	.MagazineContent ul li{
+		list-style: square;
+		/* line-height: 2; */
+		margin-bottom: 10px;
+	}
+	.magazineContent1 p {
+		color: #b5191fff;
+		margin-top: 10px;
+		font-size: 16px;
+	}

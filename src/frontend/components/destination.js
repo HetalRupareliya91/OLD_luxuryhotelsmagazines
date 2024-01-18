@@ -15,7 +15,7 @@ function Destination() {
            <Row >
               <Col lg={7} md={7} className=" d-flex flex-column mt-5">
                  <figure className="destination-img-div">
-                 <div className="destination-img image-center">Jumeirah Al Qasr Hotel, Dubai</div>
+                 <div className="destination-img image-center ">Jumeirah Al Qasr Hotel, Dubai</div>
                     <div className="thumbnail destination-main">
                        <div><button className="readmore">Read More</button></div>
                        <Image src={Head7}/>
