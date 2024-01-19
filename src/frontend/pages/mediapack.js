@@ -1,6 +1,10 @@
 import React from "react";
 import Header from "../components/header";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import SocialImage from "../../assets/img/mediapack/social.png";
+import DigitalImage from "../../assets/img/mediapack/degitalpack.jpg";
+import Team2 from "../../assets/img/team/team2.jpg";
+import Team3 from "../../assets/img/team/team3.jpg";
 import Footer from "../components/footer";
 import CallToAction from "../components/callToAction";
 function Mediapack() {
@@ -11,15 +15,103 @@ function Mediapack() {
             <section className="my-5">
                 <Container>
                     <h2 className="text-center">MEDIA PACK</h2>
-                    <div className="hotel-selection my-4">
-                        <p>We are very pleased and proud to be working closely with the below group of Luxury Magazine staff and team members, who are responsible for running our offices and Luxury Hotels Brand around the world. Without them, we're nothing</p>
-                    </div>
                 </Container>
             </section>
 
             <section className="my-3">
                 <Container>
-                   
+                    <Row >
+                        <Col lg={6} md={6}  >
+                            <a href="">
+                                <div>
+                                    <img src={SocialImage} alt="image" />
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Social Network Content Management, Influencer and Ambassador Program...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col>
+
+                        <Col lg={6} md={6}  >
+                            <a href="">
+                                <div >
+                                    <img src={DigitalImage} alt="image"/>
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Hotels Media Kit- Luxury Hotels Digital and Printed version 2024...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col>
+                        <Col lg={6} md={6}  >
+                            <a href="">
+                                <div>
+                                    <img src={SocialImage} alt="image" />
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Social Network Content Management, Influencer and Ambassador Program...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col>
+
+                        <Col lg={6} md={6}  >
+                            <a href="">
+                                <div >
+                                    <img src={DigitalImage} alt="image"/>
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Hotels Media Kit- Luxury Hotels Digital and Printed version 2024...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col><Col lg={6} md={6}  >
+                            <a href="">
+                                <div>
+                                    <img src={SocialImage} alt="image" />
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Social Network Content Management, Influencer and Ambassador Program...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col>
+
+                        <Col lg={6} md={6}  >
+                            <a href="">
+                                <div >
+                                    <img src={DigitalImage} alt="image"/>
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Hotels Media Kit- Luxury Hotels Digital and Printed version 2024...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col><Col lg={6} md={6}  >
+                            <a href="">
+                                <div>
+                                    <img src={SocialImage} alt="image" />
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Social Network Content Management, Influencer and Ambassador Program...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col>
+
+                        <Col lg={6} md={6}  >
+                            <a href="">
+                                <div>
+                                    <img src={DigitalImage} alt="image"/>
+                                    <div className="px-3">
+                                        <h5 className="mt-3">
+        Hotels Media Kit- Luxury Hotels Digital and Printed version 2024...</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </Col>
+                    </Row>
                 </Container>                
             </section>
 
