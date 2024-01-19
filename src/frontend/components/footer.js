@@ -50,7 +50,7 @@ function Footer(){
                        <h6>ADVERTISERS</h6>
                        <p><a href="" className="footer-links">Distribution</a></p>
                        <p><a href="" className="footer-links">Publish Your News/PR</a></p>
-                       <p><a href="" className="footer-links">Media Pack</a></p>
+                       <p><a href="mediapack" className="footer-links">Media Pack</a></p>
                        <p><a href="advertise-with-us" className="footer-links">Advertise With Us</a></p>
                        <p><a href="" className="footer-links">Create Hotel Profile</a></p>
                     </div>
