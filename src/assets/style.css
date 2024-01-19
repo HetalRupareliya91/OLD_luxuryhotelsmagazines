@@ -4854,8 +4854,14 @@ top: 250px;
 		background-image: url(../assets/img/magazines/BG16.jpg);
 	   }
 	   .what-are-you-intersted-in form{
-		color: rgb(153 153 153 / 84%);;
 	   }
 	   .case-study{
 		background-image: url(../assets/img/magazines/bg4.jpg);
 	   }
+.print-campaign-options .print-campaign-logo{
+	width: 35%;
+	
+}
+.digital-campaign-options .digital-campaign-logo{
+	width: 35%;
+}

@@ -30,6 +30,7 @@ import Magazines2 from  "../../assets/img/magazines/magazines2.webp"
 import Magazines3 from  "../../assets/img/magazines/magazines3.webp"
 import Magazines4 from  "../../assets/img/magazines/magazines4.webp"
 import Header from "../components/header";
+import AdvertiseTestimonial from "../components/advertiseWithus/advertiseTestimonial";
 
 function WhatWeDo() {
 
@@ -117,7 +118,8 @@ const deals = [
 
                             <Row>
                                 <Col lg={3}></Col>
-                                <Col lg={5}>    <div className="wpb_wrapper">
+                                <Col lg={6}> 
+                                   <div className="text-center wpb_wrapper">
 
                                     <p>Whether you are looking to reach Wanderlust’s audience of active, engaged travellers or want to find out how targeted, inspirational travel content can support your brand, we’re the perfect partner to work with.</p>
                                 </div></Col>
@@ -128,7 +130,7 @@ const deals = [
                                     <Col lg={3} className="what-we-do-col">
                                         <div>
                                             <div>
-                                                <FaTrophy className="element-icon" />
+                                                <FaTrophy className="element-icon m-0" />
                                             </div>
                                             <h4 className="title">AWARD-WINNING   </h4>
                                         </div>
@@ -139,7 +141,7 @@ const deals = [
                                     <Col lg={3} className="what-we-do-col">
                                         <div>
                                             <div>
-                                                <FaHandshake className="element-icon" />
+                                                <FaHandshake className="element-icon m-0" />
                                             </div>
                                             <h4 className="title">AWARD-WINNING   </h4>
                                         </div>
@@ -150,7 +152,7 @@ const deals = [
                                     <Col lg={3} className="what-we-do-col">
                                         <div>
                                             <div>
-                                                <FaLaptopMedical className="element-icon" />
+                                                <FaLaptopMedical className="element-icon m-0" />
                                             </div>
                                             <h4 className="title">AWARD-WINNING   </h4>
                                         </div>
@@ -162,7 +164,7 @@ const deals = [
                                     <Col lg={3} className="what-we-do-col">
                                         <div>
                                             <div>
-                                                <FaLeaf className="element-icon" />
+                                                <FaLeaf className="element-icon m-0" />
                                             </div>
                                             <h4 className="title">AWARD-WINNING   </h4>
                                         </div>
@@ -256,7 +258,7 @@ const deals = [
                             </Col>
                             <Col lg={6}>
                                 <div>
-                                    <button><FaBookOpen />  Request Digital Sample    </button>
+                                    <button><FaBookOpen className="m-0"/>  Request Digital Sample    </button>
                                 </div>
                             </Col>
                         </Row>
@@ -273,13 +275,9 @@ const deals = [
             <section className="print-campaign-options">
 
                 <Container>
-                    <Row>
-                        <Col lg={3}></Col>
-                        <Col lg={6}>  <div>
-                        <Image src={Logo}></Image>
-                    </div></Col>
-                    </Row>
-                  
+                   <div className="text-center">
+                        <Image src={Logo} className="print-campaign-logo"></Image>
+                    </div>
                     <div className="title-subtitle text-center ">
 
                         Print Campaign Options
@@ -301,7 +299,7 @@ const deals = [
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
-                                        <Image src={printImage1} />
+                                        <Image src={Magazines1} />
 
 
                                     </div>
@@ -320,7 +318,7 @@ const deals = [
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
-                                        <Image src={printImage1} />
+                                        <Image src={Magazines2} />
 
 
                                     </div>
@@ -340,7 +338,7 @@ const deals = [
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
-                                        <Image src={printImage1} />
+                                        <Image src={Magazines1} />
                                     </div>
                                     <div class="flip-box-back">
                                         <p className="heading">Wanderlust can produce a bespoke, high-quality print supplement for you that gives you the space to showcase all that your brand has to offer in a long-form piece with expert-written copy and stunning visuals.</p>
@@ -357,7 +355,7 @@ const deals = [
                             <div class="flip-box">
                                 <div class="flip-box-inner">
                                     <div class="flip-box-front">
-                                        <Image src={printImage1} />
+                                        <Image src={Magazines2} />
 
 
                                     </div>
@@ -373,7 +371,7 @@ const deals = [
                     </Row>
 
                     <div className="btn-div text-center ">
-                        <button><FaQuestionCircle /> More information</button>
+                        <button><FaQuestionCircle className="m-0 w-25 "/> More information</button>
                     </div>
 
                 </Container>
@@ -417,7 +415,7 @@ const deals = [
                                                         (average in 2020)
                                                         682k users per month (average
                                                         peak in 2020)</p>
-                                                    <div className="mb-5"> <button><FaBookOpen />Request Digital Issue</button></div>
+                                                    <div className="mb-5"> <button><FaBookOpen className="m-0"/>Request Digital Issue</button></div>
 
                                                 </Col>
                                             </Row>
@@ -470,12 +468,9 @@ const deals = [
             <section className="digital-campaign-options">
 
 <Container>
-<Row>
-                        <Col lg={3}></Col>
-                        <Col lg={6}>  <div>
-                        <Image src={Logo}></Image>
-                    </div></Col>
-                    </Row>
+ <div className="text-center">
+                        <Image src={Logo} className="digital-campaign-logo"></Image>
+                    </div>
     <div className="title-subtitle text-center ">
 
     Digital  Campaign Options
@@ -497,7 +492,7 @@ const deals = [
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <Image src={printImage1} />
+                        <Image src={Magazines1} />
 
 
                     </div>
@@ -516,7 +511,7 @@ const deals = [
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <Image src={printImage1} />
+                        <Image src={Magazines2} />
 
 
                     </div>
@@ -536,7 +531,7 @@ const deals = [
             <div class="flip-box">
                 <div class="flip-box-inner">
                     <div class="flip-box-front">
-                        <Image src={printImage1} />
+                        <Image src={Magazines1} />
                     </div>
                     <div class="flip-box-back">
                         <p className="heading">Wanderlust can produce a bespoke, high-quality print supplement for you that gives you the space to showcase all that your brand has to offer in a long-form piece with expert-written copy and stunning visuals.</p>
@@ -550,7 +545,7 @@ const deals = [
     </Row>
 
     <div className="btn-div text-center ">
-        <button><FaQuestionCircle /> More information</button>
+        <button><FaQuestionCircle className="m-0 w-25 "/> More information</button>
     </div>
 
 </Container>
@@ -562,7 +557,7 @@ const deals = [
 <div className="title-subtitle m-0">
 What are you interested in?
                             </div>
-                            <div className="woodmart-title-container">
+                            <div className="woodmart-title-container w-25">
                             Submit the form below and we'll get back to you with the information you requested along with some great examples
                             </div>
                             <Form>
@@ -571,7 +566,8 @@ What are you interested in?
                                     What Is Your Name
                                 </Form.Label>
                                 <Form.Control
-                                type="text"                        
+                                type="text"   
+                                className="mb-3"                     
                                             >
                                     
                                 </Form.Control>
@@ -579,7 +575,8 @@ What are you interested in?
                                 Your work email 
                                 </Form.Label>
                                 <Form.Control
-                                type="text"                        
+                                type="text" 
+                                className="mb-3"                       
                                             >
                                     
                                 </Form.Control>
@@ -587,7 +584,8 @@ What are you interested in?
                                 Which Tourism Board are you representing?
                                 </Form.Label>
                                 <Form.Control
-                                type="text"                        
+                                type="text"   
+                                className="mb-3"                     
                                             >
                                     
                                 </Form.Control>
@@ -595,7 +593,8 @@ What are you interested in?
                                     What Is Your Name
                                 </Form.Label>
                                 <Form.Control
-                                type="text"                        
+                                type="text"  
+                                className="mb-3"                      
                                             >
                                     
                                 </Form.Control>
@@ -603,26 +602,30 @@ What are you interested in?
                                     What Is Your Name
                                 </Form.Label>
                                 <Form.Control
-                                type="text"                        
+                                type="text" 
+                                className="mb-3"                       
                                             >
                                     
                                 </Form.Control>
                                 <Form.Label>
                                 Would you like to request a sample of our latest magazine issue?
                                 </Form.Label>
-                                <div className="d-flex">
+                                <div className="d-flex mb-3">
             <Form.Check
                 type="checkbox"
-                label="YES"
+                
                 name="sampleRequest"
                 id="sampleRequestYes"
+                className="pe-3"
             />
+           <Form.Label className="pe-3">YES</Form.Label>
             <Form.Check
                 type="checkbox"
-                label="NO"
                 name="sampleRequest"
                 id="sampleRequestNo"
+                className="pe-3"
             />
+            <Form.Label>NO</Form.Label>
         </div>
 
 
@@ -635,28 +638,32 @@ What are you interested in?
                 type="checkbox"
                 label="Sponsorship (print)"
                 id="campaignSponsorship"
+                className="pe-4"
             />
             <Form.Check
                 type="checkbox"
                 label="Supplements (print)"
                 id="campaignSupplements"
+                className="pe-4"
             />
 
   <Form.Check
                 type="checkbox"
                 label="Display Advertising (print)"
                 id="campaignSupplements"
+                className="pe-4"
             />
               <Form.Check
                 type="checkbox"
                 label="Book (print)"
                 id="campaignSupplements"
+                 className="pe-4"
                 />
           
 
 
                      </div>     
-                     <button className="mt-4">submit</button> 
+                     <button className="mt-4 w-25">submit</button> 
                        </Form>
   
 </div>
@@ -666,31 +673,9 @@ What are you interested in?
 </section>
 <ClientLogo/>
 
-<section className="what-we-do-slider-section spad">
+<section className="what-we-do-slider-section ">
                 <Container>
-                    <h2 className="text-center mb-4">ADVERTISING TESTIMONIALS </h2>
-
-                    <Slider {...sliderSettings} ref={sliderRef}>
-                        {deals.map((deal, index) => (
-                            <div key={index} className=" exclusive-deals1">
-                                <a>
-                                    <img src={deal.title} />
-                                </a>
-                                <div className="mt-3">
-    {Array.from({ length: 5 }, (_, index) => (
-        <span key={index} className={index < deal.starRating ? "normal-star filled" : "normal-star"}>
-          <FaStar style={{color:"#EABE12"}} className="m-0"/>
-        </span>
-    ))}
-</div>
-                                <div>
-                                    <a>
-                                        <h5>{deal.description}</h5>
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
+                 <AdvertiseTestimonial/>
                 </Container>
             </section>
 

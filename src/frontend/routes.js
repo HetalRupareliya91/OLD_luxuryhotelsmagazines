@@ -17,6 +17,7 @@ import HotelSelection from "./pages/hotelSelection";
 import HotelEditions from "./pages/hotelsEditions";
 import OurTeam from "./pages/ourTeam";
 import AboutUsPage from "./pages/about";
+import Distribution from "./pages/distribution";
 
 
 function RoutesPage(){
@@ -40,6 +41,7 @@ function RoutesPage(){
       <Route exact path="/hotels-editions" element={<HotelEditions/> } />
       <Route exact path="/our-team" element={<OurTeam/> } />
       <Route exact path="/aboutus" element={<AboutUsPage/> } />
+      <Route exact path="/distribution" element={<Distribution/> } />
       </Routes>  
     );
 }
