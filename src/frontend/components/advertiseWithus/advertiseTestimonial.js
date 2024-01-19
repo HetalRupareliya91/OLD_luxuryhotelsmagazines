@@ -62,7 +62,7 @@ function AdvertiseTestimonial(){
     return(
     <section className="spad">
     <Container>
-        <h2 className="text-center mb-4">Advertising Testimonials</h2>
+        <h1 className="text-center mb-4">Advertising Testimonials</h1>
 
         <Slider {...sliderSettings} ref={sliderRef}>
             {deals.map((deal, index) => (

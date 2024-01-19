@@ -3168,6 +3168,7 @@ h2 {
 label {
 	display: block;
 	margin-bottom: 8px;
+	margin-top: 7px;
 }
 
 input {
@@ -3858,6 +3859,7 @@ a.btn.btn-block.btn-default {
       }
       button:hover {
       background-color: #b5191fff !important;
+	  color: #000;
       }
       .signup-section {
       text-align: center;
@@ -4372,7 +4374,7 @@ padding: 10px;
 .what-we-do .inner-div {
 	height: 350px;
 	width: 350px;
-	border: 8px solid #b5191fff;
+	border: 8px solid #e41d25;
 	border-radius: 50%;
 	position: relative;
     top: 200px;
@@ -4383,14 +4385,14 @@ padding: 10px;
 .what-we-do .inner-div:hover {
     height: 350px;
     width: 350px;
-    border: 8px solid #b5191fff;
+    border: 8px solid #e41d25;
     border-radius: 0px;
     position: relative;
     top: 200px;
     left: 200px;
     padding: 90px 0px;
 }
-.what-we-do .inner-div h2{
+.what-we-do .inner-div h2 a{
 
 font-size: 40px !important;
     color: #e41d25 !important;
@@ -4403,7 +4405,7 @@ font-size: 40px !important;
 	}
 
 	.advertise-first-section{
-		height: 800px;
+		/* height: 800px; */
 	}
 	.adv-container{
 		position: relative;
@@ -4415,7 +4417,7 @@ font-size: 40px !important;
 	}
 	.heading1{
 		font-size: 24px;
-		color:#b5191fff;
+		color:#ffff;
 		font-weight: 600;
 	}
 
@@ -4450,11 +4452,30 @@ font-size: 40px !important;
 		backface-visibility: hidden;
 		z-index: 100 !important;
 	  }
-	  .flip-box-back .heading{
+	  .flip-box-back {
+		width: 90%;
+		height: 100%;
+		color: #ffff;
+		font-size: 16px;
+		font-weight: 400;
+	  }
+	  .flip-box-back ul li{
+		list-style: square;
+		text-align: start;
+		margin-bottom: 10px;
+		font-size: 16px;
+	  }
+	  .flip-box-back h3{
+		text-align: start;
+	  }
+
+	  .heading{
 		color: #ffff;
 		font-size: 18px;
 		font-weight: 400;
 	  }
+
+	 
 	  /* Style the front side (fallback if image is missing) */
 	  .flip-box-front {
 		background-color: #bbb;
@@ -4469,8 +4490,8 @@ font-size: 40px !important;
 	  }
 	  .text-heading-button{
 		position: relative;
-		top: 130px;
-		margin-bottom: 50px;
+		top: 25%;
+		/* margin-bottom: 50px; */
 	  }
 	  .what-we-do.col-lg-6:hover .hovermaindiv {
 		background: #ff000052;
@@ -4585,10 +4606,12 @@ border-bottom: 1px solid black;
 		margin-top: 10px;
 		font-size: 16px;
 	}
-	.what-we-do-section{
+	/* .what-we-do-section{
 		background-image: url(../assets/img/hero/hero-1.jpg);
+		background-size: cover;
+    background-repeat: no-repeat;
 
-	}
+	} */
 	.title-subtitle {
 		font-size: 36px;
 		line-height: 40px;
@@ -4596,6 +4619,7 @@ border-bottom: 1px solid black;
 		font-weight: 700;
 		padding-top: 40px;
 		padding-bottom: 10px;
+		letter-spacing: 2px;
 	}
 	.liner-continer {
 		position: relative;
@@ -4608,6 +4632,7 @@ border-bottom: 1px solid black;
 	.woodmart-title-container{
 		color: #ffff;	
 		font-size: 36px;
+		padding: 0px 15px;
 	}
 	.left-line {
 		display: block;
@@ -4646,27 +4671,40 @@ border-bottom: 1px solid black;
 		padding: 30px 130px ;
 	}
 
-	.what-we-do-print-section{
+	.what-we-do-section .bk-btn{
+	display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 28px 15px 33px;
+    background: #b5191fff;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}	
+	/* .what-we-do-print-section{
 		background-image: url(../assets/img/magazines/BG7.jpg);
-	}
+		background-size: cover;
+    background-repeat: no-repeat;
+	} */
 
 	.what-we-do-print-section .main-div{
-		padding: 0px 150px 30px 160px;
+		padding: 0px 80px 30px 130px;
 	}
 	
 
 	.what-we-do-print-section .liner-continer .woodmart-title-container{
-		font-size: 24px;
+		font-size: 36px;
 		color: #ffff;
 		font-weight: 300px;
 	}
 	.what-we-do-print-section .title-subtitle{
-		font-size: 24px;
+		font-size: 36px;
 		line-height: 40px;
 		color: #ffffff;
 		font-weight: 700;
-		padding-top: 40px;
+		padding-top: 60px;
 		padding-bottom: 10px;
+		letter-spacing: 2px;
 	}
 	.what-we-do-print-section .available-in .left-line{
 		display: block;
@@ -4681,7 +4719,7 @@ border-bottom: 1px solid black;
 		flex: 1 1 auto;
 		border-bottom: 1px solid;
 		border-color: rgba(255,255,255,.3);
-		margin: 30px 0px;
+		margin: 30px 0px 100px 0px;
 	}
 	.main-div h2{
 		color: #fff;
@@ -4689,26 +4727,25 @@ border-bottom: 1px solid black;
 	}
 
 	.what-we-do-print-section .logos{
-		padding: 25px 50px;
+		margin: 25px;
 	}
 	.vc_column-inner{
     padding-top: 30px !important;
-    padding-right: 30px !important;
+    padding-right: 40px !important;
     padding-bottom: 10px !important;
-    padding-left: 30px !important;
+    padding-left: 40px !important;
     background-color: #ffffff !important;
 	text-align: start;
 	}
 	.vc_column-inner h3{
 		font-size: 18px;
-		color: #2d2a2a;
+		color: #000;
 	}
 	.vc_column-inner p{
-		color: #777;
+		color: #000;
 		font-size: 16px;
 	}
 	.print-campaign-options{
-		margin-top: -46px !important;
     padding-top: 60px !important;
     padding-bottom: 60px !important;
     background-color: #ffffff !important;
@@ -4722,6 +4759,7 @@ border-bottom: 1px solid black;
 			font-size: 36px;
 			line-height: 40px;
 			color: #2d2a2a;
+			letter-spacing: 2px;
 		
 	}
 	.print-campaign-options .liner-continer .woodmart-title-container{
@@ -4734,14 +4772,14 @@ border-bottom: 1px solid black;
 		display: block;
 		flex: 1 1 auto;
 		border-bottom: 1px solid;
-		border-color:#2d2a2a;
+		border-color:#e8e8e8;
 
 	}
 	.print-campaign-options .liner-continer .right-line {
 	display: block;
 		flex: 1 1 auto;
-		border-bottom: 1px solid #2d2a2a ;
-		border-color:#2d2a2a;
+		border-bottom: 1px solid  ;
+		border-color:#e8e8e8;
 	}
 
 	.print-campaign-options .image-flip-div p{
@@ -4758,9 +4796,11 @@ position: relative;
 top: 250px;	
 	   } */
 
-	   .what-we-do-digital-section{
+	   /* .what-we-do-digital-section{
 		background-image: url(../assets/img/magazines/BG7.jpg);
-	   }
+		background-size: cover;
+    background-repeat: no-repeat;
+	   } */
 
 	   .what-we-do-digital-section .main-div{
 		padding: 30px 0px 30px 60px;
@@ -4779,6 +4819,7 @@ top: 250px;
 		font-weight: 700;
 		padding-top: 40px;
 		padding-bottom: 10px;
+		letter-spacing: 2px;
 	}
 	.what-we-do-digital-section .available-in .left-line{
 		display: block;
@@ -4797,7 +4838,7 @@ top: 250px;
 	}
 	.main-div h2{
 		color: #fff;
-		font-size: 18px;
+		font-size: 22px;
 	}
 
 	.what-we-do-digital-section .logos{
@@ -4818,6 +4859,7 @@ top: 250px;
 			font-size: 36px;
 			line-height: 40px;
 			color: #2d2a2a !important;
+			letter-spacing: 2px;	
 		
 	}
 	.digital-campaign-options .liner-continer .woodmart-title-container{
@@ -4830,33 +4872,35 @@ top: 250px;
 		display: block;
 		flex: 1 1 auto;
 		border-bottom: 1px solid;
-		border-color:#2d2a2a;
+		border-color:#e8e8e8;
 
 	}
 	.digital-campaign-options .liner-continer .right-line {
 	display: block;
 		flex: 1 1 auto;
-		border-bottom: 1px solid #2d2a2a ;
-		border-color:#2d2a2a;
+		border-bottom: 1px solid  ;
+		border-color:#e8e8e8;
 	}
 
 	.digital-campaign-options .image-flip-div p{
      font-size: 16px;
-		color: #2d2a2a;
+		color: #000;
 	}
 
 	.digital-campaign-options .image-flip-div h3{
 		font-size: 20px;
-		   color: #2d2a2a;
+		   color: #000;
 	   }
 
-	   .what-are-you-intersted-in{
+	   /* .what-are-you-intersted-in{
 		background-image: url(../assets/img/magazines/BG16.jpg);
-	   }
+	   } */
 	   .what-are-you-intersted-in form{
 	   }
 	   .case-study{
 		background-image: url(../assets/img/magazines/bg4.jpg);
+		background-size: cover;
+    background-repeat: no-repeat;
 	   }
 .print-campaign-options .print-campaign-logo{
 	width: 35%;
@@ -4864,4 +4908,71 @@ top: 250px;
 }
 .digital-campaign-options .digital-campaign-logo{
 	width: 35%;
+}
+.adv-container .flip-box-front{
+	background: url(../assets/img/redtexure.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.what-we-do-print-section-image{
+	width: 70%;
+}
+.what-we-do-digital-section-image{
+	width: 70%;
+}
+
+.our-section-div .service-include{
+    background: #f8f8f8;
+   text-align: center;
+   box-shadow: 5px 5px 10px 0px #0b020259;
+height: 250px;
+padding: 20px;
+font-family: AlrightSans;
+font-weight: normal;
+}
+.our-section-div .service-include:hover{
+	/* background-color: #b5191f; */
+	transform: translateY(-10px)
+}
+.our-section-div .service-logo{
+
+	padding: 5px;
+    font-size: 60px;
+    color: #b5191f;
+    margin: 10px;
+}
+.our-section-div{
+	background-image: url(../assets/img/magazines/bg4.jpg);
+}
+
+.our-section-div span{
+	font-size: 16px;
+    display: block;
+    text-align: center;
+}
+
+.instagram-section  .insta-section-logo{
+
+height: 80px;
+width: 80px ;
+border: 1px solid;	
+border-radius: 50%;
+background-image: url(../assets/img/hotel1.jpg);
+margin-right: 15px;
+}
+.luxury-hotel-celebraties .listing ul li{
+	list-style: square;
+	margin: 10px;
+}
+.distribution-section p{
+	color: #000;
+}
+.forthcoming-editions p{
+	color: #b5191f;
+	font-size: 18px;
+}
+.forthcoming-editions .content-section{
+	background-color: #fff;
+	box-shadow: 5px 5px 10px 0px #0b020259;
+
 }

@@ -10,8 +10,8 @@ function ClientLogo() {
 
     return (
         <section className="spad clientlogosection">
-            <h2 className="text-center mb-4">Who We Work With
-</h2>
+            <h1 className="text-center mb-4">Who We Work With
+</h1>
             <div className="slider">
                 <div className="item"><a href=""><img alt="logo" src={logo1} /></a>
                 </div>
