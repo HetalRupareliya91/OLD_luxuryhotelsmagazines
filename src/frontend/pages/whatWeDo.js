@@ -112,7 +112,7 @@ const deals = [
 
                             <div className="text-center liner-continer">
                                 <span className="left-line"></span>
-                                <span className="woodmart-title-container ">Since 1993</span>
+                                <span className="woodmart-title-container ">Since 2002</span>
                                 <span className="right-line"></span>
                             </div>
 
@@ -121,7 +121,7 @@ const deals = [
                                 <Col lg={6}> 
                                    <div className="text-center wpb_wrapper">
 
-                                    <p>Whether you are looking to reach Wanderlust’s audience of active, engaged travellers or want to find out how targeted, inspirational travel content can support your brand, we’re the perfect partner to work with.</p>
+                                    <p>We provide Luxury Hotels for affluent travellers through our online platform and in print and digital formats. Each Edition is accessible for free download on 5 different platforms and attracts 4-5 million online readers annually.</p>
                                 </div></Col>
                             </Row>
 
@@ -132,7 +132,7 @@ const deals = [
                                             <div>
                                                 <FaTrophy className="element-icon m-0" />
                                             </div>
-                                            <h4 className="title">AWARD-WINNING   </h4>
+                                            <h4 className="title">AWARD-WINNING</h4>
                                         </div>
                                         <div >
                                             <p>Over 100 awards </p>
@@ -143,10 +143,10 @@ const deals = [
                                             <div>
                                                 <FaHandshake className="element-icon m-0" />
                                             </div>
-                                            <h4 className="title">AWARD-WINNING   </h4>
+                                            <h4 className="title">COLLABORATIVE</h4>
                                         </div>
                                         <div>
-                                            <p>Over 100 awards </p>
+                                            <p>Working hand in hand with 500+ destinations</p>
                                         </div>
                                     </Col>
                                     <Col lg={3} className="what-we-do-col">
@@ -154,10 +154,10 @@ const deals = [
                                             <div>
                                                 <FaLaptopMedical className="element-icon m-0" />
                                             </div>
-                                            <h4 className="title">AWARD-WINNING   </h4>
+                                            <h4 className="title">OMNI-CHANNEL</h4>
                                         </div>
                                         <div>
-                                            <p>Over 100 awards </p>
+                                            <p>Over 10.7Mpage views in 2020</p>
                                         </div>
                                     </Col>
 
@@ -166,10 +166,10 @@ const deals = [
                                             <div>
                                                 <FaLeaf className="element-icon m-0" />
                                             </div>
-                                            <h4 className="title">AWARD-WINNING   </h4>
+                                            <h4 className="title">RESPONSIBLE</h4>
                                         </div>
                                         <div>
-                                            <p>Over 100 awards </p>
+                                            <p>Sustainability and conscious travel</p>
                                         </div>
                                     </Col>
 
