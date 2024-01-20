@@ -25,14 +25,14 @@ const InstagramWidget = () => {
 
   return (
     <div className="embedsocial-hashtag" data-ref="ce1b21c005de07a4bdd3dea5c99063d161d7105f">
-      <a
+      {/* <a
         className="feed-powered-by-es feed-powered-by-es-feed-new"
         href="https://embedsocial.com/social-media-aggregator/"
         target="_blank"
         title="Widget by EmbedSocial"
       >
         Widget by EmbedSocial<span>→</span>
-      </a>
+      </a> */}
     </div>
   );
 };
