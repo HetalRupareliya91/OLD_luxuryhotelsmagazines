@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import pdf from '../../assets/pdf/Branding-Registration.pdf'
 
 function TrademarkRegistration(){
 
@@ -15,7 +16,7 @@ function TrademarkRegistration(){
 
 <div>
     <h2>Trademark Registration Uk</h2>
-
+    {/* <embed type="application/pdf" src="/images/pdf/TradeMarkUK.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0" width="500" height="500"/> */}
     
 </div>
 

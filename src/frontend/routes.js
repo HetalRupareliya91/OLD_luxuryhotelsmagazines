@@ -22,6 +22,8 @@ import Mediapack from "./pages/mediapack";
 import TrademarkRegistration from "./pages/trademarkRegistration";
 import ContactUs from "./pages/contactUs";
 import SubscribeToNews from "./pages/subscribeToNews";
+import SubscribeToDigitalCopy from "./pages/subscribeToDigitalCopy";
+import SubscribeToPrintCopy from "./pages/subscribeToPrintCopy";
 
 
 function RoutesPage(){
@@ -50,6 +52,8 @@ function RoutesPage(){
       <Route exact path="/subscribe-to-news" element={<SubscribeToNews/> } />
       <Route exact path="/trademark-registration" element={<TrademarkRegistration/> } />    
         <Route exact path="/contact-us" element={<ContactUs/> } />
+        <Route exact path="/subcribe-digital-copy" element={<SubscribeToDigitalCopy/> } />
+        <Route exact path="/subcribe-print-copy" element={<SubscribeToPrintCopy/> } />
 
       
       </Routes>  

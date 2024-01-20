@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Container } from 'react-bootstrap';
 
 const InstagramWidget = () => {
   useEffect(() => {
@@ -24,6 +25,13 @@ const InstagramWidget = () => {
   }, []);
 
   return (
+    <>
+    <section className='instgram-section spad'>
+      <Container>
+        
+    <div className="text-center">
+      <h1>Instagram / #Luxuryhotelsbrand</h1>
+    </div>
     <div className="embedsocial-hashtag" data-ref="ce1b21c005de07a4bdd3dea5c99063d161d7105f">
       {/* <a
         className="feed-powered-by-es feed-powered-by-es-feed-new"
@@ -34,6 +42,10 @@ const InstagramWidget = () => {
         Widget by EmbedSocial<span>→</span>
       </a> */}
     </div>
+    
+    </Container>
+    </section>
+    </>
   );
 };
 

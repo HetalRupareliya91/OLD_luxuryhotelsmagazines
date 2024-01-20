@@ -988,6 +988,11 @@ ul, ol {
 	color: #aaaab3;
 	margin-bottom: 20px;
 }
+.footer-section .footer-text .ft-about ul li a{
+	font-size: 16px;
+	color: #aaaab3;
+	margin-bottom: 20px;
+}
 .footer-section .footer-text .ft-about .fa-social a {
 	display: inline-block;
 	height: 40px;
@@ -1022,6 +1027,18 @@ ul, ol {
 .footer-section .footer-text .ft-contact ul li {
 	font-size: 16px;
 	color: #aaaab3;
+	line-height: 32px;
+	list-style: none;
+}
+.footer-section .footer-text .ft-contact ul li a{
+	font-size: 16px;
+	color: #aaaab3;
+	line-height: 32px;
+	list-style: none;
+}
+.footer-section .footer-text .ft-contact ul li a:hover{
+	font-size: 16px;
+	color: #b5191fff;
 	line-height: 32px;
 	list-style: none;
 }
@@ -5035,4 +5052,7 @@ margin-right: 15px;
 
 .connect-with-us a{
 	cursor: pointer
+}
+.instgram-section{
+	background-color: #ffff;
 }

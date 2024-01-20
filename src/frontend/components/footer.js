@@ -16,16 +16,19 @@ function Footer(){
                  <Col lg={3} >
                     <div className="ft-about">
                        <div className="logo">
-                          <a href="#">
+                          <a href="/">
                              <img src={Logo} alt="" className="footer-logo"/>
                                                      </a>
                        </div>
                        <p>BRAND RECOGNITION</p>
-                       <p>Trademark Registry</p>
-                       <p>Branding Registration</p>
+                      
+                       <ul>
+                          <li className="mb-4"><a href="#">Trademark Registry</a></li>
+                          <li><a href="#">Branding Registration</a></li>
+                       </ul>
                        <div className="fa-social">
                           <a href="#"><i ><FaFacebook/></i></a>
-                          <a href="Info@LuxuryHotelsMagazines.Com"><i ></i><FaEnvelope/></a>
+                          {/* <a href="Info@LuxuryHotelsMagazines.Com"><i ></i><FaEnvelope/></a> */}
                           <a href="#"><i ><FaInstagram/></i></a>
                           <a href="#"><i ></i><FaYoutube/></a>
                        </div>
@@ -47,20 +50,21 @@ function Footer(){
                        <p><a href="userprofile" className="footer-links">Publish Your News/PR</a></p>
                        <p><a href="mediapack" className="footer-links">Media Pack</a></p>
                        <p><a href="advertise-with-us" className="footer-links">Advertise With Us</a></p>
-                       <p><a href="" className="footer-links">Create Hotel Profile</a></p>
+                       <p><a href="signup" className="footer-links">Create Hotel Profile</a></p>
                     </div>
                  </Col>
                  <Col lg={3}>
                     <div className="ft-contact">
                        <h6>Contact Us</h6>
                        <ul>
-                          <li>(12) 345 67890</li>
-                          <li>Info@LuxuryHotelsMagazines.Com</li>
+                          <li><a href="">(12) 345 67890</a></li>
+                          <li><a href="mailto:info@luxuryhotelsmagazines.com">Info@LuxuryHotelsMagazines.Com</a></li>
+                          <li><a href="contact-us">Contact </a></li>
                        </ul>
                        <ul>
-                          <li>Subscribe To Receive News</li>
-                          <li>Subscribe To Digital Copy</li>
-                          <li>Subscribe To Printed Copy</li>
+                          <li><a href="subscribe-to-news">Subscribe To Receive News </a></li>
+                          <li ><a href="subcribe-digital-copy">Subscribe To Digital Copy</a></li>
+                          <li><a href="subcribe-digital-copy">Subscribe To Printed Copy</a></li>
                        </ul>
                     </div>
                  </Col>
