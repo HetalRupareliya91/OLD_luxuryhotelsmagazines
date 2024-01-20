@@ -9,7 +9,7 @@ import icons from "../../../assets/img/magazines/RETAILERS-LOGOS-4.png";
 function WhatWeDoPrint(){
     return(
         <Parallax blur={0} bgImage={bg1} bgImageAlt="the cat" strength={300}>
-        <section className="what-we-do-print-section ">
+        <section className="what-we-do-print-section "id="print">
 
             <Container>
 

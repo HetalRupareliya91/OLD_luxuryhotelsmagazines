@@ -25,12 +25,7 @@ function Footer(){
                        <p>Branding Registration</p>
                        <div className="fa-social">
                           <a href="#"><i ><FaFacebook/></i></a>
-                          <a href="#"><i ></i><FaTwitter/></a>
-                          <a href="#"><i ><FaTripadvisor/></i></a>
-                          <a href="#"><i ><FaInstagram/></i></a>
-                          <a href="#"><i ><FaInstagram/></i></a>
-                          <a href="#"><i ><FaInstagram/></i></a>
-                          <a href="#"><i ><FaInstagram/></i></a>
+                          <a href="Info@LuxuryHotelsMagazines.Com"><i ></i><FaEnvelope/></a>
                           <a href="#"><i ><FaInstagram/></i></a>
                           <a href="#"><i ></i><FaYoutube/></a>
                        </div>
@@ -48,8 +43,8 @@ function Footer(){
                  <Col lg={3}>
                     <div className="ft-newslatter">
                        <h6>ADVERTISERS</h6>
-                       <p><a href="" className="footer-links">Distribution</a></p>
-                       <p><a href="" className="footer-links">Publish Your News/PR</a></p>
+                       <p><a href="distribution" className="footer-links">Distribution</a></p>
+                       <p><a href="userprofile" className="footer-links">Publish Your News/PR</a></p>
                        <p><a href="mediapack" className="footer-links">Media Pack</a></p>
                        <p><a href="advertise-with-us" className="footer-links">Advertise With Us</a></p>
                        <p><a href="" className="footer-links">Create Hotel Profile</a></p>
@@ -80,7 +75,7 @@ function Footer(){
                     <ul>
                        <li><a href="#">Terms of use</a></li>
                        <li><a href="#">Privacy</a></li>
-                       <li><a href="#">Environmental Policy</a></li>
+                       {/* <li><a href="#">Environmental Policy</a></li> */}
                     </ul>
                  </Col>
                  <Col lg={5} >

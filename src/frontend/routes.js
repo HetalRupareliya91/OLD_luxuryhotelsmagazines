@@ -19,6 +19,9 @@ import OurTeam from "./pages/ourTeam";
 import AboutUsPage from "./pages/about";
 import Distribution from "./pages/distribution";
 import Mediapack from "./pages/mediapack";
+import TrademarkRegistration from "./pages/trademarkRegistration";
+import ContactUs from "./pages/contactUs";
+import SubscribeToNews from "./pages/subscribeToNews";
 
 
 function RoutesPage(){
@@ -44,6 +47,11 @@ function RoutesPage(){
       <Route exact path="/aboutus" element={<AboutUsPage/> } />
       <Route exact path="/distribution" element={<Distribution/> } />
       <Route exact path="/mediapack" element={<Mediapack/> } />
+      <Route exact path="/subscribe-to-news" element={<SubscribeToNews/> } />
+      <Route exact path="/trademark-registration" element={<TrademarkRegistration/> } />    
+        <Route exact path="/contact-us" element={<ContactUs/> } />
+
+      
       </Routes>  
     );
 }

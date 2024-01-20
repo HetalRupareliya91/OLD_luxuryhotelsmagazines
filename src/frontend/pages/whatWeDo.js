@@ -214,7 +214,7 @@ const deals = [
             </section>
 
             <Parallax blur={0} bgImage={bg1} bgImageAlt="the cat" strength={300}>
-            <section className="what-we-do-digital-section">
+            <section className="what-we-do-digital-section" id="digital">
 
                 <Container>
 
@@ -589,11 +589,11 @@ What are you interested in?
 
                     <Col lg={6} className="contact-us p-0">
                     <div className="hovermaindivtwo">
-                        <div className="inner-div">
+                        <div className="inner-div"> 
                             <div className="text-center">
                                 <p>Looks Great?</p></div>
                             <div className="text-center">
-                                <h2><a>CONTACT US</a></h2>
+                                <h2><a href="contact-us">CONTACT US</a></h2>
                             </div>
                         </div>
                         </div>

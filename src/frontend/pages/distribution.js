@@ -1,4 +1,4 @@
-import React , { useRef } from "react";
+import React , { useEffect, useRef } from "react";
 import Header from "../components/header";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { FaAd, FaAward, FaCalendar, FaGlobe, FaNewspaper, FaShare, FaTrafficLight, FaUser } from "react-icons/fa";
@@ -10,7 +10,30 @@ import { FaPhoneSquare } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CallToAction from "../components/callToAction";
+import Footer from "../components/footer";
 function Distribution() {
+
+    useEffect(() => {
+        const scriptId = "EmbedSocialHashtagScript";
+    
+        if (document.getElementById(scriptId)) {
+          return;
+        }
+    
+        const script = document.createElement("script");
+        script.id = scriptId;
+        script.src = "https://embedsocial.com/cdn/ht.js";
+    
+        document.getElementsByTagName("head")[0].appendChild(script);
+        return () => {
+          // Cleanup: remove the script when the component is unmounted
+          const scriptElement = document.getElementById(scriptId);
+          if (scriptElement) {
+            document.getElementsByTagName("head")[0].removeChild(scriptElement);
+          }
+        };
+      }, []);
 
     const sliderRef = useRef(null);
 
@@ -36,48 +59,35 @@ function Distribution() {
     ],
   };
 
-//    const deals = [
-//     {
-//       title: "Luxury Hotels Cyprus & Greece  ",
-//       image:{magazineImage}
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-//       image:{magazineImage}
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-//       image:{magazineImage}
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-//       image:{magazineImage}
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-//       image:{magazineImage}
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-//       image:{magazineImage}
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-//       phone: "7779020705",
-//       description: "Timeless luxury and legendary hospitality in exotic Lombok",
-//       valid: "Valid from  05-01-2023 to 28-03-2024",
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-     
-//     },
-//     {
-//       title: "Mandarin Oriental Guangzou",
-     
-//     },
-
+   const deals = [
+    {
+      title: "Luxury Hotels Cyprus & Greece  ",
+      image:magazineImage
+    },
+    {
+      title: "Mandarin Oriental Guangzou",
+      image:magazineImage
+    },
+    {
+      title: "Mandarin Oriental Guangzou",
+      image:magazineImage
+    },
+    {
+      title: "Mandarin Oriental Guangzou",
+      image:magazineImage
+    },
+    {
+      title: "Mandarin Oriental Guangzou",
+      image:magazineImage
+    },
+    {
+      title: "Mandarin Oriental Guangzou",
+      image:magazineImage
+    },
+  
    
-//   ];
+   
+  ];
     return (
         <>
             <Header />
@@ -232,6 +242,17 @@ function Distribution() {
 </Container>
             </section> */}
 
+<div className="embedsocial-hashtag" data-ref="ce1b21c005de07a4bdd3dea5c99063d161d7105f">
+      <a
+        className="feed-powered-by-es feed-powered-by-es-feed-new"
+        href="https://embedsocial.com/social-media-aggregator/"
+        target="_blank"
+        title="Widget by EmbedSocial"
+      >
+        Widget by EmbedSocial<span>→</span>
+      </a>
+    </div>
+
             <section className="forthcoming-editions spad">
 
                 <Container>
@@ -241,8 +262,8 @@ function Distribution() {
                             <h1>Forthcoming Editions</h1>
                         </div>
 
-                        <div className="mb-4 text-left">
-<div><h2>(1) Luxury Hotels Dubai And Abu Dhabi</h2></div>
+                        <div >
+<div><h2 className="mb-5 ">(1) Luxury Hotels Dubai And Abu Dhabi</h2></div>
                         <Row>
                             
                             <Col lg={6}>
@@ -306,9 +327,9 @@ qYour 2 Ads will be Promoted on Lux
                         </Row >
                         </div>
 
-                        <div className="mt-4">
+                        <div className="mt-5">
                             <div >
-                                <h2>(2) Luxury Hotels Europe</h2>
+                                <h2 className="mb-5">(2) Luxury Hotels Europe</h2>
                             </div>
                         <Row>
                             <Col lg={6} className="order-2">
@@ -376,49 +397,39 @@ qYour 2 Ads will be Promoted on Lux
             </section>
 
 
-            <section>
+            <section className="recents-magazines">
                 <Container>
+
+                    <div >
+                        <h2 className="mb-4">Recent Magazines</h2>
+                    </div>
 
                     {/* <div>
                         <h1>DownLoad Our Full Media Pack</h1>
                     </div> */}
 
-                    {/* <Slider {...sliderSettings} ref={sliderRef}>
+               <Slider {...sliderSettings} ref={sliderRef}>
           {deals.map((deal, index) => (
-            <div key={index} className="text-center exclusive-deals">
-              <a>
-                <h6>{deal.title}</h6>
+            <div key={index} className="text-center exclusive-deals distribution-slider p-0">
+                <div>              <a>
+                <Image src={deal.image}/>
               </a>
-              <div>
-                <FaPhoneSquare className="phone-icon m-0" />
               </div>
-              <div>
-                <a>
-                  <span>{deal.phone}</span>
-                </a>
+
+              <div className="mt-3 mb-3">
+                <span className="valid">{deal.title}</span>
               </div>
-              <div>
-                <a>
-                  <h6>{deal.description}</h6>
-                </a>
-              </div>
-              <div>
-                <span className="valid">{deal.valid}</span>
-              </div>
-              <hr className="m-0"/>
-              <div>
-                <span>
-                  Stay with us for three or five nights at The Oberoi Beach Resort,
-                  Lombok. For the holiday of a lifetime.
-                </span>
-              </div>
+              
             </div>
           ))}
-        </Slider> */}
+        </Slider>
                 </Container>
 
 
             </section>
+
+           <CallToAction/>
+           <Footer/>
         </>
     );
 }

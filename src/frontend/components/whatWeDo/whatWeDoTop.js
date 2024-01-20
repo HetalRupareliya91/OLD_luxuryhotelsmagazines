@@ -102,10 +102,10 @@ function WhatWeDoTop(){
                         </div>
 
                         <div className="d-flex justify-content-around mb-5">
-<a href="what-we-do/print" className="bk-btn w-25">
+<a href="#print" className="bk-btn w-25">
     PRINT CAMPAIGNS
 </a>
-<a href="what-we-do/digital-campaigns" className="bk-btn w-25">
+<a href="#digital" className="bk-btn w-25">
     DIGITAL CAMPAIGNS
 </a>
 </div>

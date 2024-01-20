@@ -4414,11 +4414,13 @@ font-size: 40px !important;
 		color: #ffff;
 		font-size: 20px;
 		font-weight: 500;
+		letter-spacing: 1px;
 	}
 	.heading1{
 		font-size: 24px;
 		color:#ffff;
 		font-weight: 600;
+		letter-spacing: 1px;
 	}
 
 	.flip-box {
@@ -4972,7 +4974,65 @@ margin-right: 15px;
 	font-size: 18px;
 }
 .forthcoming-editions .content-section{
+	padding: 10px 30px 10px 30px;
 	background-color: #fff;
 	box-shadow: 5px 5px 10px 0px #0b020259;
 
+}
+.content-section .listing ul li{
+	list-style: circle;
+	margin: 10px;
+
+}
+
+.distribution-slider .valid{
+	font-size: 18px;
+	color:#b5191f
+}
+
+.media-pack-section .media-pack-cols{
+	/* padding: 20px; */
+	/* border: 1px solid #b5191f; */
+	box-shadow: 5px 5px 10px 0px #00000096;
+
+	width: 45%;
+    margin: 20px 20px;
+}
+
+.media-pack-section .media-pack-cols h5{
+	color: #b5191f;
+	font-size: 20px;
+	
+}
+
+.recents-magazines{
+	padding-bottom: 60px;
+}
+.Contact-us-section form{
+	box-shadow: 5px 5px 10px 0px #00000096;
+}
+.Contact-us-section form .fa-social .fa-link{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	color: #b5191fff;
+	border: 1px solid #b5191fff;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.connect-with-us .fa-social {
+	display: flex;
+	flex-direction: column;
+}
+
+.connect-with-us a{
+	cursor: pointer
 }
