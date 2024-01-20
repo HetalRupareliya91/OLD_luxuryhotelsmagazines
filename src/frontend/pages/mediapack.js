@@ -7,7 +7,6 @@ import mediapackimage from "../../assets/img/mediapack/computer.webp"
 import Footer from "../components/footer";
 import CallToAction from "../components/callToAction";
 function Mediapack() {
-
     return (
         <>
             <Header />
