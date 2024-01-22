@@ -515,7 +515,7 @@ function AddBlogs() {
         <Row className=" mb-3">
          
           <Col lg={6}>
-            <button type="submit" >Add Blog</button>
+            <button type="submit" >Add News</button>
           </Col>
         </Row>
       </form>

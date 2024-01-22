@@ -42,9 +42,9 @@ h6 {
 
 }
 
-h1 {
+/* h1 {
 	font-size: 70px;
-}
+} */
 
 h2 {
 	font-size: 36px;
@@ -3303,6 +3303,7 @@ button.readmore {
 }
 .btn:hover{
 	border: 1px solid #b5191f!important;
+	color:#fff!important;
 }
 .thumbnail:hover .readmore {
 	animation-name: fadeFromBottom;
