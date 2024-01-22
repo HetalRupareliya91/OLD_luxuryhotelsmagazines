@@ -4,6 +4,7 @@ import Search from './components/search';
 import AboutUs from './components/aboutUs';
 import LatestNews from './components/latestnews';
 import Collections from './components/collection';
+import InstagramWidget from './components/instagramWidget';
 import MostPopular from './components/mostPopular';
 import KnoledgeTest from './components/knoledgeTest';
 import CallToAction from './components/callToAction';
@@ -24,6 +25,7 @@ function IndexPage(){
     <LatestNews/>
     <Destination/>
     <Collections/>
+    <InstagramWidget/>
     <VideoBackground/>
     <KnoledgeTest/>
    

@@ -26,7 +26,7 @@ function Advertise() {
                                             <div className="text-heading-button">
 
                                                 <div className="text-center ">
-                                                    <p className="heading1">Video Banner (Home Page)</p> 
+                                                    <p className="heading1">Video Banner (Home Page)</p>
                                                     <p className="heading">(Minimum Term 3 months)</p>
                                                     <p className="heading1">€80/month
                                                     </p>
@@ -42,7 +42,7 @@ function Advertise() {
                                         </div>
                                         <div class="flip-box-back">
                                             <div >
-                                            <h3>What included</h3>
+                                                <h3>What included</h3>
                                             </div>
                                             <ul>
                                                 <li className="heading">Video Banner exposure to approximately 1 million subscribers</li>
@@ -54,15 +54,12 @@ function Advertise() {
                                                 <li className="heading">Detailed Google Analytics reports</li>
                                                 <li className="heading">A remarkable increase in sales by 225%</li>
                                                 <li className="heading">A remarkable increase in sales by 225%</li>
-                                               
-                                               
-
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="text-center">
-                               <button className="w-50">Subscribe Now</button>
-                               </div>
+                                        <button className="w-50">Subscribe Now</button>
+                                    </div>
                                 </div>
 
                             </Col>
@@ -72,8 +69,8 @@ function Advertise() {
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
                                             <div className="text-heading-button">
-                                        <div className="text-center ">
-                                                    <p className="heading1">Animated Banner</p> 
+                                                <div className="text-center ">
+                                                    <p className="heading1">Animated Banner</p>
                                                     <p className="heading">(Minimum Term of 3 months)</p>
                                                     <p className="heading1">€80/month
                                                     </p>
@@ -84,40 +81,40 @@ function Advertise() {
 
                                                     </p>
                                                 </div>
-                                                </div>
+                                            </div>
                                         </div>
                                         <div class="flip-box-back">
                                             <h3>What included</h3>
                                             <ul>
-                                            <li className="heading">Video Banner exposure to approximately 1 million subscribers</li>
+                                                <li className="heading">Video Banner exposure to approximately 1 million subscribers</li>
                                                 <li className="heading">Reach 1.5 million monthly website visitors</li>
-                                         
-                                         <li>Extensive sharing of your banner on 13 Social Networks & 550 Groups</li>
-                                         <li>A direct hyperlink from Video Banner to your website</li>
-                                         <li>A hyperlink from the Video to your YouTube channel</li>
-                                         <li>Seamless direct bookings on your website</li>
-                                         <li>Detailed Google Analytics reports</li>
-                                         <li>A remarkable increase in sales by 225%</li>
-                                         {/* <li>A remarkable increase in sales by 225%</li> */}
-                                         <li>Seamless direct bookings on your website</li>
+
+                                                <li>Extensive sharing of your banner on 13 Social Networks & 550 Groups</li>
+                                                <li>A direct hyperlink from Video Banner to your website</li>
+                                                <li>A hyperlink from the Video to your YouTube channel</li>
+                                                <li>Seamless direct bookings on your website</li>
+                                                <li>Detailed Google Analytics reports</li>
+                                                <li>A remarkable increase in sales by 225%</li>
+                                                {/* <li>A remarkable increase in sales by 225%</li> */}
+                                                <li>Seamless direct bookings on your website</li>
                                             </ul>
-                                        
+
                                         </div>
                                     </div>
                                     <div className="text-center">
-                               <button className="w-50">Subscribe Now</button>
-                               </div>
+                                        <button className="w-50">Subscribe Now</button>
+                                    </div>
                                 </div>
 
                             </Col>
-                            
+
                             <Col lg={4} className="p-4">
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
                                             <div className="text-heading-button">
-                                        <div className="text-center ">
-                                                    <p className="heading1">Hotel Profile</p> 
+                                                <div className="text-center ">
+                                                    <p className="heading1">Hotel Profile</p>
                                                     <p className="heading">(Minimum Term of 6 months)</p>
                                                     <p className="heading1">€80/month
                                                     </p>
@@ -128,51 +125,51 @@ function Advertise() {
 
                                                     </p>
                                                 </div>
-                                                </div>
+                                            </div>
                                         </div>
                                         <div class="flip-box-back">
                                             <h3>What included</h3>
                                             <ul>
                                                 <li className="heading">
-                                                Sharing Hotel Profile with 1 million subscribers
-                                                Adjust Hotel profile at any time within 
+                                                    Sharing Hotel Profile with 1 million subscribers
+                                                    Adjust Hotel profile at any time within
                                                 </li>
                                                 <li className="heading">
-                                                Sharing Hotel Profile with 1 million subscribers
+                                                    Sharing Hotel Profile with 1 million subscribers
                                                 </li>
                                                 <li className="heading">
-                                                Adjust Hotel profile at any time 
+                                                    Adjust Hotel profile at any time
                                                 </li>
-                                              
+
                                                 <li>Share your profile on the 5 Partners Program</li>
                                                 <li>Share your profile on our 13 Social Networks & 550 Groups</li>
-                                                <li>The profile contains: pictures, content, a list of amenities, and a video </li> 
-                                                <li>Ability to add Exclusive Offers to the profile at any time</li> 
+                                                <li>The profile contains: pictures, content, a list of amenities, and a video </li>
+                                                <li>Ability to add Exclusive Offers to the profile at any time</li>
                                                 {/* <li>Links to the Hotel website for convenient bookings</li>  */}
-                                                         </ul>
-                                        
+                                            </ul>
+
                                         </div>
                                     </div>
                                     <div className="text-center">
-                               <button className="w-50">Subscribe Now</button>
-                               </div>
+                                        <button className="w-50">Subscribe Now</button>
+                                    </div>
 
-                               
+
                                 </div>
 
                             </Col>
-                        
+
                             <Col lg={4} className="p-4">
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
-                                        
-                                        
+
+
 
                                             <div className="text-heading-button">
 
                                                 <div className="text-center ">
-                                                    <p className="heading1">Hotel Profile</p> 
+                                                    <p className="heading1">Hotel Profile</p>
                                                     <p className="heading">(Annual Plan)</p>
                                                     <p className="heading1">€80/month
                                                     </p>
@@ -203,8 +200,8 @@ function Advertise() {
                                         </div>
                                     </div>
                                     <div className="text-center">
-                               <button className="w-50">Subscribe Now</button>
-                               </div>
+                                        <button className="w-50">Subscribe Now</button>
+                                    </div>
                                 </div>
 
                             </Col>
@@ -215,8 +212,8 @@ function Advertise() {
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
                                             <div className="text-heading-button">
-                                        <div className="text-center ">
-                                                    <p className="heading1">Post Your Business PR/News</p> 
+                                                <div className="text-center ">
+                                                    <p className="heading1">Post Your Business PR/News</p>
                                                     <p className="heading">(Unlimited Period of Time)</p>
                                                     <p className="heading1">€80/month
                                                     </p>
@@ -227,45 +224,45 @@ function Advertise() {
 
                                                     </p>
                                                 </div>
-                                                </div>
+                                            </div>
                                         </div>
                                         <div class="flip-box-back">
                                             <h3>What included</h3>
                                             <ul>
                                                 <li className="heading">
-                                                Effective promotion of your News/PR/Event/Special Deal
+                                                    Effective promotion of your News/PR/Event/Special Deal
                                                 </li>
                                                 <li className="heading">
-                                                Publish Special Offers within your Hotel News
+                                                    Publish Special Offers within your Hotel News
                                                 </li>
                                                 <li className="heading">
-                                                Distribution of your News to approx. 1 million subscribers
+                                                    Distribution of your News to approx. 1 million subscribers
                                                 </li>
                                                 <li className="heading">
-                                                Sharing your News on our 13 Social Networks & 550 Groups
+                                                    Sharing your News on our 13 Social Networks & 550 Groups
                                                 </li>
                                                 <li className="heading">
-                                                our PR/News staying Permanently, with no time limit
+                                                    our PR/News staying Permanently, with no time limit
                                                 </li>
                                                 <li className="heading">
-                                                Links to your Website and Social Media 
-                                                </li>
-                                                 <li className="heading">
-                                                Distribution of your News to approx. 1 million subscribers
+                                                    Links to your Website and Social Media
                                                 </li>
                                                 <li className="heading">
-                                                Links to your Website and Social Media 
+                                                    Distribution of your News to approx. 1 million subscribers
                                                 </li>
                                                 <li className="heading">
-                                                Links to your Website and Social Media 
+                                                    Links to your Website and Social Media
+                                                </li>
+                                                <li className="heading">
+                                                    Links to your Website and Social Media
                                                 </li>
                                             </ul>
-                                        
+
                                         </div>
                                     </div>
                                     <div className="text-center">
-                               <button className="w-50">Subscribe Now</button>
-                               </div>
+                                        <button className="w-50">Subscribe Now</button>
+                                    </div>
                                 </div>
 
                             </Col>

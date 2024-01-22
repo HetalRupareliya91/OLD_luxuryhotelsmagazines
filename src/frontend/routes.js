@@ -26,37 +26,37 @@ import SubscribeToDigitalCopy from "./pages/subscribeToDigitalCopy";
 import SubscribeToPrintCopy from "./pages/subscribeToPrintCopy";
 
 
-function RoutesPage(){
-    return(
-      <Routes>
-      <Route exact path="/" element={<IndexPage/> } />
-      <Route exact path="/home" element={<IndexPage/> } />
-      <Route exact path="/blogs" element={<Blogs/> } />
-      <Route exact path="/Blog-details/:news_id" element={<BlogDetails/> } />
-      <Route exact path="/rooms" element={<Rooms/> } />
-      <Route exact path="/room-details/:news_id" element={<RoomDetails/> } />
-      <Route exact path="/Login" element={<Login/> } />
-      <Route exact path="/signup" element={<Signup/> } />
-      <Route exact path="/userprofile" element={<UserProfile/> } />
-      <Route exact path="/pricing-plan" element={<PricingPlan/> } />
-      <Route exact path="/profile" element={<Profile/> } />
-      <Route exact path="/subscription" element={<SubsriptionPage/> } />
-      <Route exact path="/what-we-do" element={<WhatWeDo/> } />
-      <Route exact path="/advertise-with-us" element={<AdvertiseWithUs/> } />
-      <Route exact path="/hotels-selection" element={<HotelSelection/> } />
-      <Route exact path="/hotels-editions" element={<HotelEditions/> } />
-      <Route exact path="/our-team" element={<OurTeam/> } />
-      <Route exact path="/aboutus" element={<AboutUsPage/> } />
-      <Route exact path="/distribution" element={<Distribution/> } />
-      <Route exact path="/mediapack" element={<Mediapack/> } />
-      <Route exact path="/subscribe-to-news" element={<SubscribeToNews/> } />
-      <Route exact path="/trademark-registration" element={<TrademarkRegistration/> } />    
-        <Route exact path="/contact-us" element={<ContactUs/> } />
-        <Route exact path="/subcribe-digital-copy" element={<SubscribeToDigitalCopy/> } />
-        <Route exact path="/subcribe-print-copy" element={<SubscribeToPrintCopy/> } />
+function RoutesPage() {
+  return (
+    <Routes>
+      <Route exact path="/" element={<IndexPage />} />
+      <Route exact path="/home" element={<IndexPage />} />
+      <Route exact path="/blogs" element={<Blogs />} />
+      <Route exact path="/Blog-details/:news_id" element={<BlogDetails />} />
+      <Route exact path="/rooms" element={<Rooms />} />
+      <Route exact path="/room-details/:news_id" element={<RoomDetails />} />
+      <Route exact path="/Login" element={<Login />} />
+      <Route exact path="/signup" element={<Signup />} />
+      <Route exact path="/userprofile" element={<UserProfile />} />
+      <Route exact path="/pricing-plan" element={<PricingPlan />} />
+      <Route exact path="/profile" element={<Profile />} />
+      <Route exact path="/subscription" element={<SubsriptionPage />} />
+      <Route exact path="/what-we-do" element={<WhatWeDo />} />
+      <Route exact path="/advertise-with-us" element={<AdvertiseWithUs />} />
+      <Route exact path="/hotels-selection" element={<HotelSelection />} />
+      <Route exact path="/hotels-editions" element={<HotelEditions />} />
+      <Route exact path="/our-team" element={<OurTeam />} />
+      <Route exact path="/aboutus" element={<AboutUsPage />} />
+      <Route exact path="/distribution" element={<Distribution />} />
+      <Route exact path="/mediapack" element={<Mediapack />} />
+      <Route exact path="/subscribe-to-news" element={<SubscribeToNews />} />
+      <Route exact path="/trademark-registration" element={<TrademarkRegistration />} />
+      <Route exact path="/contact-us" element={<ContactUs />} />
+      <Route exact path="/subcribe-digital-copy" element={<SubscribeToDigitalCopy />} />
+      <Route exact path="/subcribe-print-copy" element={<SubscribeToPrintCopy />} />
 
-      
-      </Routes>  
-    );
+
+    </Routes>
+  );
 }
 export default RoutesPage;

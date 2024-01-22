@@ -30,7 +30,7 @@ const InstagramWidget = () => {
       <Container>
         
     <div className="text-center">
-      <h1>Instagram / #Luxuryhotelsbrand</h1>
+      <h2>Instagram / #Luxuryhotelsbrand</h2>
     </div>
     <div className="embedsocial-hashtag" data-ref="ce1b21c005de07a4bdd3dea5c99063d161d7105f">
       {/* <a

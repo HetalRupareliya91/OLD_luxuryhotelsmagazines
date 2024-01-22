@@ -3,6 +3,7 @@ import Header from "../components/header";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import Footer from "../components/footer";
 import CallToAction from "../components/callToAction";
+import ClientLogo from '../components/clientLogo';
 import HotelsImage from "../../assets/img/about_page/hotels.jpg";
 import ClientImage from "../../assets/img/about_page/clients.jpg";
 import YachetsImage from "../../assets/img/about_page/yachets.jpg";
@@ -97,8 +98,9 @@ function AboutUsPage() {
                         <p>9. Recognition: Each hotel could be nominated by our readers as "The Best &amp; Most Luxury Hotel of the Year," and you will have access to data on the voting clients.</p>
                     </div>
                 </Container>
+                <ClientLogo/>
             </section>
-
+            
             <CallToAction />
             <Footer />
 

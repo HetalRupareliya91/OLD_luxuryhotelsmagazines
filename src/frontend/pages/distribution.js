@@ -96,7 +96,6 @@ function Distribution() {
                         <h1>Our Services</h1>
                     </div>
                     <Row>
-
                         <Col lg={3} className="mb-5">
                             <div className="service-include">
                                 <div>
@@ -196,7 +195,6 @@ function Distribution() {
             <InstagramWidget />
 
             <section className="forthcoming-editions spad">
-
                 <Container>
                     <div>
 

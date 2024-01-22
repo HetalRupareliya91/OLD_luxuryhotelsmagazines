@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/img/logo.svg";
-import { FaPhone, FaEnvelope, FaFacebook, FaYoutube, FaInstagram,FaTwitter,FaTripadvisor} from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaFacebook, FaYoutube, FaInstagram,FaTwitter,FaTripadvisor, FaAddressBook, FaBell} from 'react-icons/fa';
 import { Col, Container, Row } from "react-bootstrap";
 
 function Footer(){
@@ -23,14 +23,13 @@ function Footer(){
                        <p>BRAND RECOGNITION</p>
                       
                        <ul>
-                          <li className="mb-4"><a href="#">Trademark Registry</a></li>
-                          <li><a href="#">Branding Registration</a></li>
+                          <li className="mb-4"><a href="trademark-registration">Trademark Registry</a></li>
+                          <li><a href="trademark-registration">Branding Registration</a></li>
                        </ul>
                        <div className="fa-social">
-                          <a href="#"><i ><FaFacebook/></i></a>
-                          {/* <a href="Info@LuxuryHotelsMagazines.Com"><i ></i><FaEnvelope/></a> */}
-                          <a href="#"><i ><FaInstagram/></i></a>
-                          <a href="#"><i ></i><FaYoutube/></a>
+                          <a href="https://www.facebook.com/LuxuryHotelsMagazines"><FaFacebook/></a>
+                          <a href="https://www.instagram.com/luxuryhotelsbrand/"><FaInstagram/></a>
+                          <a href='https://www.youtube.com/channel/UCxV4ClKpFA95eU-4c8sN3Tg'><FaYoutube/></a>
                        </div>
                     </div>
                  </Col>
@@ -55,16 +54,15 @@ function Footer(){
                  </Col>
                  <Col lg={3}>
                     <div className="ft-contact">
-                       <h6>Contact Us</h6>
+                       <h6>Connect with Us</h6>
                        <ul>
-                          <li><a href="">(12) 345 67890</a></li>
-                          <li><a href="mailto:info@luxuryhotelsmagazines.com">Info@LuxuryHotelsMagazines.Com</a></li>
-                          <li><a href="contact-us">Contact </a></li>
-                       </ul>
-                       <ul>
-                          <li><a href="subscribe-to-news">Subscribe To Receive News </a></li>
-                          <li ><a href="subcribe-digital-copy">Subscribe To Digital Copy</a></li>
-                          <li><a href="subcribe-digital-copy">Subscribe To Printed Copy</a></li>
+                          <li><FaAddressBook /><a href="contact-us">Contact Us </a></li>
+                          <li><FaPhone /><a href="tel:1234567890">(12) 345 67890</a></li>
+                          <li><FaEnvelope /><a href="mailto:info@luxuryhotelsmagazines.com">info@luxuryhotelsmagazines.com</a></li>
+                  
+                          <li><FaBell /><a href="subscribe-to-news">Subscribe To Receive News </a></li>
+                          <li><FaBell /><a href="subcribe-digital-copy">Subscribe To Digital Copy</a></li>
+                          <li><FaBell /><a href="subcribe-print-copy">Subscribe To Printed Copy</a></li>
                        </ul>
                     </div>
                  </Col>
@@ -79,7 +77,6 @@ function Footer(){
                     <ul>
                        <li><a href="#">Terms of use</a></li>
                        <li><a href="#">Privacy</a></li>
-                       {/* <li><a href="#">Environmental Policy</a></li> */}
                     </ul>
                  </Col>
                  <Col lg={5} >

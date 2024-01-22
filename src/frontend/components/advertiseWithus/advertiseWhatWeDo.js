@@ -25,7 +25,7 @@ function AdvertiseWhatWeDo(){
                         <div className="text-center">
                             <p>Looks Great?</p></div>
                         <div className="text-center">
-                            <h2><a href="contact-us">CONTACT US</a></h2>
+                            <h2><a className="link_text" href="contact-us">CONTACT US</a></h2>
                         </div>
                     </div>
                 </div>
