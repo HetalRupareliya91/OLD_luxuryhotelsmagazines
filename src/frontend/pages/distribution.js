@@ -70,13 +70,10 @@ function Distribution() {
     return (
         <>
             <Header />
-
             <section className="distribution-section spad">
                 <Container>
-
                     <div className="text-center">
                         <div><h2>Distribution</h2></div>
-
                     </div>
                     <div>
                         <p>Luxury Hotels is a premier publication that produces annual digital [70%] and printed [30%] versions aimed at attracting luxury travelers in specific regions. The high-quality printed editions boast an impressive 100,000 copies distributed worldwide, each containing QR codes of the featured hotel. The digital editions have an impressive 4-5 million downloads annually according to statistics of 2022.</p>
@@ -84,11 +81,8 @@ function Distribution() {
                         <p>The publication's rotation program presents each of the 40 Luxurious Hotels with a unique opportunity to lure clients from other hotels and exchange them with their own esteemed guests, resulting in a continuous influx of bookings. Consequently, each hotel can report a significant upsurge in bookings and room occupancy throughout the year, thereby creating a win-win scenario for all participating hotels.</p>
                         <p>The publication has also implemented AI technology, enabling every newly published hotel to be shared online with their 1 million Luxury Hotels subscribers. Overall, Luxury Hotels provide an excellent platform for Luxury Hotels to showcase their unique offerings and attract high-end clients from around the world.</p>
                     </div>
-
-
                 </Container>
             </section>
-
 
             <section className="our-section-div spad">
                 <Container>
@@ -103,7 +97,6 @@ function Distribution() {
                                 </div>
                                 <span>
                                     Printed Version of Luxury Hotels Promoted in 89 Countries
-
                                 </span>
                             </div>
                         </Col>
@@ -113,8 +106,7 @@ function Distribution() {
                                     <FaNewspaper className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    13 Social Networks & 13 Million Monthly users
                                 </span>
                             </div>
                         </Col>
@@ -124,8 +116,7 @@ function Distribution() {
                                     <FaCalendar className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    All Ads Published with QR codes access to the Advertiser website
                                 </span>
                             </div>
                         </Col>
@@ -135,8 +126,7 @@ function Distribution() {
                                     <FaGlobe className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    Special offers can be published any time during the term
                                 </span>
                             </div>
                         </Col>
@@ -148,8 +138,7 @@ function Distribution() {
                                     <FaTrafficLight className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    Press Release & News can be published any time
                                 </span>
                             </div>
                         </Col>
@@ -159,8 +148,7 @@ function Distribution() {
                                     <FaUser className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    Free Digital copies available on 5 Independent Platform
                                 </span>
                             </div>
                         </Col>
@@ -170,8 +158,7 @@ function Distribution() {
                                     <FaShare className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    Digital copies sent to 1 Million Subscribers
                                 </span>
                             </div>
                         </Col>
@@ -182,13 +169,11 @@ function Distribution() {
                                     <FaAward className="service-logo" />
                                 </div>
                                 <span>
-                                    Printed Version of Luxury Hotels Promoted in 89 Countries
-
+                                    Hotel nomination for the Best Luxury Hotel of the Year
                                 </span>
                             </div>
                         </Col>
                     </Row>
-
                 </Container>
             </section>
 
@@ -197,15 +182,12 @@ function Distribution() {
             <section className="forthcoming-editions spad">
                 <Container>
                     <div>
-
                         <div className="text-center mb-4">
                             <h1>Forthcoming Editions</h1>
                         </div>
-
                         <div >
                             <div><h2 className="mb-5 ">(1) Luxury Hotels Dubai And Abu Dhabi</h2></div>
                             <Row>
-
                                 <Col lg={6}>
                                     <div>
                                         <Image src={magazineImage} />
@@ -222,7 +204,6 @@ function Distribution() {
                                             <p>4,5 Million Readers</p>
                                         </div>
                                     </div>
-
                                     <div className="listing">
                                         <ul >
                                             <li>
@@ -264,7 +245,7 @@ function Distribution() {
                                     </div>
 
                                 </Col>
-                            </Row >
+                            </Row>
                         </div>
 
                         <div className="mt-5">
