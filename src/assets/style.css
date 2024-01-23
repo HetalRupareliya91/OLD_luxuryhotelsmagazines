@@ -5889,3 +5889,13 @@ top: 250px;
 .room-details-aminites p {
 	margin: 5px;
 }
+.ProgressBar {
+	background-color: #ffffff !important;
+	color: white !important;
+	border: 2px solid black;
+	border-radius: 12px;
+	/* margin: 0px 135px; */
+}
+.progress-bar {
+	background-color: #b5191fff !important;
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Col, Container, Form, Image, Nav, Row } from 'react-bootstrap';
+import { Col, Container, Form, Image, Nav, ProgressBar, Row } from 'react-bootstrap';
 import API from "../../../utils";
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
@@ -9,7 +9,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 function AddHotel() {
     const [hotelEditorState, setHotelEditorState] = useState(EditorState.createEmpty());
     const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
-
+    const [currentStep, setCurrentStep] = useState(1);
     const handleHotelEditorChange = (editorState) => {
         setHotelEditorState(editorState);
     };
@@ -102,14 +102,14 @@ function AddHotel() {
         }));
     };
 
-    const nextStep = () => {
-        setStep(step + 1);
-    };
+    // const nextStep = () => {
+    //     setStep(step + 1);
+    // };
 
-    const prevStep = () => {
-        setStep(step - 1);
+    // const prevStep = () => {
+    //     setStep(step - 1);
 
-    };
+    // };
 
     const handleCreateHotel = async (e) => {
         const token = localStorage.getItem("token");
@@ -215,11 +215,43 @@ function AddHotel() {
         fetchAmenities();
     }, []);
 
+
+
+
+    const [progress, setProgress] = useState(0);
+
+    const nextStep = async (e) => {
+      if (currentStep < 4) {
+        setCurrentStep((prevStep) => prevStep + 1);
+        const newProgress = ((currentStep) / 4) * 100;
+        setProgress(newProgress);
+      }
+    };
+  
+    const prevStep = () => {
+      if (currentStep > 1) {
+        setCurrentStep((prevStep) => prevStep - 1);
+        const newProgress = ((currentStep - 2) / 4) * 100;
+        setProgress(newProgress);
+      }
+    };
+  
+    useEffect(() => {
+      // Set initial progress when the component mounts
+      setProgress(((currentStep ) / 4) * 100);
+    }, []);
     return (
+<>
+<div className="mb-3">
+{currentStep === 1 && <h4>Hotel Details</h4>}
+{currentStep === 2 && <h4>Hotel Contacts</h4>}
+{currentStep === 3 && <h4>Special Offer</h4>}
+{currentStep === 4 && <h4>Home Page Addon</h4>}
 
+</div>
+<ProgressBar now={progress} label={`${progress}%`} className="ProgressBar h-25 mb-3" />
         <Form>
-
-            {step === 1 && <div>
+            {currentStep === 1 && <div>
                 <Row className=" mb-3">
 
                     <Col lg={6}>
@@ -553,7 +585,7 @@ function AddHotel() {
 
 
             </div>}
-            {step === 2 && <div>
+            {currentStep === 2 && <div>
                 <Row className="mb-3">
                     <h4>Contact 1 </h4>
                     <Col lg={4}>
@@ -656,7 +688,7 @@ function AddHotel() {
                     </button>
                 </div>
             </div>}
-            {step === 3 && <div>
+            {currentStep === 3 && <div>
                 <Row className='mb-3'>
                     <Col lg={6}>
                         <input className="sidebar-input" type="text" id="offerTitle" name="offerTitle" placeholder="Offer Title" value={formData.offerTitle}
@@ -700,7 +732,7 @@ function AddHotel() {
                     </button>
                 </div>
             </div>}
-            {step === 4 && <div>
+            {currentStep === 4 && <div>
                 <Row className='mb-3'>
                     <Col>
                         <h6>
@@ -780,7 +812,7 @@ function AddHotel() {
             </div>}
 
         </Form>
-
+        </>
 
     );
 };
