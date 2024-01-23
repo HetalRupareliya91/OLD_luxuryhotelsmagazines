@@ -27,6 +27,7 @@ import SubscribeToPrintCopy from "./pages/subscribeToPrintCopy";
 import PublishVideoBanner from "./pages/publishVideoBanner";
 import PublishAnimatedBanner from "./pages/publishAnimatedBanner";
 import PublishHotelNews from "./pages/publishHotelNews";
+import KitDetail from "./pages/kitDetail";
 
 
 function RoutesPage() {
@@ -60,8 +61,7 @@ function RoutesPage() {
       <Route exact path="/publish-video-banner" element={<PublishVideoBanner />} />
       <Route exact path="/publish-animated-banner" element={<PublishAnimatedBanner />} />
       <Route exact path="/publish-hotel-news" element={<PublishHotelNews />} />
-
-
+      <Route exact path="/kit-detail" element={<KitDetail />} />
     </Routes>
   );
 }

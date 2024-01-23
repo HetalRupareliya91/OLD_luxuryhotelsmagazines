@@ -5920,7 +5920,8 @@ top: 250px;
 	cursor: pointer
 }
 
-.instgram-section {
+.instgram-section, 
+.recents-magazines {
 	background-color: #ffff;
 }
 
@@ -6040,4 +6041,11 @@ button .subscribe_text {
 }
 .hovermaindivtwo a{
 	color: white;
+}
+.text_yellow{
+	color: #856316 !important;
+}
+
+button a{
+    color: #fff;
 }
