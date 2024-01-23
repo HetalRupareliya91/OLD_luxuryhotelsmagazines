@@ -26,9 +26,9 @@ const VideoBackground = () => {
                   <Col lg={6} >
                     
                         <Row className="row">
-                           <Col sm={6} col={6} className='videos-content-present'>
+                           <Col sm={6} col={6} className='videos-content-present text-center'>
                           <Image src={Logo}/>
-                          <div className='text-center mt-4'>
+                          <div className='mt-4'>
                           <h4 >PRESENTS</h4>
                           </div>
                            </Col>

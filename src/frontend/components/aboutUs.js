@@ -13,7 +13,7 @@ import { Container, Row, Col, Button, Image } from "react-bootstrap";
 import { Parallax } from "react-parallax";
 import VideoBackgrounds from '../../assets/videos/hotelvideo_km2KqTxn.mp4';
 import ReactPlayer from "react-player";
-
+import Logo from "../../assets/img/logo.svg"
 function AboutUs() {
 
     return(
@@ -100,7 +100,7 @@ function AboutUs() {
 
      <section className="video-background p-0">
      <div className='video-iframe'>
-      <iframe loading="lazy" style={{width: "100%"}} id="ytplayer" type="text/html" width="100%" height="450px" src="https://www.youtube.com/embed/GCHzng92OEI?&autoplay=1&mute=1&loop=1&color=white&controls=0&playsinline=1&rel=0&playlist=GCHzng92OEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      <iframe loading="lazy" style={{width: "100%"}} id="ytplayer" type="text/html" width="100%" height="500px" src="https://www.youtube.com/embed/GCHzng92OEI?autoplay=1&mute=1&loop=1&color=white&controls=0&playsinline=1&rel=0&playlist=GCHzng92OEI&showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>   
             </div>
       <div className="text-overlay">
@@ -137,6 +137,18 @@ function AboutUs() {
                      </div>
                   </div>
                </div>
+
+
+               <Row className="row aboutus-section-present">
+                           <Col className='videos-content-present text-center'>
+                          <Image src={Logo}/>
+                          <div className='mt-4'>
+                          <h4 >PRESENTS</h4>
+                          </div>
+                           </Col>
+                         
+                       
+                     </Row>
           {/* <Row>
             <Col lg={6}>
               <div className='text-div'>

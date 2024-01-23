@@ -102,39 +102,72 @@ function AllHotels(){
   
     return(
         <>
-        {currentPosts.map((hotel) => (
-        <Row className='hotel-profile-div mt-4' key={hotel.id}>
+        
+        <Row className='hotel-profile-div mt-4' >
           <Col lg={4}>
             <div className='image-div'>
-              <Image src={hotel.fullImagePath} alt={hotel.hotel_title} />
+              <Image src={News1} />
             </div>
           </Col>
+
           <Col lg={8}>
             <div className='details-div mt-4'>
               <div className='mb-3'>
-                <h4>{hotel.hotel_title}</h4>
-                <h6>Created at  {formatDate(hotel.created_at)}</h6>
-                <h5>Package expiry: {hotel.updated_at}</h5>
+                <h4>The Ritz-Carlton, Doha</h4>
+                <h6>Created at : 2023-08-30</h6>
+                <h5>Package expiry: 2024-01-30</h5>
               </div>
               <Row className='mt-5'>
                 <Col lg={8} className='mt-2'>
                   <div className='time-left '>
-                    <span>Time Left : {formatDate(hotel.created_at)}</span>
+                    <span>Time Left :75d 11h 36m 6s</span>
                   </div>
                 </Col>
                 <Col lg={4} className='mt-2'>
                   <div className='d-flex all-hotel-btns'>
-                  <button className='me-1 btn-default' onClick={() => handleViewButtonClick(hotel)}>View</button>
-                    <button className='me-1 btn-default'  onClick={() => handleEditButtonClick(hotel)} >Edit</button>
-                    <button className='me-1 btn-default' onClick={() => handleOpenModal(hotel)}>Delete</button>
+                  <button className='me-1 btn-default' >View</button>
+                    <button className='me-1 btn-default'   >Edit</button>
+                    <button className='me-1 btn-default' >Delete</button>
                   </div>
                 </Col>
               </Row>
             </div>
           </Col>
         </Row>
-      ))}
+    
       
+        <Row className='hotel-profile-div mt-4' >
+          <Col lg={4}>
+            <div className='image-div'>
+              <Image src={News2} />
+            </div>
+          </Col>
+
+          <Col lg={8}>
+            <div className='details-div mt-4'>
+              <div className='mb-3'>
+                <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                <h6>Created at : 2023-08-30</h6>
+                <h5>Package expiry: 2024-01-30</h5>
+              </div>
+              <Row className='mt-5'>
+                <Col lg={8} className='mt-2'>
+                  <div className='time-left '>
+                    <span>Time Left :75d 11h 36m 6s</span>
+                  </div>
+                </Col>
+                <Col lg={4} className='mt-2'>
+                  <div className='d-flex all-hotel-btns'>
+                  <button className='me-1 btn-default' >View</button>
+                    <button className='me-1 btn-default'   >Edit</button>
+                    <button className='me-1 btn-default' >Delete</button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+    
       <div className="col-lg-12">
         <div className="room-pagination">
           {apiData.length > postsPerPage &&

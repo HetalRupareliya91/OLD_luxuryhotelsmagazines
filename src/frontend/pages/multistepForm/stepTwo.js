@@ -24,7 +24,7 @@ function Step2() {
     return (
       <div>
         <Row className="mb-3">
-          <h4>Contact 1 </h4>
+          <h5>Contact 1 </h5>
           <Col lg={4}>
             <input
             className="sidebar-input"  
@@ -37,10 +37,11 @@ function Step2() {
             required/>
           </Col>
           <Col lg={4}>
-            <input  className="sidebar-input"
-            type="email"
+            <input  
+            type="text"
             id="email"
             name="email"
+            className="sidebar-input"  
             placeholder=" Email"
             value={formData.contact1.email}
             onChange={(e) => handleChange("contact1", "email", e.target.value)}
@@ -59,9 +60,10 @@ function Step2() {
         </Row>
   
         <Row className="mb-3">
-          <h4>Contact 2 </h4>
+          <h5>Contact 2 </h5>
           <Col lg={4}>
-            <input  className="sidebar-input"  
+            <input 
+             className="sidebar-input"  
             type="text"
             id="name"
             name="name"
@@ -70,9 +72,10 @@ function Step2() {
             onChange={(e) => handleChange("contact1", "name", e.target.value)} />
           </Col>
           <Col lg={4}>
-            <input type="email"
+            <input type="text"
             id="email"
             name="email"
+            className="sidebar-input"  
             placeholder=" Email"
             value={formData.contact2.email}
             onChange={(e) => handleChange("contact2", "email", e.target.value)} />
@@ -89,7 +92,7 @@ function Step2() {
         </Row>
   
         <Row className="mb-3">
-          <h4 className="third-child">Contact 3 </h4>
+          <h5 className="third-child">Contact 3 </h5>
           <Col lg={4}>
             <input  className="sidebar-input"  
             type="text"
@@ -100,10 +103,11 @@ function Step2() {
             onChange={(e) => handleChange("contact3", "name", e.target.value)} />
           </Col>
           <Col lg={4}>
-            <input type="email"
+            <input type="text"
             id="email"
             name="email"
-            placeholder=" Email"
+            className="sidebar-input"  
+            placeholder="Email"
             value={formData.contact3.email}
             onChange={(e) => handleChange("contact3", "email", e.target.value)}  />
           </Col>

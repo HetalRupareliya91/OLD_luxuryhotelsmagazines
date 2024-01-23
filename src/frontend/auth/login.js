@@ -121,14 +121,7 @@ function Login() {
                            <h2>Log In</h2>
 
                            <Form className="user_login authsection active" id="userlogin" >
-                              <div className="form-floating">
-                                 <input type="text" className="" name="Username" placeholder="Username" onChange={handleInputChange} style={{ borderColor: userNameError ? "red" : "" }} />
-                              </div>
-                              {userNameError && (
-                                 <div style={{ color: "red", textAlign: "left" }}>
-                                    {userNameError}
-                                 </div>
-                              )}
+                             
                               <div className="form-floating">
                                  <label for="Email"></label>
                                  <input type="email" className="" name="Email" placeholder="Email " onChange={handleInputChange} style={{ borderColor: emailError ? "red" : "" }} />

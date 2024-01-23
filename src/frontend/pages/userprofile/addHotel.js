@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Col, Container, Form, Image, Nav, Row } from 'react-bootstrap';
+import { Col, Container, Form, Image, Nav, ProgressBar, Row } from 'react-bootstrap';
 import API from "../../../utils";
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
@@ -9,7 +9,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 function AddHotel() {
     const [hotelEditorState, setHotelEditorState] = useState(EditorState.createEmpty());
     const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
-
+    const [currentStep, setCurrentStep] = useState(1);
     const handleHotelEditorChange = (editorState) => {
         setHotelEditorState(editorState);
     };
@@ -102,14 +102,14 @@ function AddHotel() {
         }));
     };
 
-    const nextStep = () => {
-        setStep(step + 1);
-    };
+    // const nextStep = () => {
+    //     setStep(step + 1);
+    // };
 
-    const prevStep = () => {
-        setStep(step - 1);
+    // const prevStep = () => {
+    //     setStep(step - 1);
 
-    };
+    // };
 
     const handleCreateHotel = async (e) => {
         const token = localStorage.getItem("token");
@@ -215,11 +215,43 @@ function AddHotel() {
         fetchAmenities();
     }, []);
 
+
+
+
+    const [progress, setProgress] = useState(0);
+
+    const nextStep = async (e) => {
+      if (currentStep < 4) {
+        setCurrentStep((prevStep) => prevStep + 1);
+        const newProgress = ((currentStep) / 4) * 100;
+        setProgress(newProgress);
+      }
+    };
+  
+    const prevStep = () => {
+      if (currentStep > 1) {
+        setCurrentStep((prevStep) => prevStep - 1);
+        const newProgress = ((currentStep - 2) / 4) * 100;
+        setProgress(newProgress);
+      }
+    };
+  
+    useEffect(() => {
+      // Set initial progress when the component mounts
+      setProgress(((currentStep ) / 4) * 100);
+    }, []);
     return (
+<>
+<div className="mb-3">
+{currentStep === 1 && <h4>Hotel Details</h4>}
+{currentStep === 2 && <h4>Hotel Contacts</h4>}
+{currentStep === 3 && <h4>Special Offer</h4>}
+{currentStep === 4 && <h4>Home Page Addon</h4>}
 
+</div>
+<ProgressBar now={progress} label={`${progress}%`} className="ProgressBar h-25 mb-3" />
         <Form>
-
-            {step === 1 && <div>
+            {currentStep === 1 && <div>
                 <Row className=" mb-3">
 
                     <Col lg={6}>
@@ -318,49 +350,230 @@ function AddHotel() {
                 </Row>
                 <h5>Hotel Amenities</h5>
                 <Row className="mb-3">
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="number" id="numberOfRooms" name="numberOfRooms" placeholder="Number Of Rooms" value={formData.numberOfRooms} onChange={handleInputChange} />
                     </Col>
 
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="number" id="numberOfRestaurants" name="numberOfRestaurants" placeholder="Number Of Restaurants" value={formData.numberOfRestaurants} onChange={handleInputChange} />
                     </Col>
-                </Row>
-                <Row className="mb-3">
-                    <Col lg={6}>
-                        <input className="sidebar-input" type="number" id="outdoorSwimmingPool" name="outdoorSwimmingPool" placeholder="Outdoor Swimming Pool" value={formData.outdoorSwimmingPool} onChange={handleInputChange} />
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="number" id="outdoorSwimmingPool" name="outdoorSwimmingPool" placeholder="Swimming Pool" value={formData.outdoorSwimmingPool} onChange={handleInputChange} />
                     </Col>
 
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="number" id="bars" name="bars" placeholder="Bars" value={formData.bars} onChange={handleInputChange} />
                     </Col>
-                </Row>
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="number" id="meetingrooms" name="bars" placeholder="Meeting Rooms"  />
+                    </Col>
 
-
-                <Row className="mb-3">
-                    {formData.amenitiesList.map((amenity) => (
-                        <Col key={amenity.id} lg={3}>
-                            <Form.Group controlId={`checkboxGroup-${amenity.id}`} className='d-flex' >
+                    <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
-                                    id={amenity.id}
-                                    name={amenity.title}
+                                   
                                     className=' me-3'
-                                    onChange={handleInputChange}
-                                    checked={formData[amenity.title]}
-                                    data-id={amenity.id}
+                                   
                                 />
-                                <label htmlFor={`checkbox-${amenity.id}`}>{amenity.title}</label>
+                                <label>Room service</label>
                             </Form.Group>
                         </Col>
-                    ))}
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Concierge service</label>
+                            </Form.Group>
+                        </Col>
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Room service</label>
+                            </Form.Group>
+                        </Col>
+                </Row>
+                {/* <Row className="mb-3">
+                    
+                </Row> */}
+
+
+                <Row className="mb-3">
+                    
+                      
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Concierge service</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Breakfast</label>
+                            </Form.Group>
+                        </Col>
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>WIFI</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Fitness center</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Concierge service</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Sport Classes</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Spa</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Toiletries</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Kids Club</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Spa</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Additional Classes</label>
+                            </Form.Group>
+                        </Col>
+
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Hair Dryer</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Parking</label>
+                            </Form.Group>
+                        </Col>
+                    
                 </Row>
                 <Row className="mb-3">
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="text" id="otherInformation1" name="otherInformation1" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation1}
                             onChange={handleInputChange} />
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
+                            onChange={handleInputChange} />
+                    </Col>
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
+                            onChange={handleInputChange} />
+                    </Col>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
                             onChange={handleInputChange} />
                     </Col>
@@ -372,7 +585,7 @@ function AddHotel() {
 
 
             </div>}
-            {step === 2 && <div>
+            {currentStep === 2 && <div>
                 <Row className="mb-3">
                     <h4>Contact 1 </h4>
                     <Col lg={4}>
@@ -475,7 +688,7 @@ function AddHotel() {
                     </button>
                 </div>
             </div>}
-            {step === 3 && <div>
+            {currentStep === 3 && <div>
                 <Row className='mb-3'>
                     <Col lg={6}>
                         <input className="sidebar-input" type="text" id="offerTitle" name="offerTitle" placeholder="Offer Title" value={formData.offerTitle}
@@ -519,7 +732,7 @@ function AddHotel() {
                     </button>
                 </div>
             </div>}
-            {step === 4 && <div>
+            {currentStep === 4 && <div>
                 <Row className='mb-3'>
                     <Col>
                         <h6>
@@ -599,7 +812,7 @@ function AddHotel() {
             </div>}
 
         </Form>
-
+        </>
 
     );
 };

@@ -23,9 +23,9 @@ function IndexPage(){
     <ClientLogo/>
     <Tabs/>
     <LatestNews/>
-    <Destination/>
+    {/* <Destination/> */}
+    
     <Collections/>
-    <InstagramWidget/>
     <VideoBackground/>
     <KnoledgeTest/>
    

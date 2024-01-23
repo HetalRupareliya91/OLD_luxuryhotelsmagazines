@@ -266,7 +266,7 @@ function AddBlogs() {
 
   return (
     <>
-      <h3 className="mb-4">Add A New Blog</h3>
+      {/* <h3 className="mb-4">Add A New Blog</h3> */}
       <form id="addBlogForm" onSubmit={handleAddBlogs}>
         <Row className="mb-3">
           <Col lg={6}>
@@ -518,6 +518,9 @@ function AddBlogs() {
             <button type="submit" >Add News</button>
           </Col>
         </Row>
+        <div className="text-center">
+          <p>Your article/views will stay on our Platform for unlimited period of time</p>
+        </div>
       </form>
     </>
   );
