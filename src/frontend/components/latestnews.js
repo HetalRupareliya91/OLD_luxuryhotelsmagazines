@@ -6,7 +6,7 @@ import News7 from '../../assets/img/news7.jpg';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 function LatestNews() {
     return (
-        <section className="services-section spad">
+        <section className="spad">
         <Container >
            <h2 className="text-center mb-5">Latets News</h2>
            

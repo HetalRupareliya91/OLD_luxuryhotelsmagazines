@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import { FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaWhatsapp, FaTelegram, FaLinkedin, FaSnapchat, FaEye, FaHeart, FaMapMarker, FaBuilding, FaSpaceShuttle, FaHome, FaList, FaPencilAlt } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaWhatsapp, FaTelegram, FaLinkedin, FaSnapchat, FaEye, FaHeart, FaMapMarker, FaBuilding, FaSpaceShuttle, FaHome, FaList, FaPencilAlt, FaWifi } from 'react-icons/fa';
 
 
 import News3 from '../../assets/img/news3.jpg'
@@ -59,7 +59,7 @@ function RoomDetails() {
                     <div className="row">
                         <div className="col-lg-8">
                          
-                            <div className="row mt-5">
+                            <div className="row mt-3">
                                 <div className="col-lg-4">
                                     <div className="row">
                                         <div className="col-lg-12 col-6"><img src={News5} alt="" className="mb-2" /></div>
@@ -255,6 +255,69 @@ function RoomDetails() {
                                         </p>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="room-details-aminites">
+                            <div className="text-left m-4">
+                                <h2>Hotel Aminites</h2>
+                            
+                            </div>
+                           <div>
+
+                            <Row>
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p>Numbers Of Rooms</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> swimming pool:1</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Bars :1</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p>Kids club</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Teens Club</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Private driver</p>
+                                    </div>
+                                </Col>
+
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Room service</p>
+                                    </div>
+                                </Col>
+
+                                <Col lg={3}>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+                                </Col>
+
+                            </Row>
+                           </div>
                         </div>
                         <div className="alternate-hotels mt-3">
                             <div className="text-left m-4">

@@ -842,8 +842,13 @@ ol {
 -----------------------*/
 
 .services-section {
-	padding-bottom: 60px;
 	border-top: 1px solid #e5e5e5;
+
+	padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(to right, #f2c5b4, #eec3a9, #f2c078, #f5bb4f);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .services-section .section-title {
@@ -2861,6 +2866,10 @@ ol {
 	}
 } */
 
+.aboutus-section-present{
+	display: none;
+}
+
 @media only screen and (max-width: 767px) {
 	.aboutimg_content {
 		min-width: 100%;
@@ -2956,11 +2965,31 @@ ol {
 		padding: 0px !important;
 		box-sizing: border-box;
 	}
+	.section-title{
+		display: none;
+	}
 
+	.video-background {
+		position: relative !important;
+		width: 100% !important;
+		height: 40vh !important;
+		overflow: hidden !important;
+	}
+	.videos-content-present {
+		position: relative !important;
+		top: 0px !important;
+		bottom: 40px !important;
+
+	}
+	.videos-content-present img{
+		width: 50%;
+	}
 	.mobile-menuone li.nav-item {
 		width: 32%;
 	}
-
+.about-pic{
+	display: none;
+}
 	.mobile-menuone {
 		display: block !important;
 		width: 100%;
@@ -3590,6 +3619,10 @@ li {
 	border: 1px solid #ced4da;
 	border-radius: 4px;
 	box-sizing: border-box;
+	color: #212529 !important;
+	font-weight: 400;
+
+
 }
 
 .sidebar-input:focus {
@@ -4029,13 +4062,16 @@ color: white;
 }
 
 .hotel-profile-div .details-div .time-left {
-	width: 62%;
+	width: 64%;
 	background-color: #b5191fff;
 	color: #fff;
 	padding: 10px;
 	border-radius: 5px;
 }
-
+.details-div h4{
+	color:#b5191f;
+	font-weight: 900;
+}
 
 .grid {
 	list-style: none;
@@ -5842,4 +5878,14 @@ top: 250px;
 }
 .pt30{
 	padding-top: 30px;
+}
+.room-details-aminites .aminites{
+	/* border: 1px solid #2d2a2a; */
+	border-radius: 5px;
+	margin: 10px;
+	padding: 5px;
+	
+}
+.room-details-aminites p {
+	margin: 5px;
 }

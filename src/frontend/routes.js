@@ -32,9 +32,9 @@ function RoutesPage() {
       <Route exact path="/" element={<IndexPage />} />
       <Route exact path="/home" element={<IndexPage />} />
       <Route exact path="/blogs" element={<Blogs />} />
-      <Route exact path="/Blog-details/:news_id" element={<BlogDetails />} />
+      <Route exact path="/Blog-details/" element={<BlogDetails />} />
       <Route exact path="/rooms" element={<Rooms />} />
-      <Route exact path="/room-details/:news_id" element={<RoomDetails />} />
+      <Route exact path="/room-details/" element={<RoomDetails />} />
       <Route exact path="/Login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/userprofile" element={<UserProfile />} />

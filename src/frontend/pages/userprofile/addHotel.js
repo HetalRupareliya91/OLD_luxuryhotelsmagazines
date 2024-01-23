@@ -318,49 +318,230 @@ function AddHotel() {
                 </Row>
                 <h5>Hotel Amenities</h5>
                 <Row className="mb-3">
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="number" id="numberOfRooms" name="numberOfRooms" placeholder="Number Of Rooms" value={formData.numberOfRooms} onChange={handleInputChange} />
                     </Col>
 
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="number" id="numberOfRestaurants" name="numberOfRestaurants" placeholder="Number Of Restaurants" value={formData.numberOfRestaurants} onChange={handleInputChange} />
                     </Col>
-                </Row>
-                <Row className="mb-3">
-                    <Col lg={6}>
-                        <input className="sidebar-input" type="number" id="outdoorSwimmingPool" name="outdoorSwimmingPool" placeholder="Outdoor Swimming Pool" value={formData.outdoorSwimmingPool} onChange={handleInputChange} />
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="number" id="outdoorSwimmingPool" name="outdoorSwimmingPool" placeholder="Swimming Pool" value={formData.outdoorSwimmingPool} onChange={handleInputChange} />
                     </Col>
 
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="number" id="bars" name="bars" placeholder="Bars" value={formData.bars} onChange={handleInputChange} />
                     </Col>
-                </Row>
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="number" id="meetingrooms" name="bars" placeholder="Meeting Rooms"  />
+                    </Col>
 
-
-                <Row className="mb-3">
-                    {formData.amenitiesList.map((amenity) => (
-                        <Col key={amenity.id} lg={3}>
-                            <Form.Group controlId={`checkboxGroup-${amenity.id}`} className='d-flex' >
+                    <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
-                                    id={amenity.id}
-                                    name={amenity.title}
+                                   
                                     className=' me-3'
-                                    onChange={handleInputChange}
-                                    checked={formData[amenity.title]}
-                                    data-id={amenity.id}
+                                   
                                 />
-                                <label htmlFor={`checkbox-${amenity.id}`}>{amenity.title}</label>
+                                <label>Room service</label>
                             </Form.Group>
                         </Col>
-                    ))}
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Concierge service</label>
+                            </Form.Group>
+                        </Col>
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Room service</label>
+                            </Form.Group>
+                        </Col>
+                </Row>
+                {/* <Row className="mb-3">
+                    
+                </Row> */}
+
+
+                <Row className="mb-3">
+                    
+                      
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Concierge service</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Breakfast</label>
+                            </Form.Group>
+                        </Col>
+
+                        <Col  lg={3} className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>WIFI</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Fitness center</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Concierge service</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Sport Classes</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Spa</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Toiletries</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Kids Club</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Spa</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Additional Classes</label>
+                            </Form.Group>
+                        </Col>
+
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Hair Dryer</label>
+                            </Form.Group>
+                        </Col>
+                        <Col  lg={3}  className="mb-3">
+                            <Form.Group  className='d-flex' >
+                                <Form.Check
+                                    type="checkbox"
+                                   
+                                    className=' me-3'
+                                   
+                                />
+                                <label>Parking</label>
+                            </Form.Group>
+                        </Col>
+                    
                 </Row>
                 <Row className="mb-3">
-                    <Col lg={6}>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="text" id="otherInformation1" name="otherInformation1" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation1}
                             onChange={handleInputChange} />
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
+                            onChange={handleInputChange} />
+                    </Col>
+                    <Col lg={3}>
+                        <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
+                            onChange={handleInputChange} />
+                    </Col>
+                    <Col lg={3}>
                         <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
                             onChange={handleInputChange} />
                     </Col>
