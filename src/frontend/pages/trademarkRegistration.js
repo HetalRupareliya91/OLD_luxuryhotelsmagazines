@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import BrandingRegistrationPDF from '../../assets/pdf/Branding-Registration.pdf';
 import TrademarkUKPDF from '../../assets/pdf/TradeMarkUK.pdf';
+import CallToAction from "../components/callToAction";
 
 function TrademarkRegistration() {
 
@@ -31,6 +32,7 @@ function TrademarkRegistration() {
 
                 </Container>
             </section>
+            <CallToAction/>
             <Footer />
         </>
 

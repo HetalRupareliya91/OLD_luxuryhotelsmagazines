@@ -179,14 +179,14 @@ function Distribution() {
 
             <InstagramWidget />
 
-            <section className="forthcoming-editions spad">
+            <section className="forthcoming-editions pt-5">
                 <Container>
                     <div>
                         <div className="text-center mb-4">
                             <h1>Forthcoming Editions</h1>
                         </div>
                         <div >
-                            <div><h2 className="mb-5 ">(1) Luxury Hotels Dubai And Abu Dhabi</h2></div>
+                            <div><h2 className="mb-5 ">Luxury Hotels Dubai And Abu Dhabi</h2></div>
                             <Row>
                                 <Col lg={6}>
                                     <div>
@@ -240,7 +240,7 @@ function Distribution() {
                                         </div>
                                         <div>
 
-                                            <button>Click Here</button>
+                                        <button className="w-50"> <a href="/kit-detail">Click Here</a></button>
                                         </div>
                                     </div>
 
@@ -250,7 +250,7 @@ function Distribution() {
 
                         <div className="mt-5">
                             <div >
-                                <h2 className="mb-5">(2) Luxury Hotels Europe</h2>
+                                <h2 className="mb-5">Luxury Hotels Europe</h2>
                             </div>
                             <Row>
                                 <Col lg={6} className="order-2">
@@ -306,19 +306,25 @@ function Distribution() {
                                         </div>
                                         <div>
 
-                                            <button>Click Here</button>
+                                        <button className="w-50"> <a href="/kit-detail">Click Here</a></button>
                                         </div>
                                     </div>
 
                                 </Col>
                             </Row>
-                        </div>
+                        </div>                        
                     </div>
+                    <Row>
+                        <Col md={12} className="text-center py-5">
+                        <button> <a href="/mediapack">Download Our Full Media Pack</a></button>
+                                        
+                        </Col>
+                    </Row>
                 </Container>
             </section>
+        
 
-
-            <section className="recents-magazines">
+            <section className="recents-magazines py-5">
                 <Container>
 
                     <div >
