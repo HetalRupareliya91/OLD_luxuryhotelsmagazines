@@ -207,7 +207,7 @@ const deals = [
                     </Row>
 
                     <div className="btn-div text-center ">
-                        <button className=" w-25 "><FaQuestionCircle /> MORE INFORMATION</button>
+                        <button className="more-info w-25 "><FaQuestionCircle /> MORE INFORMATION</button>
                     </div>
 
                 </Container>
@@ -381,7 +381,7 @@ const deals = [
     </Row>
 
     <div className="btn-div text-center ">
-        <button className="w-25"><FaQuestionCircle /> MORE INFORMATION</button>
+        <button className="w-25 more-info"><FaQuestionCircle /> MORE INFORMATION</button>
     </div>
 
 </Container>

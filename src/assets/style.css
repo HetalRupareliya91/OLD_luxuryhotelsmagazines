@@ -2873,7 +2873,13 @@ ol {
 	display: none;
 }
 
+
 @media only screen and (max-width: 767px) {
+
+	.btn-div .more-info{
+   margin-top:20px;
+		width: 60% !important;
+	}
 	.aboutimg_content {
 		min-width: 100%;
 		margin-top: 10px !important;
@@ -2906,16 +2912,15 @@ ol {
 		padding: 100px 0px;
 	}
 	
-	.what-we-do.col-lg-6:hover .inner-div {
-		height: 350px;
+	.what-we-do .inner-div:hover {
+		height: 215px;
 		width: 350px;
-		border: 8px solid #b5191fff;
+		border: 8px solid #e41d25;
 		border-radius: 0px;
 		position: relative;
 		top: 200px;
-		left: 44px !important;
-		padding: 90px 0px;
-		transition: 0.5s ease all;
+		left: 200px;
+		padding: 54px 0px;
 	}
 	.what-we-do .inner-div {
 		height: 350px;
@@ -3731,9 +3736,6 @@ li {
 	height: 150px;
 }
 
-#hotelImage {
-	height: 150px;
-}
 
 .logout-btn {
 	/* position: absolute; */
@@ -4105,7 +4107,7 @@ color: white;
 }
 
 .rdw-editor-main {
-	height: 200px !important;
+	/* height: 100px !important; */
 	border: 1px solid #F1F1F1 !important;
 }
 
@@ -5153,17 +5155,17 @@ form {
 }
 
 .contact-us .inner-div {
-	height: 350px;
 	width: 350px;
-	border: 8px solid #ffffff;
-	border-radius: 50%;
-	position: relative;
-	top: 200px;
-	left: 200px;
-	padding: 100px 0px;
+    border: 8px solid #ffff;
+    border-radius: 50%;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    padding: 118px 50px;
+    transition: 0.5s ease all;
 }
 
-.what-we-do.col-lg-6:hover .inner-div {
+/* .what-we-do.col-lg-6:hover .inner-div {
 	height: 350px;
 	width: 350px;
 	border: 8px solid #b5191fff;
@@ -5173,18 +5175,18 @@ form {
 	left: 200px;
 	padding: 90px 0px;
 	transition: 0.5s ease all;
-}
+} */
 
 .contact-us.col-lg-6:hover .inner-div {
-	height: 350px;
-	width: 350px;
-	border: 8px solid #ffffff;
-	border-radius: 0px;
-	position: relative;
-	top: 200px;
-	left: 200px;
-	padding: 90px 0px;
-	transition: 0.5s ease all;
+	height: 215px;
+    width: 350px;
+    border: 8px solid #ffff;
+    border-radius: 0 !important;
+    position: relative;
+    top: 200px;
+    left: 200px !important;
+    padding: 54px 0px;
+    transition: 0.5s ease all;
 }
 
 .contact-us .inner-div h2 {
@@ -5200,27 +5202,17 @@ form {
 }
 
 .what-we-do .inner-div {
-	height: 350px;
 	width: 350px;
-	border: 8px solid #e41d25;
-	border-radius: 50%;
-	position: relative;
-	top: 200px;
-	left: 200px;
-	padding: 100px 0px;
-	transition: 0.5s ease all;
+    border: 8px solid #e41d25;
+    border-radius: 50%;
+    position: relative;
+    top: 200px;
+    left: 200px ;
+    padding: 118px 50px;
+    transition: 0.5s ease all;
 }
 
-.what-we-do .inner-div:hover {
-	height: 350px;
-	width: 350px;
-	border: 8px solid #e41d25;
-	border-radius: 0px;
-	position: relative;
-	top: 200px;
-	left: 200px;
-	padding: 90px 0px;
-}
+
 
 .what-we-do .inner-div h2 a {
 
@@ -6048,4 +6040,15 @@ button .subscribe_text {
 
 button a{
     color: #fff;
+}
+.what-we-do:hover .inner-div {
+	height: 215px;
+	width: 350px;
+	border: 8px solid #e41d25;
+	border-radius: 0 !important;
+	position: relative;
+	top: 200px;
+	left: 200px !important;
+	padding:54px 0px;
+	transition: 0.5s ease all;
 }

@@ -8,11 +8,39 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 function AddHotel() {
     const [hotelEditorState, setHotelEditorState] = useState(EditorState.createEmpty());
+    const [locationEditorState, setlocationEditorState] = useState(EditorState.createEmpty());
+    const [roomsAndSuitesEditorState, setroomsAndSuitesEditorState] = useState(EditorState.createEmpty());
+    const [restaurentsEditorState, setrestaurentsEditorState] = useState(EditorState.createEmpty());
+    // const [locationEditorState, setlocationEditorState] = useState(EditorState.createEmpty());
+    // const [locationEditorState, setlocationEditorState] = useState(EditorState.createEmpty());
+
     const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
     const [currentStep, setCurrentStep] = useState(1);
     const handleHotelEditorChange = (editorState) => {
         setHotelEditorState(editorState);
     };
+
+    const handlelocationEditorChange = (editorState) => {
+        setlocationEditorState(editorState);
+    };
+
+    const handleroomsAndSuitesEditorState = (editorState) => {
+        setroomsAndSuitesEditorState(editorState);
+    };
+
+    const handlerestaurentsEditorState = (editorState) => {
+        setrestaurentsEditorState(editorState);
+    };
+    // const handlelocationEditorChange = (editorState) => {
+    //     setlocationEditorState(editorState);
+    // };
+    // const handlelocationEditorChange = (editorState) => {
+    //     setlocationEditorState(editorState);
+    // };
+    // const handlelocationEditorChange = (editorState) => {
+    //     setlocationEditorState(editorState);
+    // };
+
 
     const handleBlogEditorChange = (editorState) => {
         setBlogEditorState(editorState);
@@ -30,6 +58,7 @@ function AddHotel() {
         aboutHotel: "",
         roomsAndSuites: "",
         restaurantsAndBars: "",
+        additionalInformation:"",
         spaAndWellness: "",
         otherFacilities: "",
         numberOfRooms: "",
@@ -61,7 +90,7 @@ function AddHotel() {
     }
 
     const handleInputChange = (e) => {
-        const { name, value, type, checked } = e.target;
+        const { name, value, type, checked } = e.target || {};
 
         if (type === "checkbox") {
             // Check if the checkbox is related to an amenity
@@ -299,14 +328,24 @@ function AddHotel() {
 
                 <Row className=" mb-3">
 
-                    <Col lg={6}>
-                        <input className="sidebar-input" type="text" id="location" name="location" placeholder="Location" value={formData.location}
-                            onChange={handleInputChange} />
+                    <Col lg={12}>
+                        {/* <input className="sidebar-input" type="text" id="location" name="location" placeholder="Location" value={formData.location}
+                            onChange={handleInputChange} /> */}
+                             <label>Location</label>
+
+                            
+<Editor
+              editorState={locationEditorState}
+              onEditorStateChange={handlelocationEditorChange}
+              name="location"
+              value={formData.location}
+            //   onChange={handleInputChange}
+            />
                     </Col>
-                    <Col lg={6}>
+                    {/* <Col lg={6}>
                         <input className="sidebar-input" type="text" id="contactInformation" name="contactInformation" placeholder="Contact Information" value={formData.contactInformation}
                             onChange={handleInputChange} />
-                    </Col>
+                    </Col> */}
 
                 </Row>
 
@@ -314,38 +353,95 @@ function AddHotel() {
                     <Col lg={12}>
                         <input className="sidebar-input" type="file" id="hotelImage" name="hotelImage" placeholder="Hotel Image" value={formData.hotelImage}
                             onChange={handleimageChange} />
+
                     </Col>
                 </Row>
                 <Row className=" mb-3">
                     <Col lg={12}>
-                        <input className="sidebar-input" type="text" id="aboutHotel" name="aboutHotel" placeholder="About Hotel" value={formData.aboutHotel}
-                            onChange={handleInputChange} />
+                        {/* <input className="sidebar-input" type="text" id="aboutHotel" name="aboutHotel" placeholder="About Hotel" value={formData.aboutHotel}
+                            onChange={handleInputChange} /> */}
+                            <label>About Hotel</label>
+
+                            
+<Editor
+              editorState={hotelEditorState}
+              onEditorStateChange={handleHotelEditorChange}
+              name="aboutHotel"
+              value={formData.aboutHotel}
+            //   onChange={handleInputChange}
+            />
                     </Col>
                 </Row>
 
                 <Row className=" mb-3">
                     <Col lg={12}>
-                        <input className="sidebar-input" type="text" id="roomsAndSuites" name="roomsAndSuites" placeholder="Rooms And Suites" value={formData.roomsAndSuites}
-                            onChange={handleInputChange} />
+                        {/* <input className="sidebar-input" type="text" id="roomsAndSuites" name="roomsAndSuites" placeholder="Rooms And Suites" value={formData.roomsAndSuites}
+                            onChange={handleInputChange} /> */}
+
+<label>Rooms And Suites</label>
+
+                            
+<Editor
+              editorState={roomsAndSuitesEditorState}
+              onEditorStateChange={handleroomsAndSuitesEditorState}
+              value={formData.roomsAndSuites}
+            //   onChange={handleInputChange}
+            />
                     </Col>
                 </Row>
 
                 <Row className=" mb-3">
                     <Col lg={12}>
-                        <input className="sidebar-input" type="text" id="restaurantsAndBars " name="restaurantsAndBars" placeholder="Restaurents And Bars (Optional)" value={formData.restaurantsAndBars}
-                            onChange={handleInputChange} />
+                        {/* <input className="sidebar-input" type="text" id="restaurantsAndBars " name="restaurantsAndBars" placeholder="Restaurents And Bars (Optional)" value={formData.restaurantsAndBars}
+                            onChange={handleInputChange} /> */}
+                            <label>Restaurents And Bars (Optional)</label>
+                            <Editor
+              editorState={restaurentsEditorState}
+              onEditorStateChange={handlerestaurentsEditorState}
+              value={formData.restaurantsAndBars}
+              onChange={handleInputChange}
+            />
                     </Col>
                 </Row>
                 <Row className=" mb-3">
                     <Col lg={12}>
-                        <input className="sidebar-input" type="text" id="spaAndWellness " name="spaAndWellness" placeholder="Spa And Wellness (Optional)" value={formData.spaAndWellness}
-                            onChange={handleInputChange} />
+                        {/* <input className="sidebar-input" type="text" id="spaAndWellness " name="spaAndWellness" placeholder="Spa And Wellness (Optional)" value={formData.spaAndWellness}
+                            onChange={handleInputChange} /> */}
+                            <label>Spa And Wellness (Optional)</label>
+                            <Editor
+            //   editorState={spaAndWellnessEditorState}
+            //   onEditorStateChange={handlespaAndWellnessEditorState}
+              value={formData.spaAndWellness}
+              onChange={handleInputChange}
+            />
                     </Col>
                 </Row>
                 <Row className=" mb-3">
                     <Col lg={12}>
-                        <input className="sidebar-input" type="text" id="otherFacilities " name="otherFacilities" placeholder="Other Facilities (Optional)" value={formData.otherFacilities}
-                            onChange={handleInputChange} />
+                        {/* <input className="sidebar-input" type="text" id="otherFacilities " name="otherFacilities" placeholder="Other Facilities (Optional)" value={formData.otherFacilities}
+                            onChange={handleInputChange} /> */}
+                            <label>Other Facilities (Optional)</label>
+                            <Editor
+              editorState={hotelEditorState}
+              onEditorStateChange={handleHotelEditorChange}
+              value={formData.roomsAndSuites}
+              onChange={handleInputChange}
+            />
+                    </Col>
+                </Row>
+
+
+                <Row className=" mb-3">
+                    <Col lg={12}>
+                        {/* <input className="sidebar-input" type="text" id="otherFacilities " name="otherFacilities" placeholder="Other Facilities (Optional)" value={formData.additionalInformation}
+                            onChange={handleInputChange} /> */}
+                            <label>Additional information (Optional)</label>
+                            <Editor
+              editorState={hotelEditorState}
+              onEditorStateChange={handleHotelEditorChange}
+              value={formData.additionalInformation}
+              onChange={handleInputChange}
+            />
                     </Col>
                 </Row>
                 <h5>Hotel Amenities</h5>
@@ -712,8 +808,16 @@ function AddHotel() {
                 </Row>
                 <Row className='mb-3'>
                     <Col lg={12}>
-                        <textarea className="sidebar-input" rows={4} placeholder="Description" name="description" value={formData.description}
-                            onChange={handleInputChange} required />
+                        {/* <textarea className="sidebar-input" rows={4} placeholder="Description" name="description" value={formData.description}
+                            onChange={handleInputChange} required /> */}
+                            <label>Description</label>
+                            <Editor
+              editorState={hotelEditorState}
+              onEditorStateChange={handleHotelEditorChange}
+              value={formData.hotelDescription}
+              onChange={handleInputChange}
+            />
+
                     </Col>
                 </Row>
                 <Row className='mb-3'>

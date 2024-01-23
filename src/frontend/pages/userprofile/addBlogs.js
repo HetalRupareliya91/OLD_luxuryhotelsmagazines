@@ -362,7 +362,7 @@ function AddBlogs() {
               type="text"
               id="blogTitle"
               name="blogTitle"
-              placeholder='Blog Title'
+              placeholder='News Title'
               value={formData.blogTitle}
               onChange={handleInputChange}
               style={{ borderColor: validationErrors.blogTitle ? "red" : "" }}
