@@ -90,7 +90,7 @@ function UserProfile() {
       <Header />
       <section className="sidebar-section">
         <Container className='d-flex sidebar-div order-1'>
-          <Nav id="sidebar" className="col-col-3 col-lg-2 d-col-block  sidebar">
+          <div id="sidebar" className="col-col-3 col-lg-2 d-col-block  sidebar">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -214,7 +214,7 @@ function UserProfile() {
 
 
             </div>
-          </Nav>
+          </div>
           <div id="content">
             <div id="welcomeMessage" >
               <div id="myHotels" style={{ display: currentSection === 'myHotels' ? 'block' : 'none' }}>

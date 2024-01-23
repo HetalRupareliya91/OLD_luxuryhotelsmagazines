@@ -217,29 +217,29 @@ function AddHotel() {
 
 
 
-
     const [progress, setProgress] = useState(0);
 
     const nextStep = async (e) => {
       if (currentStep < 4) {
         setCurrentStep((prevStep) => prevStep + 1);
-        const newProgress = ((currentStep) / 4) * 100;
+        const newProgress = ((currentStep + 1) / 4) * 100;
         setProgress(newProgress);
       }
     };
-  
+    
     const prevStep = () => {
       if (currentStep > 1) {
         setCurrentStep((prevStep) => prevStep - 1);
-        const newProgress = ((currentStep - 2) / 4) * 100;
+        const newProgress = ((currentStep - 1) / 4) * 100;
         setProgress(newProgress);
       }
     };
-  
+    
     useEffect(() => {
       // Set initial progress when the component mounts
-      setProgress(((currentStep ) / 4) * 100);
+      setProgress((currentStep / 4) * 100);
     }, []);
+    
     return (
 <>
 <div className="mb-3">

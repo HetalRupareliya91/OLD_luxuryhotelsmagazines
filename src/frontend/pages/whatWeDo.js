@@ -229,13 +229,13 @@ const deals = [
 
                         <div>
                             <Row>
-                                <Col lg={6} >
+                                <Col lg={6} className="">
                                     <div className="mt-5">
                                         <Image src={Magazines2} className="what-we-do-digital-section-image"></Image>
                                     </div>
                                 </Col>
 
-                                <Col lg={6}>
+                                <Col lg={6} className="mt-5">
                                     <div className="vc_column-inner text-left">
                                         <div className="mb-5">
                                             <h3>LUXURY HOTEL MAGAZINE</h3>
@@ -573,7 +573,7 @@ What are you interested in?
 
                      
             <section >
-                <Row>
+                <div className="rounddiv">
                     <Col lg={6} className="what-we-do p-0">
                         <div className="hovermaindiv">
                         <div className="inner-div">
@@ -599,7 +599,7 @@ What are you interested in?
                         </div>
 
                     </Col>
-                </Row>
+                    </div>
 
             </section>   
             

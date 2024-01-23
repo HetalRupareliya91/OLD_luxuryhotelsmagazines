@@ -25,7 +25,7 @@ function WhatWeDoPrint(){
                     <div>
                         <Row>
                             <Col lg={6} >
-                                <div className="mt-5">
+                                <div className="print-image-div mt-5 mb-5">
                                     <Image src={Magazines1} className="what-we-do-print-section-image"></Image>
                                 </div>
                             </Col>
