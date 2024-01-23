@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import ReCAPTCHA from "react-google-recaptcha";
 import ConnectWithUS from "../components/connectwithus";
+import PayPalButton from "../components/paypal";
 function SubscribeToPrintCopy() {
 
     return (
@@ -14,7 +15,7 @@ function SubscribeToPrintCopy() {
             <Parallax blur={0} bgImage={bg2} bgImageAlt="the cat" strength={300}>
                 <section className="Contact-us-section spad">
                     <Container>
-                    <h2 className="text-center">SUBSCRIBE TO PRINTED COPY</h2>
+                        <h2 className="text-center">SUBSCRIBE TO PRINTED COPY</h2>
                         <Row>
                             <Col lg={7}>
                                 <Form >
@@ -67,7 +68,7 @@ function SubscribeToPrintCopy() {
                                     </Row>
 
                                     <Form.Label>
-                                    Where did you hear about us
+                                        Where did you hear about us
                                     </Form.Label>
                                     <Form.Control
                                         as="textarea"
@@ -77,16 +78,14 @@ function SubscribeToPrintCopy() {
                                     >
                                     </Form.Control>
 
-                                    <div >
-                                    
-                                        <button className="mt-4 w-25">SubScribe</button>
+                                    <div className="paypal_buttons">
+                                        <PayPalButton />                                        
                                     </div>
-                                    
-                                </Form>
+                                    <button className="mt-4 w-25">SubScribe</button>                                </Form>
                             </Col>
 
                             <Col lg={5}>
-                             <ConnectWithUS/>
+                                <ConnectWithUS />
                             </Col>
                         </Row>
                     </Container>

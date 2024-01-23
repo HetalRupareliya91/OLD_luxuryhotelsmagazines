@@ -1183,10 +1183,10 @@ ol {
 	margin-right: 7px;
 }
 
-.footer-section .footer-text .ft-about .fa-social a:hover {
+/* .footer-section .footer-text .ft-about .fa-social a:hover {
 	background: #b5191fff;
 	border-color: #b5191fff;
-}
+} */
 
 .footer-section .footer-text .ft-contact {
 	margin-bottom: 30px;
@@ -3297,14 +3297,16 @@ button.readmore {
 	border-radius: 5px;
 	top: 37%;
 	color: #b5191f;
-    background: #fff;
-    border: 1px solid #b5191f!important;
+	background: #fff;
+	border: 1px solid #b5191f !important;
 
 }
-.btn:hover{
-	border: 1px solid #b5191f!important;
-	color:#fff!important;
+
+.btn:hover {
+	border: 1px solid #b5191f !important;
+	color: #fff !important;
 }
+
 .thumbnail:hover .readmore {
 	animation-name: fadeFromBottom;
 	-webkit-animation-name: fadeFromBottom;
@@ -3443,6 +3445,7 @@ figure:hover .img-dec {
 	border-radius: 0px 4px 4px 0px;
 	border: 1px solid #b5191fff;
 	padding: 0px 10px 0px 10px;
+	height: 35px;
 }
 
 .footer-social {
@@ -5829,17 +5832,39 @@ top: 250px;
 	background-color: #fff;
 }
 
-.benefits-icon{
+.benefits-icon {
 	font-size: 60px;
 	color: #b5191f;
 }
-.signup_numbers{
+
+.signup_numbers {
 	background-color: #b5191f;
 	color: #fff;
 }
-.signup_numbers p{
+
+.signup_numbers p {
 	color: #fff;
 }
-.pt30{
+
+.pt30 {
 	padding-top: 30px;
+}
+
+.paypal_buttons {
+	width: 50%;
+	margin: 0 auto;
+}
+
+button .subscribe_text {
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.duration_select {
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+}
+.publish_news_div{
+	margin: 30px 45px;
+    text-align: center;
 }

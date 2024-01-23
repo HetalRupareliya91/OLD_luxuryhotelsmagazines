@@ -43,9 +43,9 @@ function Header() {
       </nav>
       <div id="mobile-menu-wrap"></div>
       <div className="top-social">
-         <a href="#"><i ><FaFacebook/></i></a>
-         <a href="#"><i  aria-hidden="true"><FaYoutube/></i></a>
-         <a href="#"><i ><FaInstagram/></i></a>
+      <a href="https://www.facebook.com/LuxuryHotelsMagazines"><FaFacebook/></a>
+      <a href="https://www.instagram.com/luxuryhotelsbrand/"><FaInstagram/></a>
+      <a href='https://www.youtube.com/channel/UCxV4ClKpFA95eU-4c8sN3Tg'><FaYoutube/></a>
       </div>
       <ul className="top-widget">
          <li><a href="mailto:Info@LuxuryHotelsMagazines.Com"><i className="fa fa-envelope"></i> info@luxuryhotelsmagazines.com</a></li>
@@ -65,9 +65,9 @@ function Header() {
             <Col lg={6}>
               <div className="tn-right">
                 <div className="top-social">
-                  <a href="#"><i ><FaFacebook /></i></a>
-                  <a href="#"><i  aria-hidden="true"><FaYoutube /></i></a>
-                  <a href="#"><i ><FaInstagram /></i></a>
+                <a href="https://www.facebook.com/LuxuryHotelsMagazines"><FaFacebook/></a>
+                <a href="https://www.instagram.com/luxuryhotelsbrand/"><FaInstagram/></a>
+                <a href='https://www.youtube.com/channel/UCxV4ClKpFA95eU-4c8sN3Tg'><FaYoutube/></a>
                 </div>
                 <a href="/rooms" className="bk-btn">Find Hotels</a>
               </div>

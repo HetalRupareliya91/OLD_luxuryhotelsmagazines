@@ -57,8 +57,8 @@ function Advertise() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="text-center">
-                                        <button className="w-50">Subscribe Now</button>
+                                    <div className="text-center">                                   
+                                        <button className="w-50"> <a className="subscribe_text" href="/publish-video-banner">Subscribe Now</a></button>
                                     </div>
                                 </div>
 
@@ -102,7 +102,7 @@ function Advertise() {
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <button className="w-50">Subscribe Now</button>
+                                    <button className="w-50"> <a className="subscribe_text" href="/publish-animated-banner">Subscribe Now</a></button>
                                     </div>
                                 </div>
 
@@ -151,7 +151,7 @@ function Advertise() {
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <button className="w-50">Subscribe Now</button>
+                                    <button className="w-50"> <a className="subscribe_text" href="/signup">Subscribe Now</a></button>
                                     </div>
 
 
@@ -163,11 +163,7 @@ function Advertise() {
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
                                         <div class="flip-box-front">
-
-
-
                                             <div className="text-heading-button">
-
                                                 <div className="text-center ">
                                                     <p className="heading1">Hotel Profile</p>
                                                     <p className="heading">(Annual Plan)</p>
@@ -177,7 +173,6 @@ function Advertise() {
                                                         *Original price 450</p>
                                                     <p className="heading">
                                                         *Offer valid till 31-12-2023
-
                                                     </p>
                                                 </div>
 
@@ -200,13 +195,10 @@ function Advertise() {
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <button className="w-50">Subscribe Now</button>
+                                    <button className="w-50"> <a className="subscribe_text" href="/signup">Subscribe Now</a></button>
                                     </div>
                                 </div>
-
                             </Col>
-
-
                             <Col lg={4} className="p-4">
                                 <div class="flip-box">
                                     <div class="flip-box-inner">
@@ -261,7 +253,7 @@ function Advertise() {
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <button className="w-50">Subscribe Now</button>
+                                    <button className="w-50"> <a className="subscribe_text" href="/publish-hotel-news">Subscribe Now</a></button>
                                     </div>
                                 </div>
 

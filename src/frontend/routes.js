@@ -24,6 +24,9 @@ import ContactUs from "./pages/contactUs";
 import SubscribeToNews from "./pages/subscribeToNews";
 import SubscribeToDigitalCopy from "./pages/subscribeToDigitalCopy";
 import SubscribeToPrintCopy from "./pages/subscribeToPrintCopy";
+import PublishVideoBanner from "./pages/publishVideoBanner";
+import PublishAnimatedBanner from "./pages/publishAnimatedBanner";
+import PublishHotelNews from "./pages/publishHotelNews";
 
 
 function RoutesPage() {
@@ -54,6 +57,9 @@ function RoutesPage() {
       <Route exact path="/contact-us" element={<ContactUs />} />
       <Route exact path="/subcribe-digital-copy" element={<SubscribeToDigitalCopy />} />
       <Route exact path="/subcribe-print-copy" element={<SubscribeToPrintCopy />} />
+      <Route exact path="/publish-video-banner" element={<PublishVideoBanner />} />
+      <Route exact path="/publish-animated-banner" element={<PublishAnimatedBanner />} />
+      <Route exact path="/publish-hotel-news" element={<PublishHotelNews />} />
 
 
     </Routes>
