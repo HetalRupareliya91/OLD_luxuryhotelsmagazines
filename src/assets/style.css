@@ -938,9 +938,12 @@ ol {
 .aboutimg_content {
 	border: 1px solid #b5191f;
 	margin: 5px;
+	padding: 20px;
 	box-shadow: 3px 3px #b5191f2b;
 }
-
+.aboutimg_content:hover{
+	transform: translateY(-10px);
+}
 .aboutimg_content div {
 	text-align: center;
 }
@@ -5888,6 +5891,7 @@ top: 250px;
 .paypal_buttons {
 	width: 50%;
 	margin: 0 auto;
+	height: 130px;
 }
 
 button .subscribe_text {
