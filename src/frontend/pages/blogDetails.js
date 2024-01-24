@@ -16,6 +16,7 @@ import { useLocation, useParams } from "react-router-dom";
 import API from "../../utils";
 import axios from "axios";
 import CallToAction from "../components/callToAction";
+import { GeoAltFill } from "react-bootstrap-icons";
  function BlogDetails() {
 
     const { news_id } = useParams();
@@ -57,22 +58,24 @@ import CallToAction from "../components/callToAction";
         
         <><Header />
         <section className="room-details-section spad">
-            <div className="container">
-            {postData ? (
-                <div className="row">
-                    <div className="col-lg-8">
-                        <div className="row mb-3">
-                            <div className="col-lg-12">
-                                <h3 className="mt-0">{postData.news_title}</h3>
-                               
-                                {/* <div className="location"> <p><i ><FaMapMarker/></i> Courtyard by Marriott Nashik, Mumbai Naka, Mumbai-Agra National Highway, Nashik, 422001 Nashik, India</p></div> */}
-                            </div>
-                        </div>
+            <Container className="container">
+          
+                <Row >
+                    <Col lg={8}>
+                       
                         <Row className="mb-5">
                             <Col lg={12} >
-                            <Image src={postData.news_image} alt="postData.news_image" />
+                            <Image src={News1} alt="postData.news_image" />
                             </Col>
-                           
+
+                            <div className="row">
+                                <div className="col-lg-12 text-end ">
+                                    <h4 className="mt-4">Jumeirah Al Qasr Hotel </h4>
+                                    <div className="d-flex justify-content-end"><GeoAltFill className="m-0 locaton-icon" />
+                      <p>Kuwait</p></div>
+                             
+                                </div>
+                            </div>
                         </Row>
 
                         <div className="rd-text">
@@ -120,10 +123,11 @@ import CallToAction from "../components/callToAction";
 
                        </div>
 
-                    </div>
+                    </Col>
                     <div className="col-lg-4">
                     {/* <h4 >Categories</h4>  */}
-                    <h4 className="mb-3">Catagaries</h4>
+                    <div className="text-center">
+                    <h4 className="mb-3">CATEGARIES</h4></div>
                     <div className="category-div">
                        
                         <Row className="mt-2 mb-2">
@@ -182,9 +186,8 @@ import CallToAction from "../components/callToAction";
                         </div>
                     </div>
                    
-                </div>
-        ) : (   <p>Loading...</p>
-        )}
+                </Row>
+       
                 <Row className=" mt-5">
                     <Col lg={8} >
                     
@@ -212,13 +215,12 @@ import CallToAction from "../components/callToAction";
 
                 </Row >
                 <div className="alternate-hotels mt-3">
-                            <div className="text-left m-4">
-                                <h2>You May Also Like</h2>
+                            <div className="text-center m-4">
+                                <h1>You May Also Like</h1>
                             </div>
                             <div className="card-deck">
-                                
-                                <div className="slider d-flex">   
-                                    <div className="item">
+                                <Row>
+                                    <Col lg={4}>
                                         <div className="card">
                                             <img className="card-img-top" src={News5} alt="Card image cap" />
                                             <div className="card-body">
@@ -229,8 +231,8 @@ import CallToAction from "../components/callToAction";
                                                 <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="item">
+                                    </Col>
+                                    <Col lg={4}>
                                         <div className="card">
                                             <img className="card-img-top" src={News1} alt="Card image cap" />
                                             <div className="card-body">
@@ -241,8 +243,8 @@ import CallToAction from "../components/callToAction";
                                                 <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="item">
+                                    </Col>
+                                    <Col lg={4}>
                                         <div className="card">
                                             <img className="card-img-top" src={News2} alt="Card image cap" />
                                             <div className="card-body">
@@ -253,23 +255,11 @@ import CallToAction from "../components/callToAction";
                                                 <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="item">
-                                        <div className="card">
-                                            <img className="card-img-top" src={News5} alt="Card image cap" />
-                                            <div className="card-body">
-                                                <h5 className="card-title">Hotel Taj</h5>
-                                                <h6 className="card-title">India</h6>
-                                                <p className="card-text">7.8/10 (Good)</p>
-                                                <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                                <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </Col>
+                                </Row>
                             </div>
                         </div>
-            </div>
+            </Container>
         
         </section>
         <CallToAction/>

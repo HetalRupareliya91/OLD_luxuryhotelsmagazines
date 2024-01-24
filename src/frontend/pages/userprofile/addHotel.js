@@ -273,10 +273,10 @@ function AddHotel() {
     return (
 <>
 <div className="mb-3">
-{currentStep === 1 && <h4>Hotel Details</h4>}
-{currentStep === 2 && <h4>Hotel Contacts</h4>}
-{currentStep === 3 && <h4>Special Offer</h4>}
-{currentStep === 4 && <h4>Home Page Addon</h4>}
+{currentStep === 1 && <h4 className="stepform-heading">Hotel Details</h4>}
+{currentStep === 2 && <h4 className="stepform-heading">Hotel Contacts</h4>}
+{currentStep === 3 && <h4 className="stepform-heading">Special Offer</h4>}
+{currentStep === 4 && <h4 className="stepform-heading">Home Page Addon</h4>}
 
 </div>
 <ProgressBar now={progress} label={`${progress}%`} className="ProgressBar h-25 mb-3" />

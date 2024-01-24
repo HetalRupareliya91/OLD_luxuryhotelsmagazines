@@ -7,7 +7,9 @@ import { FaSearch } from "react-icons/fa";
 import API from "../../utils";
 import axios from "axios";
 
-
+import Rooms4 from "../../assets/img/room/room-4.jpg"
+import Rooms5 from "../../assets/img/room/room-5.jpg"
+import Rooms6 from "../../assets/img/room/room-6.jpg"
 function Blogs (){
     const [hotelName, setHotelName] = useState('');
     const [country, setCountry] = useState('');
@@ -348,34 +350,72 @@ function Blogs (){
         </Container>
     </div> */}
  
-    <section className="rooms-section spad ">
+ <section className="rooms-section spad ">
         <Container>
      
- <h1 className="text-center breadcrumb-section">Our News</h1>
-         
- <Row >
-          {apiData.map((news) => (
-            <Col lg={4} md={6} key={news.id}>
-              <a href={`/blog-details/${news.id}`}>
-                <div className="blog-item set-bg">
-                  <img src={news.fullImagePath} alt={news.news_title} />
-                  <div className="bi-text">
-                    {/* Display other news details */}
-                    {/* <span className="b-tag">{news.news_desc}</span> */}
-                    <h4><a href={`/blog-details/${news.id}`}>{news.news_title}</a></h4>
-                    <div className="b-time"><i className="icon_clock_alt"></i> {news.created_at}</div>
-                    <a href={`/blog-details/${news.id}`} className="primary-btn mt-3">More Details</a>
-                  </div>
-                </div>
-              </a>
-            </Col>
-          ))}
-          <Col lg={12}>
-            <div className="load-more">
-              <a href="#" className="primary-btn">Load More</a>
-            </div>
-          </Col>
+ <h1 className="text-center mt-5">Our News</h1>
+            <Row >
+            <Col lg={6} ><h6 style={{lineHeight: "4",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
+  Default sorting</h6>
+   </Col>
+            {/* <div className="col-lg-6 text-right">
+                  <div className="dropdown text-end ">
+            <span className="dropdown-span" style={{lineHeight: "3",marginRight: "6px"}}>Sort By : </span>
+
+            <div className="select-option shortdrop" style={{float: "right" ,width: "40%"}}>
+                      <select className="select-id">
+                         <option value="Afghanistan">Country</option>
+                         <option value="Afghanistan">Afghanistan</option>
+                         <option value="Åland Islands">Åland Islands</option>
+                         <option value="Albania">Albania</option>
+                         <option value="Algeria">Algeria</option>
+                         <option value="American Samoa">American Samoa</option>
+                         
+                      </select>
+                   </div>
+          </div>
+            </div> */}
         </Row>
+        <Row >
+           
+              <Col lg={4} md={6}  >
+                <a href="/blog-details/">
+                  <div className="room-item">
+                    <img src={Rooms4} alt="" />
+                    <div className="ri-text">
+                      <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                      <p>Kuwait</p>
+                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                    </div>
+                  </div>
+                </a>
+              </Col>
+          
+              <Col lg={4} md={6}  >
+                <a href="/blog-details/">
+                  <div className="room-item">
+                    <img src={Rooms6} alt="" />
+                    <div className="ri-text">
+                      <h4>Grand Hotel du Palais Royal</h4>
+                      <p>Kuwait</p>
+                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                    </div>
+                  </div>
+                </a>
+              </Col>
+              <Col lg={4} md={6}  >
+                <a href="/blog-details/">
+                  <div className="room-item">
+                    <img src={Rooms5} alt="" />
+                    <div className="ri-text">
+                      <h4>La Maison des Tetes - Relais & Chateaux</h4>
+                      <p>Kuwait</p>
+                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                    </div>
+                  </div>
+                </a>
+              </Col>
+          </Row>
         </Container>
     </section>
     <Footer/>

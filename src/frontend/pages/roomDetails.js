@@ -16,6 +16,7 @@ import video from "../../assets/videos/hotelVideo.mp4"
 import API from "../../utils";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { GeoAltFill } from "react-bootstrap-icons";
 function RoomDetails() {
     const { news_id } = useParams();
     console.log(news_id);
@@ -59,7 +60,7 @@ function RoomDetails() {
                     <div className="row">
                         <div className="col-lg-8">
                          
-                            <div className="row mt-3">
+                            <div className="row ">
                                 <div className="col-lg-4">
                                     <div className="row">
                                         <div className="col-lg-12 col-6"><img src={News5} alt="" className="mb-2" /></div>
@@ -73,12 +74,14 @@ function RoomDetails() {
 
                             <div className="row">
                                 <div className="col-lg-12 text-end ">
-                                    <h3 className="mt-4">Jumeirah Al Qasr Hotel, Dubai</h3>
+                                    <h4 className="mt-4">Jumeirah Al Qasr Hotel </h4>
+                                    <div className="d-flex justify-content-end"><GeoAltFill className="m-0 locaton-icon" />
+                      <p>Kuwait</p></div>
                              
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 mt-5 ">
+                        <div className="col-lg-4 ">
                             <iframe width="100%" height="450" src="https://www.youtube.com/embed/D0UnqGm_miA?si=qnB4y7REmVnd-Lyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -99,7 +102,7 @@ function RoomDetails() {
 
                             <div className="rd-text">
                                 <div className="rd-title">
-                                    <i ><FaMapMarker /></i> Location
+                                <GeoAltFill className="m-0 locaton-icon" /> Location
                                 </div>
 
 
@@ -258,8 +261,8 @@ function RoomDetails() {
                         </div>
 
                         <div className="room-details-aminites">
-                            <div className="text-left m-4">
-                                <h2>Hotel Aminites</h2>
+                            <div className="text-center m-4">
+                                <h1>Hotel Aminites</h1>
                             
                             </div>
                            <div>
@@ -317,11 +320,13 @@ function RoomDetails() {
                                 </Col>
 
                             </Row>
+
+                        
                            </div>
                         </div>
                         <div className="alternate-hotels mt-3">
-                            <div className="text-left m-4">
-                                <h2>You May Also Like</h2>
+                            <div className="text-center m-4">
+                                <h1>You May Also Like</h1>
                             </div>
                             <div className="card-deck">
                                 <Row>

@@ -136,6 +136,9 @@ function Login() {
                                  <input type="password" className="" name="Password" placeholder="Password " onChange={handleInputChange} style={{ borderColor: passwordError ? "red" : "" }} />
 
                               </div>
+                              <div className="text-end mb-3">
+                                 <a className="forgot-password" href="forgot-password">Forgot Password</a>
+                              </div>
                               {passwordError && (
                                  <div style={{ color: "red", textAlign: "left" }}>
                                     {passwordError}

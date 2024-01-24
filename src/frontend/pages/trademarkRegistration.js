@@ -19,13 +19,13 @@ function TrademarkRegistration() {
 
                     <Row>
                         <div className="text-center">
-                        <h5 className="py-4" style={{textTransform:"uppercase",color:"#B78628"}}>Trademark Registration Uk</h5></div>
+                        <h5 className="py-4" style={{textTransform:"uppercase",color:"#000"}}>Trademark Registration Uk</h5></div>
                         <Col md={12}>
                             <center><embed type="application/pdf" src={TrademarkUKPDF + "#toolbar=0&navpanes=0&scrollbar=0"} width="500" height="500" />
                             </center>
                         </Col>
                         <div className="text-center">
-                        <h5 className="py-4"style={{textTransform:"uppercase" ,color:"#B78628"}}>Branding Registration</h5></div>
+                        <h5 className="py-4"style={{textTransform:"uppercase" ,color:"#000"}}>Branding Registration</h5></div>
                         <Col md={12}>
                             <center><embed type="application/pdf" src={BrandingRegistrationPDF + "#toolbar=0&navpanes=0&scrollbar=0"} width="500" height="500" />
                             </center>

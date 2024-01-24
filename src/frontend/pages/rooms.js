@@ -391,7 +391,7 @@ function Rooms(){
                   <div className="room-item">
                     <img src={Rooms6} alt="" />
                     <div className="ri-text">
-                      <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                      <h4>Grand Hotel du Palais Royal</h4>
                       <p>Kuwait</p>
                       <a href={`/room-details/`} className="primary-btn">More Details</a>
                     </div>
@@ -403,7 +403,7 @@ function Rooms(){
                   <div className="room-item">
                     <img src={Rooms5} alt="" />
                     <div className="ri-text">
-                      <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                      <h4>La Maison des Tetes - Relais & Chateaux</h4>
                       <p>Kuwait</p>
                       <a href={`/room-details/`} className="primary-btn">More Details</a>
                     </div>

@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Carousel } from "react-bootstrap";
-import Hero1 from '../../assets/img/hero/hero-1.jpg';
-import Hero2 from '../../assets/img/hero/hero-2.jpg';
-import Hero3 from '../../assets/img/hero/hero-3.jpg';
+import Hero1 from '../../assets/img/magazines/magazines.webp';
+import Hero2 from '../../assets/img/magazines/magazines2.webp';
+import Hero3 from '../../assets/img/magazines/magazines3.webp';
+import magazineImage1 from "../../assets/img/magazines/magazineImage1.webp"
+import magazineImage2 from "../../assets/img/magazines/magazineImage2.webp"
+import magazineImage3 from "../../assets/img/magazines/magazineImage3.webp"
+
 import axios from "axios";
 import API from "../../utils";
 function Hero(){
@@ -71,7 +75,7 @@ function Hero(){
               <Carousel.Item>
                 <img
                   // className="d-block w-100"
-                  src={Hero1}
+                  src={magazineImage1}
                   alt="First slide"
                   className="slider-img"
                 />
@@ -79,7 +83,7 @@ function Hero(){
               <Carousel.Item>
                 <img
                   // className="d-block w-100"
-                  src={Hero2}
+                  src={magazineImage2}
                   alt="Second slide"
                   className="slider-img"
                 />
@@ -87,7 +91,7 @@ function Hero(){
               <Carousel.Item>
                 <img
                   // className="d-block w-100"
-                  src={Hero3}
+                  src={magazineImage3}
                   alt="Third slide"
                   className="slider-img"
                 />

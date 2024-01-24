@@ -232,7 +232,7 @@ function UserProfile() {
                  <AllBlogs />
               </div>
               <div id="myProfile" style={{ display: currentSection === 'myProfile' ? 'block' : 'none' }}>
-                <h3 className="mb-4">Personal Information</h3>
+                <h4 className="mb-4">Personal information</h4>
 
                 <div className="row">
                   <div className="col-lg-8 p-0 mt-3">

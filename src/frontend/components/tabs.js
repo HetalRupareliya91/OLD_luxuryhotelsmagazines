@@ -17,10 +17,10 @@ function Tabs() {
    
       <div className="content tabcontainer">
         <div>
-        <div className="text-center mb-4">
+        <div className="text-start mb-4">
 
 <h1 className="mb-3 text-white ">We inspire people to try something new, something different and sate their curiosity and thirst to explore the world.</h1>
-<h5 className="text-white">View some of our digital immersive campaigns below</h5>
+<h4 className="text-white">View some of our digital immersive campaigns below</h4>
    </div>
           <div className="w3-sidebar w3-bar-block  w3-card">
             <button className={`w3-bar-item w3-button tablink ${activeTab === 'Zoom' ? 'w3-red' : ''}`} onClick={() => openLink('Zoom')}><i className="fa fa-globe" aria-hidden="true"></i> Spain</button>

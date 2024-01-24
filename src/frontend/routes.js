@@ -28,6 +28,7 @@ import PublishVideoBanner from "./pages/publishVideoBanner";
 import PublishAnimatedBanner from "./pages/publishAnimatedBanner";
 import PublishHotelNews from "./pages/publishHotelNews";
 import KitDetail from "./pages/kitDetail";
+import ForgotPassword from "./pages/forgotPassword";
 
 
 function RoutesPage() {
@@ -62,6 +63,7 @@ function RoutesPage() {
       <Route exact path="/publish-animated-banner" element={<PublishAnimatedBanner />} />
       <Route exact path="/publish-hotel-news" element={<PublishHotelNews />} />
       <Route exact path="/kit-detail" element={<KitDetail />} />
+      <Route exact path="/forgot-password" element={<ForgotPassword />} />
     </Routes>
   );
 }

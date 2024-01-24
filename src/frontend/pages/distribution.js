@@ -186,7 +186,7 @@ function Distribution() {
                             <h1>Forthcoming Editions</h1>
                         </div>
                         <div >
-                            <div className="text-center"><h5 className="mb-4 "style={{textTransform:"uppercase" ,color:"#B78628"}} >Luxury Hotels Dubai And Abu Dhabi</h5></div>
+                            <div className="text-center"><h5 className="mb-4 "style={{textTransform:"uppercase" ,color:"#000"}} >Luxury Hotels Dubai And Abu Dhabi</h5></div>
                             <Row>
                                 <Col lg={6}>
                                     <div>
@@ -250,7 +250,7 @@ function Distribution() {
 
                         <div className="mt-5">
                             <div className="text-center">
-                                <h5 className="mb-4" style={{textTransform:"uppercase" ,color:"#B78628"}}>Luxury Hotels Europe</h5>
+                                <h5 className="mb-4" style={{textTransform:"uppercase" ,color:"#000"}}>Luxury Hotels Europe</h5>
                             </div>
                             <Row>
                                 <Col lg={6} className="order-2">
