@@ -26,11 +26,11 @@ const InstagramWidget = () => {
 
   return (
     <>
-    <section className='instgram-section spad'>
+    <section className='instgram-section'>
       <Container>
         
     <div className="text-center">
-      <h2>Instagram / #Luxuryhotelsbrand</h2>
+      <h1>Instagram / #Luxuryhotelsbrand</h1>
     </div>
     <div className="embedsocial-hashtag" data-ref="ce1b21c005de07a4bdd3dea5c99063d161d7105f">
       {/* <a

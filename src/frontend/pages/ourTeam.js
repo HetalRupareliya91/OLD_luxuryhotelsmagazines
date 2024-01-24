@@ -13,7 +13,7 @@ function OurTeam() {
             <Header />
             <section className="my-5">
                 <Container>
-                    <h2 className="text-center">MEET THE TEAM</h2>
+                    <h1 className="text-center">MEET THE TEAM</h1>
                     <div className="hotel-selection my-4">
                         <p>We are very pleased and proud to be working closely with the below group of Luxury Magazine staff and team members, who are responsible for running our offices and Luxury Hotels Brand around the world. Without them, we're nothing</p>
                     </div>

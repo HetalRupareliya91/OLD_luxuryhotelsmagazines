@@ -17,7 +17,7 @@ function HotelSelection(){
 <Header/>
 <section className="spad hotel-selection-section">
 <Container>
-<h2 className="text-center">LUXURY HOTELS SELECTION</h2>
+<h1 className="text-center">LUXURY HOTELS SELECTION</h1>
 <div className="hotel-selection spad">
 <p><a>Luxury Hotels:</a> connecting high-end hotels with discerning luxury clientele globally. In the current competitive market, attracting and retaining esteemed clients poses a considerable challenge. We present a solution inspired by successful hotel groups like Marriott, Mandarin Oriental, and Four Seasons—a groundbreaking rotation program that successfully has been implemented for the last 17 years and guarantees to bring visitors to your hotel.</p>
 

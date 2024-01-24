@@ -6,6 +6,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FaEnvelope, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import ConnectWithUS from "../components/connectwithus";
+
 
 function ContactUs() {
 
@@ -72,33 +74,9 @@ function ContactUs() {
                        
                         </Col>
 
-                        <Col lg={5} className="connect-with-us">
-                        <Form>
-   
-                        <div><h3>Connect With Us </h3></div>
-                        <div className="fa-social">
-                            <div><a href="#" className="fa-link"><i ><FaFacebook/></i></a><a>@LuxuryHotelsMagazines </a></div>
-<div>
-                          <a href="Info@LuxuryHotelsMagazines.Com" className="fa-link"><i ></i><FaEnvelope/></a> <a> info@luxuryhotelsmagazines.com</a></div>
-                        <div>  <a href="#" className="fa-link"><i ><FaInstagram/></i></a><a>@LuxuryHotelsBrand</a></div>
-                      <div>    <a href="#" className="fa-link"><i ></i><FaYoutube/></a><a>info@luxuryhotelsmagazines.com</a></div>
-                       </div>
-                       <hr></hr>
-                       <div>
-                        <div><a>Subscribe To Receive News
-                            </a>
-                            </div>
-                            <div><a>Subscribe To Digital Copy
-                            </a>
-                            </div>
-                            <div><a>Subscribe To Printed Copy
-                            </a>
-                            </div>
-                          
-
-                       </div>
-                        </Form>
-                        </Col>
+                        <Col lg={5}>
+                               <ConnectWithUS/>
+                            </Col>
                     </Row>
 
                     

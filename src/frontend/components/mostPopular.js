@@ -8,7 +8,7 @@ function MostPopular() {
             <Row >
                <Col lg={12} >
                   <div className="section-title">
-                     <h2>Most Popular</h2>
+                     <h1>Most Popular</h1>
                   </div>
                </Col>
             </Row>

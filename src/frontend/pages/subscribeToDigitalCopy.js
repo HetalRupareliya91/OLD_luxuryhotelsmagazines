@@ -15,7 +15,7 @@ function SubscribeToDigitalCopy() {
             <Parallax blur={0} bgImage={bg2} bgImageAlt="the cat" strength={300}>
                 <section className="Contact-us-section spad">
                     <Container>
-                        <h2 className="text-center">SUBSCRIBE TO DIGITAL COPY</h2>
+                        <h1 className="text-center">SUBSCRIBE TO DIGITAL COPY</h1>
                         <Row>
                             <Col lg={7}>
                                 <Form >

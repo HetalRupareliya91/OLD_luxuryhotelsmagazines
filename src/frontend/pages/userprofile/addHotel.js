@@ -11,10 +11,11 @@ function AddHotel() {
     const [locationEditorState, setlocationEditorState] = useState(EditorState.createEmpty());
     const [roomsAndSuitesEditorState, setroomsAndSuitesEditorState] = useState(EditorState.createEmpty());
     const [restaurentsEditorState, setrestaurentsEditorState] = useState(EditorState.createEmpty());
-    // const [locationEditorState, setlocationEditorState] = useState(EditorState.createEmpty());
-    // const [locationEditorState, setlocationEditorState] = useState(EditorState.createEmpty());
-
-    const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
+    const [spaAndWellnessEditorState, setSpaAndWellnessEditorState] = useState(EditorState.createEmpty());
+    const [otherFacilitiesEditorState, setOtherFacilitiesEditorState] = useState(EditorState.createEmpty());
+    const [additionalInformationEditorState, setAdditionalInformationEditorState] = useState(EditorState.createEmpty());
+    const [descriptionEditorState, setDescriptionEditorState] = useState(EditorState.createEmpty());
+    // const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
     const [currentStep, setCurrentStep] = useState(1);
     const handleHotelEditorChange = (editorState) => {
         setHotelEditorState(editorState);
@@ -31,19 +32,19 @@ function AddHotel() {
     const handlerestaurentsEditorState = (editorState) => {
         setrestaurentsEditorState(editorState);
     };
-    // const handlelocationEditorChange = (editorState) => {
-    //     setlocationEditorState(editorState);
-    // };
-    // const handlelocationEditorChange = (editorState) => {
-    //     setlocationEditorState(editorState);
-    // };
-    // const handlelocationEditorChange = (editorState) => {
-    //     setlocationEditorState(editorState);
-    // };
+    const handlespaAndWellnessEditorState = (editorState) => {
+        setSpaAndWellnessEditorState(editorState);
+    };
+    const handleOtherFacilitiesEditorChange = (editorState) => {
+        setOtherFacilitiesEditorState(editorState);
+    };
+    const handleAdditionalInformationEditorChange = (editorState) => {
+        setAdditionalInformationEditorState(editorState);
+    };
 
 
-    const handleBlogEditorChange = (editorState) => {
-        setBlogEditorState(editorState);
+    const handleDescriptionEditorState = (editorState) => {
+        setDescriptionEditorState(editorState);
     };
     const [image, setImage] = useState(null)
 
@@ -284,7 +285,7 @@ function AddHotel() {
                 <Row className=" mb-3">
 
                     <Col lg={6}>
-                        <input className="sidebar-input"
+                        <Form.Control className="sidebar-input"
                             type="text"
                             id="hotelName"
                             name="hotelName"
@@ -295,11 +296,11 @@ function AddHotel() {
                     </Col>
 
                     <Col lg={6}>
-                        <input className="sidebar-input" type="text" id="hotelWebsite" name="hotelWebsite" placeholder="Hotel Website" required value={formData.hotelWebsite}
+                        <Form.Control className="sidebar-input" type="text" id="hotelWebsite" name="hotelWebsite" placeholder="Hotel Website" required value={formData.hotelWebsite}
                             onChange={handleInputChange} />
                     </Col>
                     <Col lg={6}>
-                        <input className="sidebar-input" type="text" id="youtubeLink" name="youtubeLink" placeholder="Youtube Link" value={formData.youtubeLink}
+                        <Form.Control className="sidebar-input" type="text" id="youtubeLink" name="youtubeLink" placeholder="Youtube Link" value={formData.youtubeLink}
                             onChange={handleInputChange} />
                     </Col>
 
@@ -351,7 +352,8 @@ function AddHotel() {
 
                 <Row className=" mb-3">
                     <Col lg={12}>
-                        <input className="sidebar-input" type="file" id="hotelImage" name="hotelImage" placeholder="Hotel Image" value={formData.hotelImage}
+                        <label>Hotel Image</label>
+                        <Form.Control className="sidebar-input" type="file" id="hotelImage" name="hotelImage" placeholder="Hotel Image" value={formData.hotelImage}
                             onChange={handleimageChange} />
 
                     </Col>
@@ -409,8 +411,8 @@ function AddHotel() {
                             onChange={handleInputChange} /> */}
                             <label>Spa And Wellness (Optional)</label>
                             <Editor
-            //   editorState={spaAndWellnessEditorState}
-            //   onEditorStateChange={handlespaAndWellnessEditorState}
+              editorState={spaAndWellnessEditorState}
+              onEditorStateChange={handlespaAndWellnessEditorState}
               value={formData.spaAndWellness}
               onChange={handleInputChange}
             />
@@ -422,8 +424,8 @@ function AddHotel() {
                             onChange={handleInputChange} /> */}
                             <label>Other Facilities (Optional)</label>
                             <Editor
-              editorState={hotelEditorState}
-              onEditorStateChange={handleHotelEditorChange}
+              editorState={otherFacilitiesEditorState}
+              onEditorStateChange={handleOtherFacilitiesEditorChange}
               value={formData.roomsAndSuites}
               onChange={handleInputChange}
             />
@@ -437,8 +439,8 @@ function AddHotel() {
                             onChange={handleInputChange} /> */}
                             <label>Additional information (Optional)</label>
                             <Editor
-              editorState={hotelEditorState}
-              onEditorStateChange={handleHotelEditorChange}
+              editorState={additionalInformationEditorState}
+              onEditorStateChange={handleAdditionalInformationEditorChange}
               value={formData.additionalInformation}
               onChange={handleInputChange}
             />
@@ -683,9 +685,9 @@ function AddHotel() {
             </div>}
             {currentStep === 2 && <div>
                 <Row className="mb-3">
-                    <h4>Contact 1 </h4>
+                    <h5>Contact 1 </h5>
                     <Col lg={4}>
-                        <input
+                        <Form.Control
                             className="sidebar-input"
                             type="text"
                             id="name"
@@ -696,7 +698,7 @@ function AddHotel() {
                             required />
                     </Col>
                     <Col lg={4}>
-                        <input className="sidebar-input"
+                        <Form.Control className="sidebar-input"
                             type="email"
                             id="email"
                             name="email"
@@ -706,7 +708,7 @@ function AddHotel() {
                             required />
                     </Col>
                     <Col lg={4}>
-                        <input className="sidebar-input"
+                        <Form.Control className="sidebar-input"
                             type="text"
                             id="contactInformation"
                             name="contactInformation"
@@ -718,9 +720,9 @@ function AddHotel() {
                 </Row>
 
                 <Row className="mb-3">
-                    <h4>Contact 2 </h4>
+                    <h5>Contact 2 </h5>
                     <Col lg={4}>
-                        <input className="sidebar-input"
+                        <Form.Control className="sidebar-input"
                             type="text"
                             id="name"
                             name="name"
@@ -729,7 +731,7 @@ function AddHotel() {
                             onChange={(e) => handleChange("contact2", "name", e.target.value)} />
                     </Col>
                     <Col lg={4}>
-                        <input type="email"
+                        <Form.Control type="email"
                             id="email"
                             name="email"
                             placeholder=" Email"
@@ -737,7 +739,7 @@ function AddHotel() {
                             onChange={(e) => handleChange("contact2", "email", e.target.value)} />
                     </Col>
                     <Col lg={4}>
-                        <input type="text"
+                        <Form.Control type="text"
                             id="contactInformation"
                             name="contactInformation"
                             placeholder="Contact Information"
@@ -748,9 +750,9 @@ function AddHotel() {
                 </Row>
 
                 <Row className="mb-3">
-                    <h4 className="third-child">Contact 3 </h4>
+                    <h5 className="third-child">Contact 3 </h5>
                     <Col lg={4}>
-                        <input className="sidebar-input"
+                        <Form.Control className="sidebar-input"
                             type="text"
                             id="name"
                             name="name"
@@ -759,7 +761,7 @@ function AddHotel() {
                             onChange={(e) => handleChange("contact3", "name", e.target.value)} />
                     </Col>
                     <Col lg={4}>
-                        <input type="email"
+                        <Form.Control type="email"
                             id="email"
                             name="email"
                             placeholder=" Email"
@@ -767,7 +769,7 @@ function AddHotel() {
                             onChange={(e) => handleChange("contact3", "email", e.target.value)} />
                     </Col>
                     <Col lg={4}>
-                        <input type="text"
+                        <Form.Control type="text"
                             id="contactInformation"
                             name="contactInformation"
                             placeholder="Contact Information"
@@ -812,9 +814,9 @@ function AddHotel() {
                             onChange={handleInputChange} required /> */}
                             <label>Description</label>
                             <Editor
-              editorState={hotelEditorState}
-              onEditorStateChange={handleHotelEditorChange}
-              value={formData.hotelDescription}
+              editorState={descriptionEditorState}
+              onEditorStateChange={handleDescriptionEditorState}
+              value={formData.description}
               onChange={handleInputChange}
             />
 

@@ -19,7 +19,7 @@ function AboutUsPage() {
             <Header />
             <section className="about-content my-5">
                 <Container>
-                    <h2 className="text-center">ABOUT US</h2>
+                    <h1 className="text-center">ABOUT US</h1>
                     <Row>
                         <Col className="my-4" md={4}>
                             <Image src={AboutImage} />
@@ -31,7 +31,7 @@ function AboutUsPage() {
                         </Col>
                     </Row>
 
-                    <h2 className="text-center my-5">Luxury Hotels Magazines Distributed:</h2>
+                    <h1 className="text-center my-5">Luxury Hotels Magazines Distributed:</h1>
                     <Row>
                         <Col className="aboutimg_content">
                             <div>

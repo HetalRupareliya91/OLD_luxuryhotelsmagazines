@@ -100,7 +100,7 @@ function KnoledgeTest() {
   return (
     <section className="spad">
       <Container>
-        <h2 className="text-center mb-4">Exclusive Deals </h2>
+        <h1 className="text-center mb-4">Exclusive Deals </h1>
 
         <Slider {...sliderSettings} ref={sliderRef}>
           {deals.map((deal, index) => (

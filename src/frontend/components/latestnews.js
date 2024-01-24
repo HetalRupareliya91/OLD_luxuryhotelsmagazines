@@ -8,7 +8,7 @@ function LatestNews() {
     return (
         <section className="spad">
         <Container >
-           <h2 className="text-center mb-5">Latets News</h2>
+           <h1 className="text-center mb-5">Latets News</h1>
            
               <Row className=" mt-3">
                 <Col lg={3} md={6}>

@@ -372,20 +372,44 @@ function Rooms(){
             </div> */}
         </Row>
         <Row >
-            {apiData.map((hotel) => (
-              <Col lg={4} md={6}  key={hotel.id}>
-                <a href={`/room-details/${hotel.id}`}>
+           
+              <Col lg={4} md={6}  >
+                <a href="/room-details/">
                   <div className="room-item">
-                    <img src={hotel.fullImagePath} alt={hotel.hotel_title} />
+                    <img src={Rooms4} alt="" />
                     <div className="ri-text">
-                      <h4>{hotel.hotel_title}</h4>
-                      <p>{hotel.country}</p>
-                      <a href={`/room-details/${hotel.id}`} className="primary-btn">More Details</a>
+                      <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                      <p>Kuwait</p>
+                      <a href={`/room-details/`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>
               </Col>
-            ))}
+          
+              <Col lg={4} md={6}  >
+                <a href="/room-details/">
+                  <div className="room-item">
+                    <img src={Rooms6} alt="" />
+                    <div className="ri-text">
+                      <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                      <p>Kuwait</p>
+                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                    </div>
+                  </div>
+                </a>
+              </Col>
+              <Col lg={4} md={6}  >
+                <a href="/room-details/">
+                  <div className="room-item">
+                    <img src={Rooms5} alt="" />
+                    <div className="ri-text">
+                      <h4>Symphony Style Hotel, Quorvus Collection</h4>
+                      <p>Kuwait</p>
+                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                    </div>
+                  </div>
+                </a>
+              </Col>
           </Row>
         </Container>
     </section>

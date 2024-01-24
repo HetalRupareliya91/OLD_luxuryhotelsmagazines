@@ -18,10 +18,13 @@ function HotelEditions(){
 <section className="spad">
 
 <Container>
+   
     
-<div className="MagazineContent">
-<h2 className="mb-3">LUXURY MAGAZINES</h2>
+<div className="MagazineContent text-center">
+<h1 className="mb-3">LUXURY MAGAZINES</h1>
+</div>
 
+<div className="MagazineContent">
 <p>
 Luxury Hotels connecting high-end hotels with discerning luxury clientele globally. In the current competitive market, attracting and retaining esteemed clients poses a considerable challenge. We present a solution inspired by successful hotel groups like Marriott, Mandarin Oriental, and Four Seasons—a groundbreaking rotation program that successfully has been implemented for the last 17 years and guarantees to bring visitors to your hotel.
 </p>

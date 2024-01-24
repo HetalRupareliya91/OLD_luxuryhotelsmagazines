@@ -10,9 +10,9 @@ function Mediapack() {
     return (
         <>
             <Header />
-            <section className="my-5 ">
+            <section className="mt-5 mb-3">
                 <Container>
-                    <h2 className="text-center">Media Pack</h2>
+                    <h1 className="text-center">Media Pack</h1>
                 </Container>
             </section>
 

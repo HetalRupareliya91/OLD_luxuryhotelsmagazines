@@ -352,7 +352,7 @@ const deals = [
 
                     </div>
                     <div class="flip-box-back">
-                        <p className="heading">Sponsor one of our regular features to consistently get in front of our audience of serious travellers. Not only will this raise brand awareness but gives you an opportunity to show your expertise to our readers   Sponsor one of our regular features to consistently get in front of our audience of serious travellers. Not only will this raise brand awareness but gives you an opportunity to show your expertise to our readers Sponsor one of our regular features to consistently.</p>
+                        <p className="heading">Sponsor one of our regular features to consistently get in front of our audience of serious travellers. Not only will this raise brand awareness but gives you an opportunity to show your expertise to our readers   Sponsor one of our regular features to consistently get in front of our audience of serious travellers. Not only will this raise brand awareness but gives you an opportunity.</p>
                     </div>
                 </div>
 

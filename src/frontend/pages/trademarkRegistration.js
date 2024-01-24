@@ -11,19 +11,21 @@ function TrademarkRegistration() {
     return (
         <>
             <Header />
-            <section className="py-5">
+            <section className="py-4">
                 <Container>
-                    <div>
+                    <div className="text-center">
                         <h1>Luxury Hotels Brand Recognition And Countries Coverage</h1>
                     </div>
 
                     <Row>
-                        <h2 className="py-5">Trademark Registration Uk</h2>
+                        <div className="text-center">
+                        <h5 className="py-4" style={{textTransform:"uppercase",color:"#B78628"}}>Trademark Registration Uk</h5></div>
                         <Col md={12}>
                             <center><embed type="application/pdf" src={TrademarkUKPDF + "#toolbar=0&navpanes=0&scrollbar=0"} width="500" height="500" />
                             </center>
                         </Col>
-                        <h2 className="py-5">Branding Registration</h2>
+                        <div className="text-center">
+                        <h5 className="py-4"style={{textTransform:"uppercase" ,color:"#B78628"}}>Branding Registration</h5></div>
                         <Col md={12}>
                             <center><embed type="application/pdf" src={BrandingRegistrationPDF + "#toolbar=0&navpanes=0&scrollbar=0"} width="500" height="500" />
                             </center>
