@@ -24,13 +24,13 @@ function WhatWeDoPrint(){
 
                     <div>
                         <Row>
-                            <Col lg={6} >
+                            <Col lg={6} md={6}>
                                 <div className="print-image-div mt-5 mb-5">
                                     <Image src={Magazines1} className="what-we-do-print-section-image"></Image>
                                 </div>
                             </Col>
 
-                            <Col lg={6}>
+                            <Col lg={6} md={6}>
                                 <div className="vc_column-inner text-left">
                                     <div className="mb-4">
                                         <h3>LUXURY HOTEL MAGAZINE</h3>
@@ -60,7 +60,7 @@ function WhatWeDoPrint(){
                     </div>
 
                     <Row>
-                        <Col lg={6}>
+                        <Col lg={6} >
                             <div>
                                 <h2>Request your FREE digital sample to see why people love us.</h2>
                             </div>

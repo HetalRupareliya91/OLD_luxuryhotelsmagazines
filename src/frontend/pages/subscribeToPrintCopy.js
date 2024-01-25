@@ -41,7 +41,7 @@ function SubscribeToPrintCopy() {
 
                                     </Form.Control>
                                     <Row className="d-flex">
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Cyprus & Greece Edition"
@@ -49,7 +49,7 @@ function SubscribeToPrintCopy() {
                                                 className="pe-4"
                                             />
                                         </Col>
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Europe Edition"
@@ -57,7 +57,7 @@ function SubscribeToPrintCopy() {
                                                 className="pe-4"
                                             />
                                         </Col>
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Dubai & Abu Edition"

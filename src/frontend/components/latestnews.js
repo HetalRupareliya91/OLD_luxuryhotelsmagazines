@@ -4,6 +4,7 @@ import News5 from '../../assets/img/news5.jpg';
 import News6 from '../../assets/img/news6.jpg';
 import News7 from '../../assets/img/news7.jpg';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 function LatestNews() {
     return (
         <section className="spad">
@@ -15,7 +16,7 @@ function LatestNews() {
                    <figure>
                    <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><Link to="blog-details" className="readmore">Read More</Link></div>
                          <Image src={News5} alt=''/>
                       </div>
                    </figure>
@@ -25,7 +26,7 @@ function LatestNews() {
                       
                    <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><Link to="blog-details" className="readmore">Read More</Link></div>
                          <Image src={News4}/>
                       </div>
                    </figure>
@@ -34,7 +35,7 @@ function LatestNews() {
                    <figure>
                    <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><Link  to="blog-details" className="readmore">Read More</Link></div>
                          <Image src={News6} alt=''/>
                       </div>
                    </figure>
@@ -43,7 +44,7 @@ function LatestNews() {
                    <figure>
                    <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><Link to="blog-details" className="readmore">Read More</Link></div>
                          <Image src={News7}/>
                       </div>
                    </figure>

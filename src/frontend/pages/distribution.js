@@ -32,7 +32,7 @@ function Distribution() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                 },
             },
         ],
@@ -188,12 +188,12 @@ function Distribution() {
                         <div >
                             <div className="text-center"><h5 className="mb-4 "style={{textTransform:"uppercase" ,color:"#000"}} >Luxury Hotels Dubai And Abu Dhabi</h5></div>
                             <Row>
-                                <Col lg={6}>
+                                <Col lg={6} md={6}>
                                     <div>
                                         <Image src={magazineImage} />
                                     </div>
                                 </Col>
-                                <Col lg={6} className="content-section">
+                                <Col lg={6} md={6} className="content-section">
                                     <div className="d-flex justify-content-between mx-4 mt-3">
                                         <div>
                                             <p>Hard Copies</p>
@@ -253,12 +253,12 @@ function Distribution() {
                                 <h5 className="mb-4" style={{textTransform:"uppercase" ,color:"#000"}}>Luxury Hotels Europe</h5>
                             </div>
                             <Row>
-                                <Col lg={6} className="order-2">
+                                <Col lg={6} md={6} className="order-2">
                                     <div>
                                         <Image src={magazineImage} />
                                     </div>
                                 </Col>
-                                <Col lg={6} className="content-section order-1 ">
+                                <Col lg={6} md={6} className="content-section order-1 ">
                                     <div className="d-flex justify-content-between mx-4 mt-3">
                                         <div>
                                             <p>Hard Copies</p>

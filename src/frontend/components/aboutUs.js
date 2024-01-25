@@ -9,11 +9,12 @@ import News7 from '../../assets/img/news7.jpg'
 import about1 from '../../assets/img/about/about-1.jpg'
 import about2 from '../../assets/img/about/about-2.jpg'
 import HeroImage from '../../assets/img/hero/hero-2.jpg'
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { Parallax } from "react-parallax";
 import VideoBackgrounds from '../../assets/videos/hotelvideo_km2KqTxn.mp4';
 import ReactPlayer from "react-player";
 import Logo from "../../assets/img/logo.svg"
+import { Link } from "react-router-dom";
 function AboutUs() {
 
     return(
@@ -29,7 +30,7 @@ function AboutUs() {
 
                   <div className="thumbnail">
                     <div>
-                      <Button className="readmore">Read More</Button>
+                      <Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link>
                     </div>
                     <Image src={News1} alt="" />
                   </div>
@@ -40,7 +41,7 @@ function AboutUs() {
                 <figure>
                   <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                   <div className="thumbnail">
-                    <div><Button className="readmore">Read More</Button></div>
+                    <div><Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link></div>
                     <Image src={News2} alt="" />
                   </div>
                 </figure>
@@ -49,18 +50,17 @@ function AboutUs() {
                 <figure>
                   <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                   <div className="thumbnail">
-                    <div><Button className="readmore">Read More</Button></div>
+                    <div><Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link></div>
                     <Image src={News3} alt=""/>
                   </div>
                 </figure>
               </Col>
-            </Row>
-              <Row className=" mt-3">
-                 <Col lg={3} md={6}>
+
+              <Col lg={3} md={6}>
                     <figure>
                         <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                        <div className="thumbnail">
-                          <div><button className="readmore">Read More</button></div>
+                          <div><Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link></div>
                           <Image src={News4} alt=""/>
                        </div>
                     </figure>
@@ -69,7 +69,7 @@ function AboutUs() {
                     <figure>
                         <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>  
                        <div className="thumbnail">
-                          <div><button className="readmore">Read More</button></div>
+                          <div><Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link></div>
                           <Image src={News5} alt=""/>
                        </div>
                     </figure>
@@ -78,7 +78,7 @@ function AboutUs() {
                     <figure>
                         <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                        <div className="thumbnail">
-                          <div><button className="readmore">Read More</button></div>
+                          <div><Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link></div>
                           <Image src={News6} alt=""/>
                        </div>
                     </figure>
@@ -87,25 +87,30 @@ function AboutUs() {
                     <figure>
                         <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                        <div className="thumbnail">
-                          <div><button className="readmore">Read More</button></div>
+                          <div><Link to="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux" className="readmore">Read More</Link></div>
                           <Image src={News7} alt=""/>
                        </div>
                     </figure>
                  </Col>
-              </Row>
+            </Row>
+              {/* <Row className=" mt-3">
+                 
+              </Row> */}
            </div>
         
         </Container>
      </section>
 
      <section className="video-background p-0">
+      
      <div className='video-iframe'>
       <iframe loading="lazy" style={{width: "100%"}} id="ytplayer" type="text/html" width="100%" height="500px" src="https://www.youtube.com/embed/GCHzng92OEI?autoplay=1&mute=1&loop=1&color=white&controls=0&playsinline=1&rel=0&playlist=GCHzng92OEI&showinfo=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>   
             </div>
+            <Container>
       <div className="text-overlay">
-      <div className="row ">
-                  <div className="col-lg-6">
+      <Row >
+                  <Col lg={6} >
                      <div className="about-text">
                         <div className="section-title ">
                            <span className="text-white">About Us</span>
@@ -118,13 +123,13 @@ function AboutUs() {
                            apartment, guest house, or tree house, weve got you covered.
                         </p>
 
-                        <a href="#" className="primary-btn about-btn text-white">Read More</a>
+                        <a href="aboutus" className="primary-btn about-btn text-white">Read More</a>
 
                         </div>
                         
                      </div>
-                  </div>
-                  <div className="col-lg-6">
+                  </Col>
+                  <Col lg={6}>
                      <div className="about-pic">
                         <div className="row">
                            <div className="col-sm-6 col-6">
@@ -135,11 +140,11 @@ function AboutUs() {
                            </div>
                         </div>
                      </div>
-                  </div>
-               </div>
+                  </Col>
+               </Row>
 
 
-               <Row className="row aboutus-section-present">
+               <Row className=" aboutus-section-present mobile-view">
                            <Col className='videos-content-present text-center'>
                           <Image src={Logo}/>
                           <div className='mt-4'>
@@ -164,6 +169,7 @@ function AboutUs() {
             </Col>
           </Row> */}
           </div>
+          </Container>
     </section>
     
      {/* <Parallax blur={5} bgImage={HeroImage} bgImageAlt="the cat" strength={350}>

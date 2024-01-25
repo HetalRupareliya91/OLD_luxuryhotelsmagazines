@@ -14,28 +14,28 @@ const VideoBackground = () => {
             </iframe>   
             </div>
       <div className="text-overlay">
-      <div className="row ">
-                  <div className="col-lg-6">
+      <Row >
+                  <Col lg={6}>
                      <div className="about-text">
                         <div className="section-title  ">
                         <p className=''> <b style={{color:"#b5191fff"}}> Luxury Hotels</b>, a renowned global brand founded in England <b style={{color:"#b5191fff"}}> 17 years ago, </b>is currently present in 89 countries. We provide <b style={{color:"#b5191fff"}}>Luxury Hotels </b>for affluent travellers through our online platform and in print and digital formats. Each Edition is accessible for free download on 5 different platforms and attracts 4-5 million online readers annually.</p>
                 <p className=''>Through our Printed Edition Rotation Program, your hotel will be featured as one of the top <b style={{color:"#b5191fff"}}>Luxury Hotels </b> and will ensure a continuous influx of bookings and a consistent occupancy rate of <b style={{color:"#b5191fff"}}> 800,000 to 1 million tourists </b> throughout the year, all without any commission fees.</p>
                         </div>
                      </div>
-                  </div>
+                  </Col>
                   <Col lg={6} >
                     
-                        <Row className="row">
-                           <Col sm={6} col={6} className='videos-content-present text-center'>
+                       
+                           <div className='videos-content-present text-center'>
                           <Image src={Logo}/>
                           <div className='mt-4'>
                           <h4 >PRESENTS</h4>
                           </div>
-                           </Col>
+                           </div>
                          
-                       
-                     </Row>
+              
                   </Col>
+                  </Row>
                </div>
           {/* <Row>
             <Col lg={6}>
@@ -51,7 +51,7 @@ const VideoBackground = () => {
               </div>
             </Col>
           </Row> */}
-          </div>
+          
     </section>
 
    

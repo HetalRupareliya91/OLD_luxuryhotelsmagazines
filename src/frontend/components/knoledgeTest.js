@@ -14,6 +14,7 @@ function KnoledgeTest() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: false,
     responsive: [
       {
         breakpoint: 992,
@@ -24,7 +25,7 @@ function KnoledgeTest() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],

@@ -39,7 +39,7 @@ function WhatWeDoTop(){
 
                         <div>
                             <Row>
-                                <Col lg={3} className="what-we-do-col">
+                                <Col lg={3} md={6} className="what-we-do-col">
                                     <div>
                                         <div className="text-center mb-3">
                                             <FaTrophy className="element-icon " />
@@ -51,7 +51,7 @@ function WhatWeDoTop(){
                                     </div>
                                   
                                 </Col>
-                                <Col lg={3} className="what-we-do-col">
+                                <Col lg={3} md={6} className="what-we-do-col">
                                     <div>
                                         <div className="text-center mb-3">
                                             <FaHandshake className="element-icon " />
@@ -63,7 +63,7 @@ function WhatWeDoTop(){
                                     </div>
                                    
                                 </Col>
-                                <Col lg={3} className="what-we-do-col">
+                                <Col lg={3} md={6} className="what-we-do-col">
                                     <div>
                                         <div className="text-center mb-3">
                                             <FaLaptopMedical className="element-icon " />
@@ -76,7 +76,7 @@ function WhatWeDoTop(){
                                    
                                 </Col>
 
-                                <Col lg={3} className="what-we-do-col">
+                                <Col lg={3} md={6} className="what-we-do-col">
                                     <div>
                                         <div className="text-center mb-3">
                                             <FaLeaf className="element-icon " />

@@ -34,11 +34,11 @@ function Header() {
          <ul> 
             <li className="active"><a href="/">Home</a></li>
             <li>
-               <a href="/">Hotels</a>
+               <a href="/">Luxury Hotels/Resorts</a>
             </li>
-            <li><a href="/blog">Blogs</a></li>
-            <li><a href="/blog">Create Hotel Profile</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/hotel-search">List Your Hotels</a></li>
+            <li><a href="/userprofile">Publish Hotel News</a></li>
+            <li><a href="/contact-us">Contact</a></li>
          </ul>
       </nav>
       <div id="mobile-menu-wrap"></div>

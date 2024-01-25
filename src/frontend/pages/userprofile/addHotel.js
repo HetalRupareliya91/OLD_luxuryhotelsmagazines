@@ -270,7 +270,9 @@ function AddHotel() {
       setProgress((currentStep / 4) * 100);
     }, []);
     
-    return (
+
+    
+    return(
 <>
 <div className="mb-3">
 {currentStep === 1 && <h4 className="stepform-heading">Hotel Details</h4>}
@@ -448,25 +450,25 @@ function AddHotel() {
                 </Row>
                 <h5>Hotel Amenities</h5>
                 <Row className="mb-3">
-                    <Col lg={3}>
+                    <Col lg={3} md={4}>
                         <input className="sidebar-input" type="number" id="numberOfRooms" name="numberOfRooms" placeholder="Number Of Rooms" value={formData.numberOfRooms} onChange={handleInputChange} />
                     </Col>
 
-                    <Col lg={3}>
+                    <Col lg={3} md={4}>
                         <input className="sidebar-input" type="number" id="numberOfRestaurants" name="numberOfRestaurants" placeholder="Number Of Restaurants" value={formData.numberOfRestaurants} onChange={handleInputChange} />
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={3} md={4}>
                         <input className="sidebar-input" type="number" id="outdoorSwimmingPool" name="outdoorSwimmingPool" placeholder="Swimming Pool" value={formData.outdoorSwimmingPool} onChange={handleInputChange} />
                     </Col>
 
-                    <Col lg={3}>
+                    <Col lg={3} md={4}>
                         <input className="sidebar-input" type="number" id="bars" name="bars" placeholder="Bars" value={formData.bars} onChange={handleInputChange} />
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={3} md={4}>
                         <input className="sidebar-input" type="number" id="meetingrooms" name="bars" placeholder="Meeting Rooms"  />
                     </Col>
 
-                    <Col  lg={3} className="mb-3">
+                    <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -478,7 +480,7 @@ function AddHotel() {
                             </Form.Group>
                         </Col>
 
-                        <Col  lg={3} className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -490,7 +492,7 @@ function AddHotel() {
                             </Form.Group>
                         </Col>
 
-                        <Col  lg={3} className="mb-3">
+                        <Col  lg={3} md={4}className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -501,17 +503,8 @@ function AddHotel() {
                                 <label>Room service</label>
                             </Form.Group>
                         </Col>
-                </Row>
-                {/* <Row className="mb-3">
-                    
-                </Row> */}
 
-
-                <Row className="mb-3">
-                    
-                      
-
-                        <Col  lg={3} className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -522,7 +515,7 @@ function AddHotel() {
                                 <label>Concierge service</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3} className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -534,7 +527,7 @@ function AddHotel() {
                             </Form.Group>
                         </Col>
 
-                        <Col  lg={3} className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -545,7 +538,7 @@ function AddHotel() {
                                 <label>WIFI</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -556,7 +549,7 @@ function AddHotel() {
                                 <label>Fitness center</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4}  className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -567,7 +560,7 @@ function AddHotel() {
                                 <label>Concierge service</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -578,7 +571,7 @@ function AddHotel() {
                                 <label>Sport Classes</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -589,7 +582,7 @@ function AddHotel() {
                                 <label>Spa</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -600,7 +593,7 @@ function AddHotel() {
                                 <label>Toiletries</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -611,7 +604,7 @@ function AddHotel() {
                                 <label>Kids Club</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -622,7 +615,7 @@ function AddHotel() {
                                 <label>Spa</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -634,7 +627,7 @@ function AddHotel() {
                             </Form.Group>
                         </Col>
 
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -645,7 +638,7 @@ function AddHotel() {
                                 <label>Hair Dryer</label>
                             </Form.Group>
                         </Col>
-                        <Col  lg={3}  className="mb-3">
+                        <Col  lg={3} md={4} className="mb-3">
                             <Form.Group  className='d-flex' >
                                 <Form.Check
                                     type="checkbox"
@@ -656,8 +649,13 @@ function AddHotel() {
                                 <label>Parking</label>
                             </Form.Group>
                         </Col>
-                    
                 </Row>
+                {/* <Row className="mb-3">
+                    
+                </Row> */}
+
+
+             
                 <Row className="mb-3">
                     <Col lg={3}>
                         <input className="sidebar-input" type="text" id="otherInformation1" name="otherInformation1" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation1}

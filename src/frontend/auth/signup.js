@@ -231,11 +231,7 @@ function Signup() {
                                     </>}
                                 {step === 2 &&
                                     <div className=" justify-content-between mt-4 ">
-                                        <Row>
-                                            <Col lg={12}>
-                                                <ProgressBar now={progress} label={`${progress}%`} className="mt-3" />
-                                            </Col>
-                                        </Row>
+                                     
                                         <Row >
                                             <Col lg={6} md={6} sm={6}>
                                                 <div className="pricingTable m-0">
@@ -291,7 +287,8 @@ function Signup() {
                                         </Row>
 
 
-                                    </div>}
+                                    </div>
+                                    }
 
                                 {step > 1 && (
                                     <>

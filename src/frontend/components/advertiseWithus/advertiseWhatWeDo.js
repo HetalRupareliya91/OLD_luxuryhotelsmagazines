@@ -6,7 +6,7 @@ function AdvertiseWhatWeDo(){
     return(
         <section >
         <div className="rounddiv">
-            <Col lg={6} className="what-we-do p-0">
+            <Col lg={6}  md={6} className="what-we-do p-0">
                 <div className="hovermaindiv">
                 <div className="inner-div">
                     <div className="text-center">
@@ -19,7 +19,7 @@ function AdvertiseWhatWeDo(){
 
             </Col>
 
-            <Col lg={6} className="contact-us p-0">
+            <Col lg={6}  md={6} className="contact-us p-0">
             <div className="hovermaindivtwo">
                 <div className="inner-div"> 
                     <div className="text-center">

@@ -127,7 +127,7 @@ const deals = [
 
 
                     <Row className="image-flip-div">
-                        <Col lg={3} className="p-5">
+                        <Col lg={3} md={6} className="p-5">
                             <div className="text-center">
                                 <h3>Books</h3>
 
@@ -148,7 +148,7 @@ const deals = [
 
                         </Col>
 
-                        <Col lg={3} className="p-5">
+                        <Col lg={3} md={6} className="p-5">
                             <div className="text-center">
                                 <h3>Sponsorship</h3> </div>
                             <div class="flip-box">
@@ -168,7 +168,7 @@ const deals = [
                         </Col>
 
 
-                        <Col lg={3} className="p-5">
+                        <Col lg={3} md={6} className="p-5">
                             <div className="text-center">
                                 <h3>Supplements</h3> </div>
                             <div class="flip-box">
@@ -185,7 +185,7 @@ const deals = [
 
                         </Col>
 
-                        <Col lg={3} className="p-5">
+                        <Col lg={3} md={6} className="p-5">
                             <div className="text-center">
                                 <h3>Display Advertising</h3> </div>
                             <div class="flip-box">
@@ -229,13 +229,13 @@ const deals = [
 
                         <div>
                             <Row>
-                                <Col lg={6} className="">
+                                <Col lg={6} md={6} className="">
                                     <div className="mt-5">
                                         <Image src={Magazines2} className="what-we-do-digital-section-image"></Image>
                                     </div>
                                 </Col>
 
-                                <Col lg={6} className="mt-5">
+                                <Col lg={6} md={6} className="mt-5">
                                     <div className="vc_column-inner text-left">
                                         <div className="mb-5">
                                             <h3>LUXURY HOTEL MAGAZINE</h3>
@@ -265,7 +265,11 @@ const deals = [
                         <section className="special spad tabs-section" data-scrollax-parent="true">
 
 
+                        <div className="text-start mb-4">
 
+<h1 className="mb-3 text-white ">NEW FOR 2021</h1>
+<h4 className="text-white">View some of our digital immersive campaigns below</h4>
+   </div>
                             <div className="content tabcontainer2">
                                 <div>
                                     <div className="w3-sidebar w3-bar-block  w3-card">
@@ -320,7 +324,7 @@ const deals = [
 
 
     <Row className="image-flip-div">
-        <Col lg={4} className="p-5">
+        <Col lg={4} md={6} className="p-5">
             <div className="text-center">
                 <h3>Video</h3>
 
@@ -341,7 +345,7 @@ const deals = [
 
         </Col>
 
-        <Col lg={4} className="p-5">
+        <Col lg={4} md={6} className="p-5">
             <div className="text-center">
                 <h3>E-Newsletters</h3> </div>
             <div class="flip-box">
@@ -361,7 +365,7 @@ const deals = [
         </Col>
 
 
-        <Col lg={4} className="p-5">
+        <Col lg={4} md={6} className="p-5">
             <div className="text-center">
                 <h3>Virtual Events</h3> </div>
             <div class="flip-box">
@@ -530,7 +534,7 @@ What are you interested in?
                             </div>
                             <div className="card-deck">
                                 <Row>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={6} className="mb-3">
                                         <div className="card">
                                             <img className="card-img-top" src={News5} alt="Card image cap" />
                                             <div className="card-body">
@@ -542,7 +546,7 @@ What are you interested in?
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={6} className="mb-3">
                                         <div className="card">
                                             <img className="card-img-top" src={News1} alt="Card image cap" />
                                             <div className="card-body">
@@ -554,7 +558,7 @@ What are you interested in?
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={6} className="mb-3">
                                         <div className="card">
                                             <img className="card-img-top" src={News2} alt="Card image cap" />
                                             <div className="card-body">
@@ -574,7 +578,7 @@ What are you interested in?
                      
             <section >
                 <div className="rounddiv">
-                    <Col lg={6} className="what-we-do p-0">
+                    <Col lg={6} md={6} className="what-we-do p-0">
                         <div className="hovermaindiv">
                         <div className="inner-div">
                             <div className="text-center">
@@ -587,7 +591,7 @@ What are you interested in?
 
                     </Col>
 
-                    <Col lg={6} className="contact-us p-0">
+                    <Col lg={6} md={6} className="contact-us p-0">
                     <div className="hovermaindivtwo">
                         <div className="inner-div"> 
                             <div className="text-center">

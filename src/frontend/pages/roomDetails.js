@@ -228,7 +228,7 @@ function RoomDetails() {
                                         </div>
                                         <div className="col-lg-12">
                                             <textarea placeholder="Describe Your Experience"></textarea>
-                                            <button type="submit" className=" btn-default">Submit Now</button>
+                                            <button type="submit" className=" btn-default-submit ">Submit Now</button>
                                         </div>
                                     </div>
                                 </form>
@@ -267,58 +267,139 @@ function RoomDetails() {
                             </div>
                            <div>
 
-                            <Row>
-                                <Col lg={3}>
-                                    <div className="aminites d-flex">
-                                        <FaWifi/>
-                                        <p>Numbers Of Rooms</p>
-                                    </div>
-                                </Col>
-                                <Col lg={3}>
-                                    <div className="aminites d-flex">
+{/* 
+<div className="d-flex">
+<div className="aminites d-flex">
                                         <FaWifi/>
                                         <p> swimming pool:1</p>
                                     </div>
-                                </Col>
-                                <Col lg={3}>
+
                                     <div className="aminites d-flex">
                                         <FaWifi/>
                                         <p> Bars :1</p>
                                     </div>
-                                </Col>
-                                <Col lg={3}>
+
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> swimming pool:1</p>
+                                    </div>
+
                                     <div className="aminites d-flex">
                                         <FaWifi/>
                                         <p>Kids club</p>
                                     </div>
-                                </Col>
-                                <Col lg={3}>
+
                                     <div className="aminites d-flex">
                                         <FaWifi/>
                                         <p> Teens Club</p>
                                     </div>
-                                </Col>
-                                <Col lg={3}>
+
                                     <div className="aminites d-flex">
                                         <FaWifi/>
                                         <p> Private driver</p>
                                     </div>
-                                </Col>
 
-                                <Col lg={3}>
                                     <div className="aminites d-flex">
                                         <FaWifi/>
                                         <p> Room service</p>
                                     </div>
-                                </Col>
 
-                                <Col lg={3}>
                                     <div className="aminites d-flex">
                                         <FaWifi/>
                                         <p> Sport classese</p>
                                     </div>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+                                    <div className="aminites d-flex">
+                                        <FaWifi/>
+                                        <p> Sport classese</p>
+                                    </div>
+
+</div> */}
+                            <Row className="room-details-aminites-row">
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p>Numbers Of Rooms</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> swimming pool:1</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Bars :1</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p>Kids club</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Teens Club</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Private driver</p>
+                                    </div>
                                 </Col>
 
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Room service</p>
+                                    </div>
+                                </Col>
+
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Sport classes</p>
+                                    </div>
+                                </Col>
+
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Concierge service
+</p>
+                                    </div>
+                                </Col>
+                                <Col lg={3} className="col-section">
+                                    <div className="aminites d-flex">
+                                        <FaWifi className="m-0"/>
+                                        <p> Fitness center</p>
+                                    </div>
+                                </Col>
                             </Row>
 
                         

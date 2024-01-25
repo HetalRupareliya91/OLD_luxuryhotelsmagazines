@@ -78,6 +78,8 @@ button {
 	border: none;
 }
 
+
+
 img {
 	max-width: 100%;
 }
@@ -94,6 +96,7 @@ img {
 input:focus,
 select:focus,
 button:focus,
+Link:focus,
 textarea:focus {
 	outline: none;
 }
@@ -631,17 +634,17 @@ ol {
 	margin-bottom: 35px;
 }
 
-.slider-img {
+/* .slider-img {
 	height: 400px;
 	width: 100%;
-}
+} */
 
 .booking-form {
 	background: white;
 	padding: 1px 1px 1px 1px;
 	border-radius: 24px;
 	position: relative;
-	margin-top: -57px;
+	margin-top: 20px;
 	z-index: 10;
 	box-shadow: 0px 0px 35px -12px grey;
 }
@@ -2496,6 +2499,14 @@ ol {
 
 /* Medium Device: 1200px */
 
+@media screen and (min-width: 992px) {
+    .mobile-view {
+        display: none;
+    }
+
+	
+	
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.testimonial-slider.owl-carousel .owl-nav button {
 		left: -150px;
@@ -2820,8 +2831,123 @@ ol {
 /* Tablet Device: 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+	.aboutus-section-present{
+		display: contents !important;
+	}
+
+	.btn-div .more-info{
+		margin-top:120px;
+			 width: 60% !important;
+		 }
+
+	.what-we-do-digital-section .main-div {
+		padding: 30px 0px 30px 0px !important;
+	}
+
+	.what-we-do-digital-section-image{
+		width: 100% !important;
+	}
+
+	.what-we-do-print-section .main-div {
+		padding: 0px 0px 30px 0px !important;
+	}
+
+	.what-we-do-section .bk-btn {
+		width: 37% !important;
+		display: inline-block;
+		font-size: 13px;
+		font-weight: 700;
+		padding: 16px 28px 16px 33px !important;
+		background: #b5191fff;
+		color: #ffffff;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.what-we-do-section .main-div {
+		padding: 30px 50px !important;
+	}
+
+	.what-we-do .inner-div {
+		
+		left: 17px !important;
+		
+	}
+
+	.contact-us .inner-div{
+		left: 17px !important;
+
+	}
+	.media-pack-section .media-pack-cols {
+
+		box-shadow: 5px 5px 10px 0px #00000096 !important;
+		width: 44% !important;
+		margin: 20px 20px !important;
+	}
+
+	.booking-form-rooms {
+		padding: 0px 0px 0px 0px !important;
+		border-radius: 24px !important;
+		position: relative !important;
+		z-index: 10 !important;
+	}
+	.serch-btn {
+		width: 100%;
+		padding: 7px !important;
+		background-color: #fff !important;
+		color: #000 !important;
+		border: none !important;
+		border-radius: 4px !important;
+		cursor: pointer !important;
+	}
+	.aboutimg_content {
+		border: 1px solid #b5191f;
+		margin: 2px;
+		padding: 20px;
+		box-shadow: 3px 3px #b5191f2b;
+	}
+	.tabcontainer{
+		width: 80% !important;
+	}
+	.tabcontainer h1 {
+		text-transform: capitalize !important;
+		text-transform: capitalize !important;
+		font-size: 27px !important;
+		font-weight: 600;
+	}
+
+	.video-background {
+		position: relative !important;
+		width: 100% !important;
+		height: 42vh !important;
+		overflow: hidden !important;
+	}
+	.videos-content-present img{
+		width: 60%;
+	}
+
+	.videos-content-present {
+		position: relative !important;
+		top: 45px !important;
+		bottom: 40px !important;
+	}
+	.about-pic{
+		display: none;
+	}
+	.section-title{
+		display: none;
+	}
 	.testimonial-slider.owl-carousel .owl-nav button {
 		left: -30px;
+	}
+	.logo img {
+		width: 50%;
+	}
+	.hero-section {
+		position: relative;
+		padding-top: 0px;
+		padding-bottom: 360px;
 	}
 
 	.testimonial-slider.owl-carousel .owl-nav button.owl-next {
@@ -2879,12 +3005,27 @@ ol {
 } */
 
 .aboutus-section-present{
-	display: none;
+	display: none !important;
 }
 
-
+@media screen and (max-width: 991px) {
+  
+	.aboutus-section-present{
+		display: contents !important;
+	}
+}
 @media only screen and (max-width: 767px) {
+
+
 	.tabcontainer h1 {
+		text-transform: capitalize !important;
+		text-transform: capitalize !important;
+		font-size: 20px !important;
+		font-weight: 600 !important;
+		margin-top: 30px !important;
+	}
+
+	.tabs-section h1{
 		text-transform: capitalize !important;
 		text-transform: capitalize !important;
 		font-size: 20px !important;
@@ -3001,7 +3142,7 @@ padding: 0px 0px !important;
 		padding: 1px 1px 1px 1px;
 		border-radius: 24px;
 		position: relative;
-		margin-top: 255px;
+		margin-top: 230px;
 		z-index: 10;
 		box-shadow: 0px 0px 35px -12px grey;
 	}
@@ -3030,6 +3171,7 @@ padding: 0px 0px !important;
 		background-color: #b5191fff;
 
 	}
+
 
 	.go2150698616 span {
 		color: #000;
@@ -3071,7 +3213,7 @@ padding: 0px 0px !important;
 	.video-background {
 		position: relative !important;
 		width: 100% !important;
-		height: 40vh !important;
+		height: 26vh !important;
 		overflow: hidden !important;
 	}
 	.videos-content-present {
@@ -3162,7 +3304,7 @@ padding: 0px 0px !important;
 	}
 
 	.logo img {
-		width: 50%;
+		width: 80%;
 	}
 
 	.amenity-main {
@@ -3182,7 +3324,7 @@ padding: 0px 0px !important;
 	}
 
 	.w3-sidebar.w3-bar-block.w3-card {
-		position: absolute !important;
+		position: unset !important;
 		height: auto;
 		background: transparent !important;
 		box-shadow: unset !important;
@@ -3419,8 +3561,6 @@ button.readmore {
 	height: 40px;
 	position: relative;
 	background: unset;
-	color: white;
-	border: 1px solid white;
 	font-size: 18px;
 	border-radius: 5px;
 	top: 37%;
@@ -3430,6 +3570,25 @@ button.readmore {
 
 }
 
+
+a.readmore {
+	height: 40px;
+	position: relative;
+	background: #fff;
+	border: 1px solid #b5191f !important;
+	color: #b5191f !important;
+	font-size: 18px;
+	border-radius: 5px;
+	top: 37%;
+	padding: 8px;
+
+}
+
+a.readmore:hover{
+	border: 1px solid #ffff !important;
+	background-color:#b5191f !important;
+	color: #ffff !important;
+}
 .btn:hover {
 	border: 1px solid #b5191f !important;
 	color: #fff !important;
@@ -3682,6 +3841,7 @@ th {
 .sidebar-list {
 	color: #fff !important;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 .sidebar-list:hover {
@@ -3780,6 +3940,8 @@ svg {
 }
 
 @media (max-width: 768px) {
+
+	
 	#sidebar {
 		width: 100%;
 		/* transform: translateX(-100%);
@@ -4451,7 +4613,16 @@ h5 {
 .pricingTable .pricingTable-sign-up {
 	padding: 25px 0;
 }
-
+button.btn-default-submit{
+	display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 28px 15px;
+    background: #b5191fff;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 button.btn-default {
 	/* margin: 0 auto; */
 	background: #b5191fff;
@@ -5115,6 +5286,9 @@ form {
 .videos-content-present {
 	position: relative;
 	top: 100px;
+}
+.videos-content-present img{
+	width: 60%;
 }
 
 .what-we-do {
@@ -5963,13 +6137,11 @@ button .subscribe_text {
 }
 .room-details-aminites .aminites{
 	/* border: 1px solid #2d2a2a; */
-	border-radius: 5px;
 	margin: 10px;
-	padding: 5px;
 	
 }
 .room-details-aminites p {
-	margin: 5px;
+    margin: -4px 5px 0px 5px;
 }
 .ProgressBar {
 	background-color: #ffffff !important;
@@ -6075,4 +6247,19 @@ button a{
 .forgot-password:hover{
 	color: #000;
 	cursor: pointer;
+}
+.room-details-aminites-row .col-section{
+	width: 20%;
+}
+
+.tabs-section h1{
+	text-transform: capitalize !important;
+	text-transform: capitalize !important;
+    font-size: 36px !important;
+    font-weight: 600;
+
+}
+
+.ytp-show-cards-title{
+	display: none !important;
 }

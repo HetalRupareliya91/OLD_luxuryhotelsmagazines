@@ -42,7 +42,7 @@ function Hero(){
          
          <div className="hero-slider ">
           <Row>
-            <Col lg={4} className="mt-3">
+            <Col lg={4} md={4} className="mt-3">
             <Carousel>
               <Carousel.Item>
                 <img
@@ -70,7 +70,7 @@ function Hero(){
               </Carousel.Item>
             </Carousel>
             </Col>
-            <Col lg={8} className="mt-3">
+            <Col lg={8} md={8} className="mt-3">
             <Carousel>
               <Carousel.Item>
                 <img

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
-import { Col, Row } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import axios from "axios";
 import API from "../../../utils";
 function AddBlogs() {
@@ -267,10 +267,10 @@ function AddBlogs() {
   return (
     <>
       {/* <h3 className="mb-4">Add A New Blog</h3> */}
-      <form id="addBlogForm" onSubmit={handleAddBlogs}>
+      <Form id="addBlogForm" onSubmit={handleAddBlogs}>
         <Row className="mb-3">
           <Col lg={6}>
-            <input
+            <Form.Control
               className="sidebar-input"
               type="text"
               id="businessName"
@@ -319,7 +319,7 @@ function AddBlogs() {
         </Row>
         <Row className="mb-3">
           <Col lg={6}>
-            <input
+            <Form.Control
               className="sidebar-input"
               type="text"
               id="fullName"
@@ -336,7 +336,7 @@ function AddBlogs() {
             )}
           </Col>
           <Col lg={6}>
-            <input
+            <Form.Control
               className="sidebar-input"
               type="email"
               id="email"
@@ -357,7 +357,7 @@ function AddBlogs() {
         </Row>
         <Row className="mb-3">
           <Col lg={6}>
-            <input
+            <Form.Control
               className="sidebar-input"
               type="text"
               id="blogTitle"
@@ -374,7 +374,7 @@ function AddBlogs() {
             )}
           </Col>
           <Col lg={6}>
-            <input
+            <Form.Control
               className="sidebar-input"
               type="text"
               id="youtubeLink"
@@ -397,7 +397,7 @@ function AddBlogs() {
         <Row className=" mb-3">
 
           <Col lg={12}>
-            <input
+            <Form.Control
               className="sidebar-input"
               id="image"
               name="image"
@@ -430,7 +430,7 @@ function AddBlogs() {
         </div>
         <Row className="mb-3">
           <Col lg={6}>
-            <input className="sidebar-input" type="text" id="offerTitle" name="offerTitle" placeholder='Enter Offer Title' value={formData.offerTitle}
+            <Form.Control className="sidebar-input" type="text" id="offerTitle" name="offerTitle" placeholder='Enter Offer Title' value={formData.offerTitle}
               onChange={handleInputChange}/>
           </Col>
           <Col lg={6}>
@@ -456,7 +456,7 @@ function AddBlogs() {
         </Row>
         <Row>
           <Col lg={6}>
-            <input className="sidebar-input" type="text" id="phoneNumber" name="phoneNumber" placeholder='Phone Number' value={formData.phoneNumber}
+            <Form.Control className="sidebar-input" type="text" id="phoneNumber" name="phoneNumber" placeholder='Phone Number' value={formData.phoneNumber}
               onChange={handleInputChange}  />
             {/* {validationErrors.phoneNumber && (
               <div style={{ color: "red", textAlign: "left" }}>
@@ -465,7 +465,7 @@ function AddBlogs() {
             )} */}
           </Col>
           <Col lg={6}>
-            <input className="sidebar-input" type="text" id="link" name="link" placeholder='Enter The Link Where Client Can Redeem Your Offer' value={formData.link}
+            <Form.Control className="sidebar-input" type="text" id="link" name="link" placeholder='Enter The Link Where Client Can Redeem Your Offer' value={formData.link}
               onChange={handleInputChange}  />
             {/* {validationErrors.link && (
               <div style={{ color: "red", textAlign: "left" }}>
@@ -477,7 +477,7 @@ function AddBlogs() {
         <Row>
 
           <Col lg={6}>
-            <input className="sidebar-input" type="date" id="offerValidfrom" name="offerValidFrom" placeholder='Dates Offer Valid From' value={formData.offerValidFrom}
+            <Form.Control className="sidebar-input" type="date" id="offerValidfrom" name="offerValidFrom" placeholder='Dates Offer Valid From' value={formData.offerValidFrom}
               onChange={handleInputChange} />
             {/* {validationErrors.offerValidFrom && (
               <div style={{ color: "red", textAlign: "left" }}>
@@ -486,7 +486,7 @@ function AddBlogs() {
             )} */}
           </Col>
           <Col lg={6}>
-            <input className="sidebar-input"
+            <Form.Control className="sidebar-input"
               type="date"
               id="offerValidTo"
               name="offerValidTo"
@@ -521,7 +521,7 @@ function AddBlogs() {
         <div className="text-center">
           <p>Your article/views will stay on our Platform for unlimited period of time</p>
         </div>
-      </form>
+      </Form>
     </>
   );
 }

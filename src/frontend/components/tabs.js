@@ -16,12 +16,13 @@ function Tabs() {
     
    
       <div className="content tabcontainer">
-        <div>
-        <div className="text-start mb-4">
+      <div className="text-start mb-4">
 
 <h1 className="mb-3 text-white ">We inspire people to try something new, something different and sate their curiosity and thirst to explore the world.</h1>
 <h4 className="text-white">View some of our digital immersive campaigns below</h4>
    </div>
+      
+      
           <div className="w3-sidebar w3-bar-block  w3-card">
             <button className={`w3-bar-item w3-button tablink ${activeTab === 'Zoom' ? 'w3-red' : ''}`} onClick={() => openLink('Zoom')}><i className="fa fa-globe" aria-hidden="true"></i> Spain</button>
             <button className={`w3-bar-item w3-button tablink ${activeTab === 'Zoom2' ? 'w3-red' : ''}`} onClick={() => openLink('Zoom2')}><i className="fa fa-globe" aria-hidden="true"></i> Queensland</button>
@@ -44,7 +45,7 @@ function Tabs() {
               <iframe width="100%" height="315" src="https://www.youtube.com/embed/D0UnqGm_miA?si=PdW4fKdvAkI6E_Oc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
           </div>
-        </div>
+       
       </div>
      
     </section>

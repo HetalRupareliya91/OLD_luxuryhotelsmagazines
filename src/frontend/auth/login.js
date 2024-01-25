@@ -37,13 +37,10 @@ function Login() {
    };
 
    const handleLogin = async (e) => {
-
+      console.log("helloow")
       e.preventDefault();
-
-
       setEmailError("");
       setPasswordError("");
-      setUserNameError("");
 
       // Validation
       let isValid = true;
@@ -55,10 +52,7 @@ function Login() {
          setEmailError("Invalid email format");
          isValid = false;
       }
-      if (!userName) {
-         setUserNameError("Username is required");
-         isValid = false;
-      }
+    
 
       if (!password) {
          setPasswordError("Password is required");
@@ -86,7 +80,7 @@ function Login() {
             
             localStorage.setItem("token", response.data.token)
             localStorage.setItem('isLoggedIn', 'true');
-            navigate("/home");
+            navigate("/userprofile");
             console.log(response.data.message);
          } else {
             console.error("Login failed:");
@@ -136,16 +130,16 @@ function Login() {
                                  <input type="password" className="" name="Password" placeholder="Password " onChange={handleInputChange} style={{ borderColor: passwordError ? "red" : "" }} />
 
                               </div>
-                              <div className="text-end mb-3">
-                                 <a className="forgot-password" href="forgot-password">Forgot Password</a>
-                              </div>
                               {passwordError && (
                                  <div style={{ color: "red", textAlign: "left" }}>
                                     {passwordError}
                                  </div>
                               )}
-                              <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>
-                              <div className="footer_line mt-3">
+                              <div className="text-end mb-3">
+                                 <a className="forgot-password" href="forgot-password">Forgot Password</a>
+                              </div>
+                             
+                              <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>                              <div className="footer_line mt-3">
                               <h6 id="loginErrorMessage" style={{ color: "red" }}></h6>
                                  <h6>Don't have an account? <a className="page_move_btn" href="/signup"  >Sign up</a></h6>
                               </div>

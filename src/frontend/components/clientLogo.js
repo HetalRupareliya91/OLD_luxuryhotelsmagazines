@@ -3,35 +3,23 @@ import logo1 from "../../assets/img/whowithwork/withWorkImage1.webp";
 import logo2 from "../../assets/img/whowithwork/withWorkImage2.webp";
 import logo3 from "../../assets/img/whowithwork/withWorkImage3.webp";
 import logo4 from "../../assets/img/whowithwork/withWorkImage4.webp";
-// import logo5 from "../../assets/img/hero/logo5.png";
-
 
 function ClientLogo() {
+    // Duplicate logos to create an infinite loop
+    const logos = [logo1, logo2, logo3, logo4, logo1, logo2, logo3, logo4];
 
     return (
         <section className="spad clientlogosection">
-            <h1 className="text-center mb-5">Who We Work With
-</h1>
+            <h1 className="text-center mb-5">Who We Work With</h1>
             <div className="slider">
-                <div className="item"><a href=""><img alt="logo" src={logo1} /></a>
-                </div>
-                <div className="item"><a href=""><img alt="logo" src={logo2} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo3} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo4} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo1} /></a>
-                </div>
-                <div className="item"><a href=""><img alt="logo" src={logo2} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo3} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo4} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo1} /></a>
-                </div>
-                <div className="item"><a href=""><img alt="logo" src={logo2} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo3} /></a></div>
-                <div className="item"><a href=""><img alt="logo" src={logo4} /></a></div>
+                {logos.map((logo, index) => (
+                    <div className="item" key={index}>
+                        <a href=""><img alt="logo" src={logo} /></a>
+                    </div>
+                ))}
             </div>
         </section>
-
     );
 }
 
-export default ClientLogo
+export default ClientLogo;

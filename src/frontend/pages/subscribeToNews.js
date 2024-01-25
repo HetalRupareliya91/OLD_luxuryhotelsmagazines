@@ -41,7 +41,7 @@ function SubscribeToNews() {
 
                                     </Form.Control>
                                     <Row className="d-flex">
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Super Cars"
@@ -49,7 +49,7 @@ function SubscribeToNews() {
                                                 className="pe-4"
                                             />
                                         </Col>
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Boutiques & Jewellery"
@@ -57,7 +57,7 @@ function SubscribeToNews() {
                                                 className="pe-4"
                                             />
                                         </Col>
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Spa & Beauty"
@@ -67,7 +67,7 @@ function SubscribeToNews() {
                                         </Col>
 
 
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Hotels & Resorts"
@@ -75,7 +75,7 @@ function SubscribeToNews() {
                                                 className="pe-4"
                                             />
                                         </Col>
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Properties"
@@ -83,7 +83,7 @@ function SubscribeToNews() {
                                                 className="pe-4"
                                             />
                                         </Col>
-                                        <Col lg={6}>
+                                        <Col lg={6} md={6}>
                                             <Form.Check
                                                 type="checkbox"
                                                 label="Restaurants/Bars"
