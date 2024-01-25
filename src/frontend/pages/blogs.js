@@ -385,7 +385,7 @@ function Blogs (){
                     <div className="ri-text">
                       <h4>Symphony Style Hotel, Quorvus Collection</h4>
                       <p>Kuwait</p>
-                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                      <a href={`/hotel-details/9/kuwait/symphony-style-hotel`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>
@@ -398,7 +398,7 @@ function Blogs (){
                     <div className="ri-text">
                       <h4>Grand Hotel du Palais Royal</h4>
                       <p>Kuwait</p>
-                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                      <a href={`/hotel-details/9/kuwait/grand-hotel-du-palais-royal`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>
@@ -410,7 +410,7 @@ function Blogs (){
                     <div className="ri-text">
                       <h4>La Maison des Tetes - Relais & Chateaux</h4>
                       <p>Kuwait</p>
-                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                      <a href={`/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>

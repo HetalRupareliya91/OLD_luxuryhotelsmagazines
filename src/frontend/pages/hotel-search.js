@@ -7,15 +7,12 @@ import { Col, Container, Form, Image, Row } from 'react-bootstrap';
 import Rooms4 from "../../assets/img/room/room-4.jpg"
 import Rooms5 from "../../assets/img/room/room-5.jpg"
 import Rooms6 from "../../assets/img/room/room-6.jpg"
-import News5 from '../../assets/img/news5.jpg'
-import News6 from '../../assets/img/news6.jpg'
-import News7 from '../../assets/img/news7.jpg'
 import CallToAction from '../components/callToAction';
 import axios from 'axios';
 import API from '../../utils';
 import { FaSearch } from 'react-icons/fa';
 
-function Rooms(){
+function HotelSearch(){
 
    const [hotelName, setHotelName] = useState('');
 
@@ -374,38 +371,38 @@ function Rooms(){
         <Row >
            
               <Col lg={4} md={6}  >
-                <a href="/room-details/">
+                <a href="/hotel-details/9/kuwait/symphony-style-hotel">
                   <div className="room-item">
                     <img src={Rooms4} alt="" />
                     <div className="ri-text">
                       <h4>Symphony Style Hotel, Quorvus Collection</h4>
                       <p>Kuwait</p>
-                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                      <a href={`/hotel-details/9/kuwait/symphony-style-hotel`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>
               </Col>
           
               <Col lg={4} md={6}  >
-                <a href="/room-details/">
+                <a href="/hotel-details/9/kuwait/grand-hotel-du-palais-royal">
                   <div className="room-item">
                     <img src={Rooms6} alt="" />
                     <div className="ri-text">
                       <h4>Grand Hotel du Palais Royal</h4>
                       <p>Kuwait</p>
-                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                      <a href={`/hotel-details/9/kuwait/grand-hotel-du-palais-royal`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>
               </Col>
               <Col lg={4} md={6}  >
-                <a href="/room-details/">
+                <a href="/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux">
                   <div className="room-item">
                     <img src={Rooms5} alt="" />
                     <div className="ri-text">
                       <h4>La Maison des Tetes - Relais & Chateaux</h4>
                       <p>Kuwait</p>
-                      <a href={`/room-details/`} className="primary-btn">More Details</a>
+                      <a href={`/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux`} className="primary-btn">More Details</a>
                     </div>
                   </div>
                 </a>
@@ -419,4 +416,4 @@ function Rooms(){
  </>
     );
 }
-export default Rooms;
+export default HotelSearch;

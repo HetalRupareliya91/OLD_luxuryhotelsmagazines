@@ -28,7 +28,7 @@ function Header() {
          <i className="icon_search"></i>
       </div>
       <div className="header-configure-area">
-         <a href="/rooms" className="bk-btn">Find Hotels</a>
+         <a href="/hotel-search" className="bk-btn">Find Hotels</a>
       </div>
       <nav className="mainmenu mobile-menu">
          <ul> 
@@ -69,7 +69,7 @@ function Header() {
                 <a href="https://www.instagram.com/luxuryhotelsbrand/"><FaInstagram/></a>
                 <a href='https://www.youtube.com/channel/UCxV4ClKpFA95eU-4c8sN3Tg'><FaYoutube/></a>
                 </div>
-                <a href="/rooms" className="bk-btn">Find Hotels</a>
+                <a href="/hotel-search" className="bk-btn">Find Hotels</a>
               </div>
             </Col>
           </Row>
@@ -92,7 +92,7 @@ function Header() {
                                  <li className="active"><a href="/">Home</a></li>
 
                                  <li>
-                                    <a href="/rooms">Luxury Hotels/Resorts</a>
+                                    <a href="/hotel-search">Luxury Hotels/Resorts</a>
                                    
                                  </li>
                                  <li><a href="/userprofile">List Your Hotels</a></li>

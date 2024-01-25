@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import IndexPage from ".";
 import Blogs from "./pages/blogs";
 import BlogDetails from "./pages/blogDetails";
-import Rooms from "./pages/rooms";
+import Rooms from "./pages/hotel-search";
 import Login from "./auth/login";
 import Signup from "./auth/signup";
 import UserProfile from "./pages/userProfile";
@@ -38,8 +38,8 @@ function RoutesPage() {
       <Route exact path="/home" element={<IndexPage />} />
       <Route exact path="/blogs" element={<Blogs />} />
       <Route exact path="/Blog-details/" element={<BlogDetails />} />
-      <Route exact path="/rooms" element={<Rooms />} />
-      <Route exact path="/room-details/" element={<RoomDetails />} />
+      <Route exact path="/hotel-search" element={<Rooms />} />
+      <Route exact path="/hotel-details/:hotelId/:country/:hotelname" element={<RoomDetails />} />
       <Route exact path="/Login" element={<Login />} />
       <Route exact path="/signup" element={<Signup />} />
       <Route exact path="/userprofile" element={<UserProfile />} />

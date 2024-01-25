@@ -69,7 +69,7 @@ function AllHotels(){
   
   //     if (roomData.status === true) {
        
-  //       history.push(`/room-details/${hotel.id}`);
+  //       history.push(`/hotel-details/${hotel.id}`);
   //     } else {
   //       console.error("Failed to fetch room details");
   //     }
@@ -80,7 +80,7 @@ function AllHotels(){
   const [showEditModal, setShowEditModal] = useState(false);
   const handleViewButtonClick = (news) => {
     // Navigate to the room-details page with the news id in the URL
-    navigate(`/room-details/${news.id}`);
+    navigate(`/hotel-details/${news.id}/kuwait/la-maison-des-tetes-relais-chateaux`);
   };
 
   const handleEditModal = (id) => {
