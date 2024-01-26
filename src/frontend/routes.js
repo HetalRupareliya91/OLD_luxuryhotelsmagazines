@@ -29,6 +29,7 @@ import PublishAnimatedBanner from "./pages/publishAnimatedBanner";
 import PublishHotelNews from "./pages/publishHotelNews";
 import KitDetail from "./pages/kitDetail";
 import ForgotPassword from "./pages/forgotPassword";
+import EditHotel from "./pages/editHotel";
 
 
 function RoutesPage() {
@@ -36,7 +37,7 @@ function RoutesPage() {
     <Routes>
       <Route exact path="/" element={<IndexPage />} />
       <Route exact path="/home" element={<IndexPage />} />
-      <Route exact path="/blogs" element={<Blogs />} />
+      <Route exact path="/news-search" element={<Blogs />} />
       <Route exact path="/Blog-details/" element={<BlogDetails />} />
       <Route exact path="/hotel-search" element={<Rooms />} />
       <Route exact path="/hotel-details/:hotelId/:country/:hotelname" element={<RoomDetails />} />
@@ -64,6 +65,7 @@ function RoutesPage() {
       <Route exact path="/publish-hotel-news" element={<PublishHotelNews />} />
       <Route exact path="/kit-detail" element={<KitDetail />} />
       <Route exact path="/forgot-password" element={<ForgotPassword />} />
+      <Route exact path="/edit-hotel-profile" element={<EditHotel />} />
     </Routes>
   );
 }

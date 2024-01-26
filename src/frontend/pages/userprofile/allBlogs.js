@@ -130,7 +130,7 @@ function AllBlogs() {
   };
   return (
     <>
-     <Row className='hotel-profile-div mt-4' >
+     {/* <Row className='hotel-profile-div mt-4' >
           <Col lg={4}>
             <div className='image-div'>
               <Image src={News1} />
@@ -193,12 +193,12 @@ function AllBlogs() {
               </Row>
             </div>
           </Col>
-        </Row>
-      {/* {currentPosts.map((news) => (
+        </Row> */}
+    {currentPosts.map((news) => (
         <Row className='hotel-profile-div mt-4' key={news.id}>
           <Col lg={4}>
             <div className='image-div'>
-              <Image src={news.fullImagePath} alt={news.news_title} />
+              <Image src={News1} alt={news.news_title} />
             </div>
           </Col>
           <Col lg={8}>
@@ -226,7 +226,7 @@ function AllBlogs() {
           </Col>
         </Row>
       ))}
-       */}
+     
       <div className="col-lg-12">
         <div className="room-pagination">
           {apiData.length > postsPerPage &&

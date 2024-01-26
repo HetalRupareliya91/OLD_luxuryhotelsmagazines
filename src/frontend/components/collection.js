@@ -16,7 +16,7 @@ function Collections() {
                    <figure>
                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><a href='/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux' className="readmore">Read More</a></div>
                          <Image src={News4}/>
                       </div>
                    </figure>
@@ -26,7 +26,7 @@ function Collections() {
                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                      
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><a href='/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux' className="readmore">Read More</a></div>
                          <Image src={News5}/>
                       </div>
                    </figure>
@@ -35,7 +35,7 @@ function Collections() {
                    <figure>
                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><a href='/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux' className="readmore">Read More</a></div>
                          <Image src={News6}/>
                       </div>
                    </figure>
@@ -44,7 +44,7 @@ function Collections() {
                    <figure>
                        <div className="img-dec">Jumeirah Al Qasr Hotel, Dubai</div>
                       <div className="thumbnail">
-                         <div><button className="readmore">Read More</button></div>
+                         <div><a href='/hotel-details/9/kuwait/la-maison-des-tetes-relais-chateaux' className="readmore">Read More</a></div>
                          <Image src={News7}/>
                       </div>
                    </figure>

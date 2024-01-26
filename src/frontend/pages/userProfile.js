@@ -23,7 +23,7 @@ import { FaBlog, FaHotel, FaPowerOff, FaUser } from 'react-icons/fa';
 
 
 function UserProfile() {
-  const [currentSection, setCurrentSection] = useState('myHotels');
+  const [currentSection, setCurrentSection] = useState('myProfile');
   const showSection = (section) => {
     setCurrentSection(section);
   };
@@ -266,11 +266,7 @@ function UserProfile() {
                             <h6 className="m-0">Amount :</h6>
                             <b><span className="text-dark"><i className="fa fa-eur" aria-hidden="true"></i>399</span></b>
                           </li>
-                          {/* <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap px-2">
-                           <h6 className="m-0">Expiry Date :</h6>
-                           <b><span className="text-dark">31/12/2024</span></b>
-                        </li> */}
-
+                         
                         </ul>
 
                       </div>

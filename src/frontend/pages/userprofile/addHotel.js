@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Form, Image, Nav, ProgressBar, Row } from 'react-bootstrap';
 import API from "../../../utils";
-import { EditorState } from 'draft-js';
+import { EditorState ,convertToRaw} from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import { stateToHTML } from 'draft-js-export-html';
 
 function AddHotel() {
     const [hotelEditorState, setHotelEditorState] = useState(EditorState.createEmpty());
@@ -17,38 +18,89 @@ function AddHotel() {
     const [descriptionEditorState, setDescriptionEditorState] = useState(EditorState.createEmpty());
     // const [blogEditorState, setBlogEditorState] = useState(EditorState.createEmpty());
     const [currentStep, setCurrentStep] = useState(1);
-    const handleHotelEditorChange = (editorState) => {
-        setHotelEditorState(editorState);
-    };
+   
 
+
+    
+  const handleHotelEditorChange = (editorState) => {
+    setHotelEditorState(editorState);
+    const contentState = editorState.getCurrentContent();
+    const htmlContent = stateToHTML(contentState);
+    setFormData({
+      ...formData,
+      aboutHotel: htmlContent,
+    //   aboutHotel: JSON.stringify(contentRaw),
+    });
+  };
     const handlelocationEditorChange = (editorState) => {
         setlocationEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          location:  htmlContent,
+        });
     };
 
     const handleroomsAndSuitesEditorState = (editorState) => {
         setroomsAndSuitesEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          roomsAndSuites: htmlContent,
+        });
     };
 
     const handlerestaurentsEditorState = (editorState) => {
         setrestaurentsEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          restaurantsAndBars: htmlContent,
+        });
     };
     const handlespaAndWellnessEditorState = (editorState) => {
         setSpaAndWellnessEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          spaAndWellness: htmlContent,
+        });
     };
     const handleOtherFacilitiesEditorChange = (editorState) => {
         setOtherFacilitiesEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          otherFacilities: htmlContent,
+        });
     };
     const handleAdditionalInformationEditorChange = (editorState) => {
         setAdditionalInformationEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          additionalInformation: htmlContent,
+        });
     };
 
 
     const handleDescriptionEditorState = (editorState) => {
         setDescriptionEditorState(editorState);
+        const contentState = editorState.getCurrentContent();
+        const htmlContent = stateToHTML(contentState);
+        setFormData({
+          ...formData,
+          description: htmlContent,
+        });
     };
     const [image, setImage] = useState(null)
 
-    const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         hotelName: "",
         hotelWebsite: "",
@@ -66,9 +118,12 @@ function AddHotel() {
         numberOfRestaurants: "",
         outdoorSwimmingPool: "",
         bars: "",
-        amenitiesList: ["WiFi", "Parking"],
+        amenitiesList: [],
         otherInformation1: "",
         otherInformation2: "",
+
+        otherInformation3: "",
+        otherInformation4: "",
         contact1: { name: "", email: "", contactInformation: "" },
         contact2: { name: "", email: "", contactInformation: "" },
         contact3: { name: "", email: "", contactInformation: "" },
@@ -132,14 +187,6 @@ function AddHotel() {
         }));
     };
 
-    // const nextStep = () => {
-    //     setStep(step + 1);
-    // };
-
-    // const prevStep = () => {
-    //     setStep(step - 1);
-
-    // };
 
     const handleCreateHotel = async (e) => {
         const token = localStorage.getItem("token");
@@ -165,6 +212,9 @@ function AddHotel() {
         formDataObject.append('email', "rohit@gmail.com");
         formDataObject.append('otherInformation1', formData.otherInformation1);
         formDataObject.append('otherInformation2', formData.otherInformation2);
+        formDataObject.append('otherInformation3', formData.otherInformation3);
+        formDataObject.append('otherInformation4', formData.otherInformation4);
+
         formDataObject.append('type', 2);
         // Adding contact objects
         for (let i = 1; i <= 3; i++) {
@@ -183,7 +233,7 @@ function AddHotel() {
         formDataObject.append('hotel_latest_news', formData.addHotelToHomePageHotelLatestNews);
         formDataObject.append('special_offer_to_homepage', formData.addSpecialOfferToHomepage);
         formDataObject.append('home_page_spotlight', formData.addHotelToHomePageSpotlight);
-        const amenities = [];
+      
         for (const amenity of formData.amenitiesList) {
             // formDataObject.append(`amities[${amenity.id}]`, amenity.checked || false);
         }
@@ -219,10 +269,11 @@ function AddHotel() {
     };
 
     const fetchAmenities = async () => {
+        const token = localStorage.getItem("token");
         try {
             const response = await axios.get(`${API.BASE_URL}${API.ENDPOINTS.allHotelAmenities}`, {
                 headers: {
-                    'Authorization': 'hXuRUGsEGuhGf6KM',
+                    "Authorization": "Bearer " + token,
                 },
             });
             const data = response.data;
@@ -250,11 +301,15 @@ function AddHotel() {
     const [progress, setProgress] = useState(0);
 
     const nextStep = async (e) => {
-      if (currentStep < 4) {
+
+        // if(validationErrors){
+        //     handleValidation()
+        // }
+        // else if (currentStep < 4) {
         setCurrentStep((prevStep) => prevStep + 1);
         const newProgress = ((currentStep + 1) / 4) * 100;
         setProgress(newProgress);
-      }
+    //   }
     };
     
     const prevStep = () => {
@@ -287,6 +342,7 @@ function AddHotel() {
                 <Row className=" mb-3">
 
                     <Col lg={6}>
+                    <Form.Label>  Hotel Name </Form.Label>
                         <Form.Control className="sidebar-input"
                             type="text"
                             id="hotelName"
@@ -294,19 +350,28 @@ function AddHotel() {
                             placeholder="Hotel Name"
                             required
                             value={formData.hotelName}
-                            onChange={handleInputChange} />
+                            onChange={handleInputChange} 
+                            
+                            />
+                           
+           
                     </Col>
+                    
 
                     <Col lg={6}>
+                    <Form.Label>  Hotel Website </Form.Label>
                         <Form.Control className="sidebar-input" type="text" id="hotelWebsite" name="hotelWebsite" placeholder="Hotel Website" required value={formData.hotelWebsite}
                             onChange={handleInputChange} />
+
                     </Col>
                     <Col lg={6}>
+                    <Form.Label>Youtube Link </Form.Label>
                         <Form.Control className="sidebar-input" type="text" id="youtubeLink" name="youtubeLink" placeholder="Youtube Link" value={formData.youtubeLink}
                             onChange={handleInputChange} />
                     </Col>
 
                     <Col lg={6}>
+                    <Form.Label>Name Of Country</Form.Label>
                         <div className="select-option">
                             <select id="country"
                                 name="country" className="sidebar-input" value={formData.country}
@@ -650,9 +715,7 @@ function AddHotel() {
                             </Form.Group>
                         </Col>
                 </Row>
-                {/* <Row className="mb-3">
-                    
-                </Row> */}
+               
 
 
              
@@ -666,15 +729,16 @@ function AddHotel() {
                             onChange={handleInputChange} />
                     </Col>
                     <Col lg={3}>
-                        <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
+                        <input className="sidebar-input" type="text" id="otherInformation3" name="otherInformation3" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation3}
                             onChange={handleInputChange} />
                     </Col>
                     <Col lg={3}>
-                        <input className="sidebar-input" type="text" id="otherInformation2" name="otherInformation2" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation2}
+                        <input className="sidebar-input" type="text" id="otherInformation4" name="otherInformation4" placeholder="Other Information (40 Characters Maximum)" value={formData.otherInformation4}
                             onChange={handleInputChange} />
                     </Col>
                 </Row>
-                <div className="text-end">                <button onClick={nextStep} >
+                <div className="text-end">                
+                <button onClick={nextStep} >
                     next
                 </button>
                 </div>

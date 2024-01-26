@@ -2,54 +2,80 @@ import React, { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import API from '../../utils';
 import axios from 'axios';
- function Search(){
+
+function Search() {
+   const [searchResults, setSearchResults] = useState([]);
    const [hotelName, setHotelName] = useState('');
-  const [country, setCountry] = useState('');
-  const formData = {
-   
-   hotel_keyword: hotelName,
-   country:country
-  }
-
-  const handleSearch = async (e) => {
-   e.preventDefault();
-   try {
-      const response = await axios.post(
+   const [country, setCountry] = useState('');
+ 
+   const handleSearch = async () => {
+     try {
+       const response = await axios.post(
          `${API.BASE_URL}${API.ENDPOINTS.hotelSearch}`,
-         JSON.stringify(formData),
          {
-            headers: {
-               Authorization: "hXuRUGsEGuhGf6KM",
-            },
+           hotel_keyword: hotelName,
+           country: country,
+         },
+         {
+           headers: {
+             Authorization: "hXuRUGsEGuhGf6KM",
+           },
          }
-      );
-
-      if (response.data.status === true) {
-         
-      } else {
-         console.error("seach failed:");
-      }
-   } catch (error) {
-      console.error("Error:", error.message);
-   }
-};
-    return(
-        <section>
-        <Container >
-           <div className="booking-form">
-              <Form action="#">
-                 <Row >
-                    <Col lg={5} >
-                       <div className="check-date">
-                          <input type="text" placeholder="Enter Hotel Name" value={hotelName}
-                    onChange={(e) => setHotelName(e.target.value)}/>
-                          <i className="fa fa-building" aria-hidden="true"></i>
-                       </div>
-                    </Col>
-                    <Col lg={5} >
-                       <div className="select-option">
-                          <select className='select-id' value={country}
-                    onChange={(e) => setCountry(e.target.value)}>
+       );
+ 
+       if (response.status === 200) {
+         setSearchResults(response.data.hotel_data);
+       } else {
+         console.error("Search failed:", response.status);
+       }
+     } catch (error) {
+       console.error("Error:", error.message);
+     }
+   };
+ 
+   const handleHotelNameChange = async (e) => {
+     setHotelName(e.target.value);
+ 
+     // Make the API call when the user types each letter in the hotel name
+     await handleSearch();
+   };
+ 
+   return (
+     <section>
+       <Container>
+         <div className="booking-form">
+           <Form action="#">
+             <Row>
+               <Col lg={5}>
+                 <div className="check-date">
+                   <input
+                     type="text"
+                     placeholder="Enter Hotel Name"
+                     value={hotelName}
+                     onChange={handleHotelNameChange}
+                   />
+                   <i className="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                 {searchResults.length > 0 && searchResults !== 'undefined' && (
+                   <div className="search-results autocom-box ">
+                     {/* <h2>Search Results:</h2> */}
+                     <ul>
+                       {searchResults.map((result) => (
+                         <li key={result.id}>{result.hotel_title}</li>
+                         // Add other properties as needed
+                       ))}
+                     </ul>
+                   </div>
+                 )}
+               </Col>
+ 
+               <Col lg={5}>
+                 <div className="select-option">
+                   <select
+                     className="select-id"
+                     value={country}
+                     onChange={(e) => setCountry(e.target.value)}
+                   >
                              <option value="Afghanistan">Country</option>
                              <option value="Afghanistan">Afghanistan</option>
                              <option value="Åland Islands">Åland Islands</option>
@@ -234,12 +260,15 @@ import axios from 'axios';
                           </select>
                        </div>
                     </Col>
-                    <Col lg={2} >
-                       <button type="submit" onClick={handleSearch}>Check Availability</button>
-                    </Col>
+                    <Col lg={2}>
+                <button type="button" onClick={handleSearch}>
+                  Check Availability
+                </button>
+              </Col>
                  </Row>
               </Form>
            </div>
+         
         </Container>
      </section>
     );

@@ -34,10 +34,10 @@ function Header() {
          <ul> 
             <li className="active"><a href="/">Home</a></li>
             <li>
-               <a href="/">Luxury Hotels/Resorts</a>
+               <a href="/hotel-search">Luxury Hotels/Resorts</a>
             </li>
-            <li><a href="/hotel-search">List Your Hotels</a></li>
-            <li><a href="/userprofile">Publish Hotel News</a></li>
+            <li><a href="/userprofile">List Your Hotels</a></li>
+            <li><a href="/news-search">Publish Hotel News</a></li>
             <li><a href="/contact-us">Contact</a></li>
          </ul>
       </nav>
@@ -98,7 +98,7 @@ function Header() {
                                  <li><a href="/userprofile">List Your Hotels</a></li>
 
                                  <li>
-                                    <a href="/blogs">Publish Hotel News</a>
+                                    <a href="/news-search">Publish Hotel News</a>
                                   
                                  </li>
                                

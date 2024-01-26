@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import { Col, Form, Row } from "react-bootstrap";
+import { stateToHTML } from 'draft-js-export-html';
 import axios from "axios";
 import API from "../../../utils";
 function AddBlogs() {
@@ -66,13 +67,20 @@ function AddBlogs() {
     image: [],
     hotelDescription: '',
     offerTitle: '',
-    offerCountry: '',
+    contactPhoneNumber: '',
     phoneNumber: '',
     link: '',
     offerValidTo: '',
     offerValidFrom: '',
     blogContent: '',
     user_id: 2,
+    status:"1",
+    catagory:"DGFGYUGFU",
+    editor_choice:"fgufg",
+    news_views:"fdhjgffbjhfbf",
+    news_likes:"fifhisfghkjfghf",
+    hotelDescriptionHTML: '', // add this line
+  blogContentHTML: '',
   });
 
   const [validationErrors, setValidationErrors] = useState({
@@ -85,36 +93,36 @@ function AddBlogs() {
     image: "",
     offerTitle: "",
     phoneNumber: "",
-    offercountry: "",
+    contactPhoneNumber: "",
     link: "",
     offerValidFrom: "",
     offerValidTo: "",
+    
   });
-
 
 
   const handleHotelEditorChange = (editorState) => {
     setHotelEditorState(editorState);
     const contentState = editorState.getCurrentContent();
-    const contentRaw = convertToRaw(contentState);
+    const htmlContent = stateToHTML(contentState);
     setFormData({
       ...formData,
-      hotelDescription: JSON.stringify(contentRaw),
+      hotelDescriptionHTML: htmlContent,
     });
   };
 
   const handleOfferEditorChange = (editorState) => {
     setBlogEditorState(editorState);
     const contentState = editorState.getCurrentContent();
-    const contentRaw = convertToRaw(contentState);
+    const htmlContent = stateToHTML(contentState);
     setFormData({
       ...formData,
-      blogContent: JSON.stringify(contentRaw),
+      blogContentHTML: htmlContent,
     });
   };
 
-
   const handleAddBlogs = async (e) => {
+    const token = localStorage.getItem("token");
     e.preventDefault();
 
     const formDatas = new FormData();
@@ -125,22 +133,29 @@ function AddBlogs() {
     formDatas.append('news_title', formData.blogTitle);
     formDatas.append('youtube_link', formData.youtubeLink);
     formDatas.append('news_image', image);
-    formDatas.append('news_desc', formData.hotelDescription);
+    formDatas.append('news_desc', formData.hotelDescriptionHTML);
     formDatas.append('offer_title', formData.offerTitle);
-    formDatas.append('offerCountry', formData.offerCountry);
-    formDatas.append('contact_no', formData.phoneNumber);
+    // formDatas.append('offerCountry', formData.offerCountry);
+    formDatas.append('contact_no', formData.contactPhoneNumber);
+    formDatas.append('phone_number', formData.phoneNumber);
+
     formDatas.append('redeem_link', formData.link);
     formDatas.append('from_date', formData.offerValidFrom);
     formDatas.append('to_date', formData.offerValidTo);
-    formDatas.append('description', formData.blogContent);
+    formDatas.append('description', formData.blogContentHTML);
     formDatas.append('user_id', formData.user_id);
+    formDatas.append('status', formData.status);
+    formDatas.append('catagory', formData.catagory);
+    formDatas.append('editor_choice', formData.editor_choice);
+    formDatas.append('news_likes', formData.news_likes);
+    formDatas.append('news_views', formData.news_views);
     try {
       const response = await axios.post(
         `${API.BASE_URL}${API.ENDPOINTS.createNews}`,
         formDatas,
         {
           headers: {
-            "Authorization": "hXuRUGsEGuhGf6KM",
+            "Authorization": "Bearer " + token,
             'Content-Type': 'multipart/form-data',
           },
         }
@@ -193,7 +208,7 @@ function AddBlogs() {
 
     // Validate blogTitle
     if (!formData.blogTitle) {
-      newErrors.blogTitle = "blogTitle is required";
+      newErrors.blogTitle = "News Title is required";
       isValid = false;
     } else {
       newErrors.blogTitle = "";
@@ -208,7 +223,7 @@ function AddBlogs() {
     }
 
 
-    if (!formData.image) {
+    if (!image) {
       newErrors.image = "Image is required";
       isValid = false;
     } else {
@@ -419,7 +434,7 @@ function AddBlogs() {
             <Editor
               editorState={hotelEditorState}
               onEditorStateChange={handleHotelEditorChange}
-              value={formData.hotelDescription}
+              value={formData.hotelDescriptionHTML}
               onChange={handleInputChange}
             />
           </Col>
@@ -435,11 +450,11 @@ function AddBlogs() {
           </Col>
           <Col lg={6}>
             <div className="select-option">
-              <select id="country" name="country" value={formData.country}
+              <select id="country" name="contactPhoneNumber" value={formData.contactPhoneNumber}
                 onChange={handleInputChange} className="sidebar-input" >
-                <option value="Kyrgyzstan">Name Of Country</option>
-                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                <option value="Kyrgyzstan">select Country</option>
+                <option value="Kyrgyzstan">Kyrgyzstan(12)</option>
+                <option value="Lao People's Democratic Republic">Lao People's Democratic Republic(27)</option>
                 <option value="Latvia">Latvia</option>
                 <option value="Lebanon">Lebanon</option>
                 <option value="Lesotho">Lesotho</option>
@@ -507,7 +522,7 @@ function AddBlogs() {
             <Editor
               editorState={blogEditorState}
               onEditorStateChange={handleOfferEditorChange}
-              value={formData.blogContent}
+              value={formData.blogContentHTML}
               onChange={handleInputChange}
             />       
             </Col>
