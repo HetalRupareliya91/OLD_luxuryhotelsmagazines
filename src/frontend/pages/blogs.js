@@ -81,8 +81,7 @@ function Blogs (){
      
  <h1 className="text-center mt-5">Our News</h1>
             <Row >
-            <Col lg={6} ><h6 style={{lineHeight: "4",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results
-  Default sorting</h6>
+            <Col lg={6} ><h6 style={{lineHeight: "4",marginRight: "6px"}} className='m-0'>Showing 1–12 of 33 results Default sorting</h6>
    </Col>
          
         </Row>

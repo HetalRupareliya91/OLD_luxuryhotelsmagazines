@@ -79,7 +79,7 @@ function AddBlogs() {
     editor_choice:"fgufg",
     news_views:"fdhjgffbjhfbf",
     news_likes:"fifhisfghkjfghf",
-    hotelDescriptionHTML: '', // add this line
+    hotelDescriptionHTML: '', 
   blogContentHTML: '',
   });
 

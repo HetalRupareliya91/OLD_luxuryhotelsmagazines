@@ -19,7 +19,7 @@ import AddBlogs from './userprofile/addBlogs';
 import AddHotel from './userprofile/addHotel';
 import { isUserLoggedIn } from '../../utils';
 import { useNavigate } from 'react-router-dom';
-import { FaBlog, FaHotel, FaPowerOff, FaUser } from 'react-icons/fa';
+import { FaBlog, FaDollarSign, FaHotel, FaPowerOff, FaUser } from 'react-icons/fa';
 
 
 function UserProfile() {
@@ -31,12 +31,12 @@ function UserProfile() {
 
 
 
-  useEffect(() => {
-    if (!isUserLoggedIn()) {
-      navigate("/login")
-      return;
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!isUserLoggedIn()) {
+  //     navigate("/login")
+  //     return;
+  //   }
+  // }, []);
 
   const ClearUserDataFromLocalStorage = () => {
     localStorage.removeItem("isLoggedIn");
@@ -99,9 +99,7 @@ function UserProfile() {
                       }`}
                     onClick={ClearUserDataFromLocalStorage}
 
-                  >
-
-<FaPowerOff/>
+                  >s<FaPowerOff/>
                     Logout
                   </a>
                 </NavItem>
@@ -214,7 +212,7 @@ function UserProfile() {
                         </div>
                         <Row className=" mb-3">
                           <Col sm={3}>
-                            <h6 className="mb-0">Paaword</h6>
+                            <h6 className="mb-0">Password</h6>
                           </Col>
                           <Col sm={9} className="text-secondary">
                             <input type="password" className="sidebar-input" value="(239) 816-9029" />
@@ -244,12 +242,13 @@ function UserProfile() {
                           </li>
                           <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap px-2">
                             <h6 className="m-0">Amount:</h6>
-                            <b><span className="">199</span></b>
+                            <b><span className=""><FaDollarSign className='m-0'/>199</span></b>
                           </li>
                           <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap px-2">
                             <h6 className="m-0">Expiry Date :</h6>
                             <b><span className="">31/12/2024</span></b>
                           </li>
+
 
                         </ul>
 

@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import Header from "../components/header";
 import axios from "axios";
-import API from "../../utils";
+import API, { isUserLoggedIn } from "../../utils";
 import { useNavigate } from "react-router-dom"; 
 function Login() {
 
@@ -92,6 +92,8 @@ function Login() {
       }
    };
 
+   const isLoggedIn = localStorage.getItem('isLoggedIn');
+   
    return (
       <>
          <Header />
@@ -138,8 +140,16 @@ function Login() {
                               <div className="text-end mb-3">
                                  <a className="forgot-password" href="forgot-password">Forgot Password</a>
                               </div>
-                             
-                              <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>                              <div className="footer_line mt-3">
+                              {isLoggedIn ?(
+                                                  <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log Out</button>                          
+
+                              ):(
+
+                              
+                              <button type="submit" name="user_login_submit" className="auth_btn" onClick={handleLogin}>Log in</button>                          
+                                 
+                              )}
+                                 <div className="footer_line mt-3">
                               <h6 id="loginErrorMessage" style={{ color: "red" }}></h6>
                                  <h6>Don't have an account? <a className="page_move_btn" href="/signup"  >Sign up</a></h6>
                               </div>
