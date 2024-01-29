@@ -441,7 +441,7 @@ function AddBlogs() {
         </Row>
 
         <div className='text-center mb-3'>
-          <h5>YOU CAN ADD A “SPECIAL OFFER” HERE. (*non-obligatory) Offer Title</h5>
+          <h5>YOU CAN ADD A “SPECIAL OFFER” HERE. (*non-obligatory)</h5>
         </div>
         <Row className="mb-3">
           <Col lg={6}>
@@ -452,7 +452,7 @@ function AddBlogs() {
             <div className="select-option">
               <select id="country" name="contactPhoneNumber" value={formData.contactPhoneNumber}
                 onChange={handleInputChange} className="sidebar-input" >
-                <option value="Kyrgyzstan">select Country</option>
+                <option value="Kyrgyzstan">Select Country</option>
                 <option value="Kyrgyzstan">Kyrgyzstan(12)</option>
                 <option value="Lao People's Democratic Republic">Lao People's Democratic Republic(27)</option>
                 <option value="Latvia">Latvia</option>

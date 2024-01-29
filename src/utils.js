@@ -20,7 +20,10 @@ const API = {
       allMagazines:"all-hotel-magazines",
       viewNews:"views-news",
       editHotel:"edit-hotels",
-      upateHotels:"update-hotels"
+      upateHotels:"update-hotels",
+      forgetPassword:"forgot-password/HiXZ8jBFc46k",
+      varifyOtp:"verify_otp",
+      resendPassword:"resend_password"
       },
     }; 
 

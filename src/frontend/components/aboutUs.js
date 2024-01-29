@@ -129,22 +129,19 @@ function AboutUs() {
                         
                      </div>
                   </Col>
-                  <Col lg={6}>
-                     <div className="about-pic">
-                        <div className="row">
-                           <div className="col-sm-6 col-6">
-                              <Image src={about1} alt=""/>
-                           </div>
-                           <div className="col-sm-6 col-6">
-                              <Image src={about2}alt=""/>
-                           </div>
-                        </div>
-                     </div>
+                  <Col lg={6} className="aboutus-section-present">
+                    <div className="text-center">
+                    <Image src={Logo}/>
+                    </div>
+                
+                          <div className='text-center mt-4'>
+                          <h4 >PRESENTS</h4>
+                          </div>
                   </Col>
                </Row>
 
 
-               <Row className=" aboutus-section-present mobile-view">
+               {/* <Row className=" aboutus-section-present mobile-view">
                            <Col className='videos-content-present text-center'>
                           <Image src={Logo}/>
                           <div className='mt-4'>
@@ -153,7 +150,7 @@ function AboutUs() {
                            </Col>
                          
                        
-                     </Row>
+                     </Row> */}
           {/* <Row>
             <Col lg={6}>
               <div className='text-div'>

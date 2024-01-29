@@ -18,21 +18,23 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { GeoAltFill } from "react-bootstrap-icons";
 function RoomDetails() {
-    const { news_id } = useParams();
-    console.log(news_id);
+    const { hotelId } = useParams();
+    console.log(hotelId);
 
     const [postData, setPostData] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
+
+            const token = localStorage.getItem("token");
             try {
                 // Make a POST request with the id
                 const response = await axios.post(
                     `${API.BASE_URL}${API.ENDPOINTS.editHotel}`,
-                    { news_id: news_id },
+                    { hotel_id: hotelId },
                     {
                         headers: {
-                            Authorization: 'hXuRUGsEGuhGf6KM',
+                            "Authorization": "Bearer " + token,
                         },
                     }
                 );
@@ -49,10 +51,10 @@ function RoomDetails() {
             }
         };
 
-        if (news_id) {
+        if (hotelId) {
             fetchData();
         }
-    }, [news_id]);
+    }, [hotelId]);
     return (
         <><Header />
             <section className="room-details-section spad">
@@ -413,9 +415,9 @@ function RoomDetails() {
                                 <Row>
                                     <Col lg={4}>
                                         <div className="card">
-                                            <img className="card-img-top" src={News5} alt="Card image cap" />
+                                            <Image className="card-img-top" src={News5} alt="Card image cap" />
                                             <div className="card-body">
-                                                <h5 className="card-title">Hotel Taj</h5>
+                                                <h5 className="card-title">Londa Residences Cyprus</h5>
                                                 <h6 className="card-title">India</h6>
                                                 <p className="card-text">7.8/10 (Good)</p>
                                                 <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>

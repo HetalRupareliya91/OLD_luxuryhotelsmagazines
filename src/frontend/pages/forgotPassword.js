@@ -5,26 +5,81 @@ import bg2 from "../../assets/img/magazines/bg4.jpg";
 import { Parallax } from "react-parallax";
 import { FaAngleRight } from "react-icons/fa";
 import Footer from "../components/footer";
+import axios from "axios";
+import API from "../../utils";
+
 
 function ForgotPassword() {
     const [showEmailForm, setShowEmailForm] = useState(true);
+    const [userId, setUserId] = useState(null);
     const [showOTPForm, setShowOTPForm] = useState(false);
     const [showPasswordForm, setShowPasswordForm] = useState(false);
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [otpInputs, setOtpInputs] = useState(["", "", "", "", "", ""]);
     const otpRefs = useRef(Array(6).fill(null).map(() => React.createRef()));
-  const handleEmailSubmit = () => {
-    // Add logic to handle email submission and show OTP form
-    setShowEmailForm(false);
-    setShowOTPForm(true);
-  };
+    const [email, setEmail] = useState("");
 
-  const handleOTPSubmit = () => {
-    // Add logic to handle OTP submission and show password form
-    setShowOTPForm(false);
-    setShowPasswordForm(true);
-  };
+    const handleEmailSubmit = async () => {
+      try {
+        const formDataObject = new FormData();
+        formDataObject.append('email', email);
+        const response = await axios.post(
+          `${API.BASE_URL}${API.ENDPOINTS.forgetPassword}`,
+          formDataObject,
+          {
+             headers: {
+                Authorization: "hXuRUGsEGuhGf6KM",
+             },
+          }
+       );
+console.log(response.data)
+        // Check the response from the API
+        if (response.data.status == true) {
+          // API call successful, move to the next step
+          setShowEmailForm(false);
+          setShowOTPForm(true);
+          setUserId(response.data.data.id);
+        } else {
+          // Handle API error, show an error message, etc.
+          console.error("API call failed:", response.data.message);
+        }
+      } catch (error) {
+        // Handle axios error (e.g., network error)
+        console.error("Error:", error.message);
+      }
+    };
+    
+
+    const handleOTPSubmit = async () => {
+      try {
+
+        const formDataObject = new FormData();
+        formDataObject.append('user_id', userId);
+        formDataObject.append('new_otp', otpInputs.join(""));
+        const response = await axios.post(
+          `${API.BASE_URL}${API.ENDPOINTS.varifyOtp}`, 
+            formDataObject,
+          
+          {
+            headers: {
+              Authorization: "hXuRUGsEGuhGf6KM",
+           },
+          }
+        );
+    
+        if (response.data.status === true) {
+          setShowOTPForm(false);
+          setShowPasswordForm(true);
+        } else {
+          console.error("API call failed:", response.data.message);
+        }
+      } catch (error) {
+        // Handle axios error (e.g., network error)
+        console.error("Error:", error.message);
+      }
+    };
+    
 
   const handleOtpInputChange = (index, value) => {
     const newOtpInputs = [...otpInputs];
@@ -72,10 +127,12 @@ function ForgotPassword() {
                     </div>
                     <Form.Label >Enter Your Email</Form.Label>
                     <Form.Control
-                      type="text"
-                      placeholder="Enter email"
-                      className="forgot-input-feild mt-2"
-                    />
+  type="text"
+  placeholder="Enter email"
+  className="forgot-input-feild mt-2"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
                     <div className="d-flex justify-content-around mt-3 ">
                     <div className="">
                       <p className="mt-4">
@@ -97,7 +154,6 @@ function ForgotPassword() {
                     <div className="text-center mb-4">
                       <h1>Enter OTP</h1>
                     </div>
-                    {/* Display all 6 input fields for OTP in a single row */}
                     <Row className="">
                       {otpInputs.map((value, index) => (
                         <Col key={index} xs={2}>

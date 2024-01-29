@@ -9,12 +9,12 @@ function KnoledgeTest() {
   const sliderRef = useRef(null);
 
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
         breakpoint: 992,
@@ -23,9 +23,9 @@ function KnoledgeTest() {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],

@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import Logo from "../../assets/img/logo.svg";
 import { FaEnvelope, FaFacebook, FaYoutube, FaInstagram, FaToggleOn, FaToggleOff, FaBars } from 'react-icons/fa';
+import { isUserLoggedIn } from '../../utils';
 function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [isLoggedIn, setLoggedIn] = useState(false);
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
+  };
+
+  useEffect(() => {
+    // Set the initial login state
+    setLoggedIn(isUserLoggedIn());
+  }, []);
+
+
+  const handleLoginLogoutClick = () => {
+    
+    setLoggedIn(!isLoggedIn);
   };
   return (
     <>
@@ -103,7 +115,9 @@ function Header() {
                       </li>
                       {/* <li><a href="/">Login</a></li> */}
 
-                      <li><a href="/login">Login</a></li>
+                      <li> <a href="login" onClick={handleLoginLogoutClick}>
+                          {isLoggedIn ? 'Logout' : 'Login'}
+                        </a></li>
                     </ul>
                   </nav>
                   <div className="nav-right search-switch">

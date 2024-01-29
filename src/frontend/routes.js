@@ -30,6 +30,7 @@ import PublishHotelNews from "./pages/publishHotelNews";
 import KitDetail from "./pages/kitDetail";
 import ForgotPassword from "./pages/forgotPassword";
 import EditHotel from "./pages/editHotel";
+import MagazineDetails from "./pages/luxuryMagazineDetails";
 
 
 function RoutesPage() {
@@ -52,7 +53,7 @@ function RoutesPage() {
       <Route exact path="/hotels-selection" element={<HotelSelection />} />
       <Route exact path="/hotels-editions" element={<HotelEditions />} />
       <Route exact path="/our-team" element={<OurTeam />} />
-      <Route exact path="/aboutus" element={<AboutUsPage />} />
+      <Route exact path="/about-us" element={<AboutUsPage />} />
       <Route exact path="/distribution" element={<Distribution />} />
       <Route exact path="/mediapack" element={<Mediapack />} />
       <Route exact path="/subscribe-to-news" element={<SubscribeToNews />} />
@@ -66,6 +67,7 @@ function RoutesPage() {
       <Route exact path="/kit-detail" element={<KitDetail />} />
       <Route exact path="/forgot-password" element={<ForgotPassword />} />
       <Route exact path="/edit-hotel-profile" element={<EditHotel />} />
+      <Route exact path="/magazine-details" element={<MagazineDetails />} />
     </Routes>
   );
 }

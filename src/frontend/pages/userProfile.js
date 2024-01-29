@@ -31,12 +31,12 @@ function UserProfile() {
 
 
 
-  // useEffect(() => {
-  //   if (!isUserLoggedIn()) {
-  //     navigate("/login")
-  //     return;
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (!isUserLoggedIn()) {
+      navigate("/login")
+      return;
+    }
+  }, []);
 
   const ClearUserDataFromLocalStorage = () => {
     localStorage.removeItem("isLoggedIn");
@@ -98,8 +98,7 @@ function UserProfile() {
                     className={`nav-link sidebar-list ${currentSection === 'myProfile' ? 'active' : ''
                       }`}
                     onClick={ClearUserDataFromLocalStorage}
-
-                  >s<FaPowerOff/>
+                  ><FaPowerOff/>
                     Logout
                   </a>
                 </NavItem>

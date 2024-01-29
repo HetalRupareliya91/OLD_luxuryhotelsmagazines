@@ -78,9 +78,9 @@ function AllHotels(){
   //   }
   // };
   const [showEditModal, setShowEditModal] = useState(false);
-  const handleViewButtonClick = (news) => {
+  const handleViewButtonClick = (hotel) => {
     // Navigate to the room-details page with the news id in the URL
-    navigate(`/hotel-details/${news.id}/kuwait/la-maison-des-tetes-relais-chateaux`);
+    navigate(`/hotel-details/${hotel.id}/${hotel.country}/${hotel.hotel_title}`);
   };
 
   const handleEditModal = (id) => {

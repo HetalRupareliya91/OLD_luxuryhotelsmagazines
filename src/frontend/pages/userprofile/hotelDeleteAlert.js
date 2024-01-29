@@ -7,6 +7,7 @@ function HotelDeleteAlert({ showModal, handleCloseModal ,hotel_id }){
 
 
     const handleDeleteHotel = async (e) => {
+      const token = localStorage.getItem("token");
         e.preventDefault();
     
         const formDatas = new FormData();
@@ -17,7 +18,7 @@ function HotelDeleteAlert({ showModal, handleCloseModal ,hotel_id }){
             formDatas,
             {
               headers: {
-                "Authorization": "hXuRUGsEGuhGf6KM",
+                "Authorization": "Bearer " + token,
                 'Content-Type': 'multipart/form-data',
               },
             }

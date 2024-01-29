@@ -8,6 +8,7 @@ import Magazines4 from  "../../assets/img/magazines/magazines4.webp"
 import { FaFacebook, FaGoogle, FaPinterest, FaTwitter } from "react-icons/fa";
 import CallToAction from "../components/callToAction";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 
 function HotelEditions(){
@@ -53,11 +54,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines1}/>
 <p>Luxury Hotels Adored by Celebrities 2024</p>
 
-            </a>
+            </Link>
 
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
@@ -71,11 +72,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines2}/>
 <p>LUXURY HOTELS EUROPE</p>
 
-            </a>
+            </Link>
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
                 <li style={{backgroundColor:"#516eab" , margin:"3px"}}><a><FaFacebook/></a></li>
@@ -89,11 +90,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines3}/>
 <p>LUXURY HOTELS DUBAI & ABU DHABI</p>
 
-            </a>
+            </Link>
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
                 <li style={{backgroundColor:"#516eab" , margin:"3px"}}><a><FaFacebook/></a></li>
@@ -106,11 +107,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines4}/>
 <p>LUXURY HOTELS CYPRUS & GREECE 2023/2024</p>
 
-            </a>
+            </Link>
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
                 <li style={{backgroundColor:"#516eab" , margin:"3px"}}><a><FaFacebook/></a></li>
@@ -129,11 +130,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines1}/>
 <p>Luxury Hotels Adored by Celebrities 2024</p>
 
-            </a>
+            </Link>
 
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
@@ -147,11 +148,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines2}/>
 <p>LUXURY ABU DHABI JUMEIRAH ETIHAD TOWERS</p>
 
-            </a>
+            </Link>
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
                 <li style={{backgroundColor:"#516eab" , margin:"3px"}}><a><FaFacebook/></a></li>
@@ -165,11 +166,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines3}/>
 <p>LUXURY HOTELS DUBAI & ABU DHABI</p>
 
-            </a>
+            </Link>
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
                 <li style={{backgroundColor:"#516eab" , margin:"3px"}}><a><FaFacebook/></a></li>
@@ -182,11 +183,11 @@ Each Edition Rotation Program: Your hotel becomes one of the 40 most luxurious h
     <Col lg={3}>
         <div className="magazineContent1">
 
-            <a>
+            <Link to="/magazine-details">
 <Image src={Magazines4}/>
 <p>LUXURY HOTELS CYPRUS & GREECE 2023/2024</p>
 
-            </a>
+            </Link>
             <ul className="social-icons d-flex">
                 <li style={{backgroundColor:"#29c5f6", margin:"3px"}}><a><FaTwitter/></a></li>
                 <li style={{backgroundColor:"#516eab" , margin:"3px"}}><a><FaFacebook/></a></li>

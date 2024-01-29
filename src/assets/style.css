@@ -1235,7 +1235,7 @@ ol {
 }
 
 .footer-section .footer-text .ft-newslatter h6 {
-	font-size: 14px;
+	font-size: 16px;
 	color: #b5191fff;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -2797,10 +2797,7 @@ ol {
 		visibility: visible;
 	}
 
-	.about-text {
-		margin-bottom: 30px;
-	}
-
+	
 	.footer-section .copyright-option ul {
 		text-align: center;
 		margin-bottom: 10px;
@@ -2832,9 +2829,7 @@ ol {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-	.aboutus-section-present{
-		display: contents !important;
-	}
+	
 
 	.btn-div .more-info{
 		margin-top:120px;
@@ -3003,18 +2998,41 @@ ol {
 		margin-bottom: 10px;
 	}
 } */
-
 .aboutus-section-present{
-	display: none !important;
+
+	position: relative;
+    top: 100px;
 }
 
 @media screen and (max-width: 991px) {
   
-	.aboutus-section-present{
-		display: contents !important;
-	}
+	
 }
 @media only screen and (max-width: 767px) {
+
+	.aboutus-section-present {
+		position: relative;
+		top: 30px;
+	}
+	.slick-prev  , .slick-next{
+		display: none !important;
+	}
+	.autocom-box {
+		position: absolute;
+		width: 295px;
+		background: #fff;
+		padding: 5px;
+		opacity: 1;
+		pointer-events: auto;
+		display: block !important;
+		max-height: 280px;
+		overflow-y: auto;
+		border: none;
+		border-radius: 2px;
+		box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.24);
+		/* max-width: 100%; */
+		/* min-width: 430px; */
+	}
 
 
 	.tabcontainer h1 {
@@ -5791,7 +5809,7 @@ ul .social-icons li {
 }
 
 .print-campaign-options .image-flip-div h3 {
-	font-size: 20px;
+	font-size: 18px;
 	color: #2d2a2a;
 }
 
@@ -5947,39 +5965,6 @@ top: 250px;
 
 .what-we-do-digital-section-image {
 	width: 70%;
-}
-
-.our-section-div .service-include {
-	background: #f8f8f8;
-	text-align: center;
-	box-shadow: 5px 5px 10px 0px #0b020259;
-	height: 250px;
-	padding: 20px;
-	font-family: AlrightSans;
-	font-weight: normal;
-}
-
-.our-section-div .service-include:hover {
-	/* background-color: #b5191f; */
-	transform: translateY(-10px)
-}
-
-.our-section-div .service-logo {
-
-	padding: 5px;
-	font-size: 60px;
-	color: #b5191f;
-	margin: 10px;
-}
-
-.our-section-div {
-	background-image: url(../assets/img/magazines/bg4.jpg);
-}
-
-.our-section-div span {
-	font-size: 18px;
-	display: block;
-	text-align: center;
 }
 
 .instagram-section .insta-section-logo {
@@ -6209,9 +6194,7 @@ button a{
 	padding:54px 0px;
 	transition: 0.5s ease all;
 }
-.distribution-content{
-	padding: 0px 20px ;
-}
+
 .stepform-heading{
 	font-size: 24px !important;
 	text-transform: uppercase;
@@ -6263,9 +6246,26 @@ button a{
 .ytp-show-cards-title{
 	display: none !important;
 }
-.autocom-box {
 
-    width: 100%;
+.booking-form-rooms-form .autocom-box {
+    position: absolute;
+    width: 33%;
+    background: #fff;
+    padding: 5px;
+    opacity: 1;
+    pointer-events: auto;
+    display: block !important;
+    max-height: 280px;
+    overflow-y: auto;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.24);
+    max-width: 100%;
+    min-width: 430px;
+}
+.autocom-box {
+position: absolute;
+    width:38%;
   
     background: #fff;
     padding: 5px;
@@ -6277,10 +6277,18 @@ button a{
 	border: none;
     border-radius: 2px;
     box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.24);
-    left: calc(8px*-1);
+    
     max-width: 100%;
     min-width: 430px;
 }
 .autocom-box li a{
 	color: #000;
+}
+
+.text-overlay  img{
+    width: 60% !important;
+}
+
+.slick-next {
+    right: 2px !important;
 }

@@ -60,9 +60,6 @@ function Footer(){
                           <li><FaPhone /><a href="tel:1234567890">(12) 345 67890</a></li>
                           <li><FaEnvelope /><a href="mailto:info@luxuryhotelsmagazines.com">info@luxuryhotelsmagazines.com</a></li>
                   
-                          <li><FaBell /><a href="subscribe-to-news">Subscribe To Receive News </a></li>
-                          <li><FaBell /><a href="subcribe-digital-copy">Subscribe To Digital Copy</a></li>
-                          <li><FaBell /><a href="subcribe-print-copy">Subscribe To Printed Copy</a></li>
                        </ul>
                     </div>
                  </Col>

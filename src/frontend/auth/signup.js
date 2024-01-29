@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Hotel from "../../assets/img/hotel1.jpg";
 import { Col, Container, Image, Row, Form, ProgressBar } from "react-bootstrap";
 import Header from "../components/header";
@@ -15,15 +15,29 @@ import API from "../../utils";
 function Signup() {
     const [step, setStep] = useState(1);
     const [progress, setProgress] = useState(0);
-
-    const nextStep = () => {
+    const [otpInputs, setOtpInputs] = useState(["", "", "", "", "", ""]);
+    const otpRefs = useRef(Array(6).fill(null).map(() => React.createRef()));
+    const nextStep = (e) => {
+        if (e) e.preventDefault(); 
         setStep(step + 1);
-        updateProgress(); // Update progress when moving to the next step
+        updateProgress(); 
     };
 
-    const prevStep = () => {
+
+    const handleOtpInputChange = (index, value) => {
+        const newOtpInputs = [...otpInputs];
+        newOtpInputs[index] = value;
+        setOtpInputs(newOtpInputs);
+    
+        
+        if (index < 5 && value !== "") {
+          otpRefs.current[index + 1].current.focus();
+        }
+      };
+    const prevStep = (e) => {
+        if (e) e.preventDefault();
         setStep(step - 1);
-        updateProgress(); // Update progress when moving to the previous step
+        updateProgress(); 
     };
 
     const navigate = useNavigate();
@@ -42,7 +56,8 @@ function Signup() {
         });
     };
 
-    const handleSignup = async () => {
+    const handleSignup = async (e) => {
+        if (e) e.preventDefault();
 
         try {
             const response = await axios.post(
@@ -113,7 +128,8 @@ function Signup() {
         return isValid;
     };
 
-    const handleSignupClick = () => {
+    const handleSignupClick = (e) => {
+        if (e) e.preventDefault();
         const isValid = validateForm();
 
         if (isValid) {
@@ -123,7 +139,7 @@ function Signup() {
     };
 
     const updateProgress = () => {
-        const totalSteps = 2; // Assuming there are two steps in the form
+        const totalSteps = 3; // Assuming there are two steps in the form
         const newProgress = (step / totalSteps) * 100;
         setProgress(newProgress);
     };
@@ -225,11 +241,53 @@ function Signup() {
                                             <div className="footer_line mt-3">
                                                 <h6>Already have an account? <a className="page_move_btn" href="/login">Login</a></h6>
                                             </div>
-                                            <div className="float-end">
+                                            <div className="float-center">
+
+                                            <button onClick={(e) =>handleSignupClick(e)} >
+                                        Signup
+                                    </button>
                                             </div>
                                         </Form>
                                     </>}
                                 {step === 2 &&
+                                    <Form>
+                                    <div className="text-center mb-4">
+                                      <h1>Enter OTP</h1>
+                                    </div>
+                                    {/* Display all 6 input fields for OTP in a single row */}
+                                    <Row className="">
+                                      {otpInputs.map((value, index) => (
+                                        <Col key={index} xs={2}>
+                                          <Form.Control
+                                            ref={otpRefs.current[index]}
+                                            type="text"
+                                          className="otp-feild"
+                                            value={value}
+                                            onChange={(e) =>
+                                              handleOtpInputChange(index, e.target.value)
+                                            }
+                                          />
+                                        </Col>
+                                      ))}
+                                    </Row>
+                                    {/* <div className="d-flex justify-content-around mt-3 ">
+                                    <div className="">
+                                      <p className="mt-4">
+                                        <FaAngleRight className="m-0"/> <a>Back To Login</a>
+                                      </p>
+                                    </div>
+                                    <div className=" mt-3">
+                                      <Button className="" onClick={handleOTPSubmit}>
+                                        Submit OTP
+                                      </Button>
+                                    </div>
+                                    
+                                    </div> */}
+                                  </Form>
+                                    }
+
+
+{step === 3 &&
                                     <div className=" justify-content-between mt-4 ">
                                      
                                         <Row >
@@ -293,20 +351,18 @@ function Signup() {
                                 {step > 1 && (
                                     <>
                                         <div className="float-end">
-                                            <button onClick={prevStep} >
+                                            <button onClick={(e) => prevStep(e)} >
                                                 Previous
                                             </button>
-                                            <button onClick={nextStep} >
+                                            <button onClick={(e) => nextStep(e)} >
                                                 Submit
                                             </button>
                                         </div>
                                     </>
                                 )}
-                                {step < 2 && (
-                                    <button onClick={handleSignupClick} >
-                                        Signup
-                                    </button>
-                                )}
+                                {/* {step < 2 && (
+                            
+                                )} */}
 
                             </form>
 
@@ -390,28 +446,28 @@ function Signup() {
                                 </p>
                             </div>
                         </Col>
-                        <Col lg={4} className="mb-5">
-                            <div className="benefits-block">
-                                <FaGlobe className="benefits-icon" />
-                                <h4>
-                                    Global exposure
-                                </h4>
-                                <p>
-                                    Utilizing our AI technology, your hotel profile will be automatically shared with our extensive network of over 1 million subscribers.
-                                </p>
-                            </div>
-                        </Col>
-                        <Col lg={4} className="mb-5">
-                            <div className="benefits-block">
-                                <FaChild className="benefits-icon" />
-                                <h4>
-                                    Global Reach
-                                </h4>
-                                <p>
-                                    Published & Promoted in 89 countries, integrating online (70%) and print (30%) components.
-                                </p>
-                            </div>
-                        </Col>
+                            {/* <Col lg={4} className="mb-5">
+                                <div className="benefits-block">
+                                    <FaGlobe className="benefits-icon" />
+                                    <h4>
+                                        Global exposure
+                                    </h4>
+                                    <p>
+                                        Utilizing our AI technology, your hotel profile will be automatically shared with our extensive network of over 1 million subscribers.
+                                    </p>
+                                </div>
+                            </Col>
+                            <Col lg={4} className="mb-5">
+                                <div className="benefits-block">
+                                    <FaChild className="benefits-icon" />
+                                    <h4>
+                                        Global Reach
+                                    </h4>
+                                    <p>
+                                        Published & Promoted in 89 countries, integrating online (70%) and print (30%) components.
+                                    </p>
+                                </div>
+                            </Col> */}
                         <Col lg={4} className="mb-5">
                             <div className="benefits-block">
                                 <FaInternetExplorer className="benefits-icon" />
@@ -475,6 +531,29 @@ function Signup() {
                                 </h4>
                                 <p>
                                     Each hotel could be nominated by our readers as "The Best Luxury Hotel of the Year," and Hotel could have access to data on the voting clients.
+                                </p>
+                            </div>
+                        </Col>
+
+                        <Col lg={4} className="mb-5">
+                            <div className="benefits-block">
+                                <FaChild className="benefits-icon" />
+                                <h4>
+                                    Global Reach
+                                </h4>
+                                <p>
+                                    Published & Promoted in 89 countries, integrating online (70%) and print (30%) components.
+                                </p>
+                            </div>
+                        </Col>
+                        <Col lg={4} className="mb-5">
+                            <div className="benefits-block">
+                                <FaGlobe className="benefits-icon" />
+                                <h4>
+                                    Global exposure
+                                </h4>
+                                <p>
+                                    Utilizing our AI technology, your hotel profile will be automatically shared with our extensive network of over 1 million subscribers.
                                 </p>
                             </div>
                         </Col>

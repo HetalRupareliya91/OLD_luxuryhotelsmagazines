@@ -430,10 +430,10 @@ function AddHotel() {
         }
 
         if (!formData.outdoorSwimmingPool) {
-            newErrors.outdoorSwimmingPool  = "outdoor SwimmingPool is required";
+            newErrors.outdoorSwimmingPool = "outdoor SwimmingPool is required";
             isValid = false;
         } else {
-            newErrors.outdoorSwimmingPool  = "";
+            newErrors.outdoorSwimmingPool = "";
         }
 
         if (!formData.bars) {
@@ -636,9 +636,10 @@ function AddHotel() {
                     </Row>
                     <Row className=" mb-3">
                         <Col lg={12}>
+                            
                             {/* <input className="sidebar-input" type="text" id="aboutHotel" name="aboutHotel" placeholder="About Hotel" value={formData.aboutHotel}
                             onChange={handleInputChange} /> */}
-                            <label>About Hotel</label>
+                            <h5>About Hotel</h5>
 
 
                             <Editor
@@ -661,7 +662,7 @@ function AddHotel() {
                             {/* <input className="sidebar-input" type="text" id="roomsAndSuites" name="roomsAndSuites" placeholder="Rooms And Suites" value={formData.roomsAndSuites}
                             onChange={handleInputChange} /> */}
 
-                            <label>Rooms And Suites</label>
+                            <h5>Rooms And Suites</h5>
 
 
                             <Editor
@@ -682,7 +683,7 @@ function AddHotel() {
                         <Col lg={12}>
                             {/* <input className="sidebar-input" type="text" id="restaurantsAndBars " name="restaurantsAndBars" placeholder="Restaurents And Bars (Optional)" value={formData.restaurantsAndBars}
                             onChange={handleInputChange} /> */}
-                            <label>Restaurents And Bars (Optional)</label>
+                            <h5>Restaurents And Bars (Optional)</h5>
                             <Editor
                                 editorState={restaurentsEditorState}
                                 onEditorStateChange={handlerestaurentsEditorState}
@@ -701,7 +702,7 @@ function AddHotel() {
                         <Col lg={12}>
                             {/* <input className="sidebar-input" type="text" id="spaAndWellness " name="spaAndWellness" placeholder="Spa And Wellness (Optional)" value={formData.spaAndWellness}
                             onChange={handleInputChange} /> */}
-                            <label>Spa And Wellness (Optional)</label>
+                            <h5>Spa And Wellness (Optional)</h5>
                             <Editor
                                 editorState={spaAndWellnessEditorState}
                                 onEditorStateChange={handlespaAndWellnessEditorState}
@@ -720,7 +721,7 @@ function AddHotel() {
                         <Col lg={12}>
                             {/* <input className="sidebar-input" type="text" id="otherFacilities " name="otherFacilities" placeholder="Other Facilities (Optional)" value={formData.otherFacilities}
                             onChange={handleInputChange} /> */}
-                            <label>Other Facilities (Optional)</label>
+                            <h5>Other Facilities (Optional)</h5>
                             <Editor
                                 editorState={otherFacilitiesEditorState}
                                 onEditorStateChange={handleOtherFacilitiesEditorChange}
@@ -739,7 +740,8 @@ function AddHotel() {
                         <Col lg={12}>
                             {/* <input className="sidebar-input" type="text" id="otherFacilities " name="otherFacilities" placeholder="Other Facilities (Optional)" value={formData.additionalInformation}
                             onChange={handleInputChange} /> */}
-                            <label>Additional information (Optional)</label>
+                            
+                            <h5>Additional information (Optional)</h5>
                             <Editor
                                 editorState={additionalInformationEditorState}
                                 onEditorStateChange={handleAdditionalInformationEditorChange}
@@ -791,7 +793,7 @@ function AddHotel() {
                             )}
                         </Col>
                         <Col lg={3} md={4}>
-                            <input className="sidebar-input" type="number" id="meetingrooms" name="bars" placeholder="Meeting Rooms"value={formData.amenitiesList} onChange={handleInputChange} style={{ borderColor: validationErrors.amenitiesList ? "red" : "" }}
+                            <input className="sidebar-input" type="number" id="meetingrooms" name="bars" placeholder="Meeting Rooms" value={formData.amenitiesList} onChange={handleInputChange} style={{ borderColor: validationErrors.amenitiesList ? "red" : "" }}
                             />
                             {validationErrors.amenitiesList && (
                                 <div style={{ color: "red", textAlign: "left" }}>
